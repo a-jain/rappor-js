@@ -1,0 +1,13 @@
+{
+	"name": "rappor-js",
+	"main": "server.js",
+	"dependencies": {
+		"express" : "latest",
+		"mongoose" : "latest",
+		"body-parser" : "latest",
+		"method-override" : "latest",
+		"jade": "latest",
+		"stylus": "latest",
+		"nib": "latest"
+	}
+}
