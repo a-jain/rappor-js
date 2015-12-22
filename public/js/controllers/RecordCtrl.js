@@ -3,7 +3,7 @@ var recordModule = angular.module('RecordCtrl', []);
 
 recordModule.controller('RecordController', function($scope) {
 
-    $scope.tagline = 'Nothing beats a pocket protector!';
+    $scope.tagline = 'Enter the record here';
 
 });
 

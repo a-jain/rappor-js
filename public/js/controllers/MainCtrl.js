@@ -3,7 +3,7 @@ var mainModule = angular.module('MainCtrl', []);
 
 mainModule.controller('MainController', function($scope) {
 
-    $scope.tagline = 'To the moon and back!';   
+    $scope.tagline = 'Akash Jain\'s Thesis';   
 
 });
 
