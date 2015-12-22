@@ -10,3 +10,6 @@ def push(msg="default"):
 
 def linode():
 	local("ssh akshjn@45.79.133.53")
+
+def run():
+	local("nodemon server.js")

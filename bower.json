@@ -3,6 +3,9 @@
 	"dependencies": {
 		"jquery": "latest",
 		"bootstrap": "latest",
-		"angular": "latest"
+		"angular": "latest",
+		"font-awesome": "latest",
+        "animate.css": "latest",
+        "angular-route": "latest" 
 	}
 }
