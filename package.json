@@ -8,7 +8,13 @@
 		"method-override" : "latest",
 		"jade": "latest",
 		"stylus": "latest",
-		"nib": "latest"
+		"nib": "latest",
+		"browserify": "latest",
+		"coffee-script": "latest",
+		"coffeeify": "latest",
+		"md5": "latest",
+		"needle": "latest",
+		"watchify": "latest"
 	},
 	"engines": {
 		"node": "4.2.3"

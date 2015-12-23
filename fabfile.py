@@ -13,3 +13,6 @@ def linode():
 
 def run():
 	local("nodemon server.js")
+
+def runb():
+	local("browserify -t coffeeify rappor.coffee -o rappor.js")
