@@ -9,5 +9,8 @@
 		"jade": "latest",
 		"stylus": "latest",
 		"nib": "latest"
+	},
+	"engines": {
+		"node": "4.2.3"
 	}
 }
