@@ -14,7 +14,10 @@
 		"coffeeify": "latest",
 		"md5": "latest",
 		"needle": "latest",
-		"watchify": "latest"
+		"cors": "latest",
+		"digest-js": "latest",
+		"create-hmac": "latest",
+		"convert-hex": "latest"
 	},
 	"engines": {
 		"node": "4.2.3"

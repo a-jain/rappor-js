@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 // define our shema
 var recordSchema = new Schema({
   cohort:  Number,
-  bitString: String
+  bitString: Number
   // params: {
   // 	k: Number,
   // 	h: Number,

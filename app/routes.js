@@ -12,8 +12,8 @@ module.exports = function(router) {
         // do logging
         console.log('Something is happening.');
         // accept any headers
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        // res.header("Access-Control-Allow-Origin", "*");
+        // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next(); // make sure we go to the next routes and don't stop here
     });
 
@@ -60,6 +60,18 @@ module.exports = function(router) {
             })
 
             .sort({ cohort: 'asc' })
+        })
+
+        // delete a specific record
+        .delete(function(req, res) {
+            Record.remove({
+                // empty condition matches everything
+            }, function(err, record) {
+                if (err)
+                    res.send(err);
+
+                res.send({ message: 'Successfully deleted everything'});
+            });
         });
 
     router.route('/api/v1/records/:record_id')

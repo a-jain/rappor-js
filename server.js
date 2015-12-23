@@ -8,6 +8,7 @@ var methodOverride = require('method-override');
 var stylus		   = require('stylus');
 var nib		       = require('nib');
 var mongoose       = require('mongoose');
+var cors           = require('cors');
 
 // configuration ===========================================
     
@@ -27,6 +28,9 @@ app.use(stylus.middleware({
 	src: __dirname + '/public',
 	compile: compile
 }))
+
+// allow CORS requests FOR NOW
+app.use(cors())
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
