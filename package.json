@@ -12,5 +12,9 @@
 	},
 	"engines": {
 		"node": "4.2.3"
+	},
+	"scripts": {
+	  "postinstall": "bower install",
+	  "start": "nf start"
 	}
 }
