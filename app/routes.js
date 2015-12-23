@@ -13,6 +13,7 @@ module.exports = function(router) {
         console.log('Something is happening.');
         // accept any headers
         res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next(); // make sure we go to the next routes and don't stop here
     });
 
