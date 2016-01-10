@@ -14,7 +14,7 @@ This is a provisional implementation of Rappor in JavaScript that is designed to
 
 If you have some array of true/false values, e.g.
 
-> bools = [true, true, false] \
+> bools = [true, true, false]
 
 Then you can sent it to the server like so: 
 
