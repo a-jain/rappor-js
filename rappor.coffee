@@ -8,6 +8,7 @@ params =
 	p: 0.4
 	q: 0.6
 	f: 0.5
+	m: 64
 
 bools = [
 	true
@@ -19,14 +20,14 @@ bools = [
 class Rappor
 
 	# hard coding m as 64
-	# hard coding URL as http://rappor-js.herokuapp.com/api/v1/records
+	# hard coding server as http://rappor-js.herokuapp.com/api/v1/records
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
-	constructor: (params, m=64, url='http://rappor-js.herokuapp.com/api/v1/records') ->
+	constructor: (params, m=64, server='http://rappor-js.herokuapp.com/api/v1/records') ->
 		@params = params
-		@params["m"] = m
-		@params["url"] = url
+		@params["m"] ?= m
+		@params["server"] = server
 		@params["secret"] ?= "randomsecret"
 
 		# check endianness (big endian is 2^3, 2^2, 2^1, 2^0)
@@ -49,7 +50,7 @@ class Rappor
 			"Access-Control-Allow-Headers": "X-Requested-With"
 
 		console.log data
-		# needle.post(@params["url"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body)
+		# needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body)
 
 	_generateRapporBits: (bools) ->
 		# return mapping of bits

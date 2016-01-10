@@ -7,13 +7,13 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
 
         // home page
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'partials/home',
             controller: 'MainController'
         })
 
         // records page that will use the NerdController
         .when('/records', {
-            templateUrl: 'views/record.html',
+            templateUrl: 'partials/record',
             controller: 'RecordController'
         });
 

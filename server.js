@@ -46,6 +46,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // use Jade
 app.set('view engine', 'jade');
+app.locals.pretty = true;
+
 app.set('views', __dirname + '/public/views')
 
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT

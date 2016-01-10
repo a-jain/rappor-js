@@ -148,6 +148,12 @@ module.exports = function(router) {
 
     // frontend routes =========================================================
     // route to handle all angular requests
+    // note order is important
+    router.get('/partials/*', function(req, res, next) {
+        res.render('.' + req.path);
+    });
+
+
     router.get('*', function(req, res) {
         res.render('index', {
             title: 'Akash Jain'

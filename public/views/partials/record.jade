@@ -1,0 +1,30 @@
+.jumbotron.text-center
+	h1 Documentation
+
+.h1 Usage:
+
+dl.dl-horizontal
+	dt Install
+	dd #[ Embed the Rappor JS library by including the script in your code: #[code= '<script src="rappor.js"></script>']]
+
+	dt Specify Paramaters
+	dd #[em (Optional)]: If you are familiar with the #[a(href="http://research.google.com/pubs/archive/42852.pdf") RAPPOR paper], you can specify the parameters (else you can use the defaults, shown below):
+		blockquote
+			| #[samp params = {] #[br]
+			| 	#[samp k: 16,]  #[br]
+			|	#[samp h: 3, ]  #[br]
+			|	#[samp p: 0.4,] #[br]
+			|	#[samp q: 0.6,] #[br]
+			|	#[samp f: 0.5,] #[br]
+			|	#[samp m: 64] #[br]
+			| } #[br]
+			| #[br]
+			| #[samp server = "http://rappor-js.herokuapp.com/api/v1/records";]
+	
+	dt Use	
+	dd To send an array like #[code= '[true, true, false]'] do this
+		blockquote
+			| #[samp r = new Rappor(params, server)] #[br]
+			| #[samp bits = r.encode([true, true, false])] #[br]
+			| #[samp r.sendToServer(bits)] #[br]
+
