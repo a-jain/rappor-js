@@ -12,7 +12,11 @@ This is a provisional implementation of Rappor in JavaScript that is designed to
 
 ## Client Usage
 
-> bools = [true, true, false]
-> 
-> r = new Rappor()
+If you have some array of true/false values, e.g.
+
+> bools = [true, true, false] \\
+
+Then you can sent it to the server like so: 
+
+> r = new Rappor() \\
 > r.sendToServer(r.encode(bools))
