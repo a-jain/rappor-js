@@ -18,6 +18,6 @@ If you have some array of true/false values, e.g.
 
 Then you can sent it to the server like so: 
 
-> r = new Rappor()
+> `r = new Rappor()`
 > 
-> r.sendToServer(r.encode(bools))
+> `r.sendToServer(r.encode(bools))`
