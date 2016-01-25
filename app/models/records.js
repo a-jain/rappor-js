@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// define our shema
+// define our schema
 var recordSchema = new Schema({
   cohort:  Number,
   bitString: Number
@@ -10,9 +10,9 @@ var recordSchema = new Schema({
   // 	k: Number,
   // 	h: Number,
   // 	m: Number,
-  // 	f: Number,
   // 	p: Number,
-  // 	q: Number
+  // 	q: Number,
+  //  f: Number
   // }
 });
 
