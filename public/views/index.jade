@@ -13,6 +13,7 @@ html
 
 		script(src='js/controllers/MainCtrl.js')
 		script(src='js/controllers/RecordCtrl.js')
+		script(src='js/controllers/SendReportCtrl.js')
 		script(src='js/services/RecordService.js')
 		script(src='js/appRoutes.js')
 		script(src='js/app.js')
@@ -28,5 +29,11 @@ body(ng-app='rappor-js', ng-controller='RecordController')
 			ul.nav.navbar-nav
 				li
 					a(href='/records') Questionnaire
+
+			ul.nav.navbar-nav
+				li
+					a(href='/send') Send Report
+
+
 
 		div(ng-view)

@@ -11,10 +11,16 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
             controller: 'MainController'
         })
 
-        // records page that will use the NerdController
+        // records page that will use the RecordController
         .when('/records', {
             templateUrl: 'partials/record',
             controller: 'RecordController'
+        })
+
+        // Send records page that will use the SendReportController
+        .when('/send', {
+            templateUrl: 'partials/sendReport',
+            controller: 'SendReportController'
         });
 
     $locationProvider.html5Mode(true);

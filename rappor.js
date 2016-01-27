@@ -12927,55 +12927,64 @@ function property(path) {
 module.exports = property;
 
 },{"../internal/baseProperty":90,"../internal/basePropertyDeep":91,"../internal/isKey":107}],129:[function(require,module,exports){
-var HMAC, Rappor, bools, convertHex, encodedBits, needle, params, r;
+var HMAC, Rappor, bools, convertHex, needle, params, r,
+  indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 needle = require("needle");
 
 HMAC = require("create-hmac");
 
-convertHex = require('convert-hex');
+convertHex = require("convert-hex");
 
 params = {
   k: 16,
   h: 3,
   p: 0.4,
   q: 0.6,
-  f: 0.5
+  f: 0.5,
+  m: 64
 };
 
-bools = [true, true, false];
+bools = [true];
 
 Rappor = (function() {
-  function Rappor(params, m, url) {
-    var base;
+  function Rappor(params, m, server) {
+    var base, base1;
     if (m == null) {
       m = 64;
     }
-    if (url == null) {
-      url = 'http://rappor-js.herokuapp.com/api/v1/records';
+    if (server == null) {
+      server = 'http://localhost:8080/api/v1/records';
     }
     this.params = params;
-    this.params["m"] = m;
-    this.params["url"] = url;
-    if ((base = this.params)["secret"] == null) {
-      base["secret"] = "randomsecret";
+    if ((base = this.params)["m"] == null) {
+      base["m"] = m;
     }
-    this.params["big-endian"] = parseInt("1110", 2) === 14 ? true : false;
+    this.params["server"] = server;
+    if ((base1 = this.params)["secret"] == null) {
+      base1["secret"] = "randomsecret";
+    }
+    this.params["bigEndian"] = parseInt("1110", 2) === 14 ? true : false;
   }
 
   Rappor.prototype.encode = function(bools) {
-    var bits, irr, prr;
+    var bits;
+    this.truth = bools[0];
     bits = this._generateRapporBits(bools);
-    prr = this._generatePrr(bits);
-    return irr = this._generateIrr(prr);
+    this._generatePrr(bits);
+    return this._generateIrr();
   };
 
-  Rappor.prototype.sendToServer = function(bits) {
+  Rappor.prototype.sendToServer = function() {
     var cohortNo, data, options;
     cohortNo = Math.floor(Math.random() * this.params["m"]);
     data = {
+      bool: this.truth,
       cohort: cohortNo,
-      bitString: bits
+      orig: this.params["bigEndian"] ? this.orig.join("") : this.orig.reverse().join(""),
+      prr: this._zfill(parseInt(this.prr, 10).toString(2)),
+      irr: this._zfill(parseInt(this.irr, 10).toString(2)),
+      params: this.params
     };
     options = {
       "Access-Control-Allow-Headers": "X-Requested-With"
@@ -12984,20 +12993,30 @@ Rappor = (function() {
   };
 
   Rappor.prototype._generateRapporBits = function(bools) {
-    var bits, num;
-    return bits = (function() {
+    var HmacMap, num, ones;
+    HmacMap = new HMAC('sha1', this.params["secret"]);
+    HmacMap.update("" + bools[0]);
+    ones = (function() {
+      var j, ref, results;
+      results = [];
+      for (num = j = 0, ref = this.params["h"] - 1; 0 <= ref ? j <= ref : j >= ref; num = 0 <= ref ? ++j : --j) {
+        results.push(num = parseInt(HmacMap.digest('hex').slice(0, 4), 16) % this.params["k"]);
+      }
+      return results;
+    }).call(this);
+    return this.orig = (function() {
       var j, ref, results;
       results = [];
       for (num = j = 0, ref = this.params["k"] - 1; 0 <= ref ? j <= ref : j >= ref; num = 0 <= ref ? ++j : --j) {
-        results.push(num = Math.random() > 0.5 ? 1 : 0);
+        results.push(num = indexOf.call(ones, num) >= 0 ? 1 : 0);
       }
       return results;
     }).call(this);
   };
 
   Rappor.prototype._generatePrr = function(bits) {
-    var Hmac, bloom, byte, digest, f_mask, i, j, joinedBits, noise_bit, prr, rand128, ref, threshold128, u_bit, uniform;
-    joinedBits = this.params["big-endian"] ? bits.join("") : bits.reverse().join("");
+    var Hmac, bloom, byte, digest, f_mask, i, j, joinedBits, noise_bit, rand128, ref, threshold128, u_bit, uniform;
+    joinedBits = this.params["bigEndian"] ? bits.join("") : bits.reverse().join("");
     bloom = parseInt(joinedBits, 2);
     Hmac = new HMAC('sha256', this.params["secret"]);
     Hmac.update(joinedBits);
@@ -13014,11 +13033,11 @@ Rappor = (function() {
       noise_bit = rand128 < threshold128;
       f_mask |= noise_bit << i;
     }
-    return prr = (bloom & ~f_mask) | (uniform & f_mask);
+    return this.prr = (bloom & ~f_mask) | (uniform & f_mask);
   };
 
-  Rappor.prototype._generateIrr = function(prr) {
-    var bit, i, irr, irrp, irrq, j, ref;
+  Rappor.prototype._generateIrr = function() {
+    var bit, i, irrp, irrq, j, ref;
     irrp = 0;
     irrq = 0;
     for (i = j = 0, ref = this.params["k"] - 1; 0 <= ref ? j <= ref : j >= ref; i = 0 <= ref ? ++j : --j) {
@@ -13027,7 +13046,17 @@ Rappor = (function() {
       bit = Math.random() < this.params["q"];
       irrq |= bit << i;
     }
-    return irr = (irrp & ~prr) | (irrq & prr);
+    return this.irr = (irrp & ~this.prr) | (irrq & this.prr);
+  };
+
+  Rappor.prototype._zfill = function(val) {
+    var i, j, padding, ref, zeroes;
+    zeroes = "0";
+    padding = this.params["k"] - val.length;
+    for (i = j = 0, ref = padding; 0 <= ref ? j <= ref : j >= ref; i = 0 <= ref ? ++j : --j) {
+      zeroes += "0";
+    }
+    return (zeroes + val).slice(2);
   };
 
   Rappor.prototype._print = function() {
@@ -13045,11 +13074,13 @@ Rappor = (function() {
 
 })();
 
+console.log("rappor.js loaded");
+
 r = new Rappor(params);
 
-encodedBits = r.encode(bools);
+r.encode(bools);
 
-r.sendToServer(encodedBits);
+r.sendToServer();
 
 r._print();
 

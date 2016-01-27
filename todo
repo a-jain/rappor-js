@@ -3,3 +3,6 @@
 1. Think of information we will gather
 2. Devise some mapping to a bitstring
 3. Send data to server
+
+Figure out mapping from bools to string to *encoding*
+Need to add this to print-unique-values() and more-candidates() in regtest.sh
