@@ -6,3 +6,9 @@
 
 Figure out mapping from bools to string to *encoding*
 Need to add this to print-unique-values() and more-candidates() in regtest.sh
+
+02/02/2016
+Receive list of installed add in / fonts / panopticlickss
+Want to rappor such that we get information about all of the installed add ons at once, so that we can infer which add ons are associated with each other
+
+Want to get associations, eg.g. lists of webites that people visit, so we can get clusters of info

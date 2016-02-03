@@ -4,11 +4,12 @@ var Schema = mongoose.Schema;
 
 // define our schema
 var recordSchema = new Schema({
-  bool:  Number,
+  bool:  { type: Boolean },
   cohort:  Number,
-  orig: String,
-  prr: String,
-  irr: String,
+  date:  { type: Date, default: Date.now },
+  orig:  { type: String, trim: true, default: "mongoose error" },
+  prr:  { type: String, trim: true, default: "mongoose error" },
+  irr:  { type: String, trim: true, default: "mongoose error" },
   params: {
   	bigEndian: Boolean,
     k: Number,
@@ -21,6 +22,8 @@ var recordSchema = new Schema({
     server: String
   }
 });
+
+recordSchema.index({cohort: 1});
 
 // define our records model
 // module.exports allows us to pass this to other files when it is called

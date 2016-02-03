@@ -33,8 +33,12 @@ module.exports = function(router) {
         .post(function(req, res) {
             var record = new Record();
 
+            record.bool   = req.body.bool;
             record.cohort = req.body.cohort;
-            record.bitString = req.body.bitString;
+            record.orig   = req.body.orig;
+            record.prr    = req.body.prr;
+            record.irr    = req.body.irr;
+            
             record.params = req.body.params;
 
             // save the record

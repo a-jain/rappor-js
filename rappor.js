@@ -12939,7 +12939,7 @@ convertHex = require("convert-hex");
 params = {
   k: 16,
   h: 3,
-  p: 0.4,
+  p: 0.7,
   q: 0.6,
   f: 0.5,
   m: 64
@@ -12976,10 +12976,11 @@ Rappor = (function() {
   };
 
   Rappor.prototype.sendToServer = function() {
-    var cohortNo, data, options;
+    var cohortNo, data, localTruth, options;
     cohortNo = Math.floor(Math.random() * this.params["m"]);
+    localTruth = this.truth;
     data = {
-      bool: this.truth,
+      bool: localTruth,
       cohort: cohortNo,
       orig: this.params["bigEndian"] ? this.orig.join("") : this.orig.reverse().join(""),
       prr: this._zfill(parseInt(this.prr, 10).toString(2)),
@@ -12989,7 +12990,14 @@ Rappor = (function() {
     options = {
       "Access-Control-Allow-Headers": "X-Requested-With"
     };
-    return console.log(data);
+    console.log(data);
+    return needle.post(this.params["server"], data, options, function(err, resp) {
+      if (err) {
+        return console.log(err.message);
+      } else {
+        return console.log(resp.body);
+      }
+    });
   };
 
   Rappor.prototype._generateRapporBits = function(bools) {

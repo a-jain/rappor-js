@@ -5,7 +5,7 @@ convertHex = require "convert-hex"
 params = 
 	k: 16
 	h: 3
-	p: 0.4
+	p: 0.7
 	q: 0.6
 	f: 0.5
 	m: 64
@@ -32,7 +32,7 @@ class Rappor
 		@params["bigEndian"] = if parseInt("1110", 2) is 14 then true else false
 
 	encode: (bools) ->
-		this.truth = bools[0]
+		@truth = bools[0]
 		bits = this._generateRapporBits(bools)
 		this._generatePrr(bits)
 		this._generateIrr()
@@ -42,20 +42,18 @@ class Rappor
 		cohortNo = Math.floor(Math.random() * @params["m"])
 
 		data = 
-			bool: this.truth
+			bool: @truth
 			cohort: cohortNo
-			orig: if @params["bigEndian"] then this.orig.join("") else this.orig.reverse().join("")
-			prr: this._zfill(parseInt(this.prr, 10).toString(2))
-			irr: this._zfill(parseInt(this.irr, 10).toString(2))
+			orig: if @params["bigEndian"] then @orig.join("") else @orig.reverse().join("")
+			prr: this._zfill(parseInt(@prr, 10).toString(2))
+			irr: this._zfill(parseInt(@irr, 10).toString(2))
 			params: @params
 
 		options =
 			"Access-Control-Allow-Headers": "X-Requested-With"
 
 		console.log data
-		# console.log this.irr
-		# console.log parseInt(this.irr, 10).toString(2)
-		# needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body)
+		needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body)
 
 	_generateRapporBits: (bools) ->
 		# return mapping of bits
@@ -73,10 +71,8 @@ class Rappor
 		ones = for num in [0..@params["h"]-1]
 					num = parseInt(HmacMap.digest('hex')[0..3], 16) % @params["k"]
 
-		this.orig = for num in [0..@params["k"]-1]
+		@orig = for num in [0..@params["k"]-1]
 					num = if num in ones then 1 else 0
-
-		# console.log bits
 
 	# port of google code
 	# note that the data is the array stringified
@@ -109,7 +105,7 @@ class Rappor
 			noise_bit = (rand128 < threshold128)
 			f_mask |= (noise_bit << i)  # maybe set bit in mask
 
-		this.prr = (bloom & ~f_mask) | (uniform & f_mask)
+		@prr = (bloom & ~f_mask) | (uniform & f_mask)
 
 	_generateIrr: () ->
 
@@ -124,7 +120,7 @@ class Rappor
 			bit = Math.random() < @params["q"]
 			irrq |= (bit << i)  # using bool as int
 
-		this.irr = (irrp & ~this.prr) | (irrq & this.prr)
+		@irr = (irrp & ~@prr) | (irrq & @prr)
 
 	_zfill: (val) ->
 		zeroes = "0"
