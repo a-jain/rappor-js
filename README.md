@@ -21,3 +21,7 @@ Then you can sent it to the server like so:
 > `r = new Rappor()`
 > 
 > `r.sendToServer(r.encode(bools))`
+
+## Server Dependencies
+
+- Need Rscript

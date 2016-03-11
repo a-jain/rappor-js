@@ -2,6 +2,7 @@ import csv
 import sys
 import requests
 import json
+import os
 
 # params = {
 # 	'k' : 16,
@@ -11,6 +12,11 @@ import json
 # 	'q' : 0.75,
 # 	'f' : 0.5
 # }
+
+subDir      = os.path.join(os.getcwd(), "server/outputs")
+countsFile  = os.path.join(subDir, sys.argv[1])
+cohortsFile = os.path.join(subDir, sys.argv[2])
+paramsFile  = os.path.join(subDir, sys.argv[3])
 
 serverUrl = "http://localhost:8080/api/v1/records";
 
@@ -32,9 +38,12 @@ def getSumBits(params, jsonResponse):
 		totalCounts[record['cohort']] += 1
 
 	# prints out counts
+	fo = open(countsFile, "w")
+	
 	for i in range(0, params['m']):
-		print '{}, {}'.format(totalCounts[i], ', '.join(map(str, bitCounts[i])))
-
+		fo.write( '{},{}\n'.format(totalCounts[i], ','.join(map(str, bitCounts[i]))) )
+	
+	fo.close()
 
 def getTrueCounts(params, jsonResponse):
 	trueCounts  = [0] * params['m']
@@ -52,22 +61,45 @@ def getTrueCounts(params, jsonResponse):
 	# 1   7
 	# 2   4
 	# etc
+
+	fo = open(cohortsFile, "w")
+
 	for i in range(0, params['m']):
-		print '{}, {}'.format(i, trueCounts[i])
+		fo.write( '{}, {}\n'.format(i, trueCounts[i]) )
+
+	fo.close()
 
 
 # finally, handle creation of params.csv file
 # check - this is not correct python rn
 # also check if this comes in alphabetical order or what
 def getParams(params):
-	print join(params.keys())
-	print join(map(str, params.vals()))
+
+	# paramsCopy = {}
+	# paramsCopy['k'] = params['k']
+	# paramsCopy['h'] = params['h']
+	# paramsCopy['m'] = params['m']
+	# paramsCopy['p'] = params['p']
+	# paramsCopy['q'] = params['q']
+	# paramsCopy['f'] = params['f']
+
+	fo = open(paramsFile, "w")
+
+	# fo.write( "\"")
+	# fo.write( "\",\"".join(paramsCopy.keys()) )
+	# fo.write( "\"\n")
+	# fo.write( ",".join(map(str, paramsCopy.values())) )
+
+	fo.write( "\"k\",\"h\",\"m\",\"p\",\"q\",\"f\"\n" )
+	fo.write( "{},{},{},{},{},{}\n".format(params['k'], params['h'], params['m'], params['p'], params['q'], params['f']))
+
+	fo.close()
 
 
 # change from printing to std out to printing to a given filename
 # sumBits.csv for first one, trueBits.csv for second one, params.csv for third one
 def main():
-	r = requests.get(serverUrl)
+	r = requests.get(serverUrl, timeout=(5, 120))
 
 	# cache JSON response
 	jsonResponse = r.json()

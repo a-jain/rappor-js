@@ -1,5 +1,18 @@
-script(src='rappor.js')
+script.
+	function formSubmit() {
+		var n = $("#n").val();
+		var p = $("#p").val();
+
+		simRappor(parseInt(n), parseFloat(p));
+	}
 
 .jumbotron.text-center
 	h1 Send Report
+
+p Simulate Rappor #[em N] times, with #[em p] probability of sending true 
+
+form(name="sim", id="sim", onSubmit="formSubmit()")
+	input(type="text", name="n", id="n", placeholder="N")
+	input(type="text", name="p", id="p", placeholder="p")
+	input(type="submit", value="Go!")
 
