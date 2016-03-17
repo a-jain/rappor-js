@@ -1,0 +1,115 @@
+.jumbotron.text-center
+	h1 Examine Browser
+	
+	p {{tagline}}
+
+.row
+	.col-md-6
+		p Select the criteria you want to choose from:
+
+		p Browser:
+
+		select.selectpicker(title="Browser", id="userAgent")
+			option  
+			option Chrome
+			option Safari
+			option Firefox
+			option IE
+			option Other
+
+		//- p
+		//- p Chain Commands
+
+		//- select.selectpicker(title="AND/OR", id="andOr1")
+		//- 	option  
+		//- 	option AND
+		//- 	option OR
+
+		p
+		p Uses an Ad Blocker?
+
+		select.selectpicker(title="Ad Blocker", id="adBlocker")
+			option 
+			option Yes
+
+		p
+		p userAgentKey
+		p languageKey
+		p colorDepthKey
+		p screenResolutionKey
+		p availableScreenResolutionKey
+		p timezoneOffsetKey
+		p sessionStorageKey
+		p localStorageKey
+		p indexedDbKey
+		p addBehaviorKey
+		p openDatabaseKey
+		p cpuClassKey
+		p platformKey
+		p doNotTrackKey
+		p pluginsKey
+		p canvasKey
+		p webglKey
+		p adBlockKey
+		p hasLiedLanguagesKey
+		p hasLiedResolutionKey
+		p hasLiedOsKey
+		p hasLiedBrowserKey
+		p touchSupportKey
+
+	.col-md-6
+
+		p Copy and paste the following code:
+		p
+		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
+
+script.
+	$("#userAgent").change(function() {
+		if ($("#userAgent").val() == "") {
+			
+			$("#results").text("");
+			$("#finalCode").text("Final Code Here");
+
+			return;
+		}
+
+		console.log($("#userAgent").val())
+		var rapporResults = RapporExamine.userAgentData($("#userAgent").val())
+
+		console.log(rapporResults)
+
+		if (rapporResults) {
+			$("#results").text(`Browser is indeed ${$("#userAgent").val()}!`);
+		} else {
+			$("#results").text(`Browser is unfortunately not ${$("#userAgent").val()}`);
+		}
+
+		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nr.send(RapporExamine.userAgentData(\"${$("#userAgent").val()}\"));`
+
+		$("#finalCode").text(templateString);
+
+		console.log(templateString);
+	});
+
+	$("#adBlocker").change(function() {
+		if ($("#adBlocker").val() == "") {
+			
+			$("#results").text("");
+			$("#finalCode").text("Final Code Here");
+
+			return;
+		}
+
+		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nRapporExamine.getAdBlock(r.sendTrue(), r.sendFalse());`
+
+		$("#finalCode").text(templateString);
+
+	});
+
+	console.log(RapporExamine.getRegularPlugins());
+
+	console.log(RapporExamine.getAdBlock());
+
+	//- RapporExamine.getAdBlock(r.encodeTrue(), r.encodeFalse())
+
+	$('.selectpicker').selectpicker();

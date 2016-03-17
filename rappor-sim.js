@@ -9,7 +9,8 @@ function simRappor(n, p) {
 		else
 			bool = false;
 
-		r.encode(bool);
-		r.sendToServer();
+		r.send(bool);
 	}
 }
+
+console.log("rappor-sim.js loaded")

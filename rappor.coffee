@@ -6,10 +6,10 @@ md5        = require "md5"
 params = 
 	k: 32
 	h: 2
-	p: 0.3
-	q: 0.7
-	f: 0.25
-	m: 8
+	p: 0.1
+	q: 0.9
+	f: 0.15
+	m: 16
 
 bool = true
 
@@ -30,6 +30,16 @@ class window.Rappor
 
 		# check endianness (big endian is 2^3, 2^2, 2^1, 2^0)
 		@params["bigEndian"] = if parseInt("1110", 2) is 14 then true else false
+
+	send: (bool) ->
+		this.encode(bool)
+		this.sendToServer()
+
+	sendTrue: () ->
+		this.send(true)
+
+	sendFalse: () ->
+		this.send(false)
 
 	encode: (bool) ->
 		@truth = bool
@@ -53,8 +63,8 @@ class window.Rappor
 		# console.log "orig is"
 		# console.log @orig
 
-		console.log data
-		# needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body.message)
+		# console.log data
+		needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body.message)
 
 	_generateRapporBits: () ->
 		# return mapping of bits

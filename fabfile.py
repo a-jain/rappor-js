@@ -17,9 +17,11 @@ def run():
 	webbrowser.open_new_tab("http://localhost:8080")
 
 def runb():
-	local("browserify -t coffeeify rappor.coffee -o rappor.js")
+	local("browserify --fast -t coffeeify rappor.coffee -o rappor.js")
+	local("browserify -t coffeeify rappor-examine.coffee -o rappor-examine.js")
 	local("cp ./rappor.js ./public/js/rappor-js/")
 	local("cp ./rappor-sim.js ./public/js/rappor-js/")
+	local("cp ./rappor-examine.js ./public/js/rappor-js/")
 
 # do we really need cohortFile??
 def analyze():
