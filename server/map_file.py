@@ -27,31 +27,32 @@ def getParams():
 
 	return params
 
-def main():
-
-	params = getParams()
+# generate test strings
+def generateCandidates(n):
 	candidates = ["true", "false"]
 
-	for i in range(0, 8):
+	for i in range(0, n):
 		candidates.append("fake" + str(i))
 
-	# now must assembly map file
-	# format is:
-	# "true",  [1..k], [1..k], ..., [1..k] {m times} and must start with a 1!
-	# "false", [1..k], [1..k], ..., [1..k] {m times}
-	# ...
-	# "test3", [1..k], [1..k], ..., [1..k] {m times}
-	
+	return candidates
+
+
+# format is:
+# "true",  [1..k], [1..k], ..., [1..k] {m times} and must start with a 1!
+# "false", [1..k], [1..k], ..., [1..k] {m times}
+# ...
+# "test3", [1..k], [1..k], ..., [1..k] {m times}
+def constructMap(candidates, m, h, k):
 	X = {}
 	for c in candidates:
 		candidateOnes = []
-		for i in range(int(params["m"])):
+		for i in range(m):
 			x = hashlib.md5("" + c + str(i)).hexdigest()
 
 			# double check if the + 1 is necessary
 			ones = []
-			for j in range(int(params["h"])):
-				ones.append(i * int(params["k"]) + int(x[4*j : 4*j+4], 16) % int(params["k"]) + 1)
+			for j in range(h):
+				ones.append(i * k + int(x[4*j : 4*j+4], 16) % k + 1)
 
 			# bloom = [0] * int(params["k"])
 			# for i in range(int(params["k"])):
@@ -64,8 +65,12 @@ def main():
 			candidateOnes.extend(sorted(ones))
 
 		X[c] = candidateOnes
-	
-	# print X into appropriate design matrix format
+
+	return X
+
+
+# print X into appropriate design matrix format
+def writeToFile(X):
 	fo = open(mapFile, "w")
 
 	for key, val in X.iteritems():
@@ -77,5 +82,19 @@ def main():
 		fo.write("\n")
 
 	fo.close()
+
+
+def unitTest():
+	X = ["true"]
+
+
+def main():
+
+	params = getParams()
+	candidates = generateCandidates(8)
+
+	X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
+	
+	writeToFile(X)
 
 main()
