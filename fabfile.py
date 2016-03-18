@@ -37,5 +37,8 @@ def analyze():
 	# also need to create map file
 	local("python ./server/map_file.py {} {}".format(paramFile, mapFile))
 
-	# now run R
-	# local("sudo ./server/regressions.R {} {} {}".format(countFile, truthFile, paramFile)) # add arg1 arg2 arg3 here, where args are filenames
+def analyzeTest():
+	paramFile = "params.csv"
+	mapFile   = "map.csv"
+
+	local("python ./server/map_file.py {} {}".format(paramFile, mapFile))

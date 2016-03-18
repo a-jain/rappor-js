@@ -2,6 +2,7 @@ import hashlib
 import csv
 import sys
 import os
+import struct
 
 subDir      = os.path.join(os.getcwd(), "server/outputs")
 paramsFile  = os.path.join(subDir, sys.argv[1])
@@ -36,6 +37,12 @@ def generateCandidates(n):
 
 	return candidates
 
+def to_big_endian(i):
+	"""Convert an integer to a 4 byte big endian string.  Used for hashing."""
+	# https://docs.python.org/2/library/struct.html
+	# - Big Endian (>) for consistent network byte order.
+	# - L means 4 bytes when using >
+	return struct.pack('>L', i)
 
 # format is:
 # "true",  [1..k], [1..k], ..., [1..k] {m times} and must start with a 1!
@@ -47,20 +54,19 @@ def constructMap(candidates, m, h, k):
 	for c in candidates:
 		candidateOnes = []
 		for i in range(m):
-			x = hashlib.md5("" + c + str(i)).hexdigest()
+			val = to_big_endian(i) + c
+			md5 = hashlib.md5(val)
+
+			digest = md5.digest()
+			print digest
 
 			# double check if the + 1 is necessary
-			ones = []
-			for j in range(h):
-				ones.append(i * k + int(x[4*j : 4*j+4], 16) % k + 1)
+			# ones = []
+			# for j in range(h):
+			# 	ones.append(i * k + int(digest[4*j : 4*j+4], 16) % k + 1)
 
-			# bloom = [0] * int(params["k"])
-			# for i in range(int(params["k"])):
-			# 	if i in ones:
-			# 		bloom[i] = 1
-
-			# make absolute value??
-
+			ones = [ord(digest[i]) % k for i in xrange(h)]
+			print ones
 
 			candidateOnes.extend(sorted(ones))
 
@@ -85,16 +91,24 @@ def writeToFile(X):
 
 
 def unitTest():
-	X = ["true"]
+	candidates = ["true"]
+	m = 1
+	h = 2
+	k = 32
 
+	print constructMap(candidates, m, h, k)
 
 def main():
-
+	testing = True
 	params = getParams()
-	candidates = generateCandidates(8)
 
-	X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
-	
-	writeToFile(X)
+	if testing:
+		unitTest()
+	else:
+		candidates = generateCandidates(5)
+
+		X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
+		
+		writeToFile(X)
 
 main()
