@@ -30,10 +30,10 @@ def getParams():
 
 # generate test strings
 def generateCandidates(n):
-	candidates = ["true", "false"]
+	candidates = ["TRUE", "FALSE"]
 
 	for i in range(0, n):
-		candidates.append("fake" + str(i))
+		candidates.append("zzfake" + str(i))
 
 	return candidates
 
@@ -58,15 +58,15 @@ def constructMap(candidates, m, h, k):
 			md5 = hashlib.md5(val)
 
 			digest = md5.digest()
-			print digest
+			# print digest
 
 			# double check if the + 1 is necessary
 			# ones = []
 			# for j in range(h):
 			# 	ones.append(i * k + int(digest[4*j : 4*j+4], 16) % k + 1)
 
-			ones = [ord(digest[i]) % k for i in xrange(h)]
-			print ones
+			ones = [k-((ord(digest[j]) % k))+i*k for j in xrange(h)]
+			# print ones
 
 			candidateOnes.extend(sorted(ones))
 
@@ -91,21 +91,21 @@ def writeToFile(X):
 
 
 def unitTest():
-	candidates = ["true"]
-	m = 1
+	candidates = ["TRUE"]
+	m = 3
 	h = 2
 	k = 32
 
 	print constructMap(candidates, m, h, k)
 
 def main():
-	testing = True
+	testing = False
 	params = getParams()
 
 	if testing:
 		unitTest()
 	else:
-		candidates = generateCandidates(5)
+		candidates = generateCandidates(6)
 
 		X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
 		

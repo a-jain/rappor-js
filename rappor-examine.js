@@ -1138,7 +1138,7 @@ case 5:o=this.x64Xor(o,this.x64LeftShift([0,e.charCodeAt(u+4)],32));case 4:o=thi
 })(typeof window === 'object' ? window : this);
 
 },{}],4:[function(require,module,exports){
-var RapporExamine, fuckAdBlock;
+var RapporExamine;
 
 RapporExamine = window.RapporExamine || {};
 
@@ -1146,13 +1146,9 @@ RapporExamine.Fingerprint = require("fingerprintjs2");
 
 RapporExamine.UAParser = require("ua-parser-js");
 
-fuckAdBlock = false;
-
 RapporExamine.fuckAdBlock = require("FuckAdBlock");
 
 window.RapporExamine = RapporExamine;
-
-RapporExamine.adBlock = false;
 
 RapporExamine.getData = function(result, components) {
   return console.log(components);
@@ -1189,7 +1185,7 @@ RapporExamine.getRegularPlugins = function() {
 };
 
 RapporExamine.getAdBlock = function(success, failure) {
-  if (fuckAdBlock == null) {
+  if (typeof fuckAdBlock === "undefined" || fuckAdBlock === null) {
     success();
   }
   fuckAdBlock.onDetected(success);

@@ -25,6 +25,4 @@ dl.dl-horizontal
 	dd To send an array like #[code= '[true, true, false]'] do this
 		blockquote
 			| #[samp r = new Rappor(params, server)] #[br]
-			| #[samp bits = r.encode([true, true, false])] #[br]
-			| #[samp r.sendToServer(bits)] #[br]
-
+			| #[samp r.send(true)] #[br]

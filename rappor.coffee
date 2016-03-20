@@ -3,7 +3,8 @@ HMAC       = require "create-hmac"
 convertHex = require "convert-hex"
 md5        = require "md5"
 struct     = require "struct"
-ByteBuffer = require("byte-buffer")
+ByteBuffer = require "byte-buffer"
+BitArray   = require "bit-array"
 
 params = 
 	k: 32
@@ -11,7 +12,7 @@ params =
 	p: 0.1
 	q: 0.9
 	f: 0.15
-	m: 16
+	m: 8
 
 bool = true
 
@@ -23,12 +24,13 @@ class window.Rappor
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
-	constructor: (@params=params, server='http://localhost:8080/api/v1/records', cohort=16) ->
+	constructor: (@params=params, server='http://localhost:8080/api/v1/records', cohort=3) ->
 		# @params = params
 		@params["server"] ?= server
 		@params["secret"] ?= "secret"
 
-		@cohort = cohort ?= Math.floor(Math.random() * @params["m"])
+		@cohort ?= cohort
+		# @cohort = Math.floor(Math.random() * @params["m"])
 
 		# check endianness (big endian is 2^3, 2^2, 2^1, 2^0)
 		@params["bigEndian"] = if parseInt("1110", 2) is 14 then true else false
@@ -84,11 +86,13 @@ class window.Rappor
 
 		# val = "" + @truth + (@cohort)
 
+		trueString = if @truth then "TRUE" else "FALSE"
+
 		b = this._to_big_endian(@cohort)
 
 		b.implicitGrowth = true
 		# b.prepend(3)
-		b.writeString("" + @truth)
+		b.writeString(trueString)
 		val = new Buffer(b.raw)
 
 		# console.log "md5 is " + md5(val)
@@ -174,16 +178,30 @@ class window.Rappor
 			noise_bit = (rand128 < threshold128)
 			f_mask |= (noise_bit << i)  # maybe set bit in mask
 
+		# needed to handle negative numbers
+		# console.log "orig f_mask is " + f_mask + " or " + f_mask.toString(2)
+
+		# if f_mask < 0
+		# 	console.log "neg case entered"
+		# 	f_mask = ~f_mask
+		# 	f_mask -= 1
+		# 	f_mask = f_mask >>> 0
+
+
 		# console.log "**"
-		# console.log bits
-		# console.log f_mask
-		# console.log uniform
+		# console.log "bits is " + bits + " or " + bits.toString(2)
+		# console.log "f_mask is " + f_mask + " or " + f_mask.toString(2)
+
+		# console.log "uniform is " + uniform + " or " + uniform.toString(2)
+		
 		@prr = (bits & ~f_mask) | (uniform & f_mask)
-		# console.log @prr
+		
+		# console.log "@prr is " + @prr + " or " + @prr.toString(2)
+
 		# @prr = Math.abs @prr
 
 		# console.log "prr: " + @prr + " or as bin: " + parseInt(@prr, 10).toString(2) + " with length: " + parseInt(@prr, 10).toString(2).length
-		@prr = this._zfill(parseInt(@prr, 10).toString(2))
+		@prr = this._zfill(@prr)
 
 	_generateIrr: () ->
 
@@ -232,13 +250,14 @@ class window.Rappor
 
 		return b
 
+	# javascript gets weird handling 32-bit bitstrings
 	_zfill: (val) ->
 		# console.log "zfill called on " + val
 
-		val = val.replace /-/, ""
-		zeroes = "0"
-		padding = @params["k"]-val.length
-		zeroes += "0" for i in [0..padding]
+		# val = val.replace /-/, ""
+		# zeroes = "0"
+		# padding = @params["k"]-val.length
+		# zeroes += "0" for i in [0..padding]
 
 		# console.log "zfill called"
 		# console.log val
@@ -252,7 +271,22 @@ class window.Rappor
 		# console.log "returns: " + (zeroes + val).slice(2) + "  and length is " + (zeroes + val).slice(2).length
 		# console.log "***"
 
-		(zeroes + val).slice(2).replace /-/, "0"
+		# (zeroes + val).slice(2).replace /-/, "0"
+
+		# console.log val
+		b = new ByteBuffer(@params["k"] / 8, ByteBuffer.BIG_ENDIAN)
+		b.writeInt(val)
+		# console.log(b.toHex())
+
+		stripped = b.toHex().replace(/ /g,'')
+		# console.log(stripped)
+
+		bi = new BitArray(@params["k"], stripped)
+		# bi.toHexString()
+		# bi.toString()
+
+		# now reverse
+		bi.toString().split('').reverse().join('')
 
 	_print: ->
 		for param, value of @params

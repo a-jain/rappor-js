@@ -67,6 +67,8 @@ def getTrueCounts(params, jsonResponse):
 	for i in range(0, params['m']):
 		fo.write( '{}, {}\n'.format(i, trueCounts[i]) )
 
+	fo.write( '\nTotal, {}'.format(sum(trueCounts)))
+
 	fo.close()
 
 
