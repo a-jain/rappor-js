@@ -1,12 +1,8 @@
 RapporExamine = window.RapporExamine || {}
 RapporExamine.Fingerprint = require "fingerprintjs2"
 RapporExamine.UAParser    = require "ua-parser-js"
-
-# fuckAdBlock = false
-
 RapporExamine.fuckAdBlock = require "FuckAdBlock"
 window.RapporExamine = RapporExamine
-
 
 RapporExamine.getData = (result, components) ->
 	# console.log(result) # a hash, representing your device fingerprint
@@ -52,6 +48,3 @@ RapporExamine.test = () ->
 	console.log "rappor-examine test"	
 
 console.log "rappor-examine.js loaded"
-
-
-

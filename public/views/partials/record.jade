@@ -1,3 +1,6 @@
+script.
+	hljs.initHighlightingOnLoad()
+
 .jumbotron.text-center
 	h1 Documentation
 
@@ -9,20 +12,20 @@ dl.dl-horizontal
 
 	dt Specify Paramaters
 	dd #[em (Optional)]: If you are familiar with the #[a(href="http://research.google.com/pubs/archive/42852.pdf") RAPPOR paper], you can specify the parameters (else you can use the defaults, shown below):
-		blockquote
-			| #[samp params = {] #[br]
-			| 	#[samp k: {{k}},]  #[br]
-			|	#[samp h: {{h}}, ]  #[br]
-			|	#[samp p: {{p}},] #[br]
-			|	#[samp q: {{q}},] #[br]
-			|	#[samp f: {{f}},] #[br]
-			|	#[samp m: {{m}}] #[br]
+		blockquote(style="font-family: monospace")
+			| params = { #[br]
+			| 	k: {{k}},  #[br]
+			|	h: {{h}},   #[br]
+			|	p: {{p}}, #[br]
+			|	q: {{q}}, #[br]
+			|	f: {{f}}, #[br]
+			|	m: {{m}} #[br]
 			| } #[br]
 			| #[br]
-			| #[samp server = "http://rappor-js.herokuapp.com/api/v1/records";]
+			| server = "http://rappor-js.herokuapp.com/api/v1/records";			
 	
 	dt Use	
-	dd To send an array like #[code= '[true, true, false]'] do this
+	dd To send #[code= 'true'] do this
 		blockquote
 			| #[samp r = new Rappor(params, server)] #[br]
 			| #[samp r.send(true)] #[br]

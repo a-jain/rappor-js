@@ -4,16 +4,21 @@ html
 		title #{title}
 		link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
 		link(rel='stylesheet', href='libs/bootstrap-select/dist/css/bootstrap-select.css')
+		link(rel='stylesheet', href='libs/validator.min.css')
 
 		meta(charset='UTF-8')
+		meta(name="viewport", content="width=device-width, initial-scale=1")
 		base(href='/')
 
-		script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+		script(src="libs/jquery/dist/jquery.min.js")
 		script(src="libs/bootstrap/js/dropdown.js")
 		script(src="libs/bootstrap-select/dist/js/bootstrap-select.min.js")
 		
 		script(src='libs/angular/angular.min.js')
 		script(src='libs/angular-route/angular-route.min.js')
+
+		link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js")
 
 		script(src='js/controllers/MainCtrl.js')
 		script(src='js/controllers/RecordCtrl.js')
@@ -40,7 +45,7 @@ body(ng-app='rappor-js', ng-controller='RecordController')
 
 			ul.nav.navbar-nav
 				li
-					a(href='/records') Questionnaire
+					a(href='/records') Documentation
 
 			ul.nav.navbar-nav
 				li

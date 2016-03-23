@@ -17,14 +17,6 @@
 			option IE
 			option Other
 
-		//- p
-		//- p Chain Commands
-
-		//- select.selectpicker(title="AND/OR", id="andOr1")
-		//- 	option  
-		//- 	option AND
-		//- 	option OR
-
 		p
 		p Uses an Ad Blocker?
 
@@ -33,29 +25,16 @@
 			option Yes
 
 		p
-		p userAgentKey
-		p languageKey
-		p colorDepthKey
-		p screenResolutionKey
-		p availableScreenResolutionKey
-		p timezoneOffsetKey
-		p sessionStorageKey
-		p localStorageKey
-		p indexedDbKey
-		p addBehaviorKey
-		p openDatabaseKey
-		p cpuClassKey
-		p platformKey
-		p doNotTrackKey
-		p pluginsKey
-		p canvasKey
-		p webglKey
-		p adBlockKey
-		p hasLiedLanguagesKey
-		p hasLiedResolutionKey
-		p hasLiedOsKey
-		p hasLiedBrowserKey
-		p touchSupportKey
+		p language
+		p screenResolution
+		p timezoneOffset
+		p sessionStorage
+		p localStorage
+		p cpuClass
+		p platform
+		p plugins
+		p webgl
+		p touchSupport
 
 	.col-md-6
 
@@ -107,9 +86,5 @@ script.
 	});
 
 	console.log(RapporExamine.getRegularPlugins());
-
-	console.log(RapporExamine.getAdBlock());
-
-	//- RapporExamine.getAdBlock(r.encodeTrue(), r.encodeFalse())
 
 	$('.selectpicker').selectpicker();

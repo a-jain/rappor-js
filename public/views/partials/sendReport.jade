@@ -2,18 +2,36 @@ script.
 	function formSubmit() {
 		var n = $("#n").val();
 		var p = $("#p").val();
+		var s = $("#s").val();
 
-		simRappor(parseInt(n), parseFloat(p));
+		simRappor(parseInt(n), parseFloat(p), s);
 	}
+
 
 .jumbotron.text-center
 	h1 Send Report
 
-p Simulate Rappor #[em N] times, with #[em p] probability of sending true 
+p Simulate Rappor #[em N] times, with #[em p] probability of sending true (or an optional other string)
 
-form(name="sim", id="sim", onSubmit="formSubmit()")
-	input(type="text", name="n", id="n", placeholder="N")
-	input(type="text", name="p", id="p", placeholder="p")
-	input(type="submit", value="Go!")
+form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle="validator")
+	.form-group
+		label.col-sm-2.control-label(for="n") N*
+		.col-sm-10
+			input.form-control(type="text", name="n", id="n", placeholder="Number of times to submit report", required, pattern="^[1-9][0-9]*$", title="Must be a number")
+			//- .help-block.with-errors
+
+	.form-group
+		label.col-sm-2.control-label(for="p") p
+		.col-sm-10
+			input.form-control(type="text", name="p", id="p", placeholder="Probability of sending true", pattern="^(0(\.\d+)*|1(\.0+)*)$", title="Should be a decimal between 0 and 1")
+
+	.form-group
+		label.col-sm-2.control-label(for="s") Optional String
+		.col-sm-10
+			input.form-control(type="text", name="s", id="s", placeholder="(optional - only use if you want to send a string, not a boolean)")
+
+	.form-group
+		.col-sm-offset-2.col-sm-10
+			button.btn.btn-primary(type="submit") Go!
 
 p

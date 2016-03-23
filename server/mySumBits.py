@@ -50,7 +50,7 @@ def getTrueCounts(params, jsonResponse):
 
 	for record in jsonResponse:
 		# now calculate trueCounts
-		if record['bool']:
+		if record['truth'] or str(record['truth']).lower() == "true":
 			trueCounts[record['cohort']] += 1
 
 	# need some way of printing out originals

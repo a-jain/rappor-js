@@ -14778,14 +14778,14 @@ params = {
 bool = true;
 
 window.Rappor = (function() {
-  function Rappor(params1, server, cohort) {
+  function Rappor(params1, server, debug) {
     var base, base1;
     this.params = params1 != null ? params1 : params;
     if (server == null) {
       server = 'http://localhost:8080/api/v1/records';
     }
-    if (cohort == null) {
-      cohort = 3;
+    if (debug == null) {
+      debug = false;
     }
     if ((base = this.params)["server"] == null) {
       base["server"] = server;
@@ -14793,15 +14793,13 @@ window.Rappor = (function() {
     if ((base1 = this.params)["secret"] == null) {
       base1["secret"] = "secret";
     }
-    if (this.cohort == null) {
-      this.cohort = cohort;
-    }
-    this.params["bigEndian"] = parseInt("1110", 2) === 14 ? true : false;
+    this.cohort = this._generateCohort(this.params["m"]);
+    this.debug = true;
   }
 
   Rappor.prototype.send = function(bool) {
-    this.encode(bool);
-    return this.sendToServer();
+    this._encode(bool);
+    return this._sendToServer();
   };
 
   Rappor.prototype.sendTrue = function() {
@@ -14812,18 +14810,17 @@ window.Rappor = (function() {
     return this.send(false);
   };
 
-  Rappor.prototype.encode = function(bool) {
+  Rappor.prototype._encode = function(data) {
     var bits;
-    this.truth = bool;
-    bits = this._generateRapporBits();
+    bits = this._generateRapporBits(data);
     this._generatePrr(bits);
     return this._generateIrr();
   };
 
-  Rappor.prototype.sendToServer = function() {
+  Rappor.prototype._sendToServer = function() {
     var data, options;
     data = {
-      bool: this.truth,
+      truth: this.truth,
       cohort: this.cohort,
       orig: this.orig.join(""),
       prr: this.prr,
@@ -14833,12 +14830,18 @@ window.Rappor = (function() {
     options = {
       "Access-Control-Allow-Headers": "X-Requested-With"
     };
-    return console.log(data);
+    console.log(data);
+    return this.cohort = this._generateCohort(this.params["m"]);
   };
 
-  Rappor.prototype._generateRapporBits = function() {
+  Rappor.prototype._generateRapporBits = function(data) {
     var b, bit_to_set, bloom, digest, i, j, len, num, ones, trueString, val;
-    trueString = this.truth ? "TRUE" : "FALSE";
+    if (typeof data === "boolean") {
+      trueString = data ? "TRUE" : "FALSE";
+    } else {
+      trueString = data;
+    }
+    this.truth = trueString;
     b = this._to_big_endian(this.cohort);
     b.implicitGrowth = true;
     b.writeString(trueString);
@@ -14933,6 +14936,10 @@ window.Rappor = (function() {
     stripped = b.toHex().replace(/ /g, '');
     bi = new BitArray(this.params["k"], stripped);
     return bi.toString().split('').reverse().join('');
+  };
+
+  Rappor.prototype._generateCohort = function(m) {
+    return Math.floor(Math.random() * m);
   };
 
   Rappor.prototype._print = function() {
