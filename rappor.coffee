@@ -2,7 +2,6 @@ needle     = require "needle"
 HMAC       = require "create-hmac"
 convertHex = require "convert-hex"
 md5        = require "md5"
-struct     = require "struct"
 ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
 
