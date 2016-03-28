@@ -1,5 +1,4 @@
 {
-	"name": "rappor-js",
 	"dependencies": {
 		"jquery": "latest",
 		"bootstrap": "latest",
