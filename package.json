@@ -26,5 +26,8 @@
   "scripts": {
     "postinstall": "bower install",
     "start": "nf start"
+  },
+  "devDependencies": {
+    "bower": "^1.5.2"
   }
 }
