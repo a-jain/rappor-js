@@ -2,7 +2,7 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "latest",
-    "bower": "^1.5.2",
+    "bower": "^1.7.7",
     "browserify": "^13.0.0",
     "coffee-script": "latest",
     "coffeeify": "latest",
