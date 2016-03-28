@@ -1,5 +1,4 @@
 {
-  "name": "rappor-js",
   "main": "server.js",
   "dependencies": {
     "body-parser": "latest",
