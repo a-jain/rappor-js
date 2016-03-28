@@ -5,16 +5,6 @@ md5        = require "md5"
 ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
 
-params = 
-	k: 32
-	h: 2
-	p: 0.1
-	q: 0.9
-	f: 0.15
-	m: 8
-
-bool = true
-
 # create Rappor object
 class window.Rappor
 
@@ -23,12 +13,20 @@ class window.Rappor
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
-	constructor: (@params=params, server='http://localhost:8080/api/v1/records', debug=false) ->
-		# @params = params
+	constructor: (params, server='http://localhost:8080/api/v1/records', debug=false) ->
+		defaultParams = 
+			k: 32
+			h: 2
+			p: 0.1
+			q: 0.9
+			f: 0.15
+			m: 8
+
+		@params = params ?= defaultParams
+
 		@params["server"] ?= server
 		@params["secret"] ?= "secret"
 
-		# @cohort ?= cohort
 		@cohort = this._generateCohort(@params["m"])
 
 		# @debug = debug

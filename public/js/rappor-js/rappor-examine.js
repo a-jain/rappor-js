@@ -1172,24 +1172,29 @@ RapporExamine.userAgentData = function(candidate) {
   }
 };
 
-RapporExamine.getRegularPlugins = function() {
-  var fprint, plugins;
-  fprint = new RapporExamine.Fingerprint();
-  plugins = fprint.getRegularPlugins();
-  plugins = plugins.map(function(plugin) {
-    var indx;
-    indx = plugin.indexOf("::");
-    return plugin.substring(0, indx);
-  });
-  return Array.from(new Set(plugins));
-};
-
 RapporExamine.getAdBlock = function(success, failure) {
   if (typeof fuckAdBlock === "undefined" || fuckAdBlock === null) {
     success();
   }
   fuckAdBlock.onDetected(success);
   return fuckAdBlock.onNotDetected(failure);
+};
+
+RapporExamine.hasPlugin = function(s) {
+  var fprint, plugins;
+  fprint = new RapporExamine.Fingerprint();
+  plugins = fprint.getRegularPlugins();
+  plugins = plugins.map(function(plugin) {
+    var indx;
+    indx = plugin.indexOf("::");
+    return plugin.substring(0, indx).toLowerCase();
+  });
+  plugins = Array.from(new Set(plugins));
+  if (plugins.join("").indexOf(s.toLowerCase()) !== -1) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 RapporExamine.test = function() {

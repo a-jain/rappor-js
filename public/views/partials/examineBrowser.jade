@@ -25,6 +25,14 @@
 			option Yes
 
 		p
+		p Has a particular plugin (not extension; case insensitive)?
+		//- form.form-inline(name="plugin", id="plugin", onSubmit="formSubmitGetPlugin()", data-toggle="validator")
+		//- 	.form-group
+		//- .col-md-6
+		input.form-control(type="text", name="pluginText", id="pluginText", placeholder="Name of plugin", required, title="Must check for a plugin")
+			
+
+		p
 		p language
 		p screenResolution
 		p timezoneOffset
@@ -32,7 +40,6 @@
 		p localStorage
 		p cpuClass
 		p platform
-		p plugins
 		p webgl
 		p touchSupport
 
@@ -43,48 +50,51 @@
 		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
 
 script.
-	$("#userAgent").change(function() {
-		if ($("#userAgent").val() == "") {
-			
+
+	function handleNull(s) {
+		if (s == "") {
 			$("#results").text("");
 			$("#finalCode").text("Final Code Here");
 
-			return;
+			return true;
 		}
+		return false;
+	}
 
-		console.log($("#userAgent").val())
+	function setCode(s) {
+		$("#finalCode").text(s);
+	}
+
+	
+
+	$("#userAgent").change(function() {
+		if (handleNull($("#userAgent").val())) return;
+
 		var rapporResults = RapporExamine.userAgentData($("#userAgent").val())
-
-		console.log(rapporResults)
-
-		if (rapporResults) {
-			$("#results").text(`Browser is indeed ${$("#userAgent").val()}!`);
-		} else {
-			$("#results").text(`Browser is unfortunately not ${$("#userAgent").val()}`);
-		}
 
 		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nr.send(RapporExamine.userAgentData(\"${$("#userAgent").val()}\"));`
 
-		$("#finalCode").text(templateString);
-
-		console.log(templateString);
+		setCode(templateString);
 	});
 
 	$("#adBlocker").change(function() {
-		if ($("#adBlocker").val() == "") {
-			
-			$("#results").text("");
-			$("#finalCode").text("Final Code Here");
-
-			return;
-		}
+		if (handleNull($("#adBlocker").val())) return;
 
 		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nRapporExamine.getAdBlock(r.sendTrue(), r.sendFalse());`
 
-		$("#finalCode").text(templateString);
-
+		setCode(templateString);
 	});
 
-	console.log(RapporExamine.getRegularPlugins());
+	$("#pluginText").on("change keyup paste", function() {
+		if (handleNull($("#pluginText").val())) return;
+
+		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nr.send(RapporExamine.hasPlugin(\"${$("#pluginText").val()}\"));`
+
+		setCode(templateString);
+	});
+
+
+	//- console.log(RapporExamine.getRegularPlugins());
+	console.log(RapporExamine.hasPlugin("pdf"));
 
 	$('.selectpicker').selectpicker();

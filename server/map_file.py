@@ -58,16 +58,8 @@ def constructMap(candidates, m, h, k):
 			md5 = hashlib.md5(val)
 
 			digest = md5.digest()
-			# print digest
-
-			# double check if the + 1 is necessary
-			# ones = []
-			# for j in range(h):
-			# 	ones.append(i * k + int(digest[4*j : 4*j+4], 16) % k + 1)
-
+			
 			ones = [k-((ord(digest[j]) % k))+i*k for j in xrange(h)]
-			# print ones
-
 			candidateOnes.extend(sorted(ones))
 
 		X[c] = candidateOnes
