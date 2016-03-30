@@ -13,7 +13,7 @@ class window.Rappor
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
-	constructor: (params, server='http://localhost:8080/api/v1/records', debug=false) ->
+	constructor: (params, server='http://localhost:8080/api/v1/records', debug=false, group="") ->
 		defaultParams = 
 			k: 32
 			h: 2
@@ -31,6 +31,7 @@ class window.Rappor
 
 		# @debug = debug
 		@debug = true
+		@group = group
 
 	send: (bool) ->
 		this._encode(bool)

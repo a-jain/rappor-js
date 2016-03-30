@@ -10,9 +10,10 @@ var recordSchema = new Schema({
   orig:  { type: String, trim: true, default: "mongoose error" },
   prr:  { type: String, trim: true, default: "mongoose error" },
   irr:  { type: String, trim: true, default: "mongoose error" },
+  group: { type: String, trim:true },
+  type: { type: String, default: "record" },
   params: {
-  	bigEndian: Boolean,
-    k: Number,
+  	k: Number,
   	h: Number,
   	m: Number,
   	p: Number,

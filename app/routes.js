@@ -1,5 +1,8 @@
-// grab the nerd model we just created
+// grab the record model we just created
 var Record = require('./models/records');
+var Auth   = require('./models/auths');
+
+var md5    = require('md5');
 
 module.exports = function(router) {
 
@@ -56,7 +59,9 @@ module.exports = function(router) {
 
         // get all records
         .get(function(req, res) {
-            Record.find(function(err, records) {
+            Record.find({
+                type: "record"
+            }, function(err, records) {
                 if (err)
                     res.send(err)
 
@@ -69,7 +74,7 @@ module.exports = function(router) {
         // delete a specific record
         .delete(function(req, res) {
             Record.remove({
-                // empty condition matches everything
+                type: "record"
             }, function(err, record) {
                 if (err)
                     res.send(err);
@@ -112,7 +117,8 @@ module.exports = function(router) {
         // delete a specific record
         .delete(function(req, res) {
             Record.remove({
-                _id: req.params.record_id
+                _id: req.params.record_id,
+                type: "record"
             }, function(err, record) {
                 if (err)
                     res.send(err);
@@ -121,34 +127,73 @@ module.exports = function(router) {
             });
         });
 
-    // routes to handle cohorts go here
-    router.route('/api/v1/cohort/:cohort_no')
+    // routes to handle credentials go here
+    router.route('/api/v1/records/credentials/:key')
 
-        // get all records in a given cohort
+        // get all records using a given *private* key
         .get(function(req, res) {
-            Record.find({
-                cohort: req.params.cohort_no
-            }, function(err, record) {
+
+            var pubKey = "x";
+
+            // first retrieve appropriate public key
+            Auth.find({
+                privateKey: req.params.key,
+                type: "auth"
+            }, function(err, auth) {
                 if (err)
                     res.send(err);
 
-                res.json(record);
-            });
-        })
+                pubKey = auth[0].publicKey;
 
-        // delete all records in a given cohort
-        .delete(function(req, res) {
-            Record.remove({
-                cohort: req.params.cohort_no
-            }, function(err, record) {
-                if (err)
-                    res.send(err);
+                // now get all records corresponding to public key
+                Record.find({
+                    publicKey: pubKey,
+                    type: "record"
+                }, function(err, records) {
+                    if (err)
+                        res.send(err)
 
-                res.send({ message: 'Successfully deleted cohort'});
+                    res.json(records);
+                });
             });
         });
 
-    // route to handle delete goes here (router.delete)
+    // route to create new credentials goes here:
+    router.route('/api/v1/credentials')
+
+        // get all records
+        .get(function(req, res) {
+            Auth.find({
+                type: "auth"
+            }, function(err, records) {
+                if (err)
+                    res.send(err)
+
+                res.json(records);
+            })
+
+            .sort({ date: 'asc' })
+        })
+
+        // create a specific record
+        .post(function(req, res) {
+
+            var auth = new Auth();
+            
+            auth.publicKey    = md5(Math.random().toString()).substring(0,12);
+            auth.privateKey   = md5(Math.random().toString()).substring(0,12);
+
+            auth.save(function(err) {
+                if (err)
+                    res.send(err);
+
+                res.json({
+                    message: 'Keys saved successfully',
+                    privateKey: auth.privateKey,
+                    publicKey: auth.publicKey
+                });
+            });
+        });
 
     // frontend routes =========================================================
     // route to handle all angular requests

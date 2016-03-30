@@ -22,3 +22,5 @@ recordService.factory('Record', ['$http', function($http) {
     }       
 
 }]);
+
+console.log("RecordService.js touched");
