@@ -22,8 +22,6 @@ library(Matrix)
 # Currently represent three sets of constraints on the solution vector:
 #  - all solution coefficients are nonnegative
 #  - the sum total of all solution coefficients is no more than 1
-#  - in each of the coordinates of the target vector (estimated Bloom filter)
-#    we don't overshoot by more than three standard deviations.
 MakeG <- function(n, X) {
   d <- Diagonal(n)
   last <- rep(-1, n)

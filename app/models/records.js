@@ -4,13 +4,12 @@ var Schema = mongoose.Schema;
 
 // define our schema
 var recordSchema = new Schema({
-  bool:  { type: Boolean },
   cohort:  Number,
   date:  { type: Date, default: Date.now },
-  orig:  { type: String, trim: true, default: "mongoose error" },
-  prr:  { type: String, trim: true, default: "mongoose error" },
+  orig:  { type: String, trim: true },
+  prr:  { type: String, trim: true },
   irr:  { type: String, trim: true, default: "mongoose error" },
-  group: { type: String, trim:true },
+  group: { type: String, trim: true, default: "" },
   type: { type: String, default: "record" },
   params: {
   	k: Number,

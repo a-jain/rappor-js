@@ -1,9 +1,9 @@
-needle     = require "needle"
 HMAC       = require "create-hmac"
 convertHex = require "convert-hex"
 md5        = require "md5"
 ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
+needle     = require "needle"
 
 # create Rappor object
 class window.Rappor
@@ -13,8 +13,9 @@ class window.Rappor
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
-	constructor: (params, server='http://localhost:8080/api/v1/records', debug=false, group="") ->
-		defaultParams = 
+	constructor: (defaultParams = {}) ->
+
+		baselineParams = 
 			k: 32
 			h: 2
 			p: 0.1
@@ -22,20 +23,24 @@ class window.Rappor
 			f: 0.15
 			m: 8
 
-		@params = params ?= defaultParams
+		@params = defaultParams.params           or baselineParams
+		@params["server"] = defaultParams.server or 'http://localhost:8080/api/v1/records'
+		@debug = defaultParams.debug             or false
+		@group = defaultParams.publicKey         or ""
 
 		@params["server"] ?= server
-		@params["secret"] ?= "secret"
+		@secret = "secret"
 
 		@cohort = this._generateCohort(@params["m"])
 
-		# @debug = debug
-		@debug = true
-		@group = group
+		# @debug = true
 
 	send: (bool) ->
-		this._encode(bool)
-		this._sendToServer()
+		if typeof bool is "object"
+			this.send(s) for s in bool
+		else
+			this._encode(bool)
+			this._sendToServer()
 
 	sendTrue: () ->
 		this.send(true)
@@ -51,18 +56,21 @@ class window.Rappor
 	_sendToServer: () ->
 
 		data = 
-			truth: @truth
 			cohort: @cohort
-			orig: @orig.join("")
-			prr: @prr
 			irr: @irr
 			params: @params
+			group: @group
+
+		if @debug
+			data.truth = @truth
+			data.orig = @orig.join("")
+			data.prr = @prr
 
 		options =
 			"Access-Control-Allow-Headers": "X-Requested-With"
 
 		console.log data
-		# needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp.body.message)
+		needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp)
 
 		@cohort = this._generateCohort(@params["m"])
 
@@ -71,7 +79,7 @@ class window.Rappor
 		# note that the range will create [0 to 16], so we subtract 1
 
 		if typeof data is "boolean"
-			trueString = if data then "TRUE" else "FALSE"
+			trueString = if data then "true" else "false"
 		else
 			trueString = data
 
@@ -102,7 +110,7 @@ class window.Rappor
 		joinedBits = this._to_big_endian(bits)
 		val = new Buffer(joinedBits.raw)
 
-		Hmac = new HMAC('sha256', @params["secret"])
+		Hmac = new HMAC('sha256', @secret)
 		Hmac.update(val)
 		digest = Hmac.digest('hex')
 
@@ -179,9 +187,13 @@ class window.Rappor
 	_generateCohort: (m) ->
 		Math.floor(Math.random() * m)
 
-	_print: ->
+	_print: () ->
 		for param, value of @params
 			console.log "#{param} is #{value}"
+
+		console.log "@debug is " + @debug
+		console.log "@cohort is " + @cohort
+		console.log "@group is " + @group
 
 console.log "rappor.js loaded"
 

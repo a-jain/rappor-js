@@ -1,10 +1,11 @@
 script.
 	function formSubmit() {
-		var n = $("#n").val();
-		var p = $("#p").val();
-		var s = $("#s").val();
+		var n  = $("#n").val();
+		var pK = $("#pubKey").val();
+		var p  = $("#p").val();
+		var s  = $("#s").val();
 
-		simRappor(parseInt(n), parseFloat(p), s);
+		simRappor(parseInt(n), parseFloat(p), pK, s);
 	}
 
 
@@ -18,12 +19,16 @@ form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle=
 		label.col-sm-2.control-label(for="n") N*
 		.col-sm-10
 			input.form-control(type="text", name="n", id="n", placeholder="Number of times to submit report", required, pattern="^[1-9][0-9]*$", title="Must be a number")
-			//- .help-block.with-errors
+
+	.form-group
+		label.col-sm-2.control-label(for="group") Public Key
+		.col-sm-10
+			input.form-control(type="text", name="pubKey", id="pubKey", placeholder="Public Key", pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
 
 	.form-group
 		label.col-sm-2.control-label(for="p") p
 		.col-sm-10
-			input.form-control(type="text", name="p", id="p", placeholder="Probability of sending true", pattern="^(0(\.\d+)*|1(\.0+)*)$", title="Should be a decimal between 0 and 1")
+			input.form-control(type="text", name="p", id="p", placeholder="Probability of sending true", pattern="^(0(\.[0-9]+)*|1(\.0+)*)$", title="Should be a decimal between 0 and 1")
 
 	.form-group
 		label.col-sm-2.control-label(for="s") Optional String

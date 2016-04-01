@@ -36,7 +36,9 @@ def push(msg="default"):
 	local("git commit -m \"%s\"" % msg)
 	local("git push origin master")
 	local("git push heroku master")
-	local("exec R --vanilla --slave -e \"shiny::deployApp()\"")
+	
+def pushR():
+	local("exec R --vanilla --slave -e \"rsconnect::deployApp()\"")
 
 def linode():
 	local("ssh akshjn@45.79.133.53")

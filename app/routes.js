@@ -41,6 +41,7 @@ module.exports = function(router) {
             record.orig   = req.body.orig;
             record.prr    = req.body.prr;
             record.irr    = req.body.irr;
+            record.group  = req.body.group;
             
             record.params = req.body.params;
 
@@ -71,7 +72,7 @@ module.exports = function(router) {
             .sort({ cohort: 'asc' })
         })
 
-        // delete a specific record
+        // delete all records
         .delete(function(req, res) {
             Record.remove({
                 type: "record"
@@ -140,18 +141,27 @@ module.exports = function(router) {
                 privateKey: req.params.key,
                 type: "auth"
             }, function(err, auth) {
-                if (err)
+                if (err) {
                     res.send(err);
+                    return;
+                }
+
+                if (typeof auth === undefined || auth.length == 0) {
+                    res.send("Private key not found. Make sure you\'re not using the public key!");
+                    return;
+                }
 
                 pubKey = auth[0].publicKey;
 
                 // now get all records corresponding to public key
                 Record.find({
-                    publicKey: pubKey,
+                    group: pubKey,
                     type: "record"
                 }, function(err, records) {
-                    if (err)
-                        res.send(err)
+                    if (err) {
+                        res.send(err);
+                        return;
+                    }
 
                     res.json(records);
                 });
@@ -161,7 +171,7 @@ module.exports = function(router) {
     // route to create new credentials goes here:
     router.route('/api/v1/credentials')
 
-        // get all records
+        // get all auths
         .get(function(req, res) {
             Auth.find({
                 type: "auth"
@@ -175,7 +185,7 @@ module.exports = function(router) {
             .sort({ date: 'asc' })
         })
 
-        // create a specific record
+        // create a specific auth
         .post(function(req, res) {
 
             var auth = new Auth();
@@ -192,6 +202,18 @@ module.exports = function(router) {
                     privateKey: auth.privateKey,
                     publicKey: auth.publicKey
                 });
+            });
+        })
+
+        // delete all auths
+        .delete(function(req, res) {
+            Auth.remove({
+                type: "auth"
+            }, function(err, record) {
+                if (err)
+                    res.send(err);
+
+                res.send({ message: 'Successfully deleted everything'});
             });
         });
 

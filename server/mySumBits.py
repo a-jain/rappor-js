@@ -4,15 +4,6 @@ import requests
 import json
 import os
 
-# params = {
-# 	'k' : 16,
-# 	'h' : 2,
-# 	'm' : 64,
-# 	'p' : 0.5,
-# 	'q' : 0.75,
-# 	'f' : 0.5
-# }
-
 subDir      = os.path.join(os.getcwd(), "server/outputs")
 countsFile  = os.path.join(subDir, sys.argv[1])
 cohortsFile = os.path.join(subDir, sys.argv[2])
@@ -77,20 +68,7 @@ def getTrueCounts(params, jsonResponse):
 # also check if this comes in alphabetical order or what
 def getParams(params):
 
-	# paramsCopy = {}
-	# paramsCopy['k'] = params['k']
-	# paramsCopy['h'] = params['h']
-	# paramsCopy['m'] = params['m']
-	# paramsCopy['p'] = params['p']
-	# paramsCopy['q'] = params['q']
-	# paramsCopy['f'] = params['f']
-
 	fo = open(paramsFile, "w")
-
-	# fo.write( "\"")
-	# fo.write( "\",\"".join(paramsCopy.keys()) )
-	# fo.write( "\"\n")
-	# fo.write( ",".join(map(str, paramsCopy.values())) )
 
 	fo.write( "\"k\",\"h\",\"m\",\"p\",\"q\",\"f\"\n" )
 	fo.write( "{},{},{},{},{},{}\n".format(params['k'], params['h'], params['m'], params['p'], params['q'], params['f']))
@@ -112,7 +90,7 @@ def main():
 	params = jsonResponse[0]["params"]
 
 	getSumBits(params, jsonResponse)
-	getTrueCounts(params, jsonResponse)
+	# getTrueCounts(params, jsonResponse)
 	getParams(params)
 
 

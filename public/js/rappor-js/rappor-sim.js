@@ -1,6 +1,10 @@
-function simRappor(n, p, s) {
+function simRappor(n, p, pK, s) {
 
-	r = new window.Rappor();
+	r = new window.Rappor({
+		publicKey: pK
+	});
+
+	r._print();
 
 	for (var i = 0; i < n; i++) {
 	

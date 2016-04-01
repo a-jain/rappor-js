@@ -15,14 +15,13 @@ RapporExamine.allData = () ->
 
 	# return components
 
-RapporExamine.userAgentData = (candidate) ->
+RapporExamine.getBrowser = () ->
 	
 	parser = new RapporExamine.UAParser()
 	browser = parser.getBrowser()
 
-	re = new RegExp(candidate, "i")
+	browser.name.toLowerCase()
 
-	if browser.name.search(re) > -1 then 1 else 0
 
 RapporExamine.getAdBlock = (success, failure) ->
 
@@ -32,7 +31,7 @@ RapporExamine.getAdBlock = (success, failure) ->
 	fuckAdBlock.onDetected(success)
 	fuckAdBlock.onNotDetected(failure)
 
-RapporExamine.hasPlugin = (s) ->
+RapporExamine.getPlugins = () ->
 	fprint = new RapporExamine.Fingerprint()
 	plugins = fprint.getRegularPlugins()
 
@@ -44,7 +43,25 @@ RapporExamine.hasPlugin = (s) ->
 	# to remove duplicates
 	plugins = Array.from(new Set(plugins))
 
+RapporExamine.hasPlugin = (s) ->
+	plugins = RapporExamine.getPlugins()
+
 	if plugins.join("").indexOf(s.toLowerCase()) != -1 then return true else return false
+
+RapporExamine.getLanguage = () ->
+	fprint = new RapporExamine.Fingerprint()
+	keys = []
+	fprint.languageKey(keys)
+
+	keys[0].value
+
+# crude approximation - check for availability of the 'ontouchstart' property
+RapporExamine.getTouchSupport = () ->
+	fprint = new RapporExamine.Fingerprint()
+	keys = []
+	fprint.touchSupportKey(keys)
+
+	keys[0].value[2]
 
 RapporExamine.test = () ->
 	console.log "rappor-examine test"	

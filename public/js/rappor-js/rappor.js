@@ -249,7 +249,7 @@ BitArray.prototype.xor = function(x) {
 module.exports = BitArray;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/bit-array/lib/bit-typed-array.js","/node_modules/bit-array/lib")
-},{"_process":354,"buffer":153}],2:[function(require,module,exports){
+},{"_process":405,"buffer":204}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ByteBuffer, attr;
 
@@ -797,7 +797,7 @@ ByteBuffer = (function() {
 })();
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/byte-buffer/lib/byte-buffer.js","/node_modules/byte-buffer/lib")
-},{"_process":354,"attr-accessor":3,"buffer":153}],3:[function(require,module,exports){
+},{"_process":405,"attr-accessor":3,"buffer":204}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -851,7 +851,7 @@ module.exports = {
 
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/byte-buffer/node_modules/attr-accessor/lib/attr.js","/node_modules/byte-buffer/node_modules/attr-accessor/lib")
-},{"_process":354,"buffer":153}],4:[function(require,module,exports){
+},{"_process":405,"buffer":204}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 !function(globals) {
 'use strict'
@@ -901,7 +901,7 @@ if (typeof module !== 'undefined' && module.exports) { //CommonJS
 
 }(this);
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/convert-hex/convert-hex.js","/node_modules/convert-hex")
-},{"_process":354,"buffer":153}],5:[function(require,module,exports){
+},{"_process":405,"buffer":204}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -973,7 +973,7 @@ module.exports = function createHmac(alg, key) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/browser.js","/node_modules/create-hmac")
-},{"_process":354,"buffer":153,"create-hash/browser":6,"inherits":19,"stream":372}],6:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash/browser":6,"inherits":19,"stream":423}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var inherits = require('inherits')
@@ -1029,7 +1029,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/browser.js","/node_modules/create-hmac/node_modules/create-hash")
-},{"./md5":8,"_process":354,"buffer":153,"cipher-base":9,"inherits":19,"ripemd160":10,"sha.js":12}],7:[function(require,module,exports){
+},{"./md5":8,"_process":405,"buffer":204,"cipher-base":9,"inherits":19,"ripemd160":10,"sha.js":12}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var intSize = 4;
@@ -1066,7 +1066,7 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/helpers.js","/node_modules/create-hmac/node_modules/create-hash")
-},{"_process":354,"buffer":153}],8:[function(require,module,exports){
+},{"_process":405,"buffer":204}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 /*
@@ -1225,7 +1225,7 @@ module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/md5.js","/node_modules/create-hmac/node_modules/create-hash")
-},{"./helpers":7,"_process":354,"buffer":153}],9:[function(require,module,exports){
+},{"./helpers":7,"_process":405,"buffer":204}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -1319,7 +1319,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/cipher-base/index.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":19,"stream":372,"string_decoder":378}],10:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":19,"stream":423,"string_decoder":429}],10:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
 CryptoJS v3.1.2
@@ -1533,7 +1533,7 @@ function ripemd160 (message) {
 module.exports = ripemd160
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/ripemd160/lib/ripemd160.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/ripemd160/lib")
-},{"_process":354,"buffer":153}],11:[function(require,module,exports){
+},{"_process":405,"buffer":204}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -1606,7 +1606,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/hash.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"_process":354,"buffer":153}],12:[function(require,module,exports){
+},{"_process":405,"buffer":204}],12:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
@@ -1625,7 +1625,7 @@ exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/index.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./sha":13,"./sha1":14,"./sha224":15,"./sha256":16,"./sha384":17,"./sha512":18,"_process":354,"buffer":153}],13:[function(require,module,exports){
+},{"./sha":13,"./sha1":14,"./sha224":15,"./sha256":16,"./sha384":17,"./sha512":18,"_process":405,"buffer":204}],13:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -1637,6 +1637,10 @@ exports.sha512 = require('./sha512')
 
 var inherits = require('inherits')
 var Hash = require('./hash')
+
+var K = [
+  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
+]
 
 var W = new Array(80)
 
@@ -1650,61 +1654,51 @@ function Sha () {
 inherits(Sha, Hash)
 
 Sha.prototype.init = function () {
-  this._a = 0x67452301 | 0
-  this._b = 0xefcdab89 | 0
-  this._c = 0x98badcfe | 0
-  this._d = 0x10325476 | 0
-  this._e = 0xc3d2e1f0 | 0
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
 
   return this
 }
 
-/*
- * Bitwise rotate a 32-bit number to the left.
- */
-function rol (num, cnt) {
-  return (num << cnt) | (num >>> (32 - cnt))
+function rotl5 (num) {
+  return (num << 5) | (num >>> 27)
+}
+
+function rotl30 (num) {
+  return (num << 30) | (num >>> 2)
+}
+
+function ft (s, b, c, d) {
+  if (s === 0) return (b & c) | ((~b) & d)
+  if (s === 2) return (b & c) | (b & d) | (c & d)
+  return b ^ c ^ d
 }
 
 Sha.prototype._update = function (M) {
   var W = this._w
 
-  var a = this._a
-  var b = this._b
-  var c = this._c
-  var d = this._d
-  var e = this._e
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
 
-  var j = 0
-  var k
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 80; ++i) W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]
 
-  /*
-   * SHA-1 has a bitwise rotate left operation. But, SHA is not
-   * function calcW() { return rol(W[j - 3] ^ W[j -  8] ^ W[j - 14] ^ W[j - 16], 1) }
-   */
-  function calcW () { return W[j - 3] ^ W[j - 8] ^ W[j - 14] ^ W[j - 16] }
-  function loop (w, f) {
-    W[j] = w
-
-    var t = rol(a, 5) + f + e + w + k
+  for (var j = 0; j < 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
 
     e = d
     d = c
-    c = rol(b, 30)
+    c = rotl30(b)
     b = a
     a = t
-    j++
   }
-
-  k = 1518500249
-  while (j < 16) loop(M.readInt32BE(j * 4), (b & c) | ((~b) & d))
-  while (j < 20) loop(calcW(), (b & c) | ((~b) & d))
-  k = 1859775393
-  while (j < 40) loop(calcW(), b ^ c ^ d)
-  k = -1894007588
-  while (j < 60) loop(calcW(), (b & c) | (b & d) | (c & d))
-  k = -899497514
-  while (j < 80) loop(calcW(), b ^ c ^ d)
 
   this._a = (a + this._a) | 0
   this._b = (b + this._b) | 0
@@ -1727,9 +1721,8 @@ Sha.prototype._hash = function () {
 
 module.exports = Sha
 
-
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"_process":354,"buffer":153,"inherits":19}],14:[function(require,module,exports){
+},{"./hash":11,"_process":405,"buffer":204,"inherits":19}],14:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -1743,6 +1736,10 @@ module.exports = Sha
 var inherits = require('inherits')
 var Hash = require('./hash')
 
+var K = [
+  0x5a827999, 0x6ed9eba1, 0x8f1bbcdc | 0, 0xca62c1d6 | 0
+]
+
 var W = new Array(80)
 
 function Sha1 () {
@@ -1755,57 +1752,55 @@ function Sha1 () {
 inherits(Sha1, Hash)
 
 Sha1.prototype.init = function () {
-  this._a = 0x67452301 | 0
-  this._b = 0xefcdab89 | 0
-  this._c = 0x98badcfe | 0
-  this._d = 0x10325476 | 0
-  this._e = 0xc3d2e1f0 | 0
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
 
   return this
 }
 
-/*
- * Bitwise rotate a 32-bit number to the left.
- */
-function rol (num, cnt) {
-  return (num << cnt) | (num >>> (32 - cnt))
+function rotl1 (num) {
+  return (num << 1) | (num >>> 31)
+}
+
+function rotl5 (num) {
+  return (num << 5) | (num >>> 27)
+}
+
+function rotl30 (num) {
+  return (num << 30) | (num >>> 2)
+}
+
+function ft (s, b, c, d) {
+  if (s === 0) return (b & c) | ((~b) & d)
+  if (s === 2) return (b & c) | (b & d) | (c & d)
+  return b ^ c ^ d
 }
 
 Sha1.prototype._update = function (M) {
   var W = this._w
 
-  var a = this._a
-  var b = this._b
-  var c = this._c
-  var d = this._d
-  var e = this._e
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
 
-  var j = 0
-  var k
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 80; ++i) W[i] = rotl1(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16])
 
-  function calcW () { return rol(W[j - 3] ^ W[j - 8] ^ W[j - 14] ^ W[j - 16], 1) }
-  function loop (w, f) {
-    W[j] = w
-
-    var t = rol(a, 5) + f + e + w + k
+  for (var j = 0; j < 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
 
     e = d
     d = c
-    c = rol(b, 30)
+    c = rotl30(b)
     b = a
     a = t
-    j++
   }
-
-  k = 1518500249
-  while (j < 16) loop(M.readInt32BE(j * 4), (b & c) | ((~b) & d))
-  while (j < 20) loop(calcW(), (b & c) | ((~b) & d))
-  k = 1859775393
-  while (j < 40) loop(calcW(), b ^ c ^ d)
-  k = -1894007588
-  while (j < 60) loop(calcW(), (b & c) | (b & d) | (c & d))
-  k = -899497514
-  while (j < 80) loop(calcW(), b ^ c ^ d)
 
   this._a = (a + this._a) | 0
   this._b = (b + this._b) | 0
@@ -1829,7 +1824,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha1.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"_process":354,"buffer":153,"inherits":19}],15:[function(require,module,exports){
+},{"./hash":11,"_process":405,"buffer":204,"inherits":19}],15:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -1856,14 +1851,14 @@ function Sha224 () {
 inherits(Sha224, Sha256)
 
 Sha224.prototype.init = function () {
-  this._a = 0xc1059ed8 | 0
-  this._b = 0x367cd507 | 0
-  this._c = 0x3070dd17 | 0
-  this._d = 0xf70e5939 | 0
-  this._e = 0xffc00b31 | 0
-  this._f = 0x68581511 | 0
-  this._g = 0x64f98fa7 | 0
-  this._h = 0xbefa4fa4 | 0
+  this._a = 0xc1059ed8
+  this._b = 0x367cd507
+  this._c = 0x3070dd17
+  this._d = 0xf70e5939
+  this._e = 0xffc00b31
+  this._f = 0x68581511
+  this._g = 0x64f98fa7
+  this._h = 0xbefa4fa4
 
   return this
 }
@@ -1885,7 +1880,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha224.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"./sha256":16,"_process":354,"buffer":153,"inherits":19}],16:[function(require,module,exports){
+},{"./hash":11,"./sha256":16,"_process":405,"buffer":204,"inherits":19}],16:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -1930,39 +1925,39 @@ function Sha256 () {
 inherits(Sha256, Hash)
 
 Sha256.prototype.init = function () {
-  this._a = 0x6a09e667 | 0
-  this._b = 0xbb67ae85 | 0
-  this._c = 0x3c6ef372 | 0
-  this._d = 0xa54ff53a | 0
-  this._e = 0x510e527f | 0
-  this._f = 0x9b05688c | 0
-  this._g = 0x1f83d9ab | 0
-  this._h = 0x5be0cd19 | 0
+  this._a = 0x6a09e667
+  this._b = 0xbb67ae85
+  this._c = 0x3c6ef372
+  this._d = 0xa54ff53a
+  this._e = 0x510e527f
+  this._f = 0x9b05688c
+  this._g = 0x1f83d9ab
+  this._h = 0x5be0cd19
 
   return this
 }
 
-function Ch (x, y, z) {
+function ch (x, y, z) {
   return z ^ (x & (y ^ z))
 }
 
-function Maj (x, y, z) {
+function maj (x, y, z) {
   return (x & y) | (z & (x | y))
 }
 
-function Sigma0 (x) {
+function sigma0 (x) {
   return (x >>> 2 | x << 30) ^ (x >>> 13 | x << 19) ^ (x >>> 22 | x << 10)
 }
 
-function Sigma1 (x) {
+function sigma1 (x) {
   return (x >>> 6 | x << 26) ^ (x >>> 11 | x << 21) ^ (x >>> 25 | x << 7)
 }
 
-function Gamma0 (x) {
+function gamma0 (x) {
   return (x >>> 7 | x << 25) ^ (x >>> 18 | x << 14) ^ (x >>> 3)
 }
 
-function Gamma1 (x) {
+function gamma1 (x) {
   return (x >>> 17 | x << 15) ^ (x >>> 19 | x << 13) ^ (x >>> 10)
 }
 
@@ -1978,29 +1973,22 @@ Sha256.prototype._update = function (M) {
   var g = this._g | 0
   var h = this._h | 0
 
-  var j = 0
+  for (var i = 0; i < 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i < 64; ++i) W[i] = (gamma1(W[i - 2]) + W[i - 7] + gamma0(W[i - 15]) + W[i - 16]) | 0
 
-  function calcW () { return Gamma1(W[j - 2]) + W[j - 7] + Gamma0(W[j - 15]) + W[j - 16] }
-  function loop (w) {
-    W[j] = w
-
-    var T1 = h + Sigma1(e) + Ch(e, f, g) + K[j] + w
-    var T2 = Sigma0(a) + Maj(a, b, c)
+  for (var j = 0; j < 64; ++j) {
+    var T1 = (h + sigma1(e) + ch(e, f, g) + K[j] + W[j]) | 0
+    var T2 = (sigma0(a) + maj(a, b, c)) | 0
 
     h = g
     g = f
     f = e
-    e = d + T1
+    e = (d + T1) | 0
     d = c
     c = b
     b = a
-    a = T1 + T2
-
-    j++
+    a = (T1 + T2) | 0
   }
-
-  while (j < 16) loop(M.readInt32BE(j * 4))
-  while (j < 64) loop(calcW())
 
   this._a = (a + this._a) | 0
   this._b = (b + this._b) | 0
@@ -2030,7 +2018,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha256.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"_process":354,"buffer":153,"inherits":19}],17:[function(require,module,exports){
+},{"./hash":11,"_process":405,"buffer":204,"inherits":19}],17:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -2048,23 +2036,23 @@ function Sha384 () {
 inherits(Sha384, SHA512)
 
 Sha384.prototype.init = function () {
-  this._a = 0xcbbb9d5d | 0
-  this._b = 0x629a292a | 0
-  this._c = 0x9159015a | 0
-  this._d = 0x152fecd8 | 0
-  this._e = 0x67332667 | 0
-  this._f = 0x8eb44a87 | 0
-  this._g = 0xdb0c2e0d | 0
-  this._h = 0x47b5481d | 0
+  this._ah = 0xcbbb9d5d
+  this._bh = 0x629a292a
+  this._ch = 0x9159015a
+  this._dh = 0x152fecd8
+  this._eh = 0x67332667
+  this._fh = 0x8eb44a87
+  this._gh = 0xdb0c2e0d
+  this._hh = 0x47b5481d
 
-  this._al = 0xc1059ed8 | 0
-  this._bl = 0x367cd507 | 0
-  this._cl = 0x3070dd17 | 0
-  this._dl = 0xf70e5939 | 0
-  this._el = 0xffc00b31 | 0
-  this._fl = 0x68581511 | 0
-  this._gl = 0x64f98fa7 | 0
-  this._hl = 0xbefa4fa4 | 0
+  this._al = 0xc1059ed8
+  this._bl = 0x367cd507
+  this._cl = 0x3070dd17
+  this._dl = 0xf70e5939
+  this._el = 0xffc00b31
+  this._fl = 0x68581511
+  this._gl = 0x64f98fa7
+  this._hl = 0xbefa4fa4
 
   return this
 }
@@ -2077,12 +2065,12 @@ Sha384.prototype._hash = function () {
     H.writeInt32BE(l, offset + 4)
   }
 
-  writeInt64BE(this._a, this._al, 0)
-  writeInt64BE(this._b, this._bl, 8)
-  writeInt64BE(this._c, this._cl, 16)
-  writeInt64BE(this._d, this._dl, 24)
-  writeInt64BE(this._e, this._el, 32)
-  writeInt64BE(this._f, this._fl, 40)
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
 
   return H
 }
@@ -2090,7 +2078,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha384.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"./sha512":18,"_process":354,"buffer":153,"inherits":19}],18:[function(require,module,exports){
+},{"./hash":11,"./sha512":18,"_process":405,"buffer":204,"inherits":19}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -2150,23 +2138,23 @@ function Sha512 () {
 inherits(Sha512, Hash)
 
 Sha512.prototype.init = function () {
-  this._a = 0x6a09e667 | 0
-  this._b = 0xbb67ae85 | 0
-  this._c = 0x3c6ef372 | 0
-  this._d = 0xa54ff53a | 0
-  this._e = 0x510e527f | 0
-  this._f = 0x9b05688c | 0
-  this._g = 0x1f83d9ab | 0
-  this._h = 0x5be0cd19 | 0
+  this._ah = 0x6a09e667
+  this._bh = 0xbb67ae85
+  this._ch = 0x3c6ef372
+  this._dh = 0xa54ff53a
+  this._eh = 0x510e527f
+  this._fh = 0x9b05688c
+  this._gh = 0x1f83d9ab
+  this._hh = 0x5be0cd19
 
-  this._al = 0xf3bcc908 | 0
-  this._bl = 0x84caa73b | 0
-  this._cl = 0xfe94f82b | 0
-  this._dl = 0x5f1d36f1 | 0
-  this._el = 0xade682d1 | 0
-  this._fl = 0x2b3e6c1f | 0
-  this._gl = 0xfb41bd6b | 0
-  this._hl = 0x137e2179 | 0
+  this._al = 0xf3bcc908
+  this._bl = 0x84caa73b
+  this._cl = 0xfe94f82b
+  this._dl = 0x5f1d36f1
+  this._el = 0xade682d1
+  this._fl = 0x2b3e6c1f
+  this._gl = 0xfb41bd6b
+  this._hl = 0x137e2179
 
   return this
 }
@@ -2175,15 +2163,15 @@ function Ch (x, y, z) {
   return z ^ (x & (y ^ z))
 }
 
-function Maj (x, y, z) {
+function maj (x, y, z) {
   return (x & y) | (z & (x | y))
 }
 
-function Sigma0 (x, xl) {
+function sigma0 (x, xl) {
   return (x >>> 28 | xl << 4) ^ (xl >>> 2 | x << 30) ^ (xl >>> 7 | x << 25)
 }
 
-function Sigma1 (x, xl) {
+function sigma1 (x, xl) {
   return (x >>> 14 | xl << 18) ^ (x >>> 18 | xl << 14) ^ (xl >>> 9 | x << 23)
 }
 
@@ -2203,17 +2191,21 @@ function Gamma1l (x, xl) {
   return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6 | xl << 26)
 }
 
+function getCarry (a, b) {
+  return (a >>> 0) < (b >>> 0) ? 1 : 0
+}
+
 Sha512.prototype._update = function (M) {
   var W = this._w
 
-  var a = this._a | 0
-  var b = this._b | 0
-  var c = this._c | 0
-  var d = this._d | 0
-  var e = this._e | 0
-  var f = this._f | 0
-  var g = this._g | 0
-  var h = this._h | 0
+  var ah = this._ah | 0
+  var bh = this._bh | 0
+  var ch = this._ch | 0
+  var dh = this._dh | 0
+  var eh = this._eh | 0
+  var fh = this._fh | 0
+  var gh = this._gh | 0
+  var hh = this._hh | 0
 
   var al = this._al | 0
   var bl = this._bl | 0
@@ -2224,98 +2216,87 @@ Sha512.prototype._update = function (M) {
   var gl = this._gl | 0
   var hl = this._hl | 0
 
-  var i = 0
-  var j = 0
-  var Wi, Wil
-  function calcW () {
-    var x = W[j - 15 * 2]
-    var xl = W[j - 15 * 2 + 1]
-    var gamma0 = Gamma0(x, xl)
-    var gamma0l = Gamma0l(xl, x)
+  for (var i = 0; i < 32; i += 2) {
+    W[i] = M.readInt32BE(i * 4)
+    W[i + 1] = M.readInt32BE(i * 4 + 4)
+  }
+  for (; i < 160; i += 2) {
+    var xh = W[i - 15 * 2]
+    var xl = W[i - 15 * 2 + 1]
+    var gamma0 = Gamma0(xh, xl)
+    var gamma0l = Gamma0l(xl, xh)
 
-    x = W[j - 2 * 2]
-    xl = W[j - 2 * 2 + 1]
-    var gamma1 = Gamma1(x, xl)
-    var gamma1l = Gamma1l(xl, x)
+    xh = W[i - 2 * 2]
+    xl = W[i - 2 * 2 + 1]
+    var gamma1 = Gamma1(xh, xl)
+    var gamma1l = Gamma1l(xl, xh)
 
     // W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16]
-    var Wi7 = W[j - 7 * 2]
-    var Wi7l = W[j - 7 * 2 + 1]
+    var Wi7h = W[i - 7 * 2]
+    var Wi7l = W[i - 7 * 2 + 1]
 
-    var Wi16 = W[j - 16 * 2]
-    var Wi16l = W[j - 16 * 2 + 1]
+    var Wi16h = W[i - 16 * 2]
+    var Wi16l = W[i - 16 * 2 + 1]
 
-    Wil = gamma0l + Wi7l
-    Wi = gamma0 + Wi7 + ((Wil >>> 0) < (gamma0l >>> 0) ? 1 : 0)
-    Wil = Wil + gamma1l
-    Wi = Wi + gamma1 + ((Wil >>> 0) < (gamma1l >>> 0) ? 1 : 0)
-    Wil = Wil + Wi16l
-    Wi = Wi + Wi16 + ((Wil >>> 0) < (Wi16l >>> 0) ? 1 : 0)
+    var Wil = (gamma0l + Wi7l) | 0
+    var Wih = (gamma0 + Wi7h + getCarry(Wil, gamma0l)) | 0
+    Wil = (Wil + gamma1l) | 0
+    Wih = (Wih + gamma1 + getCarry(Wil, gamma1l)) | 0
+    Wil = (Wil + Wi16l) | 0
+    Wih = (Wih + Wi16h + getCarry(Wil, Wi16l)) | 0
+
+    W[i] = Wih
+    W[i + 1] = Wil
   }
 
-  function loop () {
-    W[j] = Wi
-    W[j + 1] = Wil
+  for (var j = 0; j < 160; j += 2) {
+    Wih = W[j]
+    Wil = W[j + 1]
 
-    var maj = Maj(a, b, c)
-    var majl = Maj(al, bl, cl)
+    var majh = maj(ah, bh, ch)
+    var majl = maj(al, bl, cl)
 
-    var sigma0h = Sigma0(a, al)
-    var sigma0l = Sigma0(al, a)
-    var sigma1h = Sigma1(e, el)
-    var sigma1l = Sigma1(el, e)
+    var sigma0h = sigma0(ah, al)
+    var sigma0l = sigma0(al, ah)
+    var sigma1h = sigma1(eh, el)
+    var sigma1l = sigma1(el, eh)
 
-    // t1 = h + sigma1 + ch + K[i] + W[i]
-    var Ki = K[j]
+    // t1 = h + sigma1 + ch + K[j] + W[j]
+    var Kih = K[j]
     var Kil = K[j + 1]
 
-    var ch = Ch(e, f, g)
+    var chh = Ch(eh, fh, gh)
     var chl = Ch(el, fl, gl)
 
-    var t1l = hl + sigma1l
-    var t1 = h + sigma1h + ((t1l >>> 0) < (hl >>> 0) ? 1 : 0)
-    t1l = t1l + chl
-    t1 = t1 + ch + ((t1l >>> 0) < (chl >>> 0) ? 1 : 0)
-    t1l = t1l + Kil
-    t1 = t1 + Ki + ((t1l >>> 0) < (Kil >>> 0) ? 1 : 0)
-    t1l = t1l + Wil
-    t1 = t1 + Wi + ((t1l >>> 0) < (Wil >>> 0) ? 1 : 0)
+    var t1l = (hl + sigma1l) | 0
+    var t1h = (hh + sigma1h + getCarry(t1l, hl)) | 0
+    t1l = (t1l + chl) | 0
+    t1h = (t1h + chh + getCarry(t1l, chl)) | 0
+    t1l = (t1l + Kil) | 0
+    t1h = (t1h + Kih + getCarry(t1l, Kil)) | 0
+    t1l = (t1l + Wil) | 0
+    t1h = (t1h + Wih + getCarry(t1l, Wil)) | 0
 
     // t2 = sigma0 + maj
-    var t2l = sigma0l + majl
-    var t2 = sigma0h + maj + ((t2l >>> 0) < (sigma0l >>> 0) ? 1 : 0)
+    var t2l = (sigma0l + majl) | 0
+    var t2h = (sigma0h + majh + getCarry(t2l, sigma0l)) | 0
 
-    h = g
+    hh = gh
     hl = gl
-    g = f
+    gh = fh
     gl = fl
-    f = e
+    fh = eh
     fl = el
     el = (dl + t1l) | 0
-    e = (d + t1 + ((el >>> 0) < (dl >>> 0) ? 1 : 0)) | 0
-    d = c
+    eh = (dh + t1h + getCarry(el, dl)) | 0
+    dh = ch
     dl = cl
-    c = b
+    ch = bh
     cl = bl
-    b = a
+    bh = ah
     bl = al
     al = (t1l + t2l) | 0
-    a = (t1 + t2 + ((al >>> 0) < (t1l >>> 0) ? 1 : 0)) | 0
-
-    i++
-    j += 2
-  }
-
-  while (i < 16) {
-    Wi = M.readInt32BE(j * 4)
-    Wil = M.readInt32BE(j * 4 + 4)
-
-    loop()
-  }
-
-  while (i < 80) {
-    calcW()
-    loop()
+    ah = (t1h + t2h + getCarry(al, t1l)) | 0
   }
 
   this._al = (this._al + al) | 0
@@ -2327,14 +2308,14 @@ Sha512.prototype._update = function (M) {
   this._gl = (this._gl + gl) | 0
   this._hl = (this._hl + hl) | 0
 
-  this._a = (this._a + a + ((this._al >>> 0) < (al >>> 0) ? 1 : 0)) | 0
-  this._b = (this._b + b + ((this._bl >>> 0) < (bl >>> 0) ? 1 : 0)) | 0
-  this._c = (this._c + c + ((this._cl >>> 0) < (cl >>> 0) ? 1 : 0)) | 0
-  this._d = (this._d + d + ((this._dl >>> 0) < (dl >>> 0) ? 1 : 0)) | 0
-  this._e = (this._e + e + ((this._el >>> 0) < (el >>> 0) ? 1 : 0)) | 0
-  this._f = (this._f + f + ((this._fl >>> 0) < (fl >>> 0) ? 1 : 0)) | 0
-  this._g = (this._g + g + ((this._gl >>> 0) < (gl >>> 0) ? 1 : 0)) | 0
-  this._h = (this._h + h + ((this._hl >>> 0) < (hl >>> 0) ? 1 : 0)) | 0
+  this._ah = (this._ah + ah + getCarry(this._al, al)) | 0
+  this._bh = (this._bh + bh + getCarry(this._bl, bl)) | 0
+  this._ch = (this._ch + ch + getCarry(this._cl, cl)) | 0
+  this._dh = (this._dh + dh + getCarry(this._dl, dl)) | 0
+  this._eh = (this._eh + eh + getCarry(this._el, el)) | 0
+  this._fh = (this._fh + fh + getCarry(this._fl, fl)) | 0
+  this._gh = (this._gh + gh + getCarry(this._gl, gl)) | 0
+  this._hh = (this._hh + hh + getCarry(this._hl, hl)) | 0
 }
 
 Sha512.prototype._hash = function () {
@@ -2345,14 +2326,14 @@ Sha512.prototype._hash = function () {
     H.writeInt32BE(l, offset + 4)
   }
 
-  writeInt64BE(this._a, this._al, 0)
-  writeInt64BE(this._b, this._bl, 8)
-  writeInt64BE(this._c, this._cl, 16)
-  writeInt64BE(this._d, this._dl, 24)
-  writeInt64BE(this._e, this._el, 32)
-  writeInt64BE(this._f, this._fl, 40)
-  writeInt64BE(this._g, this._gl, 48)
-  writeInt64BE(this._h, this._hl, 56)
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
+  writeInt64BE(this._gh, this._gl, 48)
+  writeInt64BE(this._hh, this._hl, 56)
 
   return H
 }
@@ -2360,7 +2341,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js/sha512.js","/node_modules/create-hmac/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":11,"_process":354,"buffer":153,"inherits":19}],19:[function(require,module,exports){
+},{"./hash":11,"_process":405,"buffer":204,"inherits":19}],19:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
@@ -2387,7 +2368,7 @@ if (typeof Object.create === 'function') {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/create-hmac/node_modules/inherits/inherits_browser.js","/node_modules/create-hmac/node_modules/inherits")
-},{"_process":354,"buffer":153}],20:[function(require,module,exports){
+},{"_process":405,"buffer":204}],20:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function(){
   var crypt = require('crypt'),
@@ -2551,7 +2532,7 @@ if (typeof Object.create === 'function') {
 })();
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/md5/md5.js","/node_modules/md5")
-},{"_process":354,"buffer":153,"charenc":21,"crypt":22,"is-buffer":23}],21:[function(require,module,exports){
+},{"_process":405,"buffer":204,"charenc":21,"crypt":22,"is-buffer":23}],21:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var charenc = {
   // UTF-8 encoding
@@ -2588,7 +2569,7 @@ var charenc = {
 module.exports = charenc;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/md5/node_modules/charenc/charenc.js","/node_modules/md5/node_modules/charenc")
-},{"_process":354,"buffer":153}],22:[function(require,module,exports){
+},{"_process":405,"buffer":204}],22:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function() {
   var base64map
@@ -2688,7 +2669,7 @@ module.exports = charenc;
 })();
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/md5/node_modules/crypt/crypt.js","/node_modules/md5/node_modules/crypt")
-},{"_process":354,"buffer":153}],23:[function(require,module,exports){
+},{"_process":405,"buffer":204}],23:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * Determine if an object is Buffer
@@ -2700,16 +2681,16 @@ module.exports = charenc;
  */
 
 module.exports = function (obj) {
-  return !!(
-    obj != null &&
-    obj.constructor &&
-    typeof obj.constructor.isBuffer === 'function' &&
-    obj.constructor.isBuffer(obj)
-  )
+  return !!(obj != null &&
+    (obj._isBuffer || // For Safari 5-7 (missing Object.prototype.constructor)
+      (obj.constructor &&
+      typeof obj.constructor.isBuffer === 'function' &&
+      obj.constructor.isBuffer(obj))
+    ))
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/md5/node_modules/is-buffer/index.js","/node_modules/md5/node_modules/is-buffer")
-},{"_process":354,"buffer":153}],24:[function(require,module,exports){
+},{"_process":405,"buffer":204}],24:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var createHash = require('crypto').createHash;
 
@@ -2819,7 +2800,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/auth.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153,"crypto":157}],25:[function(require,module,exports){
+},{"_process":405,"buffer":204,"crypto":208}],25:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 //
 //  Simple cookie handling implementation based on the standard RFC 6265.
@@ -2830,18 +2811,14 @@ module.exports = {
 //
 
 // RegExps
-
-var COOKIE_PAIR = /^([^=\s]+)\s*=\s*("?)\s*(.*)\s*\2\s*$/;
-var EXCLUDED_CHARS = /[\x00-\x1F\x7F\x3B\x3B\s\"\,\\"%]/g;
-var TRAILING_SEMICOLON = /\x3B+$/;
-var SEP_SEMICOLON = /\s*\x3B\s*/;
+const COOKIE_PAIR        = /^([^=\s]+)\s*=\s*("?)\s*(.*)\s*\2\s*$/;
+const EXCLUDED_CHARS     = /[\x00-\x1F\x7F\x3B\x3B\s\"\,\\"%]/g;
+const TRAILING_SEMICOLON = /\x3B+$/;
+const SEP_SEMICOLON      = /\s*\x3B\s*/;
 
 // Constants
-
-var KEY_INDEX = 1; // index of key from COOKIE_PAIR match
-var VALUE_INDEX = 3; // index of value from COOKIE_PAIR match
-
-// Convenience functions
+const KEY_INDEX   = 1; // index of key from COOKIE_PAIR match
+const VALUE_INDEX = 3; // index of value from COOKIE_PAIR match
 
 // Returns a copy str trimmed and without trainling semicolon.
 function cleanCookieString(str) {
@@ -2852,8 +2829,6 @@ function getFirstPair(str) {
   var index = str.indexOf('\x3B');
   return index === -1 ? str : str.substr(0, index);
 }
-
-// Private functions
 
 // Returns a encoded copy of str based on RFC6265 S4.1.1.
 function encodeCookieComponent(str) {
@@ -2866,21 +2841,22 @@ function parseSetCookieString(str) {
   str = getFirstPair(str);
 
   var res = COOKIE_PAIR.exec(str);
+  if (!res || !res[VALUE_INDEX]) return null;
 
   return {
-    name: decodeURIComponent(res[KEY_INDEX]),
-    value: decodeURIComponent(res[VALUE_INDEX])
+    name  : decodeURIComponent(res[KEY_INDEX]),
+    value : decodeURIComponent(res[VALUE_INDEX])
   };
 }
 
-// Parses a set-cookie-header and returns a key/value object. Each key
-// represent a name of a cookie.
+// Parses a set-cookie-header and returns a key/value object.
+// Each key represents the name of a cookie.
 function parseSetCookieHeader(header) {
   header = (header instanceof Array) ? header : [header];
 
   return header.reduce(function(res, str) {
     var cookie = parseSetCookieString(str);
-    res[cookie.name] = cookie.value;
+    if (cookie) res[cookie.name] = cookie.value;
     return res;
   }, {});
 }
@@ -2888,23 +2864,20 @@ function parseSetCookieHeader(header) {
 // Writes a set-cookie-string based on the standard definded in RFC6265 S4.1.1.
 function writeCookieString(obj) {
   return Object.keys(obj).reduce(function(str, name) {
-    var encodedName = encodeCookieComponent(name);
+    var encodedName  = encodeCookieComponent(name);
     var encodedValue = encodeCookieComponent(obj[name]);
-    str += (str ? "; " : "") + encodedName + '=' + encodedValue;
+    str += (str ? '; ' : '') + encodedName + '=' + encodedValue;
     return str;
-  }, "");
+  }, '');
 }
-
-// Module interface
 
 // returns a key/val object from an array of cookie strings
 exports.read = parseSetCookieHeader;
 
 // writes a cookie string header
 exports.write = writeCookieString;
-
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/cookies.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153}],26:[function(require,module,exports){
+},{"_process":405,"buffer":204}],26:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var iconv,
     inherits  = require('util').inherits,
@@ -2961,14 +2934,14 @@ module.exports = function(charset) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/decoder.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153,"iconv-lite":53,"stream":372,"util":383}],27:[function(require,module,exports){
+},{"_process":405,"buffer":204,"iconv-lite":53,"stream":423,"util":434}],27:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var readFile = require('fs').readFile,
     basename = require('path').basename;
 
 exports.build = function(data, boundary, callback) {
 
-  if (typeof data != 'object')
+  if (typeof data != 'object' || typeof data.pipe == 'function')
     return callback(new Error('Multipart builder expects data as key/val object.'));
 
   var body   = '',
@@ -3061,7 +3034,7 @@ function flatten(object, into, prefix) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/multipart.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153,"fs":137,"path":353}],28:[function(require,module,exports){
+},{"_process":405,"buffer":204,"fs":188,"path":404}],28:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 //////////////////////////////////////////
 // Needle -- Node.js HTTP Client
@@ -3091,7 +3064,12 @@ var version     = require('../package.json').version;
 var user_agent  = 'Needle/' + version;
 user_agent     += ' (Node.js ' + process.version + '; ' + process.platform + ' ' + process.arch + ')';
 
-var tls_options = 'agent pfx key passphrase cert ca ciphers rejectUnauthorized secureProtocol';
+var tls_options = 'agent pfx key passphrase cert ca ciphers rejectUnauthorized secureProtocol checkServerIdentity';
+
+// older versions of node (< 0.11.4) prevent the runtime from exiting
+// because of connections in keep-alive state. so if this is the case
+// we'll default new requests to set a Connection: close header.
+var close_by_default = !http.Agent || http.Agent.defaultMaxSockets != Infinity;
 
 //////////////////////////////////////////
 // decompressors for gzip/deflate bodies
@@ -3120,7 +3098,6 @@ var defaults = {
 
   // headers
   accept                  : '*/*',
-  connection              : 'close',
   user_agent              : user_agent,
 
   // numbers
@@ -3244,9 +3221,12 @@ Needle.prototype.setup = function(uri, options) {
 
   config.headers = {
     'Accept'     : options.accept     || defaults.accept,
-    'Connection' : options.connection || defaults.connection,
     'User-Agent' : options.user_agent || defaults.user_agent
   }
+
+  // set connection header if opts.connection was passed, or if node < 0.11.4 (close)
+  if (options.connection || close_by_default)
+    config.headers['Connection'] = options.connection || 'close';
 
   if ((options.compressed || defaults.compressed) && typeof zlib != 'undefined')
     config.headers['Accept-Encoding'] = 'gzip,deflate';
@@ -3295,8 +3275,7 @@ Needle.prototype.setup = function(uri, options) {
 
 Needle.prototype.start = function() {
 
-  var self     = this,
-      out      = new stream.PassThrough({ objectMode: false }),
+  var out      = new stream.PassThrough({ objectMode: false }),
       uri      = this.uri,
       data     = this.data,
       method   = this.method,
@@ -3307,53 +3286,65 @@ Needle.prototype.start = function() {
   if (uri.indexOf('http') === -1)
     uri = uri.replace(/^(\/\/)?/, 'http://');
 
-  var config = this.setup(uri, options);
+  var body, config = this.setup(uri, options);
 
   if (data) {
-    if (method.toUpperCase() == 'GET') { // build query string and append to URI
 
-      uri  = uri.replace(/\?.*|$/, '?' + stringify(data));
-      post_data = null;
+    if (options.multipart) { // boss says we do multipart. so we do it.
 
-    } else if (options.multipart) { // build multipart body for request
+      var self = this, boundary = options.boundary || defaults.boundary;
 
-      var boundary = options.boundary || defaults.boundary;
-
-      multipart.build(data, boundary, function(err, body) {
+      multipart.build(data, boundary, function(err, parts) {
         if (err) throw(err);
 
         config.headers['Content-Type']   = 'multipart/form-data; boundary=' + boundary;
-        config.headers['Content-Length'] = body.length;
-        self.send_request(1, method, uri, config, body, out, callback);
+        config.headers['Content-Length'] = parts.length;
+        self.send_request(1, method, uri, config, parts, out, callback);
       });
 
       return out; // stream
 
     } else if (is_stream(data) || Buffer.isBuffer(data)) {
 
-      post_data = data;
+      if (is_stream(data) && method.toUpperCase() == 'GET')
+        throw new Error('Refusing to pipe() a stream via GET. Did you mean .post?');
+
+      body = data; // use the raw buffer or stream as request body.
+
+    } else if (method.toUpperCase() == 'GET' && !options.json) {
+
+      // append the data to the URI as a querystring.
+      uri = uri.replace(/\?.*|$/, '?' + stringify(data));
 
     } else { // string or object data, no multipart.
 
-      // if no content-type was passed, determine if json or not.
-      if (!config.headers['Content-Type']) {
-        config.headers['Content-Type'] = options.json
-        ? 'application/json; charset=utf-8'
-        : 'application/x-www-form-urlencoded'; // no charset says W3 spec.
-      }
+      // if string, leave it as it is, otherwise, stringify.
+      body = (typeof(data) === 'string') ? data
+             : options.json ? JSON.stringify(data) : stringify(data);
 
-      // format post_data and build a buffer out of it.
-      var post_data = options.json ? JSON.stringify(data) : stringify(data);
-      post_data     = new Buffer(post_data, config.encoding);
-      config.headers['Content-Length'] = post_data.length;
-
-      // unless a specific accept header was passed, assume json wants json back.
-      if (options.json && config.headers['Accept'] === defaults.accept)
-        config.headers['Accept'] = 'application/json';
+      // ensure we have a buffer so bytecount is correct.
+      body = new Buffer(body, config.encoding);
     }
+
   }
 
-  return this.send_request(1, method, uri, config, post_data, out, callback);
+  if (body) { 
+    // unless we have a stream or set a querystring, set the content length.
+    if (body.length) config.headers['Content-Length'] = body.length;
+
+    // if no content-type was passed, determine if json or not.
+    if (!config.headers['Content-Type']) {
+      config.headers['Content-Type'] = options.json
+      ? 'application/json; charset=utf-8'
+      : 'application/x-www-form-urlencoded'; // no charset says W3 spec.
+    }
+
+    // unless a specific accept header was passed, assume json wants json back.
+    if (options.json && config.headers['Accept'] === defaults.accept)
+      config.headers['Accept'] = 'application/json';
+  }
+
+  return this.send_request(1, method, uri, config, body, out, callback);
 }
 
 Needle.prototype.get_request_opts = function(method, uri, config) {
@@ -3413,15 +3404,17 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
       protocol     = request_opts.protocol == 'https:' ? https : http;
 
   function done(err, resp, body) {
-    if (returned++ > 0) return;
+    if (returned++ > 0)
+      return debug('Already finished, stopping here.');
 
     if (timer) clearTimeout(timer);
     request.removeListener('error', had_error);
+    request.socket.removeListener('end', on_socket_end);
 
     if (callback)
-      callback(err, resp, body);
-    else
-      out.emit('end', err, resp, body);
+      return callback(err, resp, body);
+
+    out.emit('end', err, resp, body);
   }
 
   function had_error(err) {
@@ -3432,6 +3425,16 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
   function set_timeout(milisecs) {
     if (milisecs <= 0) return;
     timer = setTimeout(function() { request.abort() }, milisecs);
+  }
+
+  // handle errors on the underlying socket, that may be closed while writing
+  // for an example case, see test/long_string_spec.js. we make sure this 
+  // scenario ocurred by verifying the socket's writable & destroyed states.
+  function on_socket_end() { 
+    if (!this.writable && this.destroyed === false) {
+      this.destroy();
+      had_error(new Error('Remote end closed socket abruptly.'))
+    }
   }
 
   debug('Making request #' + count, request_opts);
@@ -3466,7 +3469,7 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
           config.headers['Cookie'] = cookies.write(resp.cookies);
 
         if (config.follow_set_referer)
-          config.headers['Referer'] = uri;
+          config.headers['Referer'] = uri; // the original, not the destination URL.
 
         config.headers['Host'] = null; // clear previous Host header to avoid conflicts.
 
@@ -3477,7 +3480,7 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
       }
     }
 
-    // if authentication is requested and credentials were not passed, resend request if we have user/pass
+    // if auth is requested and credentials were not passed, resend request, provided we have user/pass.
     if (resp.statusCode == 401 && headers['www-authenticate'] && config.credentials) {
       if (!config.headers['Authorization']) { // only if authentication hasn't been sent
         var auth_header = auth.header(headers['www-authenticate'], config.credentials, request_opts);
@@ -3489,7 +3492,7 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
       }
     }
 
-    // ok so we got a valid (non-redirect & authorized) response. notify the stream guys.
+    // ok, so we got a valid (non-redirect & authorized) response. let's notify the stream guys.
     out.emit('header', resp.statusCode, headers);
     out.emit('headers', headers);
 
@@ -3559,7 +3562,7 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
       resp.body  = [];
       resp.bytes = 0;
 
-      // Count the amount of (raw) bytes passed using a PassThrough stream.
+      // Gather and count the amount of (raw) bytes using a PassThrough stream.
       var clean_pipe = new stream.PassThrough();
       resp.pipe(clean_pipe);
 
@@ -3585,7 +3588,7 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
 
       // And set the .body property once all data is in.
       out.on('end', function() {
-        // we may want access to the raw data, so keep a reference.
+        // we want to be able to access to the raw data later, so keep a reference.
         resp.raw = Buffer.concat(resp.raw);
 
         // if parse was successful, we should have an array with one object
@@ -3615,9 +3618,16 @@ Needle.prototype.send_request = function(count, method, uri, config, post_data, 
 
   }); // end request call
 
-  // unless timeout was disabled, set a timeout to abort the request
+  // unless open_timeout was disabled, set a timeout to abort the request.
   set_timeout(config.open_timeout);
+
+  // handle errors on the request object. things might get bumpy.
   request.on('error', had_error);
+
+  // handle socket 'end' event to ensure we don't get delayed EPIPE errors.
+  request.once('socket', function(socket) {
+    socket.once('end', on_socket_end.bind(socket));
+  })
 
   if (post_data) {
     if (is_stream(post_data)) {
@@ -3672,7 +3682,7 @@ exports.request = function(method, uri, data, opts, callback) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/needle.js","/node_modules/needle/lib")
-},{"../package.json":55,"./auth":24,"./cookies":25,"./decoder":26,"./multipart":27,"./parsers":29,"./querystring":30,"_process":354,"buffer":153,"debug":31,"fs":137,"http":373,"https":350,"stream":372,"url":380,"zlib":152}],29:[function(require,module,exports){
+},{"../package.json":55,"./auth":24,"./cookies":25,"./decoder":26,"./multipart":27,"./parsers":29,"./querystring":30,"_process":405,"buffer":204,"debug":31,"fs":188,"http":424,"https":401,"stream":423,"url":431,"zlib":203}],29:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 //////////////////////////////////////////
 // Defines mappings between content-type
@@ -3745,7 +3755,7 @@ try {
 } catch(e) { /* xml2js not found */ }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/parsers.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153,"stream":372,"xml2js":58}],30:[function(require,module,exports){
+},{"_process":405,"buffer":204,"stream":423,"xml2js":58}],30:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // based on the qs module, but handles null objects as expected
 // fixes by Tomas Pollak.
@@ -3794,7 +3804,7 @@ function stringifyObject(obj, prefix) {
 exports.build = stringify;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/lib/querystring.js","/node_modules/needle/lib")
-},{"_process":354,"buffer":153}],31:[function(require,module,exports){
+},{"_process":405,"buffer":204}],31:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 /**
@@ -3966,7 +3976,7 @@ function localstorage(){
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/debug/browser.js","/node_modules/needle/node_modules/debug")
-},{"./debug":32,"_process":354,"buffer":153}],32:[function(require,module,exports){
+},{"./debug":32,"_process":405,"buffer":204}],32:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 /**
@@ -4167,7 +4177,7 @@ function coerce(val) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/debug/debug.js","/node_modules/needle/node_modules/debug")
-},{"_process":354,"buffer":153,"ms":33}],33:[function(require,module,exports){
+},{"_process":405,"buffer":204,"ms":33}],33:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * Helpers.
@@ -4296,7 +4306,7 @@ function plural(ms, n, name) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/debug/node_modules/ms/index.js","/node_modules/needle/node_modules/debug/node_modules/ms")
-},{"_process":354,"buffer":153}],34:[function(require,module,exports){
+},{"_process":405,"buffer":204}],34:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -4854,7 +4864,7 @@ function findIdx(table, val) {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/dbcs-codec.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],35:[function(require,module,exports){
+},{"_process":405,"buffer":204}],35:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5028,7 +5038,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/dbcs-data.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"./tables/big5-added.json":41,"./tables/cp936.json":42,"./tables/cp949.json":43,"./tables/cp950.json":44,"./tables/eucjp.json":45,"./tables/gb18030-ranges.json":46,"./tables/gbk-added.json":47,"./tables/shiftjis.json":48,"_process":354,"buffer":153}],36:[function(require,module,exports){
+},{"./tables/big5-added.json":41,"./tables/cp936.json":42,"./tables/cp949.json":43,"./tables/cp950.json":44,"./tables/eucjp.json":45,"./tables/gb18030-ranges.json":46,"./tables/gbk-added.json":47,"./tables/shiftjis.json":48,"_process":405,"buffer":204}],36:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5054,7 +5064,7 @@ for (var i = 0; i < modules.length; i++) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/index.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"./dbcs-codec":34,"./dbcs-data":35,"./internal":37,"./sbcs-codec":38,"./sbcs-data":40,"./sbcs-data-generated":39,"./utf16":49,"./utf7":50,"_process":354,"buffer":153}],37:[function(require,module,exports){
+},{"./dbcs-codec":34,"./dbcs-data":35,"./internal":37,"./sbcs-codec":38,"./sbcs-data":40,"./sbcs-data-generated":39,"./utf16":49,"./utf7":50,"_process":405,"buffer":204}],37:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5245,7 +5255,7 @@ InternalDecoderCesu8.prototype.end = function() {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/internal.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153,"string_decoder":378}],38:[function(require,module,exports){
+},{"_process":405,"buffer":204,"string_decoder":429}],38:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5321,7 +5331,7 @@ SBCSDecoder.prototype.end = function() {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/sbcs-codec.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],39:[function(require,module,exports){
+},{"_process":405,"buffer":204}],39:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5775,7 +5785,7 @@ module.exports = {
   }
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/sbcs-data-generated.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],40:[function(require,module,exports){
+},{"_process":405,"buffer":204}],40:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -5948,7 +5958,7 @@ module.exports = {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/sbcs-data.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],41:[function(require,module,exports){
+},{"_process":405,"buffer":204}],41:[function(require,module,exports){
 module.exports=[
 ["8740","䏰䰲䘃䖦䕸𧉧䵷䖳𧲱䳢𧳅㮕䜶䝄䱇䱀𤊿𣘗𧍒𦺋𧃒䱗𪍑䝏䗚䲅𧱬䴇䪤䚡𦬣爥𥩔𡩣𣸆𣽡晍囻"],
 ["8767","綕夝𨮹㷴霴𧯯寛𡵞媤㘥𩺰嫑宷峼杮薓𩥅瑡璝㡵𡵓𣚞𦀡㻬"],
@@ -7340,7 +7350,7 @@ function detectEncoding(buf, defaultEncoding) {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/utf16.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],50:[function(require,module,exports){
+},{"_process":405,"buffer":204}],50:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -7633,7 +7643,7 @@ Utf7IMAPDecoder.prototype.end = function() {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/encodings/utf7.js","/node_modules/needle/node_modules/iconv-lite/encodings")
-},{"_process":354,"buffer":153}],51:[function(require,module,exports){
+},{"_process":405,"buffer":204}],51:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -7689,7 +7699,7 @@ StripBOMWrapper.prototype.end = function() {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/lib/bom-handling.js","/node_modules/needle/node_modules/iconv-lite/lib")
-},{"_process":354,"buffer":153}],52:[function(require,module,exports){
+},{"_process":405,"buffer":204}],52:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -7907,7 +7917,7 @@ module.exports = function (iconv) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/lib/extend-node.js","/node_modules/needle/node_modules/iconv-lite/lib")
-},{"_process":354,"buffer":153,"stream":372}],53:[function(require,module,exports){
+},{"_process":405,"buffer":204,"stream":423}],53:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -8052,7 +8062,7 @@ if (nodeVer) {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/lib/index.js","/node_modules/needle/node_modules/iconv-lite/lib")
-},{"../encodings":36,"./bom-handling":51,"./extend-node":52,"./streams":54,"_process":354,"buffer":153}],54:[function(require,module,exports){
+},{"../encodings":36,"./bom-handling":51,"./extend-node":52,"./streams":54,"_process":405,"buffer":204}],54:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict"
 
@@ -8176,10 +8186,10 @@ IconvLiteDecoderStream.prototype.collect = function(cb) {
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/needle/node_modules/iconv-lite/lib/streams.js","/node_modules/needle/node_modules/iconv-lite/lib")
-},{"_process":354,"buffer":153,"stream":372}],55:[function(require,module,exports){
+},{"_process":405,"buffer":204,"stream":423}],55:[function(require,module,exports){
 module.exports={
   "name": "needle",
-  "version": "0.11.0",
+  "version": "1.0.0",
   "description": "The leanest and most handsome HTTP client in the Nodelands.",
   "keywords": [
     "http",
@@ -8248,31 +8258,16 @@ module.exports={
   "engines": {
     "node": ">= 0.10.x"
   },
-  "gitHead": "f0fb9a2b7bebeebe5530b16e82af0570d17323f4",
+  "readme": "Needle\n======\n\n[![NPM](https://nodei.co/npm/needle.png)](https://nodei.co/npm/needle/)\n\nThe leanest and most handsome HTTP client in the Nodelands.\n\n```js\nvar needle = require('needle');\n\nneedle.get('http://www.google.com', function(error, response) {\n  if (!error && response.statusCode == 200)\n    console.log(response.body);\n});\n```\n\nCallbacks not floating your boat? Needle got your back.\n\n```js\nvar data = {\n  file: '/home/johnlennon/walrus.png',\n  content_type: 'image/png'\n};\n\nneedle\n  .post('https://my.server.com/foo', data, { multipart: true })\n  .on('readable', function() { /* eat your chunks */ })\n  .on('end', function() {\n    console.log('Ready-o, friend-o.');\n  })\n```\n\nWith only one single dependency, Needle supports:\n\n - HTTP/HTTPS requests, with the usual verbs you would expect\n - All of Node's native TLS options, such as 'rejectUnauthorized' (see below)\n - Basic & Digest authentication\n - Multipart form-data (e.g. file uploads)\n - HTTP Proxy forwarding, optionally with authentication\n - Streaming gzip or deflate decompression\n - Automatic XML & JSON parsing\n - 301/302/303 redirect following, with fine-grained tuning, and\n - Streaming non-UTF-8 charset decoding, via `iconv-lite`\n\nAnd yes, Mr. Wayne, it does come with the latest streams2 support.\n\nThis makes Needle an ideal alternative for performing quick HTTP requests in Node, either for API interaction, downloading or uploading streams of data, and so on. If you need OAuth, AWS support or anything fancier, you should check out mikeal's request module.\n\nInstall\n-------\n\n```\n$ npm install needle\n```\n\nUsage\n-----\n\n```js\n// using callback\nneedle.get('ifconfig.me/all.json', function(error, response) {\n  if (!error)\n    console.log(response.body.ip_addr); // JSON decoding magic. :)\n});\n\n// using streams\nvar out = fs.createWriteStream('logo.png');\nneedle.get('https://google.com/images/logo.png').pipe(out);\n```\n\nAs you can see, you can call Needle with a callback or without it. When passed, the response body will be buffered and written to `response.body`, and the callback will be fired when all of the data has been collected and processed (e.g. decompressed, decoded and/or parsed).\n\nWhen no callback is passed, the buffering logic will be skipped but the response stream will still go through Needle's processing pipeline, so you get all the benefits of post-processing while keeping the streamishness we all love from Node.\n\nResponse pipeline\n-----------------\n\nDepending on the response's Content-Type, Needle will either attempt to parse JSON or XML streams, or, if a text response was received, will ensure that the final encoding you get is UTF-8. For XML decoding to work, though, you'll need to install the `xml2js` package as we don't enforce unneeded dependencies unless strictly needed.\n\nYou can also request a gzip/deflated response, which, if sent by the server, will be processed before parsing or decoding is performed.\n\n```js\nneedle.get('http://stackoverflow.com/feeds', { compressed: true }, function(err, resp) {\n  console.log(resp.body); // this little guy won't be a Gzipped binary blob\n                          // but a nice object containing all the latest entries\n});\n```\n\nOr in anti-callback mode, using a few other options:\n\n```js\nvar options = {\n  compressed         : true, // sets 'Accept-Encoding' to 'gzip,deflate'\n  follow_max         : 5,    // follow up to five redirects\n  rejectUnauthorized : true  // verify SSL certificate\n}\n\nvar stream = needle.get('https://backend.server.com/everything.html', options);\n\nstream.on('readable', function() {\n  while (data = this.read()) {\n    console.log(data.toString());\n  }\n})\n```\n\nAPI\n---\n\nAll of Needle's request methods return a Readable stream, and both `options` and `callback` are optional. If passed, the callback will return three arguments: `error`, `response` and `body`, which is basically an alias for `response.body`.\n\n### needle.head(url, [options,] callback)\n\n```js\nvar options = {\n  open_timeout: 5000 // if we don't get our response headers in 5 seconds, boom.\n}\n\nneedle.head('https://my.backend.server.com', function(err, resp) {\n  if (err)\n    console.log('Shoot! Something is wrong: ' + err.message)\n  else\n    console.log('Yup, still alive.')\n})\n```\n\n### needle.get(url, [options,] callback)\n\n```js\nneedle.get('google.com/search?q=syd+barrett', function(err, resp) {\n  // if no http:// is found, Needle will automagically prepend it.\n});\n```\n\n### needle.post(url, data, [options,] callback)\n\n```js\nvar options = {\n  headers: { 'X-Custom-Header': 'Bumbaway atuna' }\n}\n\nneedle.post('https://my.app.com/endpoint', 'foo=bar', options, function(err, resp) {\n  // you can pass params as a string or as an object.\n});\n```\n\n### needle.put(url, data, [options,] callback)\n\n```js\nvar nested = {\n  params: {\n    are: {\n      also: 'supported'\n    }\n  }\n}\n\nneedle.put('https://api.app.com/v2', nested, function(err, resp) {\n  console.log('Got ' + resp.bytes + ' bytes.') // another nice treat from this handsome fella.\n});\n```\n\n### needle.patch(url, data, [options,] callback)\n\nSame behaviour as PUT.\n\n### needle.delete(url, data, [options,] callback)\n\n```js\nvar options = {\n  username: 'fidelio',\n  password: 'x'\n}\n\nneedle.delete('https://api.app.com/messages/123', null, options, function(err, resp) {\n  // in this case, data may be null, but you need to explicity pass it.\n});\n```\n\n### needle.request(method, url, data, [options,] callback)\n\nGeneric request. This not only allows for flexibility, but also lets you perform a GET request with data, in which case will be appended to the request as a query string.\n\n```js\nvar data = {\n  q      : 'a very smart query',\n  page   : 2,\n  format : 'json'\n}\n\nneedle.request('get', 'forum.com/search', data, function(err, resp) {\n  if (!err && resp.statusCode == 200)\n    console.log(resp.body); // here you go, mister.\n});\n```\n\nMore examples after this short break.\n\nRequest options\n---------------\n\nFor information about options that've changed, there's always [the changelog](https://github.com/tomas/needle/releases).\n\n - `open_timeout`: (or `timeout`) Returns error if connection takes longer than X milisecs to establish. Defaults to `10000` (10 secs). `0` means no timeout.\n - `read_timeout`: Returns error if data transfer takes longer than X milisecs, after connection is established. Defaults to `0` (no timeout).\n - `follow_max`  : (or `follow`) Number of redirects to follow. Defaults to `0`. See below for more redirect options.\n - `multipart`   : Enables multipart/form-data encoding. Defaults to `false`. Use it when uploading files.\n - `proxy`       : Forwards request through HTTP(s) proxy. Eg. `proxy: 'http://user:pass@proxy.server.com:3128'`.\n - `agent`       : Uses an http.Agent of your choice, instead of the global, default one.\n - `headers`     : Object containing custom HTTP headers for request. Overrides defaults described below.\n - `auth`        : Determines what to do with provided username/password. Options are `auto`, `digest` or `basic` (default). `auto` will detect the type of authentication depending on the response headers.\n - `json`        : When `true`, sets content type to `application/json` and sends request body as JSON string, instead of a query string.\n\nResponse options\n----------------\n\n - `decode_response` : (or `decode`) Whether to decode the text responses to UTF-8, if Content-Type header shows a different charset. Defaults to `true`.\n - `parse_response`  : (or `parse`) Whether to parse XML or JSON response bodies automagically. Defaults to `true`. You can also set this to 'xml' or 'json' in which case Needle will *only* parse the response if the content type matches.\n - `output`          : Dump response output to file. This occurs after parsing and charset decoding is done.\n\nNote: To stay light on dependencies, Needle doesn't include the `xml2js` module used for XML parsing. To enable it, simply do `npm install xml2js`.\n\nHTTP Header options\n-------------------\n\nThese are basically shortcuts to the `headers` option described above.\n\n - `cookies`   : Sets a {key: 'val'} object as a 'Cookie' header.\n - `compressed`: If `true`, sets 'Accept-Encoding' header to 'gzip,deflate', and inflates content if zipped. Defaults to `false`.\n - `username`  : For HTTP basic auth.\n - `password`  : For HTTP basic auth. Requires username to be passed, but is optional.\n - `accept`    : Sets 'Accept' HTTP header. Defaults to `*/*`.\n - `connection`: Sets 'Connection' HTTP header. Defaults to `close`.\n - `user_agent`: Sets the 'User-Agent' HTTP header. Defaults to `Needle/{version} (Node.js {node_version})`.\n\nNode.js TLS Options\n-------------------\n\nThese options are passed directly to `https.request` if present. Taken from the [original documentation](http://nodejs.org/docs/latest/api/https.html):\n\n - `pfx`                : Certificate, Private key and CA certificates to use for SSL.\n - `key`                : Private key to use for SSL.\n - `passphrase`         : A string of passphrase for the private key or pfx.\n - `cert`               : Public x509 certificate to use.\n - `ca`                 : An authority certificate or array of authority certificates to check the remote host against.\n - `ciphers`            : A string describing the ciphers to use or exclude.\n - `rejectUnauthorized` : If true, the server certificate is verified against the list of supplied CAs. An 'error' event is emitted if verification fails. Verification happens at the connection level, before the HTTP request is sent.\n - `secureProtocol`     : The SSL method to use, e.g. SSLv3_method to force SSL version 3.\n\nRedirect options\n----------------\n\nThese options only apply if the `follow_max` (or `follow`) option is higher than 0.\n\n - `follow_set_cookies`      : Sends the cookies received in the `set-cookie` header as part of the following request. `false` by default.\n - `follow_set_referer`      : Sets the 'Referer' header to the requested URI when following a redirect. `false` by default.\n - `follow_keep_method`      : If enabled, resends the request using the original verb instead of being rewritten to `get` with no data. `false` by default.\n - `follow_if_same_host`     : When true, Needle will only follow redirects that point to the same host as the original request. `false` by default.\n - `follow_if_same_protocol` : When true, Needle will only follow redirects that point to the same protocol as the original request. `false` by default.\n\nOverriding Defaults\n-------------------\n\nYes sir, we have it. Needle includes a `defaults()` method, that lets you override some of the defaults for all future requests. Like this:\n\n```js\nneedle.defaults({\n  open_timeout: 60000,\n  user_agent: 'MyApp/1.2.3',\n  parse_response: false });\n```\n\nThis will override Needle's default user agent and 10-second timeout, and disable response parsing, so you don't need to pass those options in every other request.\n\nExamples Galore\n---------------\n\n### HTTPS GET with Basic Auth\n\n```js\nneedle.get('https://api.server.com', { username: 'you', password: 'secret' },\n  function(err, resp) {\n    // used HTTP auth\n});\n```\n\nOr use [RFC-1738](http://tools.ietf.org/html/rfc1738#section-3.1) basic auth URL syntax:\n\n```js\nneedle.get('https://username:password@api.server.com', function(err, resp) {\n    // used HTTP auth from URL\n});\n```\n\n### Digest Auth\n\n```js\nneedle.get('other.server.com', { username: 'you', password: 'secret', auth: 'digest' },\n  function(err, resp, body) {\n    // needle prepends 'http://' to your URL, if missing\n});\n```\n\n### Custom Accept header, deflate\n\n```js\nvar options = {\n  compressed : true,\n  follow     : 10,\n  accept     : 'application/vnd.github.full+json'\n}\n\nneedle.get('api.github.com/users/tomas', options, function(err, resp, body) {\n  // body will contain a JSON.parse(d) object\n  // if parsing fails, you'll simply get the original body\n});\n```\n\n### GET XML object\n\n```js\nneedle.get('https://news.ycombinator.com/rss', function(err, resp, body) {\n  // if xml2js is installed, you'll get a nice object containing the nodes in the RSS\n});\n```\n\n### GET binary, output to file\n\n```js\nneedle.get('http://upload.server.com/tux.png', { output: '/tmp/tux.png' }, function(err, resp, body) {\n  // you can dump any response to a file, not only binaries.\n});\n```\n\n### GET through proxy\n\n```js\nneedle.get('http://search.npmjs.org', { proxy: 'http://localhost:1234' }, function(err, resp, body) {\n  // request passed through proxy\n});\n```\n\n### GET a very large document in a stream (from 0.7+)\n\n```js\nvar stream = needle.get('http://www.as35662.net/100.log');\n\nstream.on('readable', function() {\n  var chunk;\n  while (chunk = this.read()) {\n    console.log('got data: ', chunk);\n  }\n});\n```\n\n### GET JSON object in a stream (from 0.7+)\n\n```js\nvar stream = needle.get('http://jsonplaceholder.typicode.com/db', { parse: true });\n\nstream.on('readable', function() {\n  var node;\n\n  // our stream will only emit a single JSON root node.\n  while (node = this.read()) {\n    console.log('got data: ', node);\n  }\n});\n```\n\n### GET JSONStream flexible parser with search query (from 0.7+)\n\n```js\n\n // The 'data' element of this stream will be the string representation\n // of the titles of all posts.\n\nneedle.get('http://jsonplaceholder.typicode.com/db', { parse: true })\n      .pipe(new JSONStream.parse('posts.*.title'));\n      .on('data', function (obj) {\n        console.log('got post title: %s', obj);\n      });\n```\n\n### File upload using multipart, passing file path\n\n```js\nvar data = {\n  foo: 'bar',\n  image: { file: '/home/tomas/linux.png', content_type: 'image/png' }\n}\n\nneedle.post('http://my.other.app.com', data, { multipart: true }, function(err, resp, body) {\n  // needle will read the file and include it in the form-data as binary\n});\n```\n\n### Stream upload, PUT or POST\n\n``` js\nneedle.put('https://api.app.com/v2', fs.createReadStream('myfile.txt'), function(err, resp, body) {\n  // stream content is uploaded verbatim\n});\n```\n\n### Multipart POST, passing data buffer\n\n```js\nvar buffer = fs.readFileSync('/path/to/package.zip');\n\nvar data = {\n  zip_file: {\n    buffer       : buffer,\n    filename     : 'mypackage.zip',\n    content_type : 'application/octet-stream'\n  }\n}\n\nneedle.post('http://somewhere.com/over/the/rainbow', data, { multipart: true }, function(err, resp, body) {\n  // if you see, when using buffers we need to pass the filename for the multipart body.\n  // you can also pass a filename when using the file path method, in case you want to override\n  // the default filename to be received on the other end.\n});\n```\n\n### Multipart with custom Content-Type\n\n```js\nvar data = {\n  token: 'verysecret',\n  payload: {\n    value: JSON.stringify({ title: 'test', version: 1 }),\n    content_type: 'application/json'\n  }\n}\n\nneedle.post('http://test.com/', data, { timeout: 5000, multipart: true }, function(err, resp, body) {\n  // in this case, if the request takes more than 5 seconds\n  // the callback will return a [Socket closed] error\n});\n```\n\nFor even more examples, check out the examples directory in the repo.\n\n### Testing\n\nTo run tests, you need to generate a self-signed SSL certificate in the `test` directory. After cloning the repository, run the following commands:\n\n    $ mkdir -p test/keys\n    $ openssl genrsa -out test/keys/ssl.key 2048\n    $ openssl req -new -key test/keys/ssl.key -x509 -days 999 -out test/keys/ssl.cert\n\nThen you should be able to run `npm test` once you have the dependencies in place.\n\nCredits\n-------\n\nWritten by Tomás Pollak, with the help of contributors.\n\nCopyright\n---------\n\n(c) Fork Ltd. Licensed under the MIT license.\n",
+  "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/tomas/needle/issues"
   },
-  "homepage": "https://github.com/tomas/needle",
-  "_id": "needle@0.11.0",
-  "_shasum": "02a71b008eaf7d55ae89fb9fd7685b7b88d7bc29",
-  "_from": "needle@latest",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "tomas",
-    "email": "tomas@forkhq.com"
-  },
-  "maintainers": [
-    {
-      "name": "tomas",
-      "email": "tomas@forkhq.com"
-    }
-  ],
-  "dist": {
-    "shasum": "02a71b008eaf7d55ae89fb9fd7685b7b88d7bc29",
-    "tarball": "http://registry.npmjs.org/needle/-/needle-0.11.0.tgz"
-  },
-  "_resolved": "https://registry.npmjs.org/needle/-/needle-0.11.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "homepage": "https://github.com/tomas/needle#readme",
+  "_id": "needle@1.0.0",
+  "_shasum": "24e9c776095cad2d8c40ae6e76600adba05f613f",
+  "_resolved": "https://registry.npmjs.org/needle/-/needle-1.0.0.tgz",
+  "_from": "https://registry.npmjs.org/needle/-/needle-1.0.0.tgz"
 }
 
 },{}],56:[function(require,module,exports){
@@ -8295,7 +8290,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/lib/bom.js","/node_modules/xml2js/lib")
-},{"../lib/xml2js":58,"_process":354,"buffer":153}],57:[function(require,module,exports){
+},{"../lib/xml2js":58,"_process":405,"buffer":204}],57:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.10.0
 (function() {
@@ -8333,7 +8328,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/lib/processors.js","/node_modules/xml2js/lib")
-},{"_process":354,"buffer":153}],58:[function(require,module,exports){
+},{"_process":405,"buffer":204}],58:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.10.0
 (function() {
@@ -8545,7 +8540,8 @@ module.exports={
         };
       })(this);
       rootElement = builder.create(rootName, this.options.xmldec, this.options.doctype, {
-        headless: this.options.headless
+        headless: this.options.headless,
+        allowSurrogateChars: this.options.allowSurrogateChars
       });
       return render(rootElement, rootObj).end(this.options.renderOpts);
     };
@@ -8874,7 +8870,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/lib/xml2js.js","/node_modules/xml2js/lib")
-},{"./bom":56,"./processors":57,"_process":354,"buffer":153,"events":349,"sax":59,"timers":379,"xmlbuilder":76}],59:[function(require,module,exports){
+},{"./bom":56,"./processors":57,"_process":405,"buffer":204,"events":400,"sax":59,"timers":430,"xmlbuilder":76}],59:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 ;(function (sax) { // wrapper for non-node envs
   sax.parser = function (strict, opt) { return new SAXParser(strict, opt) }
@@ -8905,6 +8901,7 @@ module.exports={
     'sgmldeclaration',
     'doctype',
     'comment',
+    'opentagstart',
     'attribute',
     'opentag',
     'closetag',
@@ -9581,6 +9578,7 @@ module.exports={
       tag.ns = parent.ns
     }
     parser.attribList.length = 0
+    emitNode(parser, 'onopentagstart', tag)
   }
 
   function qname (name, attribute) {
@@ -9846,6 +9844,14 @@ module.exports={
     }
   }
 
+  function charAt (chunk, i) {
+    var result = ''
+    if (i < chunk.length) {
+      result = chunk.charAt(i)
+    }
+    return result
+  }
+
   function write (chunk) {
     var parser = this
     if (this.error) {
@@ -9858,10 +9864,13 @@ module.exports={
     if (chunk === null) {
       return end(parser)
     }
+    if (typeof chunk === 'object') {
+      chunk = chunk.toString()
+    }
     var i = 0
     var c = ''
     while (true) {
-      c = chunk.charAt(i++)
+      c = charAt(chunk, i++)
       parser.c = c
       if (!c) {
         break
@@ -9892,7 +9901,7 @@ module.exports={
           if (parser.sawRoot && !parser.closedRoot) {
             var starti = i - 1
             while (c && c !== '<' && c !== '&') {
-              c = chunk.charAt(i++)
+              c = charAt(chunk, i++)
               if (c && parser.trackPosition) {
                 parser.position++
                 if (c === '\n') {
@@ -10441,13 +10450,13 @@ module.exports={
 })(typeof exports === 'undefined' ? this.sax = {} : exports)
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/sax/lib/sax.js","/node_modules/xml2js/node_modules/sax/lib")
-},{"_process":354,"buffer":153,"stream":372,"string_decoder":378}],60:[function(require,module,exports){
+},{"_process":405,"buffer":204,"stream":423,"string_decoder":429}],60:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLAttribute, create;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   module.exports = XMLAttribute = (function() {
     function XMLAttribute(parent, name, value) {
@@ -10477,7 +10486,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLAttribute.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/object/create":130}],61:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160}],61:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -10550,7 +10559,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLBuilder.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLDeclaration":68,"./XMLDocType":69,"./XMLElement":70,"./XMLStringifier":74,"_process":354,"buffer":153}],62:[function(require,module,exports){
+},{"./XMLDeclaration":68,"./XMLDocType":69,"./XMLElement":70,"./XMLStringifier":74,"_process":405,"buffer":204}],62:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -10558,7 +10567,7 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   XMLNode = require('./XMLNode');
 
@@ -10603,7 +10612,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLCData.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLNode":71,"_process":354,"buffer":153,"lodash/object/create":130}],63:[function(require,module,exports){
+},{"./XMLNode":71,"_process":405,"buffer":204,"lodash/create":160}],63:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -10611,7 +10620,7 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   XMLNode = require('./XMLNode');
 
@@ -10656,13 +10665,13 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLComment.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLNode":71,"_process":354,"buffer":153,"lodash/object/create":130}],64:[function(require,module,exports){
+},{"./XMLNode":71,"_process":405,"buffer":204,"lodash/create":160}],64:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLDTDAttList, create;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   module.exports = XMLDTDAttList = (function() {
     function XMLDTDAttList(parent, elementName, attributeName, attributeType, defaultValueType, defaultValue) {
@@ -10728,13 +10737,13 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDAttList.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/object/create":130}],65:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160}],65:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLDTDElement, create;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   module.exports = XMLDTDElement = (function() {
     function XMLDTDElement(parent, name, value) {
@@ -10778,15 +10787,15 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDElement.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/object/create":130}],66:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160}],66:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLDTDEntity, create, isObject;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
-  isObject = require('lodash/lang/isObject');
+  isObject = require('lodash/isObject');
 
   module.exports = XMLDTDEntity = (function() {
     function XMLDTDEntity(parent, pe, name, value) {
@@ -10866,13 +10875,13 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDEntity.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/lang/isObject":126,"lodash/object/create":130}],67:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160,"lodash/isObject":174}],67:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLDTDNotation, create;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   module.exports = XMLDTDNotation = (function() {
     function XMLDTDNotation(parent, name, value) {
@@ -10926,7 +10935,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDNotation.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/object/create":130}],68:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160}],68:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -10934,9 +10943,9 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
-  isObject = require('lodash/lang/isObject');
+  isObject = require('lodash/isObject');
 
   XMLNode = require('./XMLNode');
 
@@ -10995,15 +11004,15 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDeclaration.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLNode":71,"_process":354,"buffer":153,"lodash/lang/isObject":126,"lodash/object/create":130}],69:[function(require,module,exports){
+},{"./XMLNode":71,"_process":405,"buffer":204,"lodash/create":160,"lodash/isObject":174}],69:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDocType, XMLProcessingInstruction, create, isObject;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
-  isObject = require('lodash/lang/isObject');
+  isObject = require('lodash/isObject');
 
   XMLCData = require('./XMLCData');
 
@@ -11187,7 +11196,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDocType.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLCData":62,"./XMLComment":63,"./XMLDTDAttList":64,"./XMLDTDElement":65,"./XMLDTDEntity":66,"./XMLDTDNotation":67,"./XMLProcessingInstruction":72,"_process":354,"buffer":153,"lodash/lang/isObject":126,"lodash/object/create":130}],70:[function(require,module,exports){
+},{"./XMLCData":62,"./XMLComment":63,"./XMLDTDAttList":64,"./XMLDTDElement":65,"./XMLDTDEntity":66,"./XMLDTDNotation":67,"./XMLProcessingInstruction":72,"_process":405,"buffer":204,"lodash/create":160,"lodash/isObject":174}],70:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -11195,13 +11204,13 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
-  isObject = require('lodash/lang/isObject');
+  isObject = require('lodash/isObject');
 
-  isFunction = require('lodash/lang/isFunction');
+  isFunction = require('lodash/isFunction');
 
-  every = require('lodash/collection/every');
+  every = require('lodash/every');
 
   XMLNode = require('./XMLNode');
 
@@ -11403,18 +11412,18 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLElement.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLAttribute":60,"./XMLNode":71,"./XMLProcessingInstruction":72,"_process":354,"buffer":153,"lodash/collection/every":78,"lodash/lang/isFunction":124,"lodash/lang/isObject":126,"lodash/object/create":130}],71:[function(require,module,exports){
+},{"./XMLAttribute":60,"./XMLNode":71,"./XMLProcessingInstruction":72,"_process":405,"buffer":204,"lodash/create":160,"lodash/every":162,"lodash/isFunction":171,"lodash/isObject":174}],71:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLElement, XMLNode, XMLRaw, XMLText, isEmpty, isFunction, isObject,
     hasProp = {}.hasOwnProperty;
 
-  isObject = require('lodash/lang/isObject');
+  isObject = require('lodash/isObject');
 
-  isFunction = require('lodash/lang/isFunction');
+  isFunction = require('lodash/isFunction');
 
-  isEmpty = require('lodash/lang/isEmpty');
+  isEmpty = require('lodash/isEmpty');
 
   XMLElement = null;
 
@@ -11738,13 +11747,13 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLNode.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLCData":62,"./XMLComment":63,"./XMLDeclaration":68,"./XMLDocType":69,"./XMLElement":70,"./XMLRaw":73,"./XMLText":75,"_process":354,"buffer":153,"lodash/lang/isEmpty":123,"lodash/lang/isFunction":124,"lodash/lang/isObject":126}],72:[function(require,module,exports){
+},{"./XMLCData":62,"./XMLComment":63,"./XMLDeclaration":68,"./XMLDocType":69,"./XMLElement":70,"./XMLRaw":73,"./XMLText":75,"_process":405,"buffer":204,"lodash/isEmpty":170,"lodash/isFunction":171,"lodash/isObject":174}],72:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLProcessingInstruction, create;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   module.exports = XMLProcessingInstruction = (function() {
     function XMLProcessingInstruction(parent, target, value) {
@@ -11793,7 +11802,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLProcessingInstruction.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153,"lodash/object/create":130}],73:[function(require,module,exports){
+},{"_process":405,"buffer":204,"lodash/create":160}],73:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -11801,7 +11810,7 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   XMLNode = require('./XMLNode');
 
@@ -11846,7 +11855,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLRaw.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLNode":71,"_process":354,"buffer":153,"lodash/object/create":130}],74:[function(require,module,exports){
+},{"./XMLNode":71,"_process":405,"buffer":204,"lodash/create":160}],74:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -12020,7 +12029,7 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLStringifier.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"_process":354,"buffer":153}],75:[function(require,module,exports){
+},{"_process":405,"buffer":204}],75:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
@@ -12028,7 +12037,7 @@ module.exports={
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  create = require('lodash/object/create');
+  create = require('lodash/create');
 
   XMLNode = require('./XMLNode');
 
@@ -12073,13 +12082,13 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/XMLText.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLNode":71,"_process":354,"buffer":153,"lodash/object/create":130}],76:[function(require,module,exports){
+},{"./XMLNode":71,"_process":405,"buffer":204,"lodash/create":160}],76:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLBuilder, assign;
 
-  assign = require('lodash/object/assign');
+  assign = require('lodash/assign');
 
   XMLBuilder = require('./XMLBuilder');
 
@@ -12091,172 +12100,189 @@ module.exports={
 }).call(this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/lib/index.js","/node_modules/xml2js/node_modules/xmlbuilder/lib")
-},{"./XMLBuilder":61,"_process":354,"buffer":153,"lodash/object/assign":129}],77:[function(require,module,exports){
+},{"./XMLBuilder":61,"_process":405,"buffer":204,"lodash/assign":159}],77:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var nativeCreate = require('./_nativeCreate');
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
 /**
- * Gets the last element of `array`.
+ * Creates an hash object.
  *
- * @static
- * @memberOf _
- * @category Array
- * @param {Array} array The array to query.
- * @returns {*} Returns the last element of `array`.
- * @example
- *
- * _.last([1, 2, 3]);
- * // => 3
+ * @private
+ * @constructor
+ * @returns {Object} Returns the new hash object.
  */
-function last(array) {
-  var length = array ? array.length : 0;
-  return length ? array[length - 1] : undefined;
+function Hash() {}
+
+// Avoid inheriting from `Object.prototype` when possible.
+Hash.prototype = nativeCreate ? nativeCreate(null) : objectProto;
+
+module.exports = Hash;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Hash.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_nativeCreate":149,"_process":405,"buffer":204}],78:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var getNative = require('./_getNative'),
+    root = require('./_root');
+
+/* Built-in method references that are verified to be native. */
+var Map = getNative(root, 'Map');
+
+module.exports = Map;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Map.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_getNative":128,"./_root":151,"_process":405,"buffer":204}],79:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var mapClear = require('./_mapClear'),
+    mapDelete = require('./_mapDelete'),
+    mapGet = require('./_mapGet'),
+    mapHas = require('./_mapHas'),
+    mapSet = require('./_mapSet');
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function MapCache(values) {
+  var index = -1,
+      length = values ? values.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = values[index];
+    this.set(entry[0], entry[1]);
+  }
 }
 
-module.exports = last;
+// Add functions to the `MapCache`.
+MapCache.prototype.clear = mapClear;
+MapCache.prototype['delete'] = mapDelete;
+MapCache.prototype.get = mapGet;
+MapCache.prototype.has = mapHas;
+MapCache.prototype.set = mapSet;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/array/last.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/array")
-},{"_process":354,"buffer":153}],78:[function(require,module,exports){
+module.exports = MapCache;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_MapCache.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_mapClear":143,"./_mapDelete":144,"./_mapGet":145,"./_mapHas":146,"./_mapSet":147,"_process":405,"buffer":204}],80:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var arrayEvery = require('../internal/arrayEvery'),
-    baseCallback = require('../internal/baseCallback'),
-    baseEvery = require('../internal/baseEvery'),
-    isArray = require('../lang/isArray'),
-    isIterateeCall = require('../internal/isIterateeCall');
+var getNative = require('./_getNative'),
+    root = require('./_root');
+
+/* Built-in method references that are verified to be native. */
+var Set = getNative(root, 'Set');
+
+module.exports = Set;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Set.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_getNative":128,"./_root":151,"_process":405,"buffer":204}],81:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var stackClear = require('./_stackClear'),
+    stackDelete = require('./_stackDelete'),
+    stackGet = require('./_stackGet'),
+    stackHas = require('./_stackHas'),
+    stackSet = require('./_stackSet');
 
 /**
- * Checks if `predicate` returns truthy for **all** elements of `collection`.
- * The predicate is bound to `thisArg` and invoked with three arguments:
- * (value, index|key, collection).
+ * Creates a stack cache object to store key-value pairs.
  *
- * If a property name is provided for `predicate` the created `_.property`
- * style callback returns the property value of the given element.
- *
- * If a value is also provided for `thisArg` the created `_.matchesProperty`
- * style callback returns `true` for elements that have a matching property
- * value, else `false`.
- *
- * If an object is provided for `predicate` the created `_.matches` style
- * callback returns `true` for elements that have the properties of the given
- * object, else `false`.
- *
- * @static
- * @memberOf _
- * @alias all
- * @category Collection
- * @param {Array|Object|string} collection The collection to iterate over.
- * @param {Function|Object|string} [predicate=_.identity] The function invoked
- *  per iteration.
- * @param {*} [thisArg] The `this` binding of `predicate`.
- * @returns {boolean} Returns `true` if all elements pass the predicate check,
- *  else `false`.
- * @example
- *
- * _.every([true, 1, null, 'yes'], Boolean);
- * // => false
- *
- * var users = [
- *   { 'user': 'barney', 'active': false },
- *   { 'user': 'fred',   'active': false }
- * ];
- *
- * // using the `_.matches` callback shorthand
- * _.every(users, { 'user': 'barney', 'active': false });
- * // => false
- *
- * // using the `_.matchesProperty` callback shorthand
- * _.every(users, 'active', false);
- * // => true
- *
- * // using the `_.property` callback shorthand
- * _.every(users, 'active');
- * // => false
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
  */
-function every(collection, predicate, thisArg) {
-  var func = isArray(collection) ? arrayEvery : baseEvery;
-  if (thisArg && isIterateeCall(collection, predicate, thisArg)) {
-    predicate = undefined;
+function Stack(values) {
+  var index = -1,
+      length = values ? values.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = values[index];
+    this.set(entry[0], entry[1]);
   }
-  if (typeof predicate != 'function' || thisArg !== undefined) {
-    predicate = baseCallback(predicate, thisArg, 3);
-  }
-  return func(collection, predicate);
 }
 
-module.exports = every;
+// Add functions to the `Stack` cache.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/collection/every.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/collection")
-},{"../internal/arrayEvery":80,"../internal/baseCallback":84,"../internal/baseEvery":88,"../internal/isIterateeCall":113,"../lang/isArray":122,"_process":354,"buffer":153}],79:[function(require,module,exports){
+module.exports = Stack;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Stack.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_stackClear":153,"./_stackDelete":154,"./_stackGet":155,"./_stackHas":156,"./_stackSet":157,"_process":405,"buffer":204}],82:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-/** Used as the `TypeError` message for "Functions" methods. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+var root = require('./_root');
 
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
+/** Built-in value references. */
+var Symbol = root.Symbol;
 
+module.exports = Symbol;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Symbol.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_root":151,"_process":405,"buffer":204}],83:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var root = require('./_root');
+
+/** Built-in value references. */
+var Uint8Array = root.Uint8Array;
+
+module.exports = Uint8Array;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_Uint8Array.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_root":151,"_process":405,"buffer":204}],84:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var getNative = require('./_getNative'),
+    root = require('./_root');
+
+/* Built-in method references that are verified to be native. */
+var WeakMap = getNative(root, 'WeakMap');
+
+module.exports = WeakMap;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_WeakMap.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_getNative":128,"./_root":151,"_process":405,"buffer":204}],85:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
- * Creates a function that invokes `func` with the `this` binding of the
- * created function and arguments from `start` and beyond provided as an array.
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
  *
- * **Note:** This method is based on the [rest parameter](https://developer.mozilla.org/Web/JavaScript/Reference/Functions/rest_parameters).
- *
- * @static
- * @memberOf _
- * @category Function
- * @param {Function} func The function to apply a rest parameter to.
- * @param {number} [start=func.length-1] The start position of the rest parameter.
- * @returns {Function} Returns the new function.
- * @example
- *
- * var say = _.restParam(function(what, names) {
- *   return what + ' ' + _.initial(names).join(', ') +
- *     (_.size(names) > 1 ? ', & ' : '') + _.last(names);
- * });
- *
- * say('hello', 'fred', 'barney', 'pebbles');
- * // => 'hello fred, barney, & pebbles'
+ * @private
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {...*} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
  */
-function restParam(func, start) {
-  if (typeof func != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
+function apply(func, thisArg, args) {
+  var length = args.length;
+  switch (length) {
+    case 0: return func.call(thisArg);
+    case 1: return func.call(thisArg, args[0]);
+    case 2: return func.call(thisArg, args[0], args[1]);
+    case 3: return func.call(thisArg, args[0], args[1], args[2]);
   }
-  start = nativeMax(start === undefined ? (func.length - 1) : (+start || 0), 0);
-  return function() {
-    var args = arguments,
-        index = -1,
-        length = nativeMax(args.length - start, 0),
-        rest = Array(length);
-
-    while (++index < length) {
-      rest[index] = args[start + index];
-    }
-    switch (start) {
-      case 0: return func.call(this, rest);
-      case 1: return func.call(this, args[0], rest);
-      case 2: return func.call(this, args[0], args[1], rest);
-    }
-    var otherArgs = Array(start + 1);
-    index = -1;
-    while (++index < start) {
-      otherArgs[index] = args[index];
-    }
-    otherArgs[start] = rest;
-    return func.apply(this, otherArgs);
-  };
+  return func.apply(thisArg, args);
 }
 
-module.exports = restParam;
+module.exports = apply;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/function/restParam.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/function")
-},{"_process":354,"buffer":153}],80:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_apply.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],86:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
- * A specialized version of `_.every` for arrays without support for callback
- * shorthands and `this` binding.
+ * A specialized version of `_.every` for arrays without support for
+ * iteratee shorthands.
  *
  * @private
  * @param {Array} array The array to iterate over.
  * @param {Function} predicate The function invoked per iteration.
- * @returns {boolean} Returns `true` if all elements pass the predicate check,
- *  else `false`.
+ * @returns {boolean} Returns `true` if all elements pass the predicate check, else `false`.
  */
 function arrayEvery(array, predicate) {
   var index = -1,
@@ -12272,18 +12298,42 @@ function arrayEvery(array, predicate) {
 
 module.exports = arrayEvery;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/arrayEvery.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],81:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_arrayEvery.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],87:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
- * A specialized version of `_.some` for arrays without support for callback
- * shorthands and `this` binding.
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} array The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array.length,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+module.exports = arrayMap;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_arrayMap.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],88:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
  *
  * @private
  * @param {Array} array The array to iterate over.
  * @param {Function} predicate The function invoked per iteration.
- * @returns {boolean} Returns `true` if any element passes the predicate check,
- *  else `false`.
+ * @returns {boolean} Returns `true` if any element passes the predicate check, else `false`.
  */
 function arraySome(array, predicate) {
   var index = -1,
@@ -12299,51 +12349,170 @@ function arraySome(array, predicate) {
 
 module.exports = arraySome;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/arraySome.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],82:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_arraySome.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],89:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var keys = require('../object/keys');
+var eq = require('./eq');
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
- * A specialized version of `_.assign` for customizing assigned values without
- * support for argument juggling, multiple sources, and `this` binding `customizer`
- * functions.
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
+ * for equality comparisons.
  *
  * @private
- * @param {Object} object The destination object.
- * @param {Object} source The source object.
- * @param {Function} customizer The function to customize assigned values.
- * @returns {Object} Returns `object`.
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
  */
-function assignWith(object, source, customizer) {
-  var index = -1,
-      props = keys(source),
-      length = props.length;
-
-  while (++index < length) {
-    var key = props[index],
-        value = object[key],
-        result = customizer(value, source[key], key, object, source);
-
-    if ((result === result ? (result !== value) : (value === value)) ||
-        (value === undefined && !(key in object))) {
-      object[key] = result;
-    }
+function assignValue(object, key, value) {
+  var objValue = object[key];
+  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
+      (value === undefined && !(key in object))) {
+    object[key] = value;
   }
-  return object;
 }
 
-module.exports = assignWith;
+module.exports = assignValue;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/assignWith.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../object/keys":131,"_process":354,"buffer":153}],83:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assignValue.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./eq":161,"_process":405,"buffer":204}],90:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseCopy = require('./baseCopy'),
-    keys = require('../object/keys');
+var assocIndexOf = require('./_assocIndexOf');
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype;
+
+/** Built-in value references. */
+var splice = arrayProto.splice;
 
 /**
- * The base implementation of `_.assign` without support for argument juggling,
- * multiple sources, and `customizer` functions.
+ * Removes `key` and its value from the associative array.
+ *
+ * @private
+ * @param {Array} array The array to query.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function assocDelete(array, key) {
+  var index = assocIndexOf(array, key);
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = array.length - 1;
+  if (index == lastIndex) {
+    array.pop();
+  } else {
+    splice.call(array, index, 1);
+  }
+  return true;
+}
+
+module.exports = assocDelete;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assocDelete.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocIndexOf":93,"_process":405,"buffer":204}],91:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocIndexOf = require('./_assocIndexOf');
+
+/**
+ * Gets the associative array value for `key`.
+ *
+ * @private
+ * @param {Array} array The array to query.
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function assocGet(array, key) {
+  var index = assocIndexOf(array, key);
+  return index < 0 ? undefined : array[index][1];
+}
+
+module.exports = assocGet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assocGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocIndexOf":93,"_process":405,"buffer":204}],92:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocIndexOf = require('./_assocIndexOf');
+
+/**
+ * Checks if an associative array value for `key` exists.
+ *
+ * @private
+ * @param {Array} array The array to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function assocHas(array, key) {
+  return assocIndexOf(array, key) > -1;
+}
+
+module.exports = assocHas;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assocHas.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocIndexOf":93,"_process":405,"buffer":204}],93:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var eq = require('./eq');
+
+/**
+ * Gets the index at which the first occurrence of `key` is found in `array`
+ * of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to search.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+module.exports = assocIndexOf;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assocIndexOf.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./eq":161,"_process":405,"buffer":204}],94:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocIndexOf = require('./_assocIndexOf');
+
+/**
+ * Sets the associative array `key` to `value`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ */
+function assocSet(array, key, value) {
+  var index = assocIndexOf(array, key);
+  if (index < 0) {
+    array.push([key, value]);
+  } else {
+    array[index][1] = value;
+  }
+}
+
+module.exports = assocSet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_assocSet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocIndexOf":93,"_process":405,"buffer":204}],95:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var copyObject = require('./_copyObject'),
+    keys = require('./keys');
+
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
  *
  * @private
  * @param {Object} object The destination object.
@@ -12351,83 +12520,37 @@ var baseCopy = require('./baseCopy'),
  * @returns {Object} Returns `object`.
  */
 function baseAssign(object, source) {
-  return source == null
-    ? object
-    : baseCopy(source, keys(source), object);
+  return object && copyObject(source, keys(source), object);
 }
 
 module.exports = baseAssign;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseAssign.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../object/keys":131,"./baseCopy":85,"_process":354,"buffer":153}],84:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseAssign.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_copyObject":118,"./keys":179,"_process":405,"buffer":204}],96:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseMatches = require('./baseMatches'),
-    baseMatchesProperty = require('./baseMatchesProperty'),
-    bindCallback = require('./bindCallback'),
-    identity = require('../utility/identity'),
-    property = require('../utility/property');
+var isArray = require('./isArray'),
+    stringToPath = require('./_stringToPath');
 
 /**
- * The base implementation of `_.callback` which supports specifying the
- * number of arguments to provide to `func`.
+ * Casts `value` to a path array if it's not one.
  *
  * @private
- * @param {*} [func=_.identity] The value to convert to a callback.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {number} [argCount] The number of arguments to provide to `func`.
- * @returns {Function} Returns the callback.
+ * @param {*} value The value to inspect.
+ * @returns {Array} Returns the cast property path array.
  */
-function baseCallback(func, thisArg, argCount) {
-  var type = typeof func;
-  if (type == 'function') {
-    return thisArg === undefined
-      ? func
-      : bindCallback(func, thisArg, argCount);
-  }
-  if (func == null) {
-    return identity;
-  }
-  if (type == 'object') {
-    return baseMatches(func);
-  }
-  return thisArg === undefined
-    ? property(func)
-    : baseMatchesProperty(func, thisArg);
+function baseCastPath(value) {
+  return isArray(value) ? value : stringToPath(value);
 }
 
-module.exports = baseCallback;
+module.exports = baseCastPath;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseCallback.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../utility/identity":134,"../utility/property":135,"./baseMatches":95,"./baseMatchesProperty":96,"./bindCallback":101,"_process":354,"buffer":153}],85:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseCastPath.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_stringToPath":158,"./isArray":167,"_process":405,"buffer":204}],97:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-/**
- * Copies properties of `source` to `object`.
- *
- * @private
- * @param {Object} source The object to copy properties from.
- * @param {Array} props The property names to copy.
- * @param {Object} [object={}] The object to copy properties to.
- * @returns {Object} Returns `object`.
- */
-function baseCopy(source, props, object) {
-  object || (object = {});
+var isObject = require('./isObject');
 
-  var index = -1,
-      length = props.length;
-
-  while (++index < length) {
-    var key = props[index];
-    object[key] = source[key];
-  }
-  return object;
-}
-
-module.exports = baseCopy;
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseCopy.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],86:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isObject = require('../lang/isObject');
+/** Built-in value references. */
+var objectCreate = Object.create;
 
 /**
  * The base implementation of `_.create` without support for assigning
@@ -12437,53 +12560,42 @@ var isObject = require('../lang/isObject');
  * @param {Object} prototype The object to inherit from.
  * @returns {Object} Returns the new object.
  */
-var baseCreate = (function() {
-  function object() {}
-  return function(prototype) {
-    if (isObject(prototype)) {
-      object.prototype = prototype;
-      var result = new object;
-      object.prototype = undefined;
-    }
-    return result || {};
-  };
-}());
+function baseCreate(proto) {
+  return isObject(proto) ? objectCreate(proto) : {};
+}
 
 module.exports = baseCreate;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseCreate.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isObject":126,"_process":354,"buffer":153}],87:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseCreate.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isObject":174,"_process":405,"buffer":204}],98:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseForOwn = require('./baseForOwn'),
-    createBaseEach = require('./createBaseEach');
+var baseForOwn = require('./_baseForOwn'),
+    createBaseEach = require('./_createBaseEach');
 
 /**
- * The base implementation of `_.forEach` without support for callback
- * shorthands and `this` binding.
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
  *
  * @private
- * @param {Array|Object|string} collection The collection to iterate over.
+ * @param {Array|Object} collection The collection to iterate over.
  * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array|Object|string} Returns `collection`.
+ * @returns {Array|Object} Returns `collection`.
  */
 var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseEach.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseForOwn":90,"./createBaseEach":103,"_process":354,"buffer":153}],88:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseEach.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseForOwn":101,"./_createBaseEach":121,"_process":405,"buffer":204}],99:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseEach = require('./baseEach');
+var baseEach = require('./_baseEach');
 
 /**
- * The base implementation of `_.every` without support for callback
- * shorthands and `this` binding.
+ * The base implementation of `_.every` without support for iteratee shorthands.
  *
  * @private
- * @param {Array|Object|string} collection The collection to iterate over.
+ * @param {Array|Object} collection The collection to iterate over.
  * @param {Function} predicate The function invoked per iteration.
- * @returns {boolean} Returns `true` if all elements pass the predicate check,
- *  else `false`
+ * @returns {boolean} Returns `true` if all elements pass the predicate check, else `false`
  */
 function baseEvery(collection, predicate) {
   var result = true;
@@ -12496,10 +12608,10 @@ function baseEvery(collection, predicate) {
 
 module.exports = baseEvery;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseEvery.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseEach":87,"_process":354,"buffer":153}],89:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseEvery.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseEach":98,"_process":405,"buffer":204}],100:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var createBaseFor = require('./createBaseFor');
+var createBaseFor = require('./_createBaseFor');
 
 /**
  * The base implementation of `baseForIn` and `baseForOwn` which iterates
@@ -12517,15 +12629,14 @@ var baseFor = createBaseFor();
 
 module.exports = baseFor;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseFor.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./createBaseFor":104,"_process":354,"buffer":153}],90:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseFor.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_createBaseFor":122,"_process":405,"buffer":204}],101:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseFor = require('./baseFor'),
-    keys = require('../object/keys');
+var baseFor = require('./_baseFor'),
+    keys = require('./keys');
 
 /**
- * The base implementation of `_.forOwn` without support for callback
- * shorthands and `this` binding.
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
  *
  * @private
  * @param {Object} object The object to iterate over.
@@ -12533,33 +12644,28 @@ var baseFor = require('./baseFor'),
  * @returns {Object} Returns `object`.
  */
 function baseForOwn(object, iteratee) {
-  return baseFor(object, iteratee, keys);
+  return object && baseFor(object, iteratee, keys);
 }
 
 module.exports = baseForOwn;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseForOwn.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../object/keys":131,"./baseFor":89,"_process":354,"buffer":153}],91:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseForOwn.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseFor":100,"./keys":179,"_process":405,"buffer":204}],102:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var toObject = require('./toObject');
+var baseCastPath = require('./_baseCastPath'),
+    isKey = require('./_isKey');
 
 /**
- * The base implementation of `get` without support for string paths
- * and default values.
+ * The base implementation of `_.get` without support for default values.
  *
  * @private
  * @param {Object} object The object to query.
- * @param {Array} path The path of the property to get.
- * @param {string} [pathKey] The key representation of path.
+ * @param {Array|string} path The path of the property to get.
  * @returns {*} Returns the resolved value.
  */
-function baseGet(object, path, pathKey) {
-  if (object == null) {
-    return;
-  }
-  if (pathKey !== undefined && pathKey in toObject(object)) {
-    path = [pathKey];
-  }
+function baseGet(object, path) {
+  path = isKey(path, object) ? [path + ''] : baseCastPath(path);
+
   var index = 0,
       length = path.length;
 
@@ -12571,63 +12677,112 @@ function baseGet(object, path, pathKey) {
 
 module.exports = baseGet;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./toObject":119,"_process":354,"buffer":153}],92:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseCastPath":96,"./_isKey":139,"_process":405,"buffer":204}],103:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseIsEqualDeep = require('./baseIsEqualDeep'),
-    isObject = require('../lang/isObject'),
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Built-in value references. */
+var getPrototypeOf = Object.getPrototypeOf;
+
+/**
+ * The base implementation of `_.has` without support for deep paths.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */
+function baseHas(object, key) {
+  // Avoid a bug in IE 10-11 where objects with a [[Prototype]] of `null`,
+  // that are composed entirely of index properties, return `false` for
+  // `hasOwnProperty` checks of them.
+  return hasOwnProperty.call(object, key) ||
+    (typeof object == 'object' && key in object && getPrototypeOf(object) === null);
+}
+
+module.exports = baseHas;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseHas.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],104:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */
+function baseHasIn(object, key) {
+  return key in Object(object);
+}
+
+module.exports = baseHasIn;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseHasIn.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],105:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseIsEqualDeep = require('./_baseIsEqualDeep'),
+    isObject = require('./isObject'),
     isObjectLike = require('./isObjectLike');
 
 /**
- * The base implementation of `_.isEqual` without support for `this` binding
- * `customizer` functions.
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
  *
  * @private
  * @param {*} value The value to compare.
  * @param {*} other The other value to compare.
- * @param {Function} [customizer] The function to customize comparing values.
- * @param {boolean} [isLoose] Specify performing partial comparisons.
- * @param {Array} [stackA] Tracks traversed `value` objects.
- * @param {Array} [stackB] Tracks traversed `other` objects.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {boolean} [bitmask] The bitmask of comparison flags.
+ *  The bitmask may be composed of the following flags:
+ *     1 - Unordered comparison
+ *     2 - Partial comparison
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
  * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
  */
-function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
+function baseIsEqual(value, other, customizer, bitmask, stack) {
   if (value === other) {
     return true;
   }
   if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
     return value !== value && other !== other;
   }
-  return baseIsEqualDeep(value, other, baseIsEqual, customizer, isLoose, stackA, stackB);
+  return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
 }
 
 module.exports = baseIsEqual;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseIsEqual.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isObject":126,"./baseIsEqualDeep":93,"./isObjectLike":116,"_process":354,"buffer":153}],93:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseIsEqual.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseIsEqualDeep":106,"./isObject":174,"./isObjectLike":175,"_process":405,"buffer":204}],106:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var equalArrays = require('./equalArrays'),
-    equalByTag = require('./equalByTag'),
-    equalObjects = require('./equalObjects'),
-    isArray = require('../lang/isArray'),
-    isTypedArray = require('../lang/isTypedArray');
+var Stack = require('./_Stack'),
+    equalArrays = require('./_equalArrays'),
+    equalByTag = require('./_equalByTag'),
+    equalObjects = require('./_equalObjects'),
+    getTag = require('./_getTag'),
+    isArray = require('./isArray'),
+    isHostObject = require('./_isHostObject'),
+    isTypedArray = require('./isTypedArray');
+
+/** Used to compose bitmasks for comparison styles. */
+var PARTIAL_COMPARE_FLAG = 2;
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
     arrayTag = '[object Array]',
     objectTag = '[object Object]';
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
 var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
- * of values.
- */
-var objToString = objectProto.toString;
 
 /**
  * A specialized version of `baseIsEqual` for arrays and objects which performs
@@ -12638,94 +12793,74 @@ var objToString = objectProto.toString;
  * @param {Object} object The object to compare.
  * @param {Object} other The other object to compare.
  * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Function} [customizer] The function to customize comparing objects.
- * @param {boolean} [isLoose] Specify performing partial comparisons.
- * @param {Array} [stackA=[]] Tracks traversed `value` objects.
- * @param {Array} [stackB=[]] Tracks traversed `other` objects.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {number} [bitmask] The bitmask of comparison flags. See `baseIsEqual` for more details.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function baseIsEqualDeep(object, other, equalFunc, customizer, isLoose, stackA, stackB) {
+function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
   var objIsArr = isArray(object),
       othIsArr = isArray(other),
       objTag = arrayTag,
       othTag = arrayTag;
 
   if (!objIsArr) {
-    objTag = objToString.call(object);
-    if (objTag == argsTag) {
-      objTag = objectTag;
-    } else if (objTag != objectTag) {
-      objIsArr = isTypedArray(object);
-    }
+    objTag = getTag(object);
+    objTag = objTag == argsTag ? objectTag : objTag;
   }
   if (!othIsArr) {
-    othTag = objToString.call(other);
-    if (othTag == argsTag) {
-      othTag = objectTag;
-    } else if (othTag != objectTag) {
-      othIsArr = isTypedArray(other);
-    }
+    othTag = getTag(other);
+    othTag = othTag == argsTag ? objectTag : othTag;
   }
-  var objIsObj = objTag == objectTag,
-      othIsObj = othTag == objectTag,
+  var objIsObj = objTag == objectTag && !isHostObject(object),
+      othIsObj = othTag == objectTag && !isHostObject(other),
       isSameTag = objTag == othTag;
 
-  if (isSameTag && !(objIsArr || objIsObj)) {
-    return equalByTag(object, other, objTag);
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, equalFunc, customizer, bitmask, stack)
+      : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
   }
-  if (!isLoose) {
+  if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
     var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
         othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
 
     if (objIsWrapped || othIsWrapped) {
-      return equalFunc(objIsWrapped ? object.value() : object, othIsWrapped ? other.value() : other, customizer, isLoose, stackA, stackB);
+      stack || (stack = new Stack);
+      return equalFunc(objIsWrapped ? object.value() : object, othIsWrapped ? other.value() : other, customizer, bitmask, stack);
     }
   }
   if (!isSameTag) {
     return false;
   }
-  // Assume cyclic values are equal.
-  // For more information on detecting circular references see https://es5.github.io/#JO.
-  stackA || (stackA = []);
-  stackB || (stackB = []);
-
-  var length = stackA.length;
-  while (length--) {
-    if (stackA[length] == object) {
-      return stackB[length] == other;
-    }
-  }
-  // Add `object` and `other` to the stack of traversed objects.
-  stackA.push(object);
-  stackB.push(other);
-
-  var result = (objIsArr ? equalArrays : equalObjects)(object, other, equalFunc, customizer, isLoose, stackA, stackB);
-
-  stackA.pop();
-  stackB.pop();
-
-  return result;
+  stack || (stack = new Stack);
+  return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
 }
 
 module.exports = baseIsEqualDeep;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseIsEqualDeep.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isArray":122,"../lang/isTypedArray":128,"./equalArrays":105,"./equalByTag":106,"./equalObjects":107,"_process":354,"buffer":153}],94:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseIsEqualDeep.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Stack":81,"./_equalArrays":123,"./_equalByTag":124,"./_equalObjects":125,"./_getTag":129,"./_isHostObject":136,"./isArray":167,"./isTypedArray":178,"_process":405,"buffer":204}],107:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseIsEqual = require('./baseIsEqual'),
-    toObject = require('./toObject');
+var Stack = require('./_Stack'),
+    baseIsEqual = require('./_baseIsEqual');
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
 
 /**
- * The base implementation of `_.isMatch` without support for callback
- * shorthands and `this` binding.
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
  *
  * @private
  * @param {Object} object The object to inspect.
- * @param {Array} matchData The propery names, values, and compare flags to match.
- * @param {Function} [customizer] The function to customize comparing objects.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  */
-function baseIsMatch(object, matchData, customizer) {
+function baseIsMatch(object, source, matchData, customizer) {
   var index = matchData.length,
       length = index,
       noCustomizer = !customizer;
@@ -12733,7 +12868,7 @@ function baseIsMatch(object, matchData, customizer) {
   if (object == null) {
     return !length;
   }
-  object = toObject(object);
+  object = Object(object);
   while (index--) {
     var data = matchData[index];
     if ((noCustomizer && data[2])
@@ -12754,8 +12889,13 @@ function baseIsMatch(object, matchData, customizer) {
         return false;
       }
     } else {
-      var result = customizer ? customizer(objValue, srcValue, key) : undefined;
-      if (!(result === undefined ? baseIsEqual(srcValue, objValue, customizer, true) : result)) {
+      var stack = new Stack,
+          result = customizer ? customizer(objValue, srcValue, key, object, source, stack) : undefined;
+
+      if (!(result === undefined
+            ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack)
+            : result
+          )) {
         return false;
       }
     }
@@ -12765,15 +12905,68 @@ function baseIsMatch(object, matchData, customizer) {
 
 module.exports = baseIsMatch;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseIsMatch.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseIsEqual":92,"./toObject":119,"_process":354,"buffer":153}],95:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseIsMatch.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Stack":81,"./_baseIsEqual":105,"_process":405,"buffer":204}],108:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseIsMatch = require('./baseIsMatch'),
-    getMatchData = require('./getMatchData'),
-    toObject = require('./toObject');
+var baseMatches = require('./_baseMatches'),
+    baseMatchesProperty = require('./_baseMatchesProperty'),
+    identity = require('./identity'),
+    isArray = require('./isArray'),
+    property = require('./property');
 
 /**
- * The base implementation of `_.matches` which does not clone `source`.
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */
+function baseIteratee(value) {
+  var type = typeof value;
+  if (type == 'function') {
+    return value;
+  }
+  if (value == null) {
+    return identity;
+  }
+  if (type == 'object') {
+    return isArray(value)
+      ? baseMatchesProperty(value[0], value[1])
+      : baseMatches(value);
+  }
+  return property(value);
+}
+
+module.exports = baseIteratee;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseIteratee.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseMatches":110,"./_baseMatchesProperty":111,"./identity":165,"./isArray":167,"./property":181,"_process":405,"buffer":204}],109:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = Object.keys;
+
+/**
+ * The base implementation of `_.keys` which doesn't skip the constructor
+ * property of prototypes or treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  return nativeKeys(Object(object));
+}
+
+module.exports = baseKeys;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseKeys.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],110:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseIsMatch = require('./_baseIsMatch'),
+    getMatchData = require('./_getMatchData');
+
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
  *
  * @private
  * @param {Object} source The object of property values to match.
@@ -12789,67 +12982,49 @@ function baseMatches(source) {
       if (object == null) {
         return false;
       }
-      return object[key] === value && (value !== undefined || (key in toObject(object)));
+      return object[key] === value &&
+        (value !== undefined || (key in Object(object)));
     };
   }
   return function(object) {
-    return baseIsMatch(object, matchData);
+    return object === source || baseIsMatch(object, source, matchData);
   };
 }
 
 module.exports = baseMatches;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseMatches.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseIsMatch":94,"./getMatchData":109,"./toObject":119,"_process":354,"buffer":153}],96:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseMatches.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseIsMatch":107,"./_getMatchData":127,"_process":405,"buffer":204}],111:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseGet = require('./baseGet'),
-    baseIsEqual = require('./baseIsEqual'),
-    baseSlice = require('./baseSlice'),
-    isArray = require('../lang/isArray'),
-    isKey = require('./isKey'),
-    isStrictComparable = require('./isStrictComparable'),
-    last = require('../array/last'),
-    toObject = require('./toObject'),
-    toPath = require('./toPath');
+var baseIsEqual = require('./_baseIsEqual'),
+    get = require('./get'),
+    hasIn = require('./hasIn');
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
 
 /**
- * The base implementation of `_.matchesProperty` which does not clone `srcValue`.
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
  *
  * @private
  * @param {string} path The path of the property to get.
- * @param {*} srcValue The value to compare.
+ * @param {*} srcValue The value to match.
  * @returns {Function} Returns the new function.
  */
 function baseMatchesProperty(path, srcValue) {
-  var isArr = isArray(path),
-      isCommon = isKey(path) && isStrictComparable(srcValue),
-      pathKey = (path + '');
-
-  path = toPath(path);
   return function(object) {
-    if (object == null) {
-      return false;
-    }
-    var key = pathKey;
-    object = toObject(object);
-    if ((isArr || !isCommon) && !(key in object)) {
-      object = path.length == 1 ? object : baseGet(object, baseSlice(path, 0, -1));
-      if (object == null) {
-        return false;
-      }
-      key = last(path);
-      object = toObject(object);
-    }
-    return object[key] === srcValue
-      ? (srcValue !== undefined || (key in object))
-      : baseIsEqual(srcValue, object[key], undefined, true);
+    var objValue = get(object, path);
+    return (objValue === undefined && objValue === srcValue)
+      ? hasIn(object, path)
+      : baseIsEqual(srcValue, objValue, undefined, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
   };
 }
 
 module.exports = baseMatchesProperty;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseMatchesProperty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../array/last":77,"../lang/isArray":122,"./baseGet":91,"./baseIsEqual":92,"./baseSlice":99,"./isKey":114,"./isStrictComparable":117,"./toObject":119,"./toPath":120,"_process":354,"buffer":153}],97:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseMatchesProperty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseIsEqual":105,"./get":163,"./hasIn":164,"_process":405,"buffer":204}],112:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * The base implementation of `_.property` without support for deep paths.
@@ -12866,11 +13041,10 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseProperty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],98:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseProperty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],113:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseGet = require('./baseGet'),
-    toPath = require('./toPath');
+var baseGet = require('./_baseGet');
 
 /**
  * A specialized version of `baseProperty` which supports deep paths.
@@ -12880,17 +13054,15 @@ var baseGet = require('./baseGet'),
  * @returns {Function} Returns the new function.
  */
 function basePropertyDeep(path) {
-  var pathKey = (path + '');
-  path = toPath(path);
   return function(object) {
-    return baseGet(object, path, pathKey);
+    return baseGet(object, path);
   };
 }
 
 module.exports = basePropertyDeep;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/basePropertyDeep.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseGet":91,"./toPath":120,"_process":354,"buffer":153}],99:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_basePropertyDeep.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseGet":102,"_process":405,"buffer":204}],114:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
@@ -12905,11 +13077,10 @@ function baseSlice(array, start, end) {
   var index = -1,
       length = array.length;
 
-  start = start == null ? 0 : (+start || 0);
   if (start < 0) {
     start = -start > length ? 0 : (length + start);
   }
-  end = (end === undefined || end > length) ? length : (+end || 0);
+  end = end > length ? length : end;
   if (end < 0) {
     end += length;
   }
@@ -12925,103 +13096,157 @@ function baseSlice(array, start, end) {
 
 module.exports = baseSlice;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseSlice.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],100:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseSlice.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],115:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
- * Converts `value` to a string if it's not one. An empty string is returned
- * for `null` or `undefined` values.
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
  *
  * @private
- * @param {*} value The value to process.
- * @returns {string} Returns the string.
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
  */
-function baseToString(value) {
-  return value == null ? '' : (value + '');
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
 }
 
-module.exports = baseToString;
+module.exports = baseTimes;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/baseToString.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],101:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseTimes.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],116:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var identity = require('../utility/identity');
+var arrayMap = require('./_arrayMap');
 
 /**
- * A specialized version of `baseCallback` which only supports `this` binding
- * and specifying the number of arguments to provide to `func`.
+ * The base implementation of `_.toPairs` and `_.toPairsIn` which creates an array
+ * of key-value pairs for `object` corresponding to the property names of `props`.
  *
  * @private
- * @param {Function} func The function to bind.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {number} [argCount] The number of arguments to provide to `func`.
- * @returns {Function} Returns the callback.
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the new array of key-value pairs.
  */
-function bindCallback(func, thisArg, argCount) {
-  if (typeof func != 'function') {
-    return identity;
-  }
-  if (thisArg === undefined) {
-    return func;
-  }
-  switch (argCount) {
-    case 1: return function(value) {
-      return func.call(thisArg, value);
-    };
-    case 3: return function(value, index, collection) {
-      return func.call(thisArg, value, index, collection);
-    };
-    case 4: return function(accumulator, value, index, collection) {
-      return func.call(thisArg, accumulator, value, index, collection);
-    };
-    case 5: return function(value, other, key, object, source) {
-      return func.call(thisArg, value, other, key, object, source);
-    };
-  }
-  return function() {
-    return func.apply(thisArg, arguments);
-  };
+function baseToPairs(object, props) {
+  return arrayMap(props, function(key) {
+    return [key, object[key]];
+  });
 }
 
-module.exports = bindCallback;
+module.exports = baseToPairs;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/bindCallback.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../utility/identity":134,"_process":354,"buffer":153}],102:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_baseToPairs.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_arrayMap":87,"_process":405,"buffer":204}],117:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var bindCallback = require('./bindCallback'),
-    isIterateeCall = require('./isIterateeCall'),
-    restParam = require('../function/restParam');
+/**
+ * Checks if `value` is a global object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {null|Object} Returns `value` if it's a global object, else `null`.
+ */
+function checkGlobal(value) {
+  return (value && value.Object === Object) ? value : null;
+}
+
+module.exports = checkGlobal;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_checkGlobal.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],118:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var copyObjectWith = require('./_copyObjectWith');
 
 /**
- * Creates a `_.assign`, `_.defaults`, or `_.merge` function.
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property names to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @returns {Object} Returns `object`.
+ */
+function copyObject(source, props, object) {
+  return copyObjectWith(source, props, object);
+}
+
+module.exports = copyObject;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_copyObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_copyObjectWith":119,"_process":405,"buffer":204}],119:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assignValue = require('./_assignValue');
+
+/**
+ * This function is like `copyObject` except that it accepts a function to
+ * customize copied values.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property names to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */
+function copyObjectWith(source, props, object, customizer) {
+  object || (object = {});
+
+  var index = -1,
+      length = props.length;
+
+  while (++index < length) {
+    var key = props[index];
+
+    var newValue = customizer
+      ? customizer(object[key], source[key], key, object, source)
+      : source[key];
+
+    assignValue(object, key, newValue);
+  }
+  return object;
+}
+
+module.exports = copyObjectWith;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_copyObjectWith.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assignValue":89,"_process":405,"buffer":204}],120:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isIterateeCall = require('./_isIterateeCall'),
+    rest = require('./rest');
+
+/**
+ * Creates a function like `_.assign`.
  *
  * @private
  * @param {Function} assigner The function to assign values.
  * @returns {Function} Returns the new assigner function.
  */
 function createAssigner(assigner) {
-  return restParam(function(object, sources) {
+  return rest(function(object, sources) {
     var index = -1,
-        length = object == null ? 0 : sources.length,
-        customizer = length > 2 ? sources[length - 2] : undefined,
-        guard = length > 2 ? sources[2] : undefined,
-        thisArg = length > 1 ? sources[length - 1] : undefined;
+        length = sources.length,
+        customizer = length > 1 ? sources[length - 1] : undefined,
+        guard = length > 2 ? sources[2] : undefined;
 
-    if (typeof customizer == 'function') {
-      customizer = bindCallback(customizer, thisArg, 5);
-      length -= 2;
-    } else {
-      customizer = typeof thisArg == 'function' ? thisArg : undefined;
-      length -= (customizer ? 1 : 0);
-    }
+    customizer = typeof customizer == 'function'
+      ? (length--, customizer)
+      : undefined;
+
     if (guard && isIterateeCall(sources[0], sources[1], guard)) {
       customizer = length < 3 ? undefined : customizer;
       length = 1;
     }
+    object = Object(object);
     while (++index < length) {
       var source = sources[index];
       if (source) {
-        assigner(object, source, customizer);
+        assigner(object, source, index, customizer);
       }
     }
     return object;
@@ -13030,12 +13255,10 @@ function createAssigner(assigner) {
 
 module.exports = createAssigner;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/createAssigner.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../function/restParam":79,"./bindCallback":101,"./isIterateeCall":113,"_process":354,"buffer":153}],103:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_createAssigner.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_isIterateeCall":138,"./rest":182,"_process":405,"buffer":204}],121:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var getLength = require('./getLength'),
-    isLength = require('./isLength'),
-    toObject = require('./toObject');
+var isArrayLike = require('./isArrayLike');
 
 /**
  * Creates a `baseEach` or `baseEachRight` function.
@@ -13047,12 +13270,15 @@ var getLength = require('./getLength'),
  */
 function createBaseEach(eachFunc, fromRight) {
   return function(collection, iteratee) {
-    var length = collection ? getLength(collection) : 0;
-    if (!isLength(length)) {
+    if (collection == null) {
+      return collection;
+    }
+    if (!isArrayLike(collection)) {
       return eachFunc(collection, iteratee);
     }
-    var index = fromRight ? length : -1,
-        iterable = toObject(collection);
+    var length = collection.length,
+        index = fromRight ? length : -1,
+        iterable = Object(collection);
 
     while ((fromRight ? index-- : ++index < length)) {
       if (iteratee(iterable[index], index, iterable) === false) {
@@ -13065,13 +13291,11 @@ function createBaseEach(eachFunc, fromRight) {
 
 module.exports = createBaseEach;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/createBaseEach.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./getLength":108,"./isLength":115,"./toObject":119,"_process":354,"buffer":153}],104:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_createBaseEach.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArrayLike":168,"_process":405,"buffer":204}],122:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var toObject = require('./toObject');
-
 /**
- * Creates a base function for `_.forIn` or `_.forInRight`.
+ * Creates a base function for methods like `_.forIn`.
  *
  * @private
  * @param {boolean} [fromRight] Specify iterating from right to left.
@@ -13079,13 +13303,13 @@ var toObject = require('./toObject');
  */
 function createBaseFor(fromRight) {
   return function(object, iteratee, keysFunc) {
-    var iterable = toObject(object),
+    var index = -1,
+        iterable = Object(object),
         props = keysFunc(object),
-        length = props.length,
-        index = fromRight ? length : -1;
+        length = props.length;
 
-    while ((fromRight ? index-- : ++index < length)) {
-      var key = props[index];
+    while (length--) {
+      var key = props[fromRight ? length : ++index];
       if (iteratee(iterable[key], key, iterable) === false) {
         break;
       }
@@ -13096,10 +13320,14 @@ function createBaseFor(fromRight) {
 
 module.exports = createBaseFor;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/createBaseFor.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./toObject":119,"_process":354,"buffer":153}],105:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_createBaseFor.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],123:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var arraySome = require('./arraySome');
+var arraySome = require('./_arraySome');
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
 
 /**
  * A specialized version of `baseIsEqualDeep` for arrays with support for
@@ -13109,58 +13337,94 @@ var arraySome = require('./arraySome');
  * @param {Array} array The array to compare.
  * @param {Array} other The other array to compare.
  * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Function} [customizer] The function to customize comparing arrays.
- * @param {boolean} [isLoose] Specify performing partial comparisons.
- * @param {Array} [stackA] Tracks traversed `value` objects.
- * @param {Array} [stackB] Tracks traversed `other` objects.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual` for more details.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  */
-function equalArrays(array, other, equalFunc, customizer, isLoose, stackA, stackB) {
+function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
   var index = -1,
+      isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      isUnordered = bitmask & UNORDERED_COMPARE_FLAG,
       arrLength = array.length,
       othLength = other.length;
 
-  if (arrLength != othLength && !(isLoose && othLength > arrLength)) {
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
     return false;
   }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(array, other);
+
   // Ignore non-index properties.
   while (++index < arrLength) {
     var arrValue = array[index],
-        othValue = other[index],
-        result = customizer ? customizer(isLoose ? othValue : arrValue, isLoose ? arrValue : othValue, index) : undefined;
+        othValue = other[index];
 
-    if (result !== undefined) {
-      if (result) {
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
         continue;
       }
-      return false;
+      result = false;
+      break;
     }
     // Recursively compare arrays (susceptible to call stack limits).
-    if (isLoose) {
+    if (isUnordered) {
       if (!arraySome(other, function(othValue) {
-            return arrValue === othValue || equalFunc(arrValue, othValue, customizer, isLoose, stackA, stackB);
+            return arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack);
           })) {
-        return false;
+        result = false;
+        break;
       }
-    } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, customizer, isLoose, stackA, stackB))) {
-      return false;
+    } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+      result = false;
+      break;
     }
   }
-  return true;
+  stack['delete'](array);
+  return result;
 }
 
 module.exports = equalArrays;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/equalArrays.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./arraySome":81,"_process":354,"buffer":153}],106:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_equalArrays.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_arraySome":88,"_process":405,"buffer":204}],124:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Symbol = require('./_Symbol'),
+    Uint8Array = require('./_Uint8Array'),
+    equalArrays = require('./_equalArrays'),
+    mapToArray = require('./_mapToArray'),
+    setToArray = require('./_setToArray');
+
+/** Used to compose bitmasks for comparison styles. */
+var UNORDERED_COMPARE_FLAG = 1,
+    PARTIAL_COMPARE_FLAG = 2;
+
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
     dateTag = '[object Date]',
     errorTag = '[object Error]',
+    mapTag = '[object Map]',
     numberTag = '[object Number]',
     regexpTag = '[object RegExp]',
-    stringTag = '[object String]';
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]';
+
+var arrayBufferTag = '[object ArrayBuffer]';
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
 
 /**
  * A specialized version of `baseIsEqualDeep` for comparing objects of
@@ -13173,10 +13437,21 @@ var boolTag = '[object Boolean]',
  * @param {Object} object The object to compare.
  * @param {Object} other The other object to compare.
  * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual` for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalByTag(object, other, tag) {
+function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
   switch (tag) {
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
     case boolTag:
     case dateTag:
       // Coerce dates and booleans to numbers, dates to milliseconds and booleans
@@ -13188,31 +13463,50 @@ function equalByTag(object, other, tag) {
 
     case numberTag:
       // Treat `NaN` vs. `NaN` as equal.
-      return (object != +object)
-        ? other != +other
-        : object == +other;
+      return (object != +object) ? other != +other : object == +other;
 
     case regexpTag:
     case stringTag:
       // Coerce regexes to strings and treat strings primitives and string
       // objects as equal. See https://es5.github.io/#x15.10.6.4 for more details.
       return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      // Recursively compare objects (susceptible to call stack limits).
+      return equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask | UNORDERED_COMPARE_FLAG, stack.set(object, other));
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
   }
   return false;
 }
 
 module.exports = equalByTag;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/equalByTag.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],107:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_equalByTag.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Symbol":82,"./_Uint8Array":83,"./_equalArrays":123,"./_mapToArray":148,"./_setToArray":152,"_process":405,"buffer":204}],125:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var keys = require('../object/keys');
+var baseHas = require('./_baseHas'),
+    keys = require('./keys');
 
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to compose bitmasks for comparison styles. */
+var PARTIAL_COMPARE_FLAG = 2;
 
 /**
  * A specialized version of `baseIsEqualDeep` for objects with support for
@@ -13222,42 +13516,58 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @param {Object} object The object to compare.
  * @param {Object} other The other object to compare.
  * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Function} [customizer] The function to customize comparing values.
- * @param {boolean} [isLoose] Specify performing partial comparisons.
- * @param {Array} [stackA] Tracks traversed `value` objects.
- * @param {Array} [stackB] Tracks traversed `other` objects.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual` for more details.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, stackB) {
-  var objProps = keys(object),
+function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+  var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+      objProps = keys(object),
       objLength = objProps.length,
       othProps = keys(other),
       othLength = othProps.length;
 
-  if (objLength != othLength && !isLoose) {
+  if (objLength != othLength && !isPartial) {
     return false;
   }
   var index = objLength;
   while (index--) {
     var key = objProps[index];
-    if (!(isLoose ? key in other : hasOwnProperty.call(other, key))) {
+    if (!(isPartial ? key in other : baseHas(other, key))) {
       return false;
     }
   }
-  var skipCtor = isLoose;
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+
+  var skipCtor = isPartial;
   while (++index < objLength) {
     key = objProps[index];
     var objValue = object[key],
-        othValue = other[key],
-        result = customizer ? customizer(isLoose ? othValue : objValue, isLoose? objValue : othValue, key) : undefined;
+        othValue = other[key];
 
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
     // Recursively compare objects (susceptible to call stack limits).
-    if (!(result === undefined ? equalFunc(objValue, othValue, customizer, isLoose, stackA, stackB) : result)) {
-      return false;
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+          : compared
+        )) {
+      result = false;
+      break;
     }
     skipCtor || (skipCtor = key == 'constructor');
   }
-  if (!skipCtor) {
+  if (result && !skipCtor) {
     var objCtor = object.constructor,
         othCtor = other.constructor;
 
@@ -13266,18 +13576,19 @@ function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, sta
         ('constructor' in object && 'constructor' in other) &&
         !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
           typeof othCtor == 'function' && othCtor instanceof othCtor)) {
-      return false;
+      result = false;
     }
   }
-  return true;
+  stack['delete'](object);
+  return result;
 }
 
 module.exports = equalObjects;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/equalObjects.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../object/keys":131,"_process":354,"buffer":153}],108:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_equalObjects.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseHas":103,"./keys":179,"_process":405,"buffer":204}],126:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseProperty = require('./baseProperty');
+var baseProperty = require('./_baseProperty');
 
 /**
  * Gets the "length" property value of `object`.
@@ -13293,21 +13604,21 @@ var getLength = baseProperty('length');
 
 module.exports = getLength;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/getLength.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./baseProperty":97,"_process":354,"buffer":153}],109:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_getLength.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseProperty":112,"_process":405,"buffer":204}],127:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isStrictComparable = require('./isStrictComparable'),
-    pairs = require('../object/pairs');
+var isStrictComparable = require('./_isStrictComparable'),
+    toPairs = require('./toPairs');
 
 /**
- * Gets the propery names, values, and compare flags of `object`.
+ * Gets the property names, values, and compare flags of `object`.
  *
  * @private
  * @param {Object} object The object to query.
  * @returns {Array} Returns the match data of `object`.
  */
 function getMatchData(object) {
-  var result = pairs(object),
+  var result = toPairs(object),
       length = result.length;
 
   while (length--) {
@@ -13318,10 +13629,10 @@ function getMatchData(object) {
 
 module.exports = getMatchData;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/getMatchData.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../object/pairs":133,"./isStrictComparable":117,"_process":354,"buffer":153}],110:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_getMatchData.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_isStrictComparable":142,"./toPairs":185,"_process":405,"buffer":204}],128:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isNative = require('../lang/isNative');
+var isNative = require('./isNative');
 
 /**
  * Gets the native function at `key` of `object`.
@@ -13332,42 +13643,277 @@ var isNative = require('../lang/isNative');
  * @returns {*} Returns the function if it's native, else `undefined`.
  */
 function getNative(object, key) {
-  var value = object == null ? undefined : object[key];
+  var value = object[key];
   return isNative(value) ? value : undefined;
 }
 
 module.exports = getNative;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/getNative.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isNative":125,"_process":354,"buffer":153}],111:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_getNative.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isNative":173,"_process":405,"buffer":204}],129:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var getLength = require('./getLength'),
-    isLength = require('./isLength');
+var Map = require('./_Map'),
+    Set = require('./_Set'),
+    WeakMap = require('./_WeakMap');
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]',
+    objectTag = '[object Object]',
+    setTag = '[object Set]',
+    weakMapTag = '[object WeakMap]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = Function.prototype.toString;
 
 /**
- * Checks if `value` is array-like.
+ * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect maps, sets, and weakmaps. */
+var mapCtorString = Map ? funcToString.call(Map) : '',
+    setCtorString = Set ? funcToString.call(Set) : '',
+    weakMapCtorString = WeakMap ? funcToString.call(WeakMap) : '';
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function getTag(value) {
+  return objectToString.call(value);
+}
+
+// Fallback for IE 11 providing `toStringTag` values for maps, sets, and weakmaps.
+if ((Map && getTag(new Map) != mapTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : null,
+        ctorString = typeof Ctor == 'function' ? funcToString.call(Ctor) : '';
+
+    if (ctorString) {
+      switch (ctorString) {
+        case mapCtorString: return mapTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+module.exports = getTag;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_getTag.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Map":78,"./_Set":80,"./_WeakMap":84,"_process":405,"buffer":204}],130:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseCastPath = require('./_baseCastPath'),
+    isArguments = require('./isArguments'),
+    isArray = require('./isArray'),
+    isIndex = require('./_isIndex'),
+    isKey = require('./_isKey'),
+    isLength = require('./isLength'),
+    isString = require('./isString'),
+    last = require('./last'),
+    parent = require('./_parent');
+
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */
+function hasPath(object, path, hasFunc) {
+  if (object == null) {
+    return false;
+  }
+  var result = hasFunc(object, path);
+  if (!result && !isKey(path)) {
+    path = baseCastPath(path);
+    object = parent(object, path);
+    if (object != null) {
+      path = last(path);
+      result = hasFunc(object, path);
+    }
+  }
+  var length = object ? object.length : undefined;
+  return result || (
+    !!length && isLength(length) && isIndex(path, length) &&
+    (isArray(object) || isString(object) || isArguments(object))
+  );
+}
+
+module.exports = hasPath;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_hasPath.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseCastPath":96,"./_isIndex":137,"./_isKey":139,"./_parent":150,"./isArguments":166,"./isArray":167,"./isLength":172,"./isString":176,"./last":180,"_process":405,"buffer":204}],131:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var hashHas = require('./_hashHas');
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(hash, key) {
+  return hashHas(hash, key) && delete hash[key];
+}
+
+module.exports = hashDelete;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_hashDelete.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_hashHas":133,"_process":405,"buffer":204}],132:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var nativeCreate = require('./_nativeCreate');
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @param {Object} hash The hash to query.
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(hash, key) {
+  if (nativeCreate) {
+    var result = hash[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(hash, key) ? hash[key] : undefined;
+}
+
+module.exports = hashGet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_hashGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_nativeCreate":149,"_process":405,"buffer":204}],133:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var nativeCreate = require('./_nativeCreate');
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @param {Object} hash The hash to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(hash, key) {
+  return nativeCreate ? hash[key] !== undefined : hasOwnProperty.call(hash, key);
+}
+
+module.exports = hashHas;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_hashHas.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_nativeCreate":149,"_process":405,"buffer":204}],134:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var nativeCreate = require('./_nativeCreate');
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ */
+function hashSet(hash, key, value) {
+  hash[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+}
+
+module.exports = hashSet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_hashSet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_nativeCreate":149,"_process":405,"buffer":204}],135:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseTimes = require('./_baseTimes'),
+    isArguments = require('./isArguments'),
+    isArray = require('./isArray'),
+    isLength = require('./isLength'),
+    isString = require('./isString');
+
+/**
+ * Creates an array of index keys for `object` values of arrays,
+ * `arguments` objects, and strings, otherwise `null` is returned.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array|null} Returns index keys, else `null`.
+ */
+function indexKeys(object) {
+  var length = object ? object.length : undefined;
+  if (isLength(length) &&
+      (isArray(object) || isString(object) || isArguments(object))) {
+    return baseTimes(length, String);
+  }
+  return null;
+}
+
+module.exports = indexKeys;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_indexKeys.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseTimes":115,"./isArguments":166,"./isArray":167,"./isLength":172,"./isString":176,"_process":405,"buffer":204}],136:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Checks if `value` is a host object in IE < 9.
  *
  * @private
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
  */
-function isArrayLike(value) {
-  return value != null && isLength(getLength(value));
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
 }
 
-module.exports = isArrayLike;
+module.exports = isHostObject;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isArrayLike.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"./getLength":108,"./isLength":115,"_process":354,"buffer":153}],112:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isHostObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],137:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-/** Used to detect unsigned integer values. */
-var reIsUint = /^\d+$/;
-
-/**
- * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
- * of an array-like value.
- */
+/** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
 
 /**
  * Checks if `value` is a valid array-like index.
@@ -13385,15 +13931,16 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isIndex.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],113:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isIndex.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],138:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArrayLike = require('./isArrayLike'),
-    isIndex = require('./isIndex'),
-    isObject = require('../lang/isObject');
+var eq = require('./eq'),
+    isArrayLike = require('./isArrayLike'),
+    isIndex = require('./_isIndex'),
+    isObject = require('./isObject');
 
 /**
- * Checks if the provided arguments are from an iteratee call.
+ * Checks if the given arguments are from an iteratee call.
  *
  * @private
  * @param {*} value The potential iteratee value argument.
@@ -13409,22 +13956,20 @@ function isIterateeCall(value, index, object) {
   if (type == 'number'
       ? (isArrayLike(object) && isIndex(index, object.length))
       : (type == 'string' && index in object)) {
-    var other = object[index];
-    return value === value ? (value === other) : (other !== other);
+    return eq(object[index], value);
   }
   return false;
 }
 
 module.exports = isIterateeCall;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isIterateeCall.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isObject":126,"./isArrayLike":111,"./isIndex":112,"_process":354,"buffer":153}],114:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isIterateeCall.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_isIndex":137,"./eq":161,"./isArrayLike":168,"./isObject":174,"_process":405,"buffer":204}],139:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArray = require('../lang/isArray'),
-    toObject = require('./toObject');
+var isArray = require('./isArray');
 
 /** Used to match property names within property paths. */
-var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\n\\]|\\.)*?\1)\]/,
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     reIsPlainProp = /^\w*$/;
 
 /**
@@ -13436,63 +13981,60 @@ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\n\\]|\\.)*?\1)\]/,
  * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
  */
 function isKey(value, object) {
-  var type = typeof value;
-  if ((type == 'string' && reIsPlainProp.test(value)) || type == 'number') {
+  if (typeof value == 'number') {
     return true;
   }
-  if (isArray(value)) {
-    return false;
-  }
-  var result = !reIsDeepProp.test(value);
-  return result || (object != null && value in toObject(object));
+  return !isArray(value) &&
+    (reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+      (object != null && value in Object(object)));
 }
 
 module.exports = isKey;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isKey.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isArray":122,"./toObject":119,"_process":354,"buffer":153}],115:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isKey.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArray":167,"_process":405,"buffer":204}],140:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
- * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
- * of an array-like value.
- */
-var MAX_SAFE_INTEGER = 9007199254740991;
-
-/**
- * Checks if `value` is a valid array-like length.
- *
- * **Note:** This function is based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).
+ * Checks if `value` is suitable for use as unique object key.
  *
  * @private
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
  */
-function isLength(value) {
-  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+function isKeyable(value) {
+  var type = typeof value;
+  return type == 'number' || type == 'boolean' ||
+    (type == 'string' && value != '__proto__') || value == null;
 }
 
-module.exports = isLength;
+module.exports = isKeyable;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isLength.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],116:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isKeyable.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],141:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
 /**
- * Checks if `value` is object-like.
+ * Checks if `value` is likely a prototype object.
  *
  * @private
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
  */
-function isObjectLike(value) {
-  return !!value && typeof value == 'object';
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
 }
 
-module.exports = isObjectLike;
+module.exports = isPrototype;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isObjectLike.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"_process":354,"buffer":153}],117:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isPrototype.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],142:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isObject = require('../lang/isObject');
+var isObject = require('./isObject');
 
 /**
  * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -13508,118 +14050,739 @@ function isStrictComparable(value) {
 
 module.exports = isStrictComparable;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/isStrictComparable.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isObject":126,"_process":354,"buffer":153}],118:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_isStrictComparable.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isObject":174,"_process":405,"buffer":204}],143:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArguments = require('../lang/isArguments'),
-    isArray = require('../lang/isArray'),
-    isIndex = require('./isIndex'),
-    isLength = require('./isLength'),
-    keysIn = require('../object/keysIn');
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+var Hash = require('./_Hash'),
+    Map = require('./_Map');
 
 /**
- * A fallback implementation of `Object.keys` which creates an array of the
- * own enumerable property names of `object`.
+ * Removes all key-value entries from the map.
  *
  * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
+ * @name clear
+ * @memberOf MapCache
  */
-function shimKeys(object) {
-  var props = keysIn(object),
-      propsLength = props.length,
-      length = propsLength && object.length;
+function mapClear() {
+  this.__data__ = {
+    'hash': new Hash,
+    'map': Map ? new Map : [],
+    'string': new Hash
+  };
+}
 
-  var allowIndexes = !!length && isLength(length) &&
-    (isArray(object) || isArguments(object));
+module.exports = mapClear;
 
-  var index = -1,
-      result = [];
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapClear.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Hash":77,"./_Map":78,"_process":405,"buffer":204}],144:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Map = require('./_Map'),
+    assocDelete = require('./_assocDelete'),
+    hashDelete = require('./_hashDelete'),
+    isKeyable = require('./_isKeyable');
 
-  while (++index < propsLength) {
-    var key = props[index];
-    if ((allowIndexes && isIndex(key, length)) || hasOwnProperty.call(object, key)) {
-      result.push(key);
-    }
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapDelete(key) {
+  var data = this.__data__;
+  if (isKeyable(key)) {
+    return hashDelete(typeof key == 'string' ? data.string : data.hash, key);
   }
+  return Map ? data.map['delete'](key) : assocDelete(data.map, key);
+}
+
+module.exports = mapDelete;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapDelete.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Map":78,"./_assocDelete":90,"./_hashDelete":131,"./_isKeyable":140,"_process":405,"buffer":204}],145:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Map = require('./_Map'),
+    assocGet = require('./_assocGet'),
+    hashGet = require('./_hashGet'),
+    isKeyable = require('./_isKeyable');
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapGet(key) {
+  var data = this.__data__;
+  if (isKeyable(key)) {
+    return hashGet(typeof key == 'string' ? data.string : data.hash, key);
+  }
+  return Map ? data.map.get(key) : assocGet(data.map, key);
+}
+
+module.exports = mapGet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Map":78,"./_assocGet":91,"./_hashGet":132,"./_isKeyable":140,"_process":405,"buffer":204}],146:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Map = require('./_Map'),
+    assocHas = require('./_assocHas'),
+    hashHas = require('./_hashHas'),
+    isKeyable = require('./_isKeyable');
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapHas(key) {
+  var data = this.__data__;
+  if (isKeyable(key)) {
+    return hashHas(typeof key == 'string' ? data.string : data.hash, key);
+  }
+  return Map ? data.map.has(key) : assocHas(data.map, key);
+}
+
+module.exports = mapHas;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapHas.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Map":78,"./_assocHas":92,"./_hashHas":133,"./_isKeyable":140,"_process":405,"buffer":204}],147:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Map = require('./_Map'),
+    assocSet = require('./_assocSet'),
+    hashSet = require('./_hashSet'),
+    isKeyable = require('./_isKeyable');
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache object.
+ */
+function mapSet(key, value) {
+  var data = this.__data__;
+  if (isKeyable(key)) {
+    hashSet(typeof key == 'string' ? data.string : data.hash, key, value);
+  } else if (Map) {
+    data.map.set(key, value);
+  } else {
+    assocSet(data.map, key, value);
+  }
+  return this;
+}
+
+module.exports = mapSet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapSet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Map":78,"./_assocSet":94,"./_hashSet":134,"./_isKeyable":140,"_process":405,"buffer":204}],148:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Converts `map` to an array.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
   return result;
 }
 
-module.exports = shimKeys;
+module.exports = mapToArray;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/shimKeys.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isArguments":121,"../lang/isArray":122,"../object/keysIn":132,"./isIndex":112,"./isLength":115,"_process":354,"buffer":153}],119:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_mapToArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],149:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isObject = require('../lang/isObject');
+var getNative = require('./_getNative');
+
+/* Built-in method references that are verified to be native. */
+var nativeCreate = getNative(Object, 'create');
+
+module.exports = nativeCreate;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_nativeCreate.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_getNative":128,"_process":405,"buffer":204}],150:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseSlice = require('./_baseSlice'),
+    get = require('./get');
 
 /**
- * Converts `value` to an object if it's not one.
+ * Gets the parent value at `path` of `object`.
  *
  * @private
- * @param {*} value The value to process.
- * @returns {Object} Returns the object.
+ * @param {Object} object The object to query.
+ * @param {Array} path The path to get the parent value of.
+ * @returns {*} Returns the parent value.
  */
-function toObject(value) {
-  return isObject(value) ? value : Object(value);
+function parent(object, path) {
+  return path.length == 1 ? object : get(object, baseSlice(path, 0, -1));
 }
 
-module.exports = toObject;
+module.exports = parent;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/toObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isObject":126,"_process":354,"buffer":153}],120:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_parent.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseSlice":114,"./get":163,"_process":405,"buffer":204}],151:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseToString = require('./baseToString'),
-    isArray = require('../lang/isArray');
+var checkGlobal = require('./_checkGlobal');
+
+/** Used to determine if values are of the language type `Object`. */
+var objectTypes = {
+  'function': true,
+  'object': true
+};
+
+/** Detect free variable `exports`. */
+var freeExports = (objectTypes[typeof exports] && exports && !exports.nodeType)
+  ? exports
+  : undefined;
+
+/** Detect free variable `module`. */
+var freeModule = (objectTypes[typeof module] && module && !module.nodeType)
+  ? module
+  : undefined;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = checkGlobal(freeExports && freeModule && typeof global == 'object' && global);
+
+/** Detect free variable `self`. */
+var freeSelf = checkGlobal(objectTypes[typeof self] && self);
+
+/** Detect free variable `window`. */
+var freeWindow = checkGlobal(objectTypes[typeof window] && window);
+
+/** Detect `this` as the global object. */
+var thisGlobal = checkGlobal(objectTypes[typeof this] && this);
+
+/**
+ * Used as a reference to the global object.
+ *
+ * The `this` value is used if it's the global object to avoid Greasemonkey's
+ * restricted `window` object, otherwise the `window` object is used.
+ */
+var root = freeGlobal ||
+  ((freeWindow !== (thisGlobal && thisGlobal.window)) && freeWindow) ||
+    freeSelf || thisGlobal || Function('return this')();
+
+module.exports = root;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_root.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_checkGlobal":117,"_process":405,"buffer":204}],152:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Converts `set` to an array.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+module.exports = setToArray;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_setToArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],153:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = { 'array': [], 'map': null };
+}
+
+module.exports = stackClear;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stackClear.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],154:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocDelete = require('./_assocDelete');
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  var data = this.__data__,
+      array = data.array;
+
+  return array ? assocDelete(array, key) : data.map['delete'](key);
+}
+
+module.exports = stackDelete;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stackDelete.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocDelete":90,"_process":405,"buffer":204}],155:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocGet = require('./_assocGet');
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  var data = this.__data__,
+      array = data.array;
+
+  return array ? assocGet(array, key) : data.map.get(key);
+}
+
+module.exports = stackGet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stackGet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocGet":91,"_process":405,"buffer":204}],156:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var assocHas = require('./_assocHas');
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  var data = this.__data__,
+      array = data.array;
+
+  return array ? assocHas(array, key) : data.map.has(key);
+}
+
+module.exports = stackHas;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stackHas.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assocHas":92,"_process":405,"buffer":204}],157:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var MapCache = require('./_MapCache'),
+    assocSet = require('./_assocSet');
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache object.
+ */
+function stackSet(key, value) {
+  var data = this.__data__,
+      array = data.array;
+
+  if (array) {
+    if (array.length < (LARGE_ARRAY_SIZE - 1)) {
+      assocSet(array, key, value);
+    } else {
+      data.array = null;
+      data.map = new MapCache(array);
+    }
+  }
+  var map = data.map;
+  if (map) {
+    map.set(key, value);
+  }
+  return this;
+}
+
+module.exports = stackSet;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stackSet.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_MapCache":79,"./_assocSet":94,"_process":405,"buffer":204}],158:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var toString = require('./toString');
 
 /** Used to match property names within property paths. */
-var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\n\\]|\\.)*?)\2)\]/g;
+var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]/g;
 
 /** Used to match backslashes in property paths. */
 var reEscapeChar = /\\(\\)?/g;
 
 /**
- * Converts `value` to property path array if it's not one.
+ * Converts `string` to a property path array.
  *
  * @private
- * @param {*} value The value to process.
+ * @param {string} string The string to convert.
  * @returns {Array} Returns the property path array.
  */
-function toPath(value) {
-  if (isArray(value)) {
-    return value;
-  }
+function stringToPath(string) {
   var result = [];
-  baseToString(value).replace(rePropName, function(match, number, quote, string) {
+  toString(string).replace(rePropName, function(match, number, quote, string) {
     result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
   });
   return result;
 }
 
-module.exports = toPath;
+module.exports = stringToPath;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal/toPath.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/internal")
-},{"../lang/isArray":122,"./baseToString":100,"_process":354,"buffer":153}],121:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/_stringToPath.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./toString":186,"_process":405,"buffer":204}],159:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArrayLike = require('../internal/isArrayLike'),
-    isObjectLike = require('../internal/isObjectLike');
+var assignValue = require('./_assignValue'),
+    copyObject = require('./_copyObject'),
+    createAssigner = require('./_createAssigner'),
+    isArrayLike = require('./isArrayLike'),
+    isPrototype = require('./_isPrototype'),
+    keys = require('./keys');
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
 var hasOwnProperty = objectProto.hasOwnProperty;
 
-/** Native method references. */
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+/** Detect if properties shadowing those on `Object.prototype` are non-enumerable. */
+var nonEnumShadows = !propertyIsEnumerable.call({ 'valueOf': 1 }, 'valueOf');
+
+/**
+ * Assigns own enumerable properties of source objects to the destination
+ * object. Source objects are applied from left to right. Subsequent sources
+ * overwrite property assignments of previous sources.
+ *
+ * **Note:** This method mutates `object` and is loosely based on
+ * [`Object.assign`](https://mdn.io/Object/assign).
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns `object`.
+ * @example
+ *
+ * function Foo() {
+ *   this.c = 3;
+ * }
+ *
+ * function Bar() {
+ *   this.e = 5;
+ * }
+ *
+ * Foo.prototype.d = 4;
+ * Bar.prototype.f = 6;
+ *
+ * _.assign({ 'a': 1 }, new Foo, new Bar);
+ * // => { 'a': 1, 'c': 3, 'e': 5 }
+ */
+var assign = createAssigner(function(object, source) {
+  if (nonEnumShadows || isPrototype(source) || isArrayLike(source)) {
+    copyObject(source, keys(source), object);
+    return;
+  }
+  for (var key in source) {
+    if (hasOwnProperty.call(source, key)) {
+      assignValue(object, key, source[key]);
+    }
+  }
+});
+
+module.exports = assign;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/assign.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_assignValue":89,"./_copyObject":118,"./_createAssigner":120,"./_isPrototype":141,"./isArrayLike":168,"./keys":179,"_process":405,"buffer":204}],160:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseAssign = require('./_baseAssign'),
+    baseCreate = require('./_baseCreate');
+
+/**
+ * Creates an object that inherits from the `prototype` object. If a `properties`
+ * object is given its own enumerable properties are assigned to the created object.
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} prototype The object to inherit from.
+ * @param {Object} [properties] The properties to assign to the object.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * function Shape() {
+ *   this.x = 0;
+ *   this.y = 0;
+ * }
+ *
+ * function Circle() {
+ *   Shape.call(this);
+ * }
+ *
+ * Circle.prototype = _.create(Shape.prototype, {
+ *   'constructor': Circle
+ * });
+ *
+ * var circle = new Circle;
+ * circle instanceof Circle;
+ * // => true
+ *
+ * circle instanceof Shape;
+ * // => true
+ */
+function create(prototype, properties) {
+  var result = baseCreate(prototype);
+  return properties ? baseAssign(result, properties) : result;
+}
+
+module.exports = create;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/create.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseAssign":95,"./_baseCreate":97,"_process":405,"buffer":204}],161:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * Performs a [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'user': 'fred' };
+ * var other = { 'user': 'fred' };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+module.exports = eq;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/eq.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],162:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var arrayEvery = require('./_arrayEvery'),
+    baseEvery = require('./_baseEvery'),
+    baseIteratee = require('./_baseIteratee'),
+    isArray = require('./isArray'),
+    isIterateeCall = require('./_isIterateeCall');
+
+/**
+ * Checks if `predicate` returns truthy for **all** elements of `collection`.
+ * Iteration is stopped once `predicate` returns falsey. The predicate is
+ * invoked with three arguments: (value, index|key, collection).
+ *
+ * @static
+ * @memberOf _
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+ * @param- {Object} [guard] Enables use as an iteratee for functions like `_.map`.
+ * @returns {boolean} Returns `true` if all elements pass the predicate check, else `false`.
+ * @example
+ *
+ * _.every([true, 1, null, 'yes'], Boolean);
+ * // => false
+ *
+ * var users = [
+ *   { 'user': 'barney', 'active': false },
+ *   { 'user': 'fred',   'active': false }
+ * ];
+ *
+ * // The `_.matches` iteratee shorthand.
+ * _.every(users, { 'user': 'barney', 'active': false });
+ * // => false
+ *
+ * // The `_.matchesProperty` iteratee shorthand.
+ * _.every(users, ['active', false]);
+ * // => true
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.every(users, 'active');
+ * // => false
+ */
+function every(collection, predicate, guard) {
+  var func = isArray(collection) ? arrayEvery : baseEvery;
+  if (guard && isIterateeCall(collection, predicate, guard)) {
+    predicate = undefined;
+  }
+  return func(collection, baseIteratee(predicate, 3));
+}
+
+module.exports = every;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/every.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_arrayEvery":86,"./_baseEvery":99,"./_baseIteratee":108,"./_isIterateeCall":138,"./isArray":167,"_process":405,"buffer":204}],163:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseGet = require('./_baseGet');
+
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined` the `defaultValue` is used in its place.
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned if the resolved value is `undefined`.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */
+function get(object, path, defaultValue) {
+  var result = object == null ? undefined : baseGet(object, path);
+  return result === undefined ? defaultValue : result;
+}
+
+module.exports = get;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/get.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseGet":102,"_process":405,"buffer":204}],164:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseHasIn = require('./_baseHasIn'),
+    hasPath = require('./_hasPath');
+
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': _.create({ 'c': 3 }) }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b.c');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b', 'c']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */
+function hasIn(object, path) {
+  return hasPath(object, path, baseHasIn);
+}
+
+module.exports = hasIn;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/hasIn.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseHasIn":104,"./_hasPath":130,"_process":405,"buffer":204}],165:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/**
+ * This method returns the first argument given to it.
+ *
+ * @static
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'user': 'fred' };
+ *
+ * _.identity(object) === object;
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+module.exports = identity;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/identity.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],166:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isArrayLikeObject = require('./isArrayLikeObject');
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Built-in value references. */
 var propertyIsEnumerable = objectProto.propertyIsEnumerable;
 
 /**
- * Checks if `value` is classified as an `arguments` object.
+ * Checks if `value` is likely an `arguments` object.
  *
  * @static
  * @memberOf _
@@ -13635,39 +14798,22 @@ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
  * // => false
  */
 function isArguments(value) {
-  return isObjectLike(value) && isArrayLike(value) &&
-    hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+  // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
 }
 
 module.exports = isArguments;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isArguments.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/isArrayLike":111,"../internal/isObjectLike":116,"_process":354,"buffer":153}],122:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isArguments.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArrayLikeObject":169,"_process":405,"buffer":204}],167:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var getNative = require('../internal/getNative'),
-    isLength = require('../internal/isLength'),
-    isObjectLike = require('../internal/isObjectLike');
-
-/** `Object#toString` result references. */
-var arrayTag = '[object Array]';
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/**
- * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
- * of values.
- */
-var objToString = objectProto.toString;
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeIsArray = getNative(Array, 'isArray');
-
 /**
  * Checks if `value` is classified as an `Array` object.
  *
  * @static
  * @memberOf _
+ * @type {Function}
  * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
@@ -13676,35 +14822,115 @@ var nativeIsArray = getNative(Array, 'isArray');
  * _.isArray([1, 2, 3]);
  * // => true
  *
- * _.isArray(function() { return arguments; }());
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
  * // => false
  */
-var isArray = nativeIsArray || function(value) {
-  return isObjectLike(value) && isLength(value.length) && objToString.call(value) == arrayTag;
-};
+var isArray = Array.isArray;
 
 module.exports = isArray;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/getNative":110,"../internal/isLength":115,"../internal/isObjectLike":116,"_process":354,"buffer":153}],123:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],168:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArguments = require('./isArguments'),
-    isArray = require('./isArray'),
-    isArrayLike = require('../internal/isArrayLike'),
+var getLength = require('./_getLength'),
     isFunction = require('./isFunction'),
-    isObjectLike = require('../internal/isObjectLike'),
-    isString = require('./isString'),
-    keys = require('../object/keys');
+    isLength = require('./isLength');
 
 /**
- * Checks if `value` is empty. A value is considered empty unless it's an
- * `arguments` object, array, string, or jQuery-like collection with a length
- * greater than `0` or an object with own enumerable properties.
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
  *
  * @static
  * @memberOf _
  * @category Lang
- * @param {Array|Object|string} value The value to inspect.
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(getLength(value)) && !isFunction(value);
+}
+
+module.exports = isArrayLike;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isArrayLike.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_getLength":126,"./isFunction":171,"./isLength":172,"_process":405,"buffer":204}],169:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isArrayLike = require('./isArrayLike'),
+    isObjectLike = require('./isObjectLike');
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object, else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+module.exports = isArrayLikeObject;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isArrayLikeObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArrayLike":168,"./isObjectLike":175,"_process":405,"buffer":204}],170:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isArguments = require('./isArguments'),
+    isArray = require('./isArray'),
+    isArrayLike = require('./isArrayLike'),
+    isFunction = require('./isFunction'),
+    isString = require('./isString');
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Checks if `value` is an empty collection or object. A value is considered
+ * empty if it's an `arguments` object, array, string, or jQuery-like collection
+ * with a length of `0` or has no own enumerable properties.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is empty, else `false`.
  * @example
  *
@@ -13724,34 +14950,38 @@ var isArguments = require('./isArguments'),
  * // => false
  */
 function isEmpty(value) {
-  if (value == null) {
-    return true;
-  }
-  if (isArrayLike(value) && (isArray(value) || isString(value) || isArguments(value) ||
-      (isObjectLike(value) && isFunction(value.splice)))) {
+  if (isArrayLike(value) &&
+      (isArray(value) || isString(value) ||
+        isFunction(value.splice) || isArguments(value))) {
     return !value.length;
   }
-  return !keys(value).length;
+  for (var key in value) {
+    if (hasOwnProperty.call(value, key)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 module.exports = isEmpty;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isEmpty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/isArrayLike":111,"../internal/isObjectLike":116,"../object/keys":131,"./isArguments":121,"./isArray":122,"./isFunction":124,"./isString":127,"_process":354,"buffer":153}],124:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isEmpty.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArguments":166,"./isArray":167,"./isArrayLike":168,"./isFunction":171,"./isString":176,"_process":405,"buffer":204}],171:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
-var funcTag = '[object Function]';
+var funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]';
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /**
  * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
  * of values.
  */
-var objToString = objectProto.toString;
+var objectToString = objectProto.toString;
 
 /**
  * Checks if `value` is classified as a `Function` object.
@@ -13771,34 +15001,76 @@ var objToString = objectProto.toString;
  */
 function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in older versions of Chrome and Safari which return 'function' for regexes
-  // and Safari 8 which returns 'object' for typed array constructors.
-  return isObject(value) && objToString.call(value) == funcTag;
+  // in Safari 8 which returns 'object' for typed array and weak map constructors,
+  // and PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
 }
 
 module.exports = isFunction;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isFunction.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"./isObject":126,"_process":354,"buffer":153}],125:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isFunction.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isObject":174,"_process":405,"buffer":204}],172:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This function is loosely based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+module.exports = isLength;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isLength.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],173:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isFunction = require('./isFunction'),
-    isObjectLike = require('../internal/isObjectLike');
+    isHostObject = require('./_isHostObject'),
+    isObjectLike = require('./isObjectLike');
+
+/** Used to match `RegExp` [syntax characters](http://ecma-international.org/ecma-262/6.0/#sec-patterns). */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 
 /** Used to detect host constructors (Safari > 5). */
 var reIsHostCtor = /^\[object .+?Constructor\]$/;
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var fnToString = Function.prototype.toString;
+var funcToString = Function.prototype.toString;
 
 /** Used to check objects for own properties. */
 var hasOwnProperty = objectProto.hasOwnProperty;
 
 /** Used to detect if a method is native. */
 var reIsNative = RegExp('^' +
-  fnToString.call(hasOwnProperty).replace(/[\\^$.*+?()[\]{}|]/g, '\\$&')
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
   .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
 );
 
@@ -13823,15 +15095,16 @@ function isNative(value) {
     return false;
   }
   if (isFunction(value)) {
-    return reIsNative.test(fnToString.call(value));
+    return reIsNative.test(funcToString.call(value));
   }
-  return isObjectLike(value) && reIsHostCtor.test(value);
+  return isObjectLike(value) &&
+    (isHostObject(value) ? reIsNative : reIsHostCtor).test(value);
 }
 
 module.exports = isNative;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isNative.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/isObjectLike":116,"./isFunction":124,"_process":354,"buffer":153}],126:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isNative.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_isHostObject":136,"./isFunction":171,"./isObjectLike":175,"_process":405,"buffer":204}],174:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
@@ -13850,34 +15123,68 @@ module.exports = isNative;
  * _.isObject([1, 2, 3]);
  * // => true
  *
- * _.isObject(1);
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
  * // => false
  */
 function isObject(value) {
-  // Avoid a V8 JIT bug in Chrome 19-20.
-  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
   var type = typeof value;
   return !!value && (type == 'object' || type == 'function');
 }
 
 module.exports = isObject;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"_process":354,"buffer":153}],127:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isObject.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],175:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isObjectLike = require('../internal/isObjectLike');
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+module.exports = isObjectLike;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isObjectLike.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],176:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isArray = require('./isArray'),
+    isObjectLike = require('./isObjectLike');
 
 /** `Object#toString` result references. */
 var stringTag = '[object String]';
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /**
  * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
  * of values.
  */
-var objToString = objectProto.toString;
+var objectToString = objectProto.toString;
 
 /**
  * Checks if `value` is classified as a `String` primitive or object.
@@ -13896,16 +15203,57 @@ var objToString = objectProto.toString;
  * // => false
  */
 function isString(value) {
-  return typeof value == 'string' || (isObjectLike(value) && objToString.call(value) == stringTag);
+  return typeof value == 'string' ||
+    (!isArray(value) && isObjectLike(value) && objectToString.call(value) == stringTag);
 }
 
 module.exports = isString;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isString.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/isObjectLike":116,"_process":354,"buffer":153}],128:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isString.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isArray":167,"./isObjectLike":175,"_process":405,"buffer":204}],177:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isLength = require('../internal/isLength'),
-    isObjectLike = require('../internal/isObjectLike');
+var isObjectLike = require('./isObjectLike');
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+module.exports = isSymbol;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isSymbol.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isObjectLike":175,"_process":405,"buffer":204}],178:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isLength = require('./isLength'),
+    isObjectLike = require('./isObjectLike');
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -13948,14 +15296,14 @@ typedArrayTags[numberTag] = typedArrayTags[objectTag] =
 typedArrayTags[regexpTag] = typedArrayTags[setTag] =
 typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
 
-/** Used for native method references. */
+/** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /**
  * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
  * of values.
  */
-var objToString = objectProto.toString;
+var objectToString = objectProto.toString;
 
 /**
  * Checks if `value` is classified as a typed array.
@@ -13974,119 +15322,21 @@ var objToString = objectProto.toString;
  * // => false
  */
 function isTypedArray(value) {
-  return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[objToString.call(value)];
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
 }
 
 module.exports = isTypedArray;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang/isTypedArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/lang")
-},{"../internal/isLength":115,"../internal/isObjectLike":116,"_process":354,"buffer":153}],129:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/isTypedArray.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isLength":172,"./isObjectLike":175,"_process":405,"buffer":204}],179:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var assignWith = require('../internal/assignWith'),
-    baseAssign = require('../internal/baseAssign'),
-    createAssigner = require('../internal/createAssigner');
-
-/**
- * Assigns own enumerable properties of source object(s) to the destination
- * object. Subsequent sources overwrite property assignments of previous sources.
- * If `customizer` is provided it's invoked to produce the assigned values.
- * The `customizer` is bound to `thisArg` and invoked with five arguments:
- * (objectValue, sourceValue, key, object, source).
- *
- * **Note:** This method mutates `object` and is based on
- * [`Object.assign`](http://ecma-international.org/ecma-262/6.0/#sec-object.assign).
- *
- * @static
- * @memberOf _
- * @alias extend
- * @category Object
- * @param {Object} object The destination object.
- * @param {...Object} [sources] The source objects.
- * @param {Function} [customizer] The function to customize assigned values.
- * @param {*} [thisArg] The `this` binding of `customizer`.
- * @returns {Object} Returns `object`.
- * @example
- *
- * _.assign({ 'user': 'barney' }, { 'age': 40 }, { 'user': 'fred' });
- * // => { 'user': 'fred', 'age': 40 }
- *
- * // using a customizer callback
- * var defaults = _.partialRight(_.assign, function(value, other) {
- *   return _.isUndefined(value) ? other : value;
- * });
- *
- * defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred' });
- * // => { 'user': 'barney', 'age': 36 }
- */
-var assign = createAssigner(function(object, source, customizer) {
-  return customizer
-    ? assignWith(object, source, customizer)
-    : baseAssign(object, source);
-});
-
-module.exports = assign;
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object/assign.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object")
-},{"../internal/assignWith":82,"../internal/baseAssign":83,"../internal/createAssigner":102,"_process":354,"buffer":153}],130:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseAssign = require('../internal/baseAssign'),
-    baseCreate = require('../internal/baseCreate'),
-    isIterateeCall = require('../internal/isIterateeCall');
-
-/**
- * Creates an object that inherits from the given `prototype` object. If a
- * `properties` object is provided its own enumerable properties are assigned
- * to the created object.
- *
- * @static
- * @memberOf _
- * @category Object
- * @param {Object} prototype The object to inherit from.
- * @param {Object} [properties] The properties to assign to the object.
- * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
- * @returns {Object} Returns the new object.
- * @example
- *
- * function Shape() {
- *   this.x = 0;
- *   this.y = 0;
- * }
- *
- * function Circle() {
- *   Shape.call(this);
- * }
- *
- * Circle.prototype = _.create(Shape.prototype, {
- *   'constructor': Circle
- * });
- *
- * var circle = new Circle;
- * circle instanceof Circle;
- * // => true
- *
- * circle instanceof Shape;
- * // => true
- */
-function create(prototype, properties, guard) {
-  var result = baseCreate(prototype);
-  if (guard && isIterateeCall(prototype, properties, guard)) {
-    properties = undefined;
-  }
-  return properties ? baseAssign(result, properties) : result;
-}
-
-module.exports = create;
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object/create.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object")
-},{"../internal/baseAssign":83,"../internal/baseCreate":86,"../internal/isIterateeCall":113,"_process":354,"buffer":153}],131:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var getNative = require('../internal/getNative'),
-    isArrayLike = require('../internal/isArrayLike'),
-    isObject = require('../lang/isObject'),
-    shimKeys = require('../internal/shimKeys');
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeKeys = getNative(Object, 'keys');
+var baseHas = require('./_baseHas'),
+    baseKeys = require('./_baseKeys'),
+    indexKeys = require('./_indexKeys'),
+    isArrayLike = require('./isArrayLike'),
+    isIndex = require('./_isIndex'),
+    isPrototype = require('./_isPrototype');
 
 /**
  * Creates an array of the own enumerable property names of `object`.
@@ -14115,160 +15365,64 @@ var nativeKeys = getNative(Object, 'keys');
  * _.keys('hi');
  * // => ['0', '1']
  */
-var keys = !nativeKeys ? shimKeys : function(object) {
-  var Ctor = object == null ? undefined : object.constructor;
-  if ((typeof Ctor == 'function' && Ctor.prototype === object) ||
-      (typeof object != 'function' && isArrayLike(object))) {
-    return shimKeys(object);
+function keys(object) {
+  var isProto = isPrototype(object);
+  if (!(isProto || isArrayLike(object))) {
+    return baseKeys(object);
   }
-  return isObject(object) ? nativeKeys(object) : [];
-};
+  var indexes = indexKeys(object),
+      skipIndexes = !!indexes,
+      result = indexes || [],
+      length = result.length;
 
-module.exports = keys;
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object/keys.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object")
-},{"../internal/getNative":110,"../internal/isArrayLike":111,"../internal/shimKeys":118,"../lang/isObject":126,"_process":354,"buffer":153}],132:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var isArguments = require('../lang/isArguments'),
-    isArray = require('../lang/isArray'),
-    isIndex = require('../internal/isIndex'),
-    isLength = require('../internal/isLength'),
-    isObject = require('../lang/isObject');
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Creates an array of the own and inherited enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects.
- *
- * @static
- * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keysIn(new Foo);
- * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
- */
-function keysIn(object) {
-  if (object == null) {
-    return [];
-  }
-  if (!isObject(object)) {
-    object = Object(object);
-  }
-  var length = object.length;
-  length = (length && isLength(length) &&
-    (isArray(object) || isArguments(object)) && length) || 0;
-
-  var Ctor = object.constructor,
-      index = -1,
-      isProto = typeof Ctor == 'function' && Ctor.prototype === object,
-      result = Array(length),
-      skipIndexes = length > 0;
-
-  while (++index < length) {
-    result[index] = (index + '');
-  }
   for (var key in object) {
-    if (!(skipIndexes && isIndex(key, length)) &&
-        !(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {
+    if (baseHas(object, key) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length))) &&
+        !(isProto && key == 'constructor')) {
       result.push(key);
     }
   }
   return result;
 }
 
-module.exports = keysIn;
+module.exports = keys;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object/keysIn.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object")
-},{"../internal/isIndex":112,"../internal/isLength":115,"../lang/isArguments":121,"../lang/isArray":122,"../lang/isObject":126,"_process":354,"buffer":153}],133:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/keys.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseHas":103,"./_baseKeys":109,"./_indexKeys":135,"./_isIndex":137,"./_isPrototype":141,"./isArrayLike":168,"_process":405,"buffer":204}],180:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var keys = require('./keys'),
-    toObject = require('../internal/toObject');
-
 /**
- * Creates a two dimensional array of the key-value pairs for `object`,
- * e.g. `[[key1, value1], [key2, value2]]`.
+ * Gets the last element of `array`.
  *
  * @static
  * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the new array of key-value pairs.
+ * @category Array
+ * @param {Array} array The array to query.
+ * @returns {*} Returns the last element of `array`.
  * @example
  *
- * _.pairs({ 'barney': 36, 'fred': 40 });
- * // => [['barney', 36], ['fred', 40]] (iteration order is not guaranteed)
+ * _.last([1, 2, 3]);
+ * // => 3
  */
-function pairs(object) {
-  object = toObject(object);
-
-  var index = -1,
-      props = keys(object),
-      length = props.length,
-      result = Array(length);
-
-  while (++index < length) {
-    var key = props[index];
-    result[index] = [key, object[key]];
-  }
-  return result;
+function last(array) {
+  var length = array ? array.length : 0;
+  return length ? array[length - 1] : undefined;
 }
 
-module.exports = pairs;
+module.exports = last;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object/pairs.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/object")
-},{"../internal/toObject":119,"./keys":131,"_process":354,"buffer":153}],134:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/last.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"_process":405,"buffer":204}],181:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseProperty = require('./_baseProperty'),
+    basePropertyDeep = require('./_basePropertyDeep'),
+    isKey = require('./_isKey');
+
 /**
- * This method returns the first argument provided to it.
+ * Creates a function that returns the value at `path` of a given object.
  *
  * @static
  * @memberOf _
- * @category Utility
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'user': 'fred' };
- *
- * _.identity(object) === object;
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-module.exports = identity;
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/utility/identity.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/utility")
-},{"_process":354,"buffer":153}],135:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var baseProperty = require('../internal/baseProperty'),
-    basePropertyDeep = require('../internal/basePropertyDeep'),
-    isKey = require('../internal/isKey');
-
-/**
- * Creates a function that returns the property value at `path` on a
- * given object.
- *
- * @static
- * @memberOf _
- * @category Utility
+ * @category Util
  * @param {Array|string} path The path of the property to get.
  * @returns {Function} Returns the new function.
  * @example
@@ -14281,7 +15435,7 @@ var baseProperty = require('../internal/baseProperty'),
  * _.map(objects, _.property('a.b.c'));
  * // => [2, 1]
  *
- * _.pluck(_.sortBy(objects, _.property(['a', 'b', 'c'])), 'a.b.c');
+ * _.map(_.sortBy(objects, _.property(['a', 'b', 'c'])), 'a.b.c');
  * // => [1, 2]
  */
 function property(path) {
@@ -14290,13 +15444,270 @@ function property(path) {
 
 module.exports = property;
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/utility/property.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/utility")
-},{"../internal/baseProperty":97,"../internal/basePropertyDeep":98,"../internal/isKey":114,"_process":354,"buffer":153}],136:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/property.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseProperty":112,"./_basePropertyDeep":113,"./_isKey":139,"_process":405,"buffer":204}],182:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var apply = require('./_apply'),
+    toInteger = require('./toInteger');
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates a function that invokes `func` with the `this` binding of the
+ * created function and arguments from `start` and beyond provided as an array.
+ *
+ * **Note:** This method is based on the [rest parameter](https://mdn.io/rest_parameters).
+ *
+ * @static
+ * @memberOf _
+ * @category Function
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @returns {Function} Returns the new function.
+ * @example
+ *
+ * var say = _.rest(function(what, names) {
+ *   return what + ' ' + _.initial(names).join(', ') +
+ *     (_.size(names) > 1 ? ', & ' : '') + _.last(names);
+ * });
+ *
+ * say('hello', 'fred', 'barney', 'pebbles');
+ * // => 'hello fred, barney, & pebbles'
+ */
+function rest(func, start) {
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  start = nativeMax(start === undefined ? (func.length - 1) : toInteger(start), 0);
+  return function() {
+    var args = arguments,
+        index = -1,
+        length = nativeMax(args.length - start, 0),
+        array = Array(length);
+
+    while (++index < length) {
+      array[index] = args[start + index];
+    }
+    switch (start) {
+      case 0: return func.call(this, array);
+      case 1: return func.call(this, args[0], array);
+      case 2: return func.call(this, args[0], args[1], array);
+    }
+    var otherArgs = Array(start + 1);
+    index = -1;
+    while (++index < start) {
+      otherArgs[index] = args[index];
+    }
+    otherArgs[start] = array;
+    return apply(func, this, otherArgs);
+  };
+}
+
+module.exports = rest;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/rest.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_apply":85,"./toInteger":183,"_process":405,"buffer":204}],183:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var toNumber = require('./toNumber');
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0,
+    MAX_INTEGER = 1.7976931348623157e+308;
+
+/**
+ * Converts `value` to an integer.
+ *
+ * **Note:** This function is loosely based on [`ToInteger`](http://www.ecma-international.org/ecma-262/6.0/#sec-tointeger).
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted integer.
+ * @example
+ *
+ * _.toInteger(3);
+ * // => 3
+ *
+ * _.toInteger(Number.MIN_VALUE);
+ * // => 0
+ *
+ * _.toInteger(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toInteger('3');
+ * // => 3
+ */
+function toInteger(value) {
+  if (!value) {
+    return value === 0 ? value : 0;
+  }
+  value = toNumber(value);
+  if (value === INFINITY || value === -INFINITY) {
+    var sign = (value < 0 ? -1 : 1);
+    return sign * MAX_INTEGER;
+  }
+  var remainder = value % 1;
+  return value === value ? (remainder ? value - remainder : value) : 0;
+}
+
+module.exports = toInteger;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/toInteger.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./toNumber":184,"_process":405,"buffer":204}],184:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var isFunction = require('./isFunction'),
+    isObject = require('./isObject');
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3);
+ * // => 3
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3');
+ * // => 3
+ */
+function toNumber(value) {
+  if (isObject(value)) {
+    var other = isFunction(value.valueOf) ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = toNumber;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/toNumber.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./isFunction":171,"./isObject":174,"_process":405,"buffer":204}],185:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var baseToPairs = require('./_baseToPairs'),
+    keys = require('./keys');
+
+/**
+ * Creates an array of own enumerable key-value pairs for `object` which
+ * can be consumed by `_.fromPairs`.
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the new array of key-value pairs.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.toPairs(new Foo);
+ * // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
+ */
+function toPairs(object) {
+  return baseToPairs(object, keys(object));
+}
+
+module.exports = toPairs;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/toPairs.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_baseToPairs":116,"./keys":179,"_process":405,"buffer":204}],186:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+var Symbol = require('./_Symbol'),
+    isSymbol = require('./isSymbol');
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0;
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * Converts `value` to a string if it's not one. An empty string is returned
+ * for `null` and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (value == null) {
+    return '';
+  }
+  if (isSymbol(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+module.exports = toString;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash/toString.js","/node_modules/xml2js/node_modules/xmlbuilder/node_modules/lodash")
+},{"./_Symbol":82,"./isSymbol":177,"_process":405,"buffer":204}],187:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var BitArray, ByteBuffer, HMAC, convertHex, md5, needle,
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-needle = require("needle");
 
 HMAC = require("create-hmac");
 
@@ -14308,16 +15719,15 @@ ByteBuffer = require("byte-buffer");
 
 BitArray = require("bit-array");
 
+needle = require("needle");
+
 window.Rappor = (function() {
-  function Rappor(params, server, debug) {
-    var base, base1, defaultParams;
-    if (server == null) {
-      server = 'http://localhost:8080/api/v1/records';
+  function Rappor(defaultParams) {
+    var base, baselineParams;
+    if (defaultParams == null) {
+      defaultParams = {};
     }
-    if (debug == null) {
-      debug = false;
-    }
-    defaultParams = {
+    baselineParams = {
       k: 32,
       h: 2,
       p: 0.1,
@@ -14325,20 +15735,30 @@ window.Rappor = (function() {
       f: 0.15,
       m: 8
     };
-    this.params = params != null ? params : params = defaultParams;
+    this.params = defaultParams.params || baselineParams;
+    this.params["server"] = defaultParams.server || 'http://localhost:8080/api/v1/records';
+    this.debug = defaultParams.debug || false;
+    this.group = defaultParams.publicKey || "";
     if ((base = this.params)["server"] == null) {
       base["server"] = server;
     }
-    if ((base1 = this.params)["secret"] == null) {
-      base1["secret"] = "secret";
-    }
+    this.secret = "secret";
     this.cohort = this._generateCohort(this.params["m"]);
-    this.debug = true;
   }
 
   Rappor.prototype.send = function(bool) {
-    this._encode(bool);
-    return this._sendToServer();
+    var j, len, results, s;
+    if (typeof bool === "object") {
+      results = [];
+      for (j = 0, len = bool.length; j < len; j++) {
+        s = bool[j];
+        results.push(this.send(s));
+      }
+      return results;
+    } else {
+      this._encode(bool);
+      return this._sendToServer();
+    }
   };
 
   Rappor.prototype.sendTrue = function() {
@@ -14359,24 +15779,34 @@ window.Rappor = (function() {
   Rappor.prototype._sendToServer = function() {
     var data, options;
     data = {
-      truth: this.truth,
       cohort: this.cohort,
-      orig: this.orig.join(""),
-      prr: this.prr,
       irr: this.irr,
-      params: this.params
+      params: this.params,
+      group: this.group
     };
+    if (this.debug) {
+      data.truth = this.truth;
+      data.orig = this.orig.join("");
+      data.prr = this.prr;
+    }
     options = {
       "Access-Control-Allow-Headers": "X-Requested-With"
     };
     console.log(data);
+    needle.post(this.params["server"], data, options, function(err, resp) {
+      if (err) {
+        return console.log(err.message);
+      } else {
+        return console.log(resp);
+      }
+    });
     return this.cohort = this._generateCohort(this.params["m"]);
   };
 
   Rappor.prototype._generateRapporBits = function(data) {
     var b, bit_to_set, bloom, digest, i, j, len, num, ones, trueString, val;
     if (typeof data === "boolean") {
-      trueString = data ? "TRUE" : "FALSE";
+      trueString = data ? "true" : "false";
     } else {
       trueString = data;
     }
@@ -14416,7 +15846,7 @@ window.Rappor = (function() {
     var Hmac, byte, ch, digest, digestBytes, f_mask, i, j, joinedBits, noise_bit, rand128, ref, threshold128, u_bit, uniform, val;
     joinedBits = this._to_big_endian(bits);
     val = new Buffer(joinedBits.raw);
-    Hmac = new HMAC('sha256', this.params["secret"]);
+    Hmac = new HMAC('sha256', this.secret);
     Hmac.update(val);
     digest = Hmac.digest('hex');
     if (this.params["k"] > digest.length) {
@@ -14482,14 +15912,15 @@ window.Rappor = (function() {
   };
 
   Rappor.prototype._print = function() {
-    var param, ref, results, value;
+    var param, ref, value;
     ref = this.params;
-    results = [];
     for (param in ref) {
       value = ref[param];
-      results.push(console.log(param + " is " + value));
+      console.log(param + " is " + value);
     }
-    return results;
+    console.log("@debug is " + this.debug);
+    console.log("@cohort is " + this.cohort);
+    return console.log("@group is " + this.group);
   };
 
   return Rappor;
@@ -14500,11 +15931,11 @@ console.log("rappor.js loaded");
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/rappor.coffee","/")
-},{"_process":354,"bit-array":1,"buffer":153,"byte-buffer":2,"convert-hex":4,"create-hmac":5,"md5":20,"needle":28}],137:[function(require,module,exports){
+},{"_process":405,"bit-array":1,"buffer":204,"byte-buffer":2,"convert-hex":4,"create-hmac":5,"md5":20,"needle":28}],188:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/lib/_empty.js","/../../../../usr/local/lib/node_modules/browserify/lib")
-},{"_process":354,"buffer":153}],138:[function(require,module,exports){
+},{"_process":405,"buffer":204}],189:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
@@ -14867,11 +16298,11 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/assert/assert.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/assert")
-},{"_process":354,"buffer":153,"util/":383}],139:[function(require,module,exports){
+},{"_process":405,"buffer":204,"util/":434}],190:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browser-resolve/empty.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browser-resolve")
-},{"_process":354,"buffer":153}],140:[function(require,module,exports){
+},{"_process":405,"buffer":204}],191:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -14977,7 +16408,7 @@ exports.setTyped = function (on) {
 exports.setTyped(TYPED_OK);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/utils/common.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/utils")
-},{"_process":354,"buffer":153}],141:[function(require,module,exports){
+},{"_process":405,"buffer":204}],192:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -15013,7 +16444,7 @@ function adler32(adler, buf, len, pos) {
 module.exports = adler32;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/adler32.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],142:[function(require,module,exports){
+},{"_process":405,"buffer":204}],193:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = {
 
@@ -15064,7 +16495,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/constants.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],143:[function(require,module,exports){
+},{"_process":405,"buffer":204}],194:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -15109,7 +16540,7 @@ function crc32(crc, buf, len, pos) {
 module.exports = crc32;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/crc32.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],144:[function(require,module,exports){
+},{"_process":405,"buffer":204}],195:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -16878,7 +18309,7 @@ exports.deflateTune = deflateTune;
 */
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/deflate.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"../utils/common":140,"./adler32":141,"./crc32":143,"./messages":148,"./trees":149,"_process":354,"buffer":153}],145:[function(require,module,exports){
+},{"../utils/common":191,"./adler32":192,"./crc32":194,"./messages":199,"./trees":200,"_process":405,"buffer":204}],196:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -17208,7 +18639,7 @@ module.exports = function inflate_fast(strm, start) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/inffast.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],146:[function(require,module,exports){
+},{"_process":405,"buffer":204}],197:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -18715,7 +20146,7 @@ exports.inflateUndermine = inflateUndermine;
 */
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/inflate.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"../utils/common":140,"./adler32":141,"./crc32":143,"./inffast":145,"./inftrees":147,"_process":354,"buffer":153}],147:[function(require,module,exports){
+},{"../utils/common":191,"./adler32":192,"./crc32":194,"./inffast":196,"./inftrees":198,"_process":405,"buffer":204}],198:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -19046,7 +20477,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/inftrees.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"../utils/common":140,"_process":354,"buffer":153}],148:[function(require,module,exports){
+},{"../utils/common":191,"_process":405,"buffer":204}],199:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -19063,7 +20494,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/messages.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],149:[function(require,module,exports){
+},{"_process":405,"buffer":204}],200:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -20266,7 +21697,7 @@ exports._tr_tally = _tr_tally;
 exports._tr_align = _tr_align;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/trees.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"../utils/common":140,"_process":354,"buffer":153}],150:[function(require,module,exports){
+},{"../utils/common":191,"_process":405,"buffer":204}],201:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -20299,7 +21730,7 @@ function ZStream() {
 module.exports = ZStream;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib/zstream.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/node_modules/pako/lib/zlib")
-},{"_process":354,"buffer":153}],151:[function(require,module,exports){
+},{"_process":405,"buffer":204}],202:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var msg = require('pako/lib/zlib/messages');
 var zstream = require('pako/lib/zlib/zstream');
@@ -20539,7 +21970,7 @@ Zlib.prototype._error = function(status) {
 exports.Zlib = Zlib;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/src/binding.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/src")
-},{"_process":354,"buffer":153,"pako/lib/zlib/constants":142,"pako/lib/zlib/deflate.js":144,"pako/lib/zlib/inflate.js":146,"pako/lib/zlib/messages":148,"pako/lib/zlib/zstream":150}],152:[function(require,module,exports){
+},{"_process":405,"buffer":204,"pako/lib/zlib/constants":193,"pako/lib/zlib/deflate.js":195,"pako/lib/zlib/inflate.js":197,"pako/lib/zlib/messages":199,"pako/lib/zlib/zstream":201}],203:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -21153,7 +22584,7 @@ util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/src/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/browserify-zlib/src")
-},{"./binding":151,"_process":354,"_stream_transform":370,"assert":138,"buffer":153,"util":383}],153:[function(require,module,exports){
+},{"./binding":202,"_process":405,"_stream_transform":421,"assert":189,"buffer":204,"util":434}],204:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -22701,7 +24132,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer")
-},{"_process":354,"base64-js":154,"buffer":153,"ieee754":155,"isarray":156}],154:[function(require,module,exports){
+},{"_process":405,"base64-js":205,"buffer":204,"ieee754":206,"isarray":207}],205:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -22829,7 +24260,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"_process":354,"buffer":153}],155:[function(require,module,exports){
+},{"_process":405,"buffer":204}],206:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -22917,7 +24348,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"_process":354,"buffer":153}],156:[function(require,module,exports){
+},{"_process":405,"buffer":204}],207:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var toString = {}.toString;
 
@@ -22926,7 +24357,7 @@ module.exports = Array.isArray || function (arr) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/isarray/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/buffer/node_modules/isarray")
-},{"_process":354,"buffer":153}],157:[function(require,module,exports){
+},{"_process":405,"buffer":204}],208:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict'
 
@@ -23007,7 +24438,7 @@ var publicEncrypt = require('public-encrypt')
 })
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify")
-},{"_process":354,"browserify-cipher":158,"browserify-sign":188,"browserify-sign/algos":187,"buffer":153,"create-ecdh":255,"create-hash":281,"create-hmac":294,"diffie-hellman":295,"pbkdf2":302,"public-encrypt":303,"randombytes":348}],158:[function(require,module,exports){
+},{"_process":405,"browserify-cipher":209,"browserify-sign":239,"browserify-sign/algos":238,"buffer":204,"create-ecdh":306,"create-hash":332,"create-hmac":345,"diffie-hellman":346,"pbkdf2":353,"public-encrypt":354,"randombytes":399}],209:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ebtk = require('evp_bytestokey')
 var aes = require('browserify-aes/browser')
@@ -23084,7 +24515,7 @@ function getCiphers () {
 exports.listCiphers = exports.getCiphers = getCiphers
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher")
-},{"_process":354,"browserify-aes/browser":161,"browserify-aes/modes":165,"browserify-des":176,"browserify-des/modes":177,"buffer":153,"evp_bytestokey":186}],159:[function(require,module,exports){
+},{"_process":405,"browserify-aes/browser":212,"browserify-aes/modes":216,"browserify-des":227,"browserify-des/modes":228,"buffer":204,"evp_bytestokey":237}],210:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -23265,7 +24696,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],160:[function(require,module,exports){
+},{"_process":405,"buffer":204}],211:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -23366,7 +24797,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"./aes":159,"./ghash":164,"_process":354,"buffer":153,"buffer-xor":173,"cipher-base":174,"inherits":351}],161:[function(require,module,exports){
+},{"./aes":210,"./ghash":215,"_process":405,"buffer":204,"buffer-xor":224,"cipher-base":225,"inherits":402}],212:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
@@ -23381,7 +24812,7 @@ function getCiphers () {
 exports.listCiphers = exports.getCiphers = getCiphers
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"./decrypter":162,"./encrypter":163,"./modes":165,"_process":354,"buffer":153}],162:[function(require,module,exports){
+},{"./decrypter":213,"./encrypter":214,"./modes":216,"_process":405,"buffer":204}],213:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -23521,7 +24952,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/decrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"./aes":159,"./authCipher":160,"./modes":165,"./modes/cbc":166,"./modes/cfb":167,"./modes/cfb1":168,"./modes/cfb8":169,"./modes/ctr":170,"./modes/ecb":171,"./modes/ofb":172,"./streamCipher":175,"_process":354,"buffer":153,"cipher-base":174,"evp_bytestokey":186,"inherits":351}],163:[function(require,module,exports){
+},{"./aes":210,"./authCipher":211,"./modes":216,"./modes/cbc":217,"./modes/cfb":218,"./modes/cfb1":219,"./modes/cfb8":220,"./modes/ctr":221,"./modes/ecb":222,"./modes/ofb":223,"./streamCipher":226,"_process":405,"buffer":204,"cipher-base":225,"evp_bytestokey":237,"inherits":402}],214:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -23646,7 +25077,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/encrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"./aes":159,"./authCipher":160,"./modes":165,"./modes/cbc":166,"./modes/cfb":167,"./modes/cfb1":168,"./modes/cfb8":169,"./modes/ctr":170,"./modes/ecb":171,"./modes/ofb":172,"./streamCipher":175,"_process":354,"buffer":153,"cipher-base":174,"evp_bytestokey":186,"inherits":351}],164:[function(require,module,exports){
+},{"./aes":210,"./authCipher":211,"./modes":216,"./modes/cbc":217,"./modes/cfb":218,"./modes/cfb1":219,"./modes/cfb8":220,"./modes/ctr":221,"./modes/ecb":222,"./modes/ofb":223,"./streamCipher":226,"_process":405,"buffer":204,"cipher-base":225,"evp_bytestokey":237,"inherits":402}],215:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -23748,7 +25179,7 @@ function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/ghash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],165:[function(require,module,exports){
+},{"_process":405,"buffer":204}],216:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
@@ -23923,7 +25354,7 @@ exports['aes-256-gcm'] = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],166:[function(require,module,exports){
+},{"_process":405,"buffer":204}],217:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -23944,7 +25375,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":173}],167:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":224}],218:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -23979,7 +25410,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":173}],168:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":224}],219:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -24017,7 +25448,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],169:[function(require,module,exports){
+},{"_process":405,"buffer":204}],220:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -24036,7 +25467,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],170:[function(require,module,exports){
+},{"_process":405,"buffer":204}],221:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -24071,7 +25502,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":173}],171:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":224}],222:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
@@ -24081,7 +25512,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],172:[function(require,module,exports){
+},{"_process":405,"buffer":204}],223:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -24101,7 +25532,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":173}],173:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":224}],224:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -24115,7 +25546,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor")
-},{"_process":354,"buffer":153}],174:[function(require,module,exports){
+},{"_process":405,"buffer":204}],225:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -24209,7 +25640,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":351,"stream":372,"string_decoder":378}],175:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"stream":423,"string_decoder":429}],226:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -24238,7 +25669,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes")
-},{"./aes":159,"_process":354,"buffer":153,"cipher-base":174,"inherits":351}],176:[function(require,module,exports){
+},{"./aes":210,"_process":405,"buffer":204,"cipher-base":225,"inherits":402}],227:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var CipherBase = require('cipher-base')
 var des = require('des.js')
@@ -24285,7 +25716,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des")
-},{"_process":354,"buffer":153,"cipher-base":178,"des.js":179,"inherits":351}],177:[function(require,module,exports){
+},{"_process":405,"buffer":204,"cipher-base":229,"des.js":230,"inherits":402}],228:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports['des-ecb'] = {
   key: 8,
@@ -24313,7 +25744,7 @@ exports['des-ede'] = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/modes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des")
-},{"_process":354,"buffer":153}],178:[function(require,module,exports){
+},{"_process":405,"buffer":204}],229:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -24407,7 +25838,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/cipher-base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":351,"stream":372,"string_decoder":378}],179:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"stream":423,"string_decoder":429}],230:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -24418,7 +25849,7 @@ exports.CBC = require('./des/cbc');
 exports.EDE = require('./des/ede');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib")
-},{"./des/cbc":180,"./des/cipher":181,"./des/des":182,"./des/ede":183,"./des/utils":184,"_process":354,"buffer":153}],180:[function(require,module,exports){
+},{"./des/cbc":231,"./des/cipher":232,"./des/des":233,"./des/ede":234,"./des/utils":235,"_process":405,"buffer":204}],231:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -24487,7 +25918,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cbc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des")
-},{"_process":354,"buffer":153,"inherits":351,"minimalistic-assert":185}],181:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"minimalistic-assert":236}],232:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -24632,7 +26063,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des")
-},{"_process":354,"buffer":153,"minimalistic-assert":185}],182:[function(require,module,exports){
+},{"_process":405,"buffer":204,"minimalistic-assert":236}],233:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -24779,7 +26210,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/des.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des")
-},{"../des":179,"_process":354,"buffer":153,"inherits":351,"minimalistic-assert":185}],183:[function(require,module,exports){
+},{"../des":230,"_process":405,"buffer":204,"inherits":402,"minimalistic-assert":236}],234:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -24838,7 +26269,7 @@ EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/ede.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des")
-},{"../des":179,"_process":354,"buffer":153,"inherits":351,"minimalistic-assert":185}],184:[function(require,module,exports){
+},{"../des":230,"_process":405,"buffer":204,"inherits":402,"minimalistic-assert":236}],235:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -25098,7 +26529,7 @@ exports.padSplit = function padSplit(num, size, group) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/utils.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des")
-},{"_process":354,"buffer":153}],185:[function(require,module,exports){
+},{"_process":405,"buffer":204}],236:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = assert;
 
@@ -25113,7 +26544,7 @@ assert.equal = function assertEqual(l, r, msg) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert")
-},{"_process":354,"buffer":153}],186:[function(require,module,exports){
+},{"_process":405,"buffer":204}],237:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var md5 = require('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -25185,7 +26616,7 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey")
-},{"_process":354,"buffer":153,"create-hash/md5":283}],187:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash/md5":334}],238:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict'
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
@@ -25261,7 +26692,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/algos.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign")
-},{"_process":354,"buffer":153}],188:[function(require,module,exports){
+},{"_process":405,"buffer":204}],239:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var _algos = require('./algos')
 var createHash = require('create-hash')
@@ -25368,7 +26799,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign")
-},{"./algos":187,"./sign":253,"./verify":254,"_process":354,"buffer":153,"create-hash":281,"inherits":351,"stream":372}],189:[function(require,module,exports){
+},{"./algos":238,"./sign":304,"./verify":305,"_process":405,"buffer":204,"create-hash":332,"inherits":402,"stream":423}],240:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict'
 exports['1.3.132.0.10'] = 'secp256k1'
@@ -25384,7 +26815,7 @@ exports['1.3.132.0.34'] = 'p384'
 exports['1.3.132.0.35'] = 'p521'
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/curves.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign")
-},{"_process":354,"buffer":153}],190:[function(require,module,exports){
+},{"_process":405,"buffer":204}],241:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function (module, exports) {
 
@@ -29279,7 +30710,7 @@ Mont.prototype.invm = function invm(a) {
 })(typeof module === 'undefined' || module, this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib/bn.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib")
-},{"_process":354,"buffer":153}],191:[function(require,module,exports){
+},{"_process":405,"buffer":204}],242:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var bn = require('bn.js');
 var randomBytes = require('randombytes');
@@ -29323,7 +30754,7 @@ function getr(priv) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/browserify-rsa/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/browserify-rsa")
-},{"_process":354,"bn.js":190,"buffer":153,"randombytes":348}],192:[function(require,module,exports){
+},{"_process":405,"bn.js":241,"buffer":204,"randombytes":399}],243:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -29341,7 +30772,7 @@ elliptic.ec = require('./elliptic/ec');
 elliptic.eddsa = require('./elliptic/eddsa');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib")
-},{"../package.json":215,"./elliptic/curve":195,"./elliptic/curves":198,"./elliptic/ec":199,"./elliptic/eddsa":202,"./elliptic/hmac-drbg":205,"./elliptic/utils":207,"_process":354,"brorand":208,"buffer":153}],193:[function(require,module,exports){
+},{"../package.json":266,"./elliptic/curve":246,"./elliptic/curves":249,"./elliptic/ec":250,"./elliptic/eddsa":253,"./elliptic/hmac-drbg":256,"./elliptic/utils":258,"_process":405,"brorand":259,"buffer":204}],244:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -29696,7 +31127,7 @@ BasePoint.prototype.dblp = function dblp(k) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve/base.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":192,"_process":354,"bn.js":190,"buffer":153}],194:[function(require,module,exports){
+},{"../../elliptic":243,"_process":405,"bn.js":241,"buffer":204}],245:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -30106,7 +31537,7 @@ Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve/edwards.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":192,"../curve":195,"_process":354,"bn.js":190,"buffer":153,"inherits":351}],195:[function(require,module,exports){
+},{"../../elliptic":243,"../curve":246,"_process":405,"bn.js":241,"buffer":204,"inherits":402}],246:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -30118,7 +31549,7 @@ curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve")
-},{"./base":193,"./edwards":194,"./mont":196,"./short":197,"_process":354,"buffer":153}],196:[function(require,module,exports){
+},{"./base":244,"./edwards":245,"./mont":247,"./short":248,"_process":405,"buffer":204}],247:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -30298,7 +31729,7 @@ Point.prototype.getX = function getX() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve/mont.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":192,"../curve":195,"_process":354,"bn.js":190,"buffer":153,"inherits":351}],197:[function(require,module,exports){
+},{"../../elliptic":243,"../curve":246,"_process":405,"bn.js":241,"buffer":204,"inherits":402}],248:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -31209,7 +32640,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve/short.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":192,"../curve":195,"_process":354,"bn.js":190,"buffer":153,"inherits":351}],198:[function(require,module,exports){
+},{"../../elliptic":243,"../curve":246,"_process":405,"bn.js":241,"buffer":204,"inherits":402}],249:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -31418,7 +32849,7 @@ defineCurve('secp256k1', {
 });
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/curves.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic")
-},{"../elliptic":192,"./precomputed/secp256k1":206,"_process":354,"buffer":153,"hash.js":209}],199:[function(require,module,exports){
+},{"../elliptic":243,"./precomputed/secp256k1":257,"_process":405,"buffer":204,"hash.js":260}],250:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -31638,7 +33069,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec")
-},{"../../elliptic":192,"./key":200,"./signature":201,"_process":354,"bn.js":190,"buffer":153}],200:[function(require,module,exports){
+},{"../../elliptic":243,"./key":251,"./signature":252,"_process":405,"bn.js":241,"buffer":204}],251:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -31749,7 +33180,7 @@ KeyPair.prototype.inspect = function inspect() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec/key.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec")
-},{"_process":354,"bn.js":190,"buffer":153}],201:[function(require,module,exports){
+},{"_process":405,"bn.js":241,"buffer":204}],252:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -31888,7 +33319,7 @@ Signature.prototype.toDER = function toDER(enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec/signature.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/ec")
-},{"../../elliptic":192,"_process":354,"bn.js":190,"buffer":153}],202:[function(require,module,exports){
+},{"../../elliptic":243,"_process":405,"bn.js":241,"buffer":204}],253:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -32010,7 +33441,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":192,"./key":203,"./signature":204,"_process":354,"buffer":153,"hash.js":209}],203:[function(require,module,exports){
+},{"../../elliptic":243,"./key":254,"./signature":255,"_process":405,"buffer":204,"hash.js":260}],254:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -32110,7 +33541,7 @@ KeyPair.prototype.getPublic = function getPublic(enc) {
 module.exports = KeyPair;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa/key.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":192,"_process":354,"buffer":153}],204:[function(require,module,exports){
+},{"../../elliptic":243,"_process":405,"buffer":204}],255:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -32180,7 +33611,7 @@ Signature.prototype.toHex = function toHex() {
 module.exports = Signature;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa/signature.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":192,"_process":354,"bn.js":190,"buffer":153}],205:[function(require,module,exports){
+},{"../../elliptic":243,"_process":405,"bn.js":241,"buffer":204}],256:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -32298,7 +33729,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/hmac-drbg.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic")
-},{"../elliptic":192,"_process":354,"buffer":153,"hash.js":209}],206:[function(require,module,exports){
+},{"../elliptic":243,"_process":405,"buffer":204,"hash.js":260}],257:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = {
   doubles: {
@@ -33082,7 +34513,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/precomputed")
-},{"_process":354,"buffer":153}],207:[function(require,module,exports){
+},{"_process":405,"buffer":204}],258:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -33259,7 +34690,7 @@ utils.intFromLE = intFromLE;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic/utils.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic")
-},{"_process":354,"bn.js":190,"buffer":153}],208:[function(require,module,exports){
+},{"_process":405,"bn.js":241,"buffer":204}],259:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var r;
 
@@ -33320,7 +34751,7 @@ if (typeof window === 'object') {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand")
-},{"_process":354,"buffer":153}],209:[function(require,module,exports){
+},{"_process":405,"buffer":204}],260:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = exports;
 
@@ -33339,7 +34770,7 @@ hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib")
-},{"./hash/common":210,"./hash/hmac":211,"./hash/ripemd":212,"./hash/sha":213,"./hash/utils":214,"_process":354,"buffer":153}],210:[function(require,module,exports){
+},{"./hash/common":261,"./hash/hmac":262,"./hash/ripemd":263,"./hash/sha":264,"./hash/utils":265,"_process":405,"buffer":204}],261:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -33434,7 +34865,7 @@ BlockHash.prototype._pad = function pad() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash/common.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":209,"_process":354,"buffer":153}],211:[function(require,module,exports){
+},{"../hash":260,"_process":405,"buffer":204}],262:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hmac = exports;
 
@@ -33486,7 +34917,7 @@ Hmac.prototype.digest = function digest(enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash/hmac.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":209,"_process":354,"buffer":153}],212:[function(require,module,exports){
+},{"../hash":260,"_process":405,"buffer":204}],263:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -33634,7 +35065,7 @@ var sh = [
 ];
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash/ripemd.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":209,"_process":354,"buffer":153}],213:[function(require,module,exports){
+},{"../hash":260,"_process":405,"buffer":204}],264:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -34202,7 +35633,7 @@ function g1_512_lo(xh, xl) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash/sha.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":209,"_process":354,"buffer":153}],214:[function(require,module,exports){
+},{"../hash":260,"_process":405,"buffer":204}],265:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var utils = exports;
 var inherits = require('inherits');
@@ -34463,7 +35894,7 @@ function shr64_lo(ah, al, num) {
 exports.shr64_lo = shr64_lo;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash/utils.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"_process":354,"buffer":153,"inherits":351}],215:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402}],266:[function(require,module,exports){
 module.exports={
   "name": "elliptic",
   "version": "6.0.2",
@@ -34535,7 +35966,7 @@ module.exports={
   "readme": "ERROR: No README data found!"
 }
 
-},{}],216:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -34549,7 +35980,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],217:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
@@ -34670,7 +36101,7 @@ exports.signature = asn1.define('signature', function () {
 })
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/asn1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1")
-},{"_process":354,"asn1.js":220,"buffer":153}],218:[function(require,module,exports){
+},{"_process":405,"asn1.js":271,"buffer":204}],269:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\r?\nDEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\r?\n\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n/m
@@ -34704,7 +36135,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1")
-},{"_process":354,"browserify-aes":237,"buffer":153,"evp_bytestokey":252}],219:[function(require,module,exports){
+},{"_process":405,"browserify-aes":288,"buffer":204,"evp_bytestokey":303}],270:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -34809,7 +36240,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1")
-},{"./aesid.json":216,"./asn1":217,"./fixProc":218,"_process":354,"browserify-aes":237,"buffer":153,"pbkdf2":302}],220:[function(require,module,exports){
+},{"./aesid.json":267,"./asn1":268,"./fixProc":269,"_process":405,"browserify-aes":288,"buffer":204,"pbkdf2":353}],271:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = exports;
 
@@ -34822,7 +36253,7 @@ asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib")
-},{"./asn1/api":221,"./asn1/base":223,"./asn1/constants":227,"./asn1/decoders":229,"./asn1/encoders":232,"_process":354,"bn.js":190,"buffer":153}],221:[function(require,module,exports){
+},{"./asn1/api":272,"./asn1/base":274,"./asn1/constants":278,"./asn1/decoders":280,"./asn1/encoders":283,"_process":405,"bn.js":241,"buffer":204}],272:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
@@ -34885,7 +36316,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/api.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1")
-},{"../asn1":220,"_process":354,"buffer":153,"inherits":351,"vm":384}],222:[function(require,module,exports){
+},{"../asn1":271,"_process":405,"buffer":204,"inherits":402,"vm":435}],273:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
@@ -35005,7 +36436,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/buffer.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"../base":223,"_process":354,"buffer":153,"inherits":351}],223:[function(require,module,exports){
+},{"../base":274,"_process":405,"buffer":204,"inherits":402}],274:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var base = exports;
 
@@ -35015,7 +36446,7 @@ base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"./buffer":222,"./node":224,"./reporter":225,"_process":354,"buffer":153}],224:[function(require,module,exports){
+},{"./buffer":273,"./node":275,"./reporter":276,"_process":405,"buffer":204}],275:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
@@ -35629,7 +37060,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/node.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"../base":223,"_process":354,"buffer":153,"minimalistic-assert":234}],225:[function(require,module,exports){
+},{"../base":274,"_process":405,"buffer":204,"minimalistic-assert":285}],276:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 
@@ -35735,7 +37166,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/reporter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"_process":354,"buffer":153,"inherits":351}],226:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402}],277:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var constants = require('../constants');
 
@@ -35781,7 +37212,7 @@ exports.tag = {
 exports.tagByName = constants._reverse(exports.tag);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants")
-},{"../constants":227,"_process":354,"buffer":153}],227:[function(require,module,exports){
+},{"../constants":278,"_process":405,"buffer":204}],278:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var constants = exports;
 
@@ -35804,7 +37235,7 @@ constants._reverse = function reverse(map) {
 constants.der = require('./der');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants")
-},{"./der":226,"_process":354,"buffer":153}],228:[function(require,module,exports){
+},{"./der":277,"_process":405,"buffer":204}],279:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 
@@ -36125,7 +37556,7 @@ function derDecodeLen(buf, primitive, fail) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"../../asn1":220,"_process":354,"buffer":153,"inherits":351}],229:[function(require,module,exports){
+},{"../../asn1":271,"_process":405,"buffer":204,"inherits":402}],280:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var decoders = exports;
 
@@ -36133,7 +37564,7 @@ decoders.der = require('./der');
 decoders.pem = require('./pem');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"./der":228,"./pem":230,"_process":354,"buffer":153}],230:[function(require,module,exports){
+},{"./der":279,"./pem":281,"_process":405,"buffer":204}],281:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -36187,7 +37618,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/pem.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"../../asn1":220,"./der":228,"_process":354,"buffer":153,"inherits":351}],231:[function(require,module,exports){
+},{"../../asn1":271,"./der":279,"_process":405,"buffer":204,"inherits":402}],282:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -36489,7 +37920,7 @@ function encodeTag(tag, primitive, cls, reporter) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"../../asn1":220,"_process":354,"buffer":153,"inherits":351}],232:[function(require,module,exports){
+},{"../../asn1":271,"_process":405,"buffer":204,"inherits":402}],283:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var encoders = exports;
 
@@ -36497,7 +37928,7 @@ encoders.der = require('./der');
 encoders.pem = require('./pem');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"./der":231,"./pem":233,"_process":354,"buffer":153}],233:[function(require,module,exports){
+},{"./der":282,"./pem":284,"_process":405,"buffer":204}],284:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -36524,7 +37955,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/pem.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"../../asn1":220,"./der":231,"_process":354,"buffer":153,"inherits":351}],234:[function(require,module,exports){
+},{"../../asn1":271,"./der":282,"_process":405,"buffer":204,"inherits":402}],285:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = assert;
 
@@ -36539,7 +37970,7 @@ assert.equal = function assertEqual(l, r, msg) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert")
-},{"_process":354,"buffer":153}],235:[function(require,module,exports){
+},{"_process":405,"buffer":204}],286:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -36720,7 +38151,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],236:[function(require,module,exports){
+},{"_process":405,"buffer":204}],287:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -36821,7 +38252,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":235,"./ghash":240,"_process":354,"buffer":153,"buffer-xor":249,"cipher-base":250,"inherits":351}],237:[function(require,module,exports){
+},{"./aes":286,"./ghash":291,"_process":405,"buffer":204,"buffer-xor":300,"cipher-base":301,"inherits":402}],288:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
@@ -36836,7 +38267,7 @@ function getCiphers () {
 exports.listCiphers = exports.getCiphers = getCiphers
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./decrypter":238,"./encrypter":239,"./modes":241,"_process":354,"buffer":153}],238:[function(require,module,exports){
+},{"./decrypter":289,"./encrypter":290,"./modes":292,"_process":405,"buffer":204}],289:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -36976,7 +38407,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":235,"./authCipher":236,"./modes":241,"./modes/cbc":242,"./modes/cfb":243,"./modes/cfb1":244,"./modes/cfb8":245,"./modes/ctr":246,"./modes/ecb":247,"./modes/ofb":248,"./streamCipher":251,"_process":354,"buffer":153,"cipher-base":250,"evp_bytestokey":252,"inherits":351}],239:[function(require,module,exports){
+},{"./aes":286,"./authCipher":287,"./modes":292,"./modes/cbc":293,"./modes/cfb":294,"./modes/cfb1":295,"./modes/cfb8":296,"./modes/ctr":297,"./modes/ecb":298,"./modes/ofb":299,"./streamCipher":302,"_process":405,"buffer":204,"cipher-base":301,"evp_bytestokey":303,"inherits":402}],290:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -37101,7 +38532,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":235,"./authCipher":236,"./modes":241,"./modes/cbc":242,"./modes/cfb":243,"./modes/cfb1":244,"./modes/cfb8":245,"./modes/ctr":246,"./modes/ecb":247,"./modes/ofb":248,"./streamCipher":251,"_process":354,"buffer":153,"cipher-base":250,"evp_bytestokey":252,"inherits":351}],240:[function(require,module,exports){
+},{"./aes":286,"./authCipher":287,"./modes":292,"./modes/cbc":293,"./modes/cfb":294,"./modes/cfb1":295,"./modes/cfb8":296,"./modes/ctr":297,"./modes/ecb":298,"./modes/ofb":299,"./streamCipher":302,"_process":405,"buffer":204,"cipher-base":301,"evp_bytestokey":303,"inherits":402}],291:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -37203,7 +38634,7 @@ function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],241:[function(require,module,exports){
+},{"_process":405,"buffer":204}],292:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
@@ -37378,7 +38809,7 @@ exports['aes-256-gcm'] = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],242:[function(require,module,exports){
+},{"_process":405,"buffer":204}],293:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -37399,7 +38830,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":249}],243:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":300}],294:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -37434,7 +38865,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":249}],244:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":300}],295:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -37472,7 +38903,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],245:[function(require,module,exports){
+},{"_process":405,"buffer":204}],296:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -37491,7 +38922,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],246:[function(require,module,exports){
+},{"_process":405,"buffer":204}],297:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -37526,7 +38957,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":249}],247:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":300}],298:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
@@ -37536,7 +38967,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],248:[function(require,module,exports){
+},{"_process":405,"buffer":204}],299:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -37556,7 +38987,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":249}],249:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":300}],300:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -37570,7 +39001,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor")
-},{"_process":354,"buffer":153}],250:[function(require,module,exports){
+},{"_process":405,"buffer":204}],301:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -37664,7 +39095,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":351,"stream":372,"string_decoder":378}],251:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"stream":423,"string_decoder":429}],302:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -37693,7 +39124,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":235,"_process":354,"buffer":153,"cipher-base":250,"inherits":351}],252:[function(require,module,exports){
+},{"./aes":286,"_process":405,"buffer":204,"cipher-base":301,"inherits":402}],303:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var md5 = require('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -37765,7 +39196,7 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey")
-},{"_process":354,"buffer":153,"create-hash/md5":283}],253:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash/md5":334}],304:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -37954,7 +39385,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/sign.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign")
-},{"./curves":189,"_process":354,"bn.js":190,"browserify-rsa":191,"buffer":153,"create-hmac":294,"elliptic":192,"parse-asn1":219}],254:[function(require,module,exports){
+},{"./curves":240,"_process":405,"bn.js":241,"browserify-rsa":242,"buffer":204,"create-hmac":345,"elliptic":243,"parse-asn1":270}],305:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var curves = require('./curves')
@@ -38061,7 +39492,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/verify.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign")
-},{"./curves":189,"_process":354,"bn.js":190,"buffer":153,"elliptic":192,"parse-asn1":219}],255:[function(require,module,exports){
+},{"./curves":240,"_process":405,"bn.js":241,"buffer":204,"elliptic":243,"parse-asn1":270}],306:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -38187,7 +39618,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh")
-},{"_process":354,"bn.js":256,"buffer":153,"elliptic":257}],256:[function(require,module,exports){
+},{"_process":405,"bn.js":307,"buffer":204,"elliptic":308}],307:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function (module, exports) {
 
@@ -42082,7 +43513,7 @@ Mont.prototype.invm = function invm(a) {
 })(typeof module === 'undefined' || module, this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/bn.js/lib/bn.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/bn.js/lib")
-},{"_process":354,"buffer":153}],257:[function(require,module,exports){
+},{"_process":405,"buffer":204}],308:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -42100,7 +43531,7 @@ elliptic.ec = require('./elliptic/ec');
 elliptic.eddsa = require('./elliptic/eddsa');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib")
-},{"../package.json":280,"./elliptic/curve":260,"./elliptic/curves":263,"./elliptic/ec":264,"./elliptic/eddsa":267,"./elliptic/hmac-drbg":270,"./elliptic/utils":272,"_process":354,"brorand":273,"buffer":153}],258:[function(require,module,exports){
+},{"../package.json":331,"./elliptic/curve":311,"./elliptic/curves":314,"./elliptic/ec":315,"./elliptic/eddsa":318,"./elliptic/hmac-drbg":321,"./elliptic/utils":323,"_process":405,"brorand":324,"buffer":204}],309:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -42455,7 +43886,7 @@ BasePoint.prototype.dblp = function dblp(k) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve/base.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":257,"_process":354,"bn.js":256,"buffer":153}],259:[function(require,module,exports){
+},{"../../elliptic":308,"_process":405,"bn.js":307,"buffer":204}],310:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -42865,7 +44296,7 @@ Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve/edwards.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":257,"../curve":260,"_process":354,"bn.js":256,"buffer":153,"inherits":351}],260:[function(require,module,exports){
+},{"../../elliptic":308,"../curve":311,"_process":405,"bn.js":307,"buffer":204,"inherits":402}],311:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -42877,7 +44308,7 @@ curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve")
-},{"./base":258,"./edwards":259,"./mont":261,"./short":262,"_process":354,"buffer":153}],261:[function(require,module,exports){
+},{"./base":309,"./edwards":310,"./mont":312,"./short":313,"_process":405,"buffer":204}],312:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -43057,7 +44488,7 @@ Point.prototype.getX = function getX() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve/mont.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":257,"../curve":260,"_process":354,"bn.js":256,"buffer":153,"inherits":351}],262:[function(require,module,exports){
+},{"../../elliptic":308,"../curve":311,"_process":405,"bn.js":307,"buffer":204,"inherits":402}],313:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -43968,7 +45399,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve/short.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curve")
-},{"../../elliptic":257,"../curve":260,"_process":354,"bn.js":256,"buffer":153,"inherits":351}],263:[function(require,module,exports){
+},{"../../elliptic":308,"../curve":311,"_process":405,"bn.js":307,"buffer":204,"inherits":402}],314:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44177,7 +45608,7 @@ defineCurve('secp256k1', {
 });
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/curves.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic")
-},{"../elliptic":257,"./precomputed/secp256k1":271,"_process":354,"buffer":153,"hash.js":274}],264:[function(require,module,exports){
+},{"../elliptic":308,"./precomputed/secp256k1":322,"_process":405,"buffer":204,"hash.js":325}],315:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44397,7 +45828,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec")
-},{"../../elliptic":257,"./key":265,"./signature":266,"_process":354,"bn.js":256,"buffer":153}],265:[function(require,module,exports){
+},{"../../elliptic":308,"./key":316,"./signature":317,"_process":405,"bn.js":307,"buffer":204}],316:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44508,7 +45939,7 @@ KeyPair.prototype.inspect = function inspect() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec/key.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec")
-},{"_process":354,"bn.js":256,"buffer":153}],266:[function(require,module,exports){
+},{"_process":405,"bn.js":307,"buffer":204}],317:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44647,7 +46078,7 @@ Signature.prototype.toDER = function toDER(enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec/signature.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/ec")
-},{"../../elliptic":257,"_process":354,"bn.js":256,"buffer":153}],267:[function(require,module,exports){
+},{"../../elliptic":308,"_process":405,"bn.js":307,"buffer":204}],318:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44769,7 +46200,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":257,"./key":268,"./signature":269,"_process":354,"buffer":153,"hash.js":274}],268:[function(require,module,exports){
+},{"../../elliptic":308,"./key":319,"./signature":320,"_process":405,"buffer":204,"hash.js":325}],319:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44869,7 +46300,7 @@ KeyPair.prototype.getPublic = function getPublic(enc) {
 module.exports = KeyPair;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa/key.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":257,"_process":354,"buffer":153}],269:[function(require,module,exports){
+},{"../../elliptic":308,"_process":405,"buffer":204}],320:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -44939,7 +46370,7 @@ Signature.prototype.toHex = function toHex() {
 module.exports = Signature;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa/signature.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/eddsa")
-},{"../../elliptic":257,"_process":354,"bn.js":256,"buffer":153}],270:[function(require,module,exports){
+},{"../../elliptic":308,"_process":405,"bn.js":307,"buffer":204}],321:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -45057,7 +46488,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/hmac-drbg.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic")
-},{"../elliptic":257,"_process":354,"buffer":153,"hash.js":274}],271:[function(require,module,exports){
+},{"../elliptic":308,"_process":405,"buffer":204,"hash.js":325}],322:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = {
   doubles: {
@@ -45841,7 +47272,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/precomputed")
-},{"_process":354,"buffer":153}],272:[function(require,module,exports){
+},{"_process":405,"buffer":204}],323:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -46018,7 +47449,7 @@ utils.intFromLE = intFromLE;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic/utils.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/lib/elliptic")
-},{"_process":354,"bn.js":256,"buffer":153}],273:[function(require,module,exports){
+},{"_process":405,"bn.js":307,"buffer":204}],324:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var r;
 
@@ -46079,7 +47510,7 @@ if (typeof window === 'object') {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/brorand/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/brorand")
-},{"_process":354,"buffer":153}],274:[function(require,module,exports){
+},{"_process":405,"buffer":204}],325:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = exports;
 
@@ -46098,7 +47529,7 @@ hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib")
-},{"./hash/common":275,"./hash/hmac":276,"./hash/ripemd":277,"./hash/sha":278,"./hash/utils":279,"_process":354,"buffer":153}],275:[function(require,module,exports){
+},{"./hash/common":326,"./hash/hmac":327,"./hash/ripemd":328,"./hash/sha":329,"./hash/utils":330,"_process":405,"buffer":204}],326:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -46193,7 +47624,7 @@ BlockHash.prototype._pad = function pad() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash/common.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":274,"_process":354,"buffer":153}],276:[function(require,module,exports){
+},{"../hash":325,"_process":405,"buffer":204}],327:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hmac = exports;
 
@@ -46245,7 +47676,7 @@ Hmac.prototype.digest = function digest(enc) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash/hmac.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":274,"_process":354,"buffer":153}],277:[function(require,module,exports){
+},{"../hash":325,"_process":405,"buffer":204}],328:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -46393,7 +47824,7 @@ var sh = [
 ];
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash/ripemd.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":274,"_process":354,"buffer":153}],278:[function(require,module,exports){
+},{"../hash":325,"_process":405,"buffer":204}],329:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var hash = require('../hash');
 var utils = hash.utils;
@@ -46961,7 +48392,7 @@ function g1_512_lo(xh, xl) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash/sha.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"../hash":274,"_process":354,"buffer":153}],279:[function(require,module,exports){
+},{"../hash":325,"_process":405,"buffer":204}],330:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var utils = exports;
 var inherits = require('inherits');
@@ -47222,9 +48653,9 @@ function shr64_lo(ah, al, num) {
 exports.shr64_lo = shr64_lo;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash/utils.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/node_modules/elliptic/node_modules/hash.js/lib/hash")
-},{"_process":354,"buffer":153,"inherits":351}],280:[function(require,module,exports){
-arguments[4][215][0].apply(exports,arguments)
-},{"dup":215}],281:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402}],331:[function(require,module,exports){
+arguments[4][266][0].apply(exports,arguments)
+},{"dup":266}],332:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var inherits = require('inherits')
@@ -47280,7 +48711,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash")
-},{"./md5":283,"_process":354,"buffer":153,"cipher-base":284,"inherits":351,"ripemd160":285,"sha.js":287}],282:[function(require,module,exports){
+},{"./md5":334,"_process":405,"buffer":204,"cipher-base":335,"inherits":402,"ripemd160":336,"sha.js":338}],333:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var intSize = 4;
@@ -47317,7 +48748,7 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/helpers.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash")
-},{"_process":354,"buffer":153}],283:[function(require,module,exports){
+},{"_process":405,"buffer":204}],334:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 /*
@@ -47476,7 +48907,7 @@ module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash")
-},{"./helpers":282,"_process":354,"buffer":153}],284:[function(require,module,exports){
+},{"./helpers":333,"_process":405,"buffer":204}],335:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -47570,7 +49001,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/cipher-base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":351,"stream":372,"string_decoder":378}],285:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"stream":423,"string_decoder":429}],336:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
 CryptoJS v3.1.2
@@ -47784,7 +49215,7 @@ function ripemd160 (message) {
 module.exports = ripemd160
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/ripemd160/lib/ripemd160.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/ripemd160/lib")
-},{"_process":354,"buffer":153}],286:[function(require,module,exports){
+},{"_process":405,"buffer":204}],337:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -47857,7 +49288,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/hash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"_process":354,"buffer":153}],287:[function(require,module,exports){
+},{"_process":405,"buffer":204}],338:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
@@ -47876,7 +49307,7 @@ exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./sha":288,"./sha1":289,"./sha224":290,"./sha256":291,"./sha384":292,"./sha512":293,"_process":354,"buffer":153}],288:[function(require,module,exports){
+},{"./sha":339,"./sha1":340,"./sha224":341,"./sha256":342,"./sha384":343,"./sha512":344,"_process":405,"buffer":204}],339:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -47980,7 +49411,7 @@ module.exports = Sha
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"_process":354,"buffer":153,"inherits":351}],289:[function(require,module,exports){
+},{"./hash":337,"_process":405,"buffer":204,"inherits":402}],340:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -48080,7 +49511,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"_process":354,"buffer":153,"inherits":351}],290:[function(require,module,exports){
+},{"./hash":337,"_process":405,"buffer":204,"inherits":402}],341:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -48136,7 +49567,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha224.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"./sha256":291,"_process":354,"buffer":153,"inherits":351}],291:[function(require,module,exports){
+},{"./hash":337,"./sha256":342,"_process":405,"buffer":204,"inherits":402}],342:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -48281,7 +49712,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha256.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"_process":354,"buffer":153,"inherits":351}],292:[function(require,module,exports){
+},{"./hash":337,"_process":405,"buffer":204,"inherits":402}],343:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -48341,7 +49772,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha384.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"./sha512":293,"_process":354,"buffer":153,"inherits":351}],293:[function(require,module,exports){
+},{"./hash":337,"./sha512":344,"_process":405,"buffer":204,"inherits":402}],344:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -48611,7 +50042,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/sha512.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js")
-},{"./hash":286,"_process":354,"buffer":153,"inherits":351}],294:[function(require,module,exports){
+},{"./hash":337,"_process":405,"buffer":204,"inherits":402}],345:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -48683,7 +50114,7 @@ module.exports = function createHmac(alg, key) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hmac/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hmac")
-},{"_process":354,"buffer":153,"create-hash/browser":281,"inherits":351,"stream":372}],295:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash/browser":332,"inherits":402,"stream":423}],346:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var generatePrime = require('./lib/generatePrime');
 var primes = require('./lib/primes');
@@ -48727,7 +50158,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman")
-},{"./lib/dh":296,"./lib/generatePrime":297,"./lib/primes":298,"_process":354,"buffer":153}],296:[function(require,module,exports){
+},{"./lib/dh":347,"./lib/generatePrime":348,"./lib/primes":349,"_process":405,"buffer":204}],347:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -48895,7 +50326,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/lib/dh.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/lib")
-},{"./generatePrime":297,"_process":354,"bn.js":299,"buffer":153,"miller-rabin":300,"randombytes":348}],297:[function(require,module,exports){
+},{"./generatePrime":348,"_process":405,"bn.js":350,"buffer":204,"miller-rabin":351,"randombytes":399}],348:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
@@ -49004,7 +50435,7 @@ function findPrime(bits, gen) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/lib/generatePrime.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/lib")
-},{"_process":354,"bn.js":299,"buffer":153,"miller-rabin":300,"randombytes":348}],298:[function(require,module,exports){
+},{"_process":405,"bn.js":350,"buffer":204,"miller-rabin":351,"randombytes":399}],349:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -49039,7 +50470,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],299:[function(require,module,exports){
+},{}],350:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function (module, exports) {
 
@@ -52934,7 +54365,7 @@ Mont.prototype.invm = function invm(a) {
 })(typeof module === 'undefined' || module, this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/bn.js/lib")
-},{"_process":354,"buffer":153}],300:[function(require,module,exports){
+},{"_process":405,"buffer":204}],351:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var bn = require('bn.js');
 var brorand = require('brorand');
@@ -53051,7 +54482,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/lib/mr.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/lib")
-},{"_process":354,"bn.js":299,"brorand":301,"buffer":153}],301:[function(require,module,exports){
+},{"_process":405,"bn.js":350,"brorand":352,"buffer":204}],352:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var r;
 
@@ -53112,7 +54543,7 @@ if (typeof window === 'object') {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand")
-},{"_process":354,"buffer":153}],302:[function(require,module,exports){
+},{"_process":405,"buffer":204}],353:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var createHmac = require('create-hmac')
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -53196,7 +54627,7 @@ function pbkdf2Sync (password, salt, iterations, keylen, digest) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2")
-},{"_process":354,"buffer":153,"create-hmac":294}],303:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hmac":345}],354:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
@@ -53209,7 +54640,7 @@ exports.publicDecrypt = function publicDecrypt(key, buf) {
   return exports.privateDecrypt(key, buf, true);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"./privateDecrypt":344,"./publicEncrypt":345,"_process":354,"buffer":153}],304:[function(require,module,exports){
+},{"./privateDecrypt":395,"./publicEncrypt":396,"_process":405,"buffer":204}],355:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var createHash = require('create-hash');
 module.exports = function (seed, len) {
@@ -53228,7 +54659,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/mgf.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"_process":354,"buffer":153,"create-hash":281}],305:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash":332}],356:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function (module, exports) {
 
@@ -57123,7 +58554,7 @@ Mont.prototype.invm = function invm(a) {
 })(typeof module === 'undefined' || module, this);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/bn.js/lib/bn.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/bn.js/lib")
-},{"_process":354,"buffer":153}],306:[function(require,module,exports){
+},{"_process":405,"buffer":204}],357:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var bn = require('bn.js');
 var randomBytes = require('randombytes');
@@ -57167,9 +58598,9 @@ function getr(priv) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/browserify-rsa/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/browserify-rsa")
-},{"_process":354,"bn.js":305,"buffer":153,"randombytes":348}],307:[function(require,module,exports){
-arguments[4][216][0].apply(exports,arguments)
-},{"dup":216}],308:[function(require,module,exports){
+},{"_process":405,"bn.js":356,"buffer":204,"randombytes":399}],358:[function(require,module,exports){
+arguments[4][267][0].apply(exports,arguments)
+},{"dup":267}],359:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
@@ -57290,7 +58721,7 @@ exports.signature = asn1.define('signature', function () {
 })
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/asn1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1")
-},{"_process":354,"asn1.js":311,"buffer":153}],309:[function(require,module,exports){
+},{"_process":405,"asn1.js":362,"buffer":204}],360:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\r?\nDEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\r?\n\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n/m
@@ -57324,7 +58755,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/fixProc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1")
-},{"_process":354,"browserify-aes":328,"buffer":153,"evp_bytestokey":343}],310:[function(require,module,exports){
+},{"_process":405,"browserify-aes":379,"buffer":204,"evp_bytestokey":394}],361:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -57429,7 +58860,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1")
-},{"./aesid.json":307,"./asn1":308,"./fixProc":309,"_process":354,"browserify-aes":328,"buffer":153,"pbkdf2":302}],311:[function(require,module,exports){
+},{"./aesid.json":358,"./asn1":359,"./fixProc":360,"_process":405,"browserify-aes":379,"buffer":204,"pbkdf2":353}],362:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = exports;
 
@@ -57442,7 +58873,7 @@ asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib")
-},{"./asn1/api":312,"./asn1/base":314,"./asn1/constants":318,"./asn1/decoders":320,"./asn1/encoders":323,"_process":354,"bn.js":305,"buffer":153}],312:[function(require,module,exports){
+},{"./asn1/api":363,"./asn1/base":365,"./asn1/constants":369,"./asn1/decoders":371,"./asn1/encoders":374,"_process":405,"bn.js":356,"buffer":204}],363:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
@@ -57505,7 +58936,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/api.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1")
-},{"../asn1":311,"_process":354,"buffer":153,"inherits":351,"vm":384}],313:[function(require,module,exports){
+},{"../asn1":362,"_process":405,"buffer":204,"inherits":402,"vm":435}],364:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
@@ -57625,7 +59056,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/buffer.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"../base":314,"_process":354,"buffer":153,"inherits":351}],314:[function(require,module,exports){
+},{"../base":365,"_process":405,"buffer":204,"inherits":402}],365:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var base = exports;
 
@@ -57635,7 +59066,7 @@ base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"./buffer":313,"./node":315,"./reporter":316,"_process":354,"buffer":153}],315:[function(require,module,exports){
+},{"./buffer":364,"./node":366,"./reporter":367,"_process":405,"buffer":204}],366:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
@@ -58249,7 +59680,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/node.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"../base":314,"_process":354,"buffer":153,"minimalistic-assert":325}],316:[function(require,module,exports){
+},{"../base":365,"_process":405,"buffer":204,"minimalistic-assert":376}],367:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 
@@ -58355,7 +59786,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/reporter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base")
-},{"_process":354,"buffer":153,"inherits":351}],317:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402}],368:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var constants = require('../constants');
 
@@ -58401,7 +59832,7 @@ exports.tag = {
 exports.tagByName = constants._reverse(exports.tag);
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants")
-},{"../constants":318,"_process":354,"buffer":153}],318:[function(require,module,exports){
+},{"../constants":369,"_process":405,"buffer":204}],369:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var constants = exports;
 
@@ -58424,7 +59855,7 @@ constants._reverse = function reverse(map) {
 constants.der = require('./der');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/constants")
-},{"./der":317,"_process":354,"buffer":153}],319:[function(require,module,exports){
+},{"./der":368,"_process":405,"buffer":204}],370:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 
@@ -58745,7 +60176,7 @@ function derDecodeLen(buf, primitive, fail) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"../../asn1":311,"_process":354,"buffer":153,"inherits":351}],320:[function(require,module,exports){
+},{"../../asn1":362,"_process":405,"buffer":204,"inherits":402}],371:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var decoders = exports;
 
@@ -58753,7 +60184,7 @@ decoders.der = require('./der');
 decoders.pem = require('./pem');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"./der":319,"./pem":321,"_process":354,"buffer":153}],321:[function(require,module,exports){
+},{"./der":370,"./pem":372,"_process":405,"buffer":204}],372:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -58807,7 +60238,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders/pem.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/decoders")
-},{"../../asn1":311,"./der":319,"_process":354,"buffer":153,"inherits":351}],322:[function(require,module,exports){
+},{"../../asn1":362,"./der":370,"_process":405,"buffer":204,"inherits":402}],373:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -59109,7 +60540,7 @@ function encodeTag(tag, primitive, cls, reporter) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/der.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"../../asn1":311,"_process":354,"buffer":153,"inherits":351}],323:[function(require,module,exports){
+},{"../../asn1":362,"_process":405,"buffer":204,"inherits":402}],374:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var encoders = exports;
 
@@ -59117,7 +60548,7 @@ encoders.der = require('./der');
 encoders.pem = require('./pem');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"./der":322,"./pem":324,"_process":354,"buffer":153}],324:[function(require,module,exports){
+},{"./der":373,"./pem":375,"_process":405,"buffer":204}],375:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
@@ -59144,7 +60575,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders/pem.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/encoders")
-},{"../../asn1":311,"./der":322,"_process":354,"buffer":153,"inherits":351}],325:[function(require,module,exports){
+},{"../../asn1":362,"./der":373,"_process":405,"buffer":204,"inherits":402}],376:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = assert;
 
@@ -59159,7 +60590,7 @@ assert.equal = function assertEqual(l, r, msg) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert")
-},{"_process":354,"buffer":153}],326:[function(require,module,exports){
+},{"_process":405,"buffer":204}],377:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -59340,7 +60771,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],327:[function(require,module,exports){
+},{"_process":405,"buffer":204}],378:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -59441,7 +60872,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":326,"./ghash":331,"_process":354,"buffer":153,"buffer-xor":340,"cipher-base":341,"inherits":351}],328:[function(require,module,exports){
+},{"./aes":377,"./ghash":382,"_process":405,"buffer":204,"buffer-xor":391,"cipher-base":392,"inherits":402}],379:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
@@ -59456,7 +60887,7 @@ function getCiphers () {
 exports.listCiphers = exports.getCiphers = getCiphers
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./decrypter":329,"./encrypter":330,"./modes":332,"_process":354,"buffer":153}],329:[function(require,module,exports){
+},{"./decrypter":380,"./encrypter":381,"./modes":383,"_process":405,"buffer":204}],380:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -59596,7 +61027,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":326,"./authCipher":327,"./modes":332,"./modes/cbc":333,"./modes/cfb":334,"./modes/cfb1":335,"./modes/cfb8":336,"./modes/ctr":337,"./modes/ecb":338,"./modes/ofb":339,"./streamCipher":342,"_process":354,"buffer":153,"cipher-base":341,"evp_bytestokey":343,"inherits":351}],330:[function(require,module,exports){
+},{"./aes":377,"./authCipher":378,"./modes":383,"./modes/cbc":384,"./modes/cfb":385,"./modes/cfb1":386,"./modes/cfb8":387,"./modes/ctr":388,"./modes/ecb":389,"./modes/ofb":390,"./streamCipher":393,"_process":405,"buffer":204,"cipher-base":392,"evp_bytestokey":394,"inherits":402}],381:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -59721,7 +61152,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":326,"./authCipher":327,"./modes":332,"./modes/cbc":333,"./modes/cfb":334,"./modes/cfb1":335,"./modes/cfb8":336,"./modes/ctr":337,"./modes/ecb":338,"./modes/ofb":339,"./streamCipher":342,"_process":354,"buffer":153,"cipher-base":341,"evp_bytestokey":343,"inherits":351}],331:[function(require,module,exports){
+},{"./aes":377,"./authCipher":378,"./modes":383,"./modes/cbc":384,"./modes/cfb":385,"./modes/cfb1":386,"./modes/cfb8":387,"./modes/ctr":388,"./modes/ecb":389,"./modes/ofb":390,"./streamCipher":393,"_process":405,"buffer":204,"cipher-base":392,"evp_bytestokey":394,"inherits":402}],382:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -59823,7 +61254,7 @@ function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],332:[function(require,module,exports){
+},{"_process":405,"buffer":204}],383:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
@@ -59998,7 +61429,7 @@ exports['aes-256-gcm'] = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"_process":354,"buffer":153}],333:[function(require,module,exports){
+},{"_process":405,"buffer":204}],384:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -60019,7 +61450,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":340}],334:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":391}],385:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -60054,7 +61485,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":340}],335:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":391}],386:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -60092,7 +61523,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],336:[function(require,module,exports){
+},{"_process":405,"buffer":204}],387:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -60111,7 +61542,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],337:[function(require,module,exports){
+},{"_process":405,"buffer":204}],388:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -60146,7 +61577,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":340}],338:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":391}],389:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
@@ -60156,7 +61587,7 @@ exports.decrypt = function (self, block) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153}],339:[function(require,module,exports){
+},{"_process":405,"buffer":204}],390:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var xor = require('buffer-xor')
 
@@ -60176,7 +61607,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes")
-},{"_process":354,"buffer":153,"buffer-xor":340}],340:[function(require,module,exports){
+},{"_process":405,"buffer":204,"buffer-xor":391}],391:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -60190,7 +61621,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor")
-},{"_process":354,"buffer":153}],341:[function(require,module,exports){
+},{"_process":405,"buffer":204}],392:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -60284,7 +61715,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base")
-},{"_process":354,"buffer":153,"inherits":351,"stream":372,"string_decoder":378}],342:[function(require,module,exports){
+},{"_process":405,"buffer":204,"inherits":402,"stream":423,"string_decoder":429}],393:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -60313,7 +61744,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes")
-},{"./aes":326,"_process":354,"buffer":153,"cipher-base":341,"inherits":351}],343:[function(require,module,exports){
+},{"./aes":377,"_process":405,"buffer":204,"cipher-base":392,"inherits":402}],394:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var md5 = require('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -60385,7 +61816,7 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey")
-},{"_process":354,"buffer":153,"create-hash/md5":283}],344:[function(require,module,exports){
+},{"_process":405,"buffer":204,"create-hash/md5":334}],395:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -60496,7 +61927,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/privateDecrypt.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"./mgf":304,"./withPublic":346,"./xor":347,"_process":354,"bn.js":305,"browserify-rsa":306,"buffer":153,"create-hash":281,"parse-asn1":310}],345:[function(require,module,exports){
+},{"./mgf":355,"./withPublic":397,"./xor":398,"_process":405,"bn.js":356,"browserify-rsa":357,"buffer":204,"create-hash":332,"parse-asn1":361}],396:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -60594,7 +62025,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/publicEncrypt.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"./mgf":304,"./withPublic":346,"./xor":347,"_process":354,"bn.js":305,"browserify-rsa":306,"buffer":153,"create-hash":281,"parse-asn1":310,"randombytes":348}],346:[function(require,module,exports){
+},{"./mgf":355,"./withPublic":397,"./xor":398,"_process":405,"bn.js":356,"browserify-rsa":357,"buffer":204,"create-hash":332,"parse-asn1":361,"randombytes":399}],397:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -60607,7 +62038,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/withPublic.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"_process":354,"bn.js":305,"buffer":153}],347:[function(require,module,exports){
+},{"_process":405,"bn.js":356,"buffer":204}],398:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function xor(a, b) {
   var len = a.length;
@@ -60618,7 +62049,7 @@ module.exports = function xor(a, b) {
   return a
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/xor.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt")
-},{"_process":354,"buffer":153}],348:[function(require,module,exports){
+},{"_process":405,"buffer":204}],399:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -60650,7 +62081,7 @@ function oldBrowser() {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/randombytes/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/crypto-browserify/node_modules/randombytes")
-},{"_process":354,"buffer":153}],349:[function(require,module,exports){
+},{"_process":405,"buffer":204}],400:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -60952,7 +62383,7 @@ function isUndefined(arg) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/events/events.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/events")
-},{"_process":354,"buffer":153}],350:[function(require,module,exports){
+},{"_process":405,"buffer":204}],401:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var http = require('http');
 
@@ -60970,7 +62401,7 @@ https.request = function (params, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/https-browserify/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/https-browserify")
-},{"_process":354,"buffer":153,"http":373}],351:[function(require,module,exports){
+},{"_process":405,"buffer":204,"http":424}],402:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
@@ -60997,14 +62428,14 @@ if (typeof Object.create === 'function') {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/inherits/inherits_browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/inherits")
-},{"_process":354,"buffer":153}],352:[function(require,module,exports){
+},{"_process":405,"buffer":204}],403:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/isarray/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/isarray")
-},{"_process":354,"buffer":153}],353:[function(require,module,exports){
+},{"_process":405,"buffer":204}],404:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -61232,7 +62663,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/path-browserify/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/path-browserify")
-},{"_process":354,"buffer":153}],354:[function(require,module,exports){
+},{"_process":405,"buffer":204}],405:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -61327,7 +62758,7 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/process/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/process")
-},{"_process":354,"buffer":153}],355:[function(require,module,exports){
+},{"_process":405,"buffer":204}],406:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*! https://mths.be/punycode v1.4.0 by @mathias */
 ;(function(root) {
@@ -61864,7 +63295,7 @@ process.umask = function() { return 0; };
 }(this));
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/punycode/punycode.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/punycode")
-},{"_process":354,"buffer":153}],356:[function(require,module,exports){
+},{"_process":405,"buffer":204}],407:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -61952,7 +63383,7 @@ var isArray = Array.isArray || function (xs) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3/decode.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3")
-},{"_process":354,"buffer":153}],357:[function(require,module,exports){
+},{"_process":405,"buffer":204}],408:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -62041,7 +63472,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3/encode.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3")
-},{"_process":354,"buffer":153}],358:[function(require,module,exports){
+},{"_process":405,"buffer":204}],409:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -62049,12 +63480,12 @@ exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/querystring-es3")
-},{"./decode":356,"./encode":357,"_process":354,"buffer":153}],359:[function(require,module,exports){
+},{"./decode":407,"./encode":408,"_process":405,"buffer":204}],410:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = require("./lib/_stream_duplex.js")
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/duplex.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream")
-},{"./lib/_stream_duplex.js":360,"_process":354,"buffer":153}],360:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":411,"_process":405,"buffer":204}],411:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
@@ -62140,7 +63571,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib/_stream_duplex.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib")
-},{"./_stream_readable":362,"./_stream_writable":364,"_process":354,"buffer":153,"core-util-is":365,"inherits":351,"process-nextick-args":366}],361:[function(require,module,exports){
+},{"./_stream_readable":413,"./_stream_writable":415,"_process":405,"buffer":204,"core-util-is":416,"inherits":402,"process-nextick-args":417}],412:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
@@ -62171,7 +63602,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib/_stream_passthrough.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib")
-},{"./_stream_transform":363,"_process":354,"buffer":153,"core-util-is":365,"inherits":351}],362:[function(require,module,exports){
+},{"./_stream_transform":414,"_process":405,"buffer":204,"core-util-is":416,"inherits":402}],413:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -63150,7 +64581,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib/_stream_readable.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib")
-},{"./_stream_duplex":360,"_process":354,"buffer":153,"core-util-is":365,"events":349,"inherits":351,"isarray":352,"process-nextick-args":366,"string_decoder/":378,"util":139}],363:[function(require,module,exports){
+},{"./_stream_duplex":411,"_process":405,"buffer":204,"core-util-is":416,"events":400,"inherits":402,"isarray":403,"process-nextick-args":417,"string_decoder/":429,"util":190}],414:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
@@ -63351,7 +64782,7 @@ function done(stream, er) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib/_stream_transform.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib")
-},{"./_stream_duplex":360,"_process":354,"buffer":153,"core-util-is":365,"inherits":351}],364:[function(require,module,exports){
+},{"./_stream_duplex":411,"_process":405,"buffer":204,"core-util-is":416,"inherits":402}],415:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -63884,7 +65315,7 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib/_stream_writable.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/lib")
-},{"./_stream_duplex":360,"_process":354,"buffer":153,"core-util-is":365,"events":349,"inherits":351,"process-nextick-args":366,"util-deprecate":367}],365:[function(require,module,exports){
+},{"./_stream_duplex":411,"_process":405,"buffer":204,"core-util-is":416,"events":400,"inherits":402,"process-nextick-args":417,"util-deprecate":418}],416:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -63995,7 +65426,7 @@ function objectToString(o) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/core-util-is/lib/util.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/core-util-is/lib")
-},{"_process":354,"buffer":153}],366:[function(require,module,exports){
+},{"_process":405,"buffer":204}],417:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -64019,7 +65450,7 @@ function nextTick(fn) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/process-nextick-args/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/process-nextick-args")
-},{"_process":354,"buffer":153}],367:[function(require,module,exports){
+},{"_process":405,"buffer":204}],418:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 /**
@@ -64090,12 +65521,12 @@ function config (name) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/util-deprecate/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/node_modules/util-deprecate")
-},{"_process":354,"buffer":153}],368:[function(require,module,exports){
+},{"_process":405,"buffer":204}],419:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = require("./lib/_stream_passthrough.js")
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/passthrough.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream")
-},{"./lib/_stream_passthrough.js":361,"_process":354,"buffer":153}],369:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":412,"_process":405,"buffer":204}],420:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var Stream = (function (){
   try {
@@ -64111,17 +65542,17 @@ exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/readable.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream")
-},{"./lib/_stream_duplex.js":360,"./lib/_stream_passthrough.js":361,"./lib/_stream_readable.js":362,"./lib/_stream_transform.js":363,"./lib/_stream_writable.js":364,"_process":354,"buffer":153}],370:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":411,"./lib/_stream_passthrough.js":412,"./lib/_stream_readable.js":413,"./lib/_stream_transform.js":414,"./lib/_stream_writable.js":415,"_process":405,"buffer":204}],421:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = require("./lib/_stream_transform.js")
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/transform.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream")
-},{"./lib/_stream_transform.js":363,"_process":354,"buffer":153}],371:[function(require,module,exports){
+},{"./lib/_stream_transform.js":414,"_process":405,"buffer":204}],422:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = require("./lib/_stream_writable.js")
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream/writable.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/readable-stream")
-},{"./lib/_stream_writable.js":364,"_process":354,"buffer":153}],372:[function(require,module,exports){
+},{"./lib/_stream_writable.js":415,"_process":405,"buffer":204}],423:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -64252,7 +65683,7 @@ Stream.prototype.pipe = function(dest, options) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-browserify/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-browserify")
-},{"_process":354,"buffer":153,"events":349,"inherits":351,"readable-stream/duplex.js":359,"readable-stream/passthrough.js":368,"readable-stream/readable.js":369,"readable-stream/transform.js":370,"readable-stream/writable.js":371}],373:[function(require,module,exports){
+},{"_process":405,"buffer":204,"events":400,"inherits":402,"readable-stream/duplex.js":410,"readable-stream/passthrough.js":419,"readable-stream/readable.js":420,"readable-stream/transform.js":421,"readable-stream/writable.js":422}],424:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ClientRequest = require('./lib/request')
 var extend = require('xtend')
@@ -64329,7 +65760,7 @@ http.METHODS = [
 	'UNSUBSCRIBE'
 ]
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http")
-},{"./lib/request":375,"_process":354,"buffer":153,"builtin-status-codes":377,"url":380,"xtend":386}],374:[function(require,module,exports){
+},{"./lib/request":426,"_process":405,"buffer":204,"builtin-status-codes":428,"url":431,"xtend":437}],425:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableByteStream)
 
@@ -64373,7 +65804,7 @@ function isFunction (value) {
 xhr = null // Help gc
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib/capability.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib")
-},{"_process":354,"buffer":153}],375:[function(require,module,exports){
+},{"_process":405,"buffer":204}],426:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // var Base64 = require('Base64')
 var capability = require('./capability')
@@ -64652,7 +66083,7 @@ var unsafeHeaders = [
 ]
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib/request.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib")
-},{"./capability":374,"./response":376,"_process":354,"buffer":153,"inherits":351,"stream":372}],376:[function(require,module,exports){
+},{"./capability":425,"./response":427,"_process":405,"buffer":204,"inherits":402,"stream":423}],427:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -64828,7 +66259,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib/response.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/lib")
-},{"./capability":374,"_process":354,"buffer":153,"inherits":351,"stream":372}],377:[function(require,module,exports){
+},{"./capability":425,"_process":405,"buffer":204,"inherits":402,"stream":423}],428:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = {
   "100": "Continue",
@@ -64891,7 +66322,7 @@ module.exports = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/node_modules/builtin-status-codes/browser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/stream-http/node_modules/builtin-status-codes")
-},{"_process":354,"buffer":153}],378:[function(require,module,exports){
+},{"_process":405,"buffer":204}],429:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -65116,7 +66547,7 @@ function base64DetectIncompleteChar(buffer) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/string_decoder/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/string_decoder")
-},{"_process":354,"buffer":153}],379:[function(require,module,exports){
+},{"_process":405,"buffer":204}],430:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var nextTick = require('process/browser.js').nextTick;
 var apply = Function.prototype.apply;
@@ -65195,7 +66626,7 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
   delete immediateIds[id];
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/timers-browserify/main.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/timers-browserify")
-},{"_process":354,"buffer":153,"process/browser.js":354}],380:[function(require,module,exports){
+},{"_process":405,"buffer":204,"process/browser.js":405}],431:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -65931,7 +67362,7 @@ Url.prototype.parseHost = function() {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/url/url.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/url")
-},{"./util":381,"_process":354,"buffer":153,"punycode":355,"querystring":358}],381:[function(require,module,exports){
+},{"./util":432,"_process":405,"buffer":204,"punycode":406,"querystring":409}],432:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -65951,7 +67382,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/url/util.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/url")
-},{"_process":354,"buffer":153}],382:[function(require,module,exports){
+},{"_process":405,"buffer":204}],433:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
@@ -65960,7 +67391,7 @@ module.exports = function isBuffer(arg) {
     && typeof arg.readUInt8 === 'function';
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/util/support/isBufferBrowser.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/util/support")
-},{"_process":354,"buffer":153}],383:[function(require,module,exports){
+},{"_process":405,"buffer":204}],434:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -66550,7 +67981,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/util/util.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/util")
-},{"./support/isBuffer":382,"_process":354,"buffer":153,"inherits":351}],384:[function(require,module,exports){
+},{"./support/isBuffer":433,"_process":405,"buffer":204,"inherits":402}],435:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var indexOf = require('indexof');
 
@@ -66692,7 +68123,7 @@ exports.createContext = Script.createContext = function (context) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/vm-browserify/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/vm-browserify")
-},{"_process":354,"buffer":153,"indexof":385}],385:[function(require,module,exports){
+},{"_process":405,"buffer":204,"indexof":436}],436:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 var indexOf = [].indexOf;
@@ -66705,7 +68136,7 @@ module.exports = function(arr, obj){
   return -1;
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/vm-browserify/node_modules/indexof/index.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/vm-browserify/node_modules/indexof")
-},{"_process":354,"buffer":153}],386:[function(require,module,exports){
+},{"_process":405,"buffer":204}],437:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = extend
 
@@ -66728,4 +68159,4 @@ function extend() {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../usr/local/lib/node_modules/browserify/node_modules/xtend/immutable.js","/../../../../usr/local/lib/node_modules/browserify/node_modules/xtend")
-},{"_process":354,"buffer":153}]},{},[136]);
+},{"_process":405,"buffer":204}]},{},[187]);

@@ -4,95 +4,142 @@
 	p {{tagline}}
 
 .row
-	.col-md-6
+	.col-md-4
+		h2 1. Select string options:
+
 		p Select the criteria you want to choose from:
 
-		p Browser:
+		form.form-horizontal#radioForm
+			form-group
+				.radio
+					label#browserLabel
+						input(type="radio", name="radios", value="")#browserRadio
+						| Browser
+			form-group
+				.radio
+					label#adBlockerLabel 
+						input(type="radio", name="radios", value="")#adBlockerRadio
+						| Ad Blocker
+			form-group
+				.radio
+					label#pluginsLabel 
+						input(type="radio", name="radios", value="")#pluginsRadio
+						| Plugins
+			form-group
+				.radio
+					label#languageLabel 
+						input(type="radio", name="radios", value="")#languageRadio
+						| Language
+			form-group
+				.radio
+					label#touchLabel 
+						input(type="radio", name="radios", value="")#touchRadio
+						| Touch Support
+			form-group
+				.radio
+					label#otherLabel 
+						input(type="radio", name="radios", value="")#otherRadio
+						| Other variable (whatever you want it to be)
 
-		select.selectpicker(title="Browser", id="userAgent")
-			option  
-			option Chrome
-			option Safari
-			option Firefox
-			option IE
-			option Other
+	.col-md-4
+		h2 2. Generate keys:
 
-		p
-		p Uses an Ad Blocker?
+		button.btn.btn-primary(type="button", id="keysButton", onclick="getKeys()", disabled="disabled") Generate!
 
-		select.selectpicker(title="Ad Blocker", id="adBlocker")
-			option 
-			option Yes
+		#keyInfo
+			p
+			p 
+				b Public 
+				| Key is:
+			p#publicKey(style="font-family: monospace;") X
+			p
+			p
+				b Private 
+				| Key is:
+			p#privateKey(style="font-family: monospace;") X
 
-		p
-		p Has a particular plugin (not extension; case insensitive)?
-		//- form.form-inline(name="plugin", id="plugin", onSubmit="formSubmitGetPlugin()", data-toggle="validator")
-		//- 	.form-group
-		//- .col-md-6
-		input.form-control(type="text", name="pluginText", id="pluginText", placeholder="Name of plugin", required, title="Must check for a plugin")
-			
+	.col-md-4
+		h2 3. Generate code:
 
-		p
-		p language
-		p screenResolution
-		p timezoneOffset
-		p sessionStorage
-		p localStorage
-		p cpuClass
-		p platform
-		p webgl
-		p touchSupport
-
-	.col-md-6
-
-		p Copy and paste the following code:
+		button.btn.btn-primary(type="button", id="codeButton", onclick="genCode()", disabled="disabled") Generate!
 		p
 		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
 
 script.
+	$("#keyInfo").hide();
 
-	function handleNull(s) {
-		if (s == "") {
-			$("#results").text("");
-			$("#finalCode").text("Final Code Here");
+	$("#browserLabel").append(" (e.g. this browser returns \"" + RapporExamine.getBrowser() + "\")");
+	RapporExamine.getAdBlock(adBlockSuccess, adBlockFailure);
+	$("#pluginsLabel").append(" (e.g. this browser returns \"[" + RapporExamine.getPlugins() + "]\")");
+	$("#languageLabel").append(" (e.g. this browser returns \"" + RapporExamine.getLanguage() + "\")");
+	$("#touchLabel").append(" (e.g. this browser returns \"" + RapporExamine.getTouchSupport() + "\")");
 
-			return true;
+	function adBlockSuccess() {
+		$("#adBlockerLabel").append(" (e.g. this browser returns \"true\")");
+	}
+
+	function adBlockFailure() {
+		$("#adBlockerLabel").append(" (e.g. this browser returns \"true\")");
+	}
+
+	$('input[name=radios]').change(function(){
+	    $("#keysButton").removeAttr("disabled");
+	    $("#keysButton").focus();
+	});
+
+	function getKeys() {
+		$("#keysButton").attr("disabled", "disabled");
+		$("#codeButton").removeAttr("disabled");
+
+		$.post( "/api/v1/credentials", function( data ) {
+			console.log(data.message);
+			console.log(data);
+			$("#publicKey").text(data.publicKey);
+			$("#privateKey").text(data.privateKey);
+			$("#keyInfo").show();
+		});
+	}
+
+	function genCode() {
+		$("#codeButton").attr("disabled", "disabled");
+
+		templateString = getOperationString();
+		$("#finalCode").text(templateString);
+	}
+
+	function getOperationString() {
+		console.log($('input[name=radios]:checked').attr("id"));
+
+		var checked = $('input[name=radios]:checked').attr("id");
+		var finalStr = `<script src="rappor.js">`
+
+		if (checked != "otherRadio")
+			finalStr += `\n<script src="rappor-examine.js">`;
+
+		finalStr += `\n\nr = new window.Rappor("` + $("#publicKey").text() + `");\n`		
+
+		switch(checked) {
+			case "browserRadio":
+				finalStr += `r.send(RapporExamine.getBrowser());\n`;
+				break;
+			case "adBlockerRadio":
+				finalStr += `RapporExamine.getAdBlock(r.sendTrue(), r.sendFalse()));\n`;
+				break;
+			case "pluginsRadio":
+				finalStr += `r.send(RapporExamine.getPlugins());\n`;
+				break;
+			case "languageRadio":
+				finalStr += `r.send(RapporExamine.getLanguage());\n`;
+				break;
+			case "touchRadio":
+				finalStr += `r.send(RapporExamine.getTouchSupport());\n`;
+				break;
+			case "otherRadio":
+				finalStr += `r.send(<your_variable_here>);\n`;
+				break;
+			default:
+				break;
 		}
-		return false;
+
+		return finalStr;
 	}
-
-	function setCode(s) {
-		$("#finalCode").text(s);
-	}
-
-	$("#userAgent").change(function() {
-		if (handleNull($("#userAgent").val())) return;
-
-		var rapporResults = RapporExamine.userAgentData($("#userAgent").val())
-
-		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nr.send(RapporExamine.userAgentData(\"${$("#userAgent").val()}\"));`
-
-		setCode(templateString);
-	});
-
-	$("#adBlocker").change(function() {
-		if (handleNull($("#adBlocker").val())) return;
-
-		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nRapporExamine.getAdBlock(r.sendTrue(), r.sendFalse());`
-
-		setCode(templateString);
-	});
-
-	$("#pluginText").on("change keyup paste", function() {
-		if (handleNull($("#pluginText").val())) return;
-
-		templateString = `<script src="rappor.js">\n<script src="rappor-examine.js">\n\nr = new window.Rappor()\;\nr.send(RapporExamine.hasPlugin(\"${$("#pluginText").val()}\"));`
-
-		setCode(templateString);
-	});
-
-
-	//- console.log(RapporExamine.getRegularPlugins());
-	console.log(RapporExamine.hasPlugin("pdf"));
-
-	$('.selectpicker').selectpicker();

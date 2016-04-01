@@ -30,7 +30,7 @@ def getParams():
 
 # generate test strings
 def generateCandidates(n):
-	candidates = ["TRUE", "FALSE"]
+	candidates = ["true", "false"]
 
 	for i in range(0, n):
 		candidates.append("zzfake" + str(i))
@@ -83,7 +83,7 @@ def writeToFile(X):
 
 
 def unitTest():
-	candidates = ["TRUE"]
+	candidates = ["true"]
 	m = 3
 	h = 2
 	k = 32
