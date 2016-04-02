@@ -33,6 +33,12 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
         .when('/generate', {
             templateUrl: 'partials/generateCSV',
             controller: 'GenerateCSVController'
+        })
+
+        // Send records page that will use the SendReportController
+        .when('/analyze', {
+            templateUrl: 'partials/analyzeCSV',
+            controller: 'AnalyzeCSVController'
         });
 
     $locationProvider.html5Mode(true);

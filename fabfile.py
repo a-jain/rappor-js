@@ -38,6 +38,7 @@ def push(msg="default"):
 	local("git push origin master")
 	local("git push heroku master")
 	
+# run in R: rsconnect::deployApp('Dropbox/rappor-js/rappor-analysis')
 def pushR():
 	local("exec R --vanilla --slave -e \"rsconnect::deployApp()\"")
 

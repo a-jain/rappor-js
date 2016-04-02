@@ -2,6 +2,6 @@ name: rappor-js
 account: rappor-js
 server: shinyapps.io
 appId: 91276
-bundleId: 406442
+bundleId: 408885
 url: https://rappor-js.shinyapps.io/rappor-js/
-when: 1459345723.51435
+when: 1459616388.00417
