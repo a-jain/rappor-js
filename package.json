@@ -9,6 +9,7 @@
     "browserify": "^13.0.0",
     "coffee-script": "latest",
     "coffeeify": "latest",
+    "compression": "latest",
     "convert-hex": "latest",
     "cors": "latest",
     "create-hmac": "latest",

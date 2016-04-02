@@ -9,6 +9,7 @@ var stylus		   = require('stylus');
 var nib		       = require('nib');
 var mongoose       = require('mongoose');
 var cors           = require('cors');
+var compression    = require('compression')
 
 // configuration ===========================================
     
@@ -31,6 +32,9 @@ app.use(stylus.middleware({
 
 // allow CORS requests FOR NOW
 app.use(cors())
+
+// add gzip compression
+app.use(compression())
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
