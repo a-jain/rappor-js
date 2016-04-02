@@ -24,6 +24,7 @@ html
 		script(src='js/controllers/RecordCtrl.js')
 		script(src='js/controllers/SendReportCtrl.js')
 		script(src='js/controllers/ExamineBrowserCtrl.js')
+		script(src='js/controllers/GenerateCSVCtrl.js')
 		
 		script(src='js/services/RecordService.js')
 
@@ -54,6 +55,10 @@ body(ng-app='rappor-js', ng-controller='RecordController')
 			ul.nav.navbar-nav
 				li
 					a(href='/examine') Examine Browser
+
+			ul.nav.navbar-nav
+				li
+					a(href='/generate') Generate CSVs
 
 
 

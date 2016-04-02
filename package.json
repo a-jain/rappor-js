@@ -1,6 +1,7 @@
 {
   "main": "server.js",
   "dependencies": {
+    "adm-zip": "latest",
     "bit-array": "latest",
     "byte-buffer": "latest",
     "body-parser": "latest",
@@ -22,6 +23,7 @@
     "needle": "latest",
     "nib": "latest",
     "npm-check-updates": "^2.6.1",
+    "rimraf": "latest",
     "stylus": "^0.54.2",
     "ua-parser-js": "latest",
     "when": "^3.7.7",

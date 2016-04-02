@@ -4,18 +4,18 @@ import requests
 import json
 import os
 
-subDir      = os.path.join(os.getcwd(), "server/outputs")
-countsFile  = os.path.join(subDir, sys.argv[1])
-cohortsFile = os.path.join(subDir, sys.argv[2])
-paramsFile  = os.path.join(subDir, sys.argv[3])
+subDir      = os.path.join(os.getcwd(), "outputs/" + sys.argv[1])
 
-serverUrl = "http://localhost:8080/api/v1/records";
+if not os.path.exists(subDir):
+	os.makedirs(subDir)
+
+countsFile  = os.path.join(subDir, "counts.csv")
+paramsFile  = os.path.join(subDir, "params.csv")
 
 def getSumBits(params, jsonResponse):
 	# create frequency table of different bitStrings
 	totalCounts = [0] * params['m']
 	
-
 	# key is cohort number, values are # of times a 1 is in bitString
 	bitCounts = {}
 	for i in range(0, params['m']):
@@ -79,10 +79,19 @@ def getParams(params):
 # change from printing to std out to printing to a given filename
 # sumBits.csv for first one, trueBits.csv for second one, params.csv for third one
 def main():
+	serverUrl = "http://localhost:8080/api/v1/records";
+	privateKey  = sys.argv[1]
+
+	if privateKey is not "":
+		serverUrl += ("/credentials/" + privateKey)
+
 	r = requests.get(serverUrl, timeout=(5, 120))
 
 	# cache JSON response
-	jsonResponse = r.json()
+	try:
+		jsonResponse = r.json()
+	except:
+		print "The private key wasn't found"
 
 	# get parameter info from first response
 	# NB: assuming all params are the same, checking would be trivial
@@ -95,8 +104,8 @@ def main():
 
 
 if __name__ == '__main__':
-  try:
-    main()
-  except RuntimeError, e:
-    print >>sys.stderr, e.args[0]
-    sys.exit(1)
+	try:
+		main()
+	except RuntimeError, e:
+		print >>sys.stderr, e.args[0]
+		sys.exit(1)

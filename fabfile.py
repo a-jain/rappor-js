@@ -7,17 +7,17 @@ def run():
 	local("nodemon server.js")
 	webbrowser.open_new_tab("http://localhost:8080")
 
-def analyze():
+def analyze(privateKey=""):
 	assert_directory()
-	countFile = "counts.csv"
-	truthFile = "cohorts.csv"
+	# countFile = "counts.csv"
+	# truthFile = "cohorts.csv"
 	paramFile = "params.csv"
 	mapFile   = "map.csv"
 
 	# pull countFile from server
 	local("rm -r ./server/outputs")
 	local("mkdir -p ./server/outputs")
-	local("python ./server/mySumBits.py {} {} {}".format(countFile, truthFile, paramFile)) # add arg1 arg2 arg3 here, where args are filenames
+	local("python ./server/mySumBits.py {}".format(privateKey)) # add arg1 arg2 arg3 here, where args are filenames
 
 	# also need to create map file
 	local("python ./server/map_file.py {} {}".format(paramFile, mapFile))
@@ -50,9 +50,8 @@ def runb():
 	assert_directory()
 	local("browserify --fast -t coffeeify rappor.coffee -o rappor.js")
 	local("browserify -t coffeeify rappor-examine.coffee -o rappor-examine.js")
-	local("cp ./rappor.js ./public/js/rappor-js/")
-	local("cp ./rappor-sim.js ./public/js/rappor-js/")
-	local("cp ./rappor-examine.js ./public/js/rappor-js/")
+	local("browserify -t coffeeify rappor-csvs.coffee -o rappor-csvs.js")
+	local("cp ./rappor*.js ./public/js/rappor-js/")
 
 def analyzeTest():
 	assert_directory()

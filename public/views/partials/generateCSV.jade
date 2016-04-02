@@ -1,0 +1,43 @@
+.jumbotron.text-center
+	h1 Generate CSV files
+
+p Create the files necessary for analyzing the client data using Rappor
+
+form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-toggle="validator")
+	.form-group
+		label.col-sm-2.control-label(for="pK") Private Key
+		.col-sm-10
+			input.form-control(type="text", name="pK", id="pK", placeholder="Private Key", required, pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
+
+	.form-group
+		label.col-sm-2.control-label(for="candidates") Candidates
+		.col-sm-10
+			textarea.form-control(rows="5", name="candidates", id="candidates", placeholder="Enter each candidate string on a new line")
+
+	.form-group
+		.col-sm-offset-2.col-sm-10
+			button.btn.btn-primary(type="submit") Go!
+
+p
+
+script.
+	function csvFormSubmit() {
+		var url = "/api/v1/getCSV/" + $("#pK").val();
+		console.log(url)
+
+		var allData = {};
+		allData.strs = $("#candidates").val().trim().split(/\s+/);
+		allData.strs = Array.from(new Set(allData.strs));
+
+		console.log(allData.strs);
+
+		$.post( url, allData, function( data, textStatus ) {
+			console.log("woo it returned");
+			console.log(data);
+			console.log(textStatus);
+
+			if (textStatus == "success") {
+				window.location = url;
+			};
+		});
+	}

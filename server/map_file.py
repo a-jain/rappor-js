@@ -3,10 +3,11 @@ import csv
 import sys
 import os
 import struct
+import json
 
-subDir      = os.path.join(os.getcwd(), "server/outputs")
-paramsFile  = os.path.join(subDir, sys.argv[1])
-mapFile     = os.path.join(subDir, sys.argv[2])
+subDir      = os.path.join(os.getcwd(), "outputs/" + sys.argv[1])
+paramsFile  = subDir + "/params.csv"
+mapFile     = subDir + "/map.csv"
 
 def getParams():
 	params = {}
@@ -97,7 +98,10 @@ def main():
 	if testing:
 		unitTest()
 	else:
-		candidates = generateCandidates(6)
+		# candidates = generateCandidates(6)
+
+		candidates = json.loads(sys.argv[2])["strs"]
+		print candidates
 
 		X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
 		
