@@ -15,7 +15,7 @@
     "digest-js": "latest",
     "express": "^4.13.4",
     "fingerprintjs2": "latest",
-    "FuckAdBlock": "latest",
+    // "FuckAdBlock": "latest",
     "jade": "latest",
     "md5": "^2.1.0",
     "method-override": "latest",
