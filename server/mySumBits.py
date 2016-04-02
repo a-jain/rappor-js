@@ -80,7 +80,7 @@ def getParams(params):
 # sumBits.csv for first one, trueBits.csv for second one, params.csv for third one
 def main():
 	# serverUrl = "http://localhost:8080/api/v1/records";
-	serverUrl = "http://rappor-hs.herokuapp.com/api/v1/records";
+	serverUrl = "http://rappor-js.herokuapp.com/api/v1/records";
 	privateKey  = sys.argv[1]
 
 	if privateKey is not "":
@@ -88,8 +88,8 @@ def main():
 
 	try:
 		r = requests.get(serverUrl, timeout=120)
-	except requests.exceptions.ConnectionError:
-		print "Hitting URL " + serverURL + " too many times"
+	except:
+		print "something went wrong in mySumBits.py"
 		return 1
 
 	# cache JSON response
@@ -97,6 +97,7 @@ def main():
 		jsonResponse = r.json()
 	except:
 		print "The private key wasn't found"
+		print "server was " + serverUrl
 		print r
 		return 1
 
