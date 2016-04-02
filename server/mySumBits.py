@@ -90,12 +90,15 @@ def main():
 		r = requests.get(serverUrl, timeout=120)
 	except requests.exceptions.ConnectionError:
 		print "Hitting URL " + serverURL + " too many times"
+		return 1
 
 	# cache JSON response
 	try:
 		jsonResponse = r.json()
 	except:
 		print "The private key wasn't found"
+		print r
+		return 1
 
 	# get parameter info from first response
 	# NB: assuming all params are the same, checking would be trivial
