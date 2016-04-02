@@ -238,7 +238,7 @@ module.exports = function(router) {
                 if (err) console.log(err);
             })
 
-            res.download(dirname + req.params.privateKey + ".zip", "params.zip", function(err) {
+            res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
                 console.log(err);
             });
         })

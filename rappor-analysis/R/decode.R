@@ -165,8 +165,8 @@ PerformInference <- function(X, Y, N, mod, params, alpha, correction) {
 
   betas <- matrix(mod$coefs, ncol = 1)
 
-  cat(stderr(), "\n\nREACHED HERE\n\n")
-  cat(stderr(), betas)
+  # cat(stderr(), "\n\nREACHED HERE\n\n")
+  # cat(stderr(), betas)
 
   fit <- data.frame(string = colnames(X), Estimate = betas,
                     SD = mod$stds, # z_stat = z_values, pvalue = p_values,
@@ -241,14 +241,14 @@ FitDistribution <- function(estimates_stds, map, quiet = FALSE) {
 
   support_coefs <- 1:S
 
-  cat(stderr(), "line 244 of decode.R has S variable of \n")
-  print(S)
-  cat(stderr(), "\nline 245 of decode.R has other variable of \n")
-  print(length(estimates_stds$estimates))
-  cat(stderr(), "\nline 246 of decode.R has std estimates of \n")
-  print(as.vector(t(estimates_stds$estimates)))
-  cat(stderr(), "\nline 247 of decode.R has map of\n")
-  print(as.matrix((map)))
+  # cat(stderr(), "line 244 of decode.R has S variable of \n")
+  # print(S)
+  # cat(stderr(), "\nline 245 of decode.R has other variable of \n")
+  # print(length(estimates_stds$estimates))
+  # cat(stderr(), "\nline 246 of decode.R has std estimates of \n")
+  # print(as.vector(t(estimates_stds$estimates)))
+  # cat(stderr(), "\nline 247 of decode.R has map of\n")
+  # print(as.matrix((map)))
 
   # changed to always do lasso
   if (S > length(estimates_stds$estimates) * .008) {
@@ -378,13 +378,13 @@ Decode <- function(counts, map, params, alpha = 0.05,
 
   map_filtered <- map[filter_bits, , drop = FALSE]
 
-  cat(stderr(), "\nInitial counts received:\n")
-  print(counts)
+  # cat(stderr(), "\nInitial counts received:\n")
+  # print(counts)
 
   es <- EstimateBloomCounts(params, counts)
 
-  cat(stderr(), "\nWhatever EstimateBloomCounts returns\n")
-  print(es$estimates)
+  # cat(stderr(), "\nWhatever EstimateBloomCounts returns\n")
+  # print(es$estimates)
 
   estimates_stds_filtered <-
     list(estimates = es$estimates[filter_cohorts, , drop = FALSE],
@@ -424,7 +424,7 @@ Decode <- function(counts, map, params, alpha = 0.05,
     alpha <- alpha / S
   }
 
-  cat(stderr(), "\nABOUT TO CALL INFERENCE\n")
+  # cat(stderr(), "\nABOUT TO CALL INFERENCE\n")
   inf <- PerformInference(map_filtered[, reported, drop = FALSE],
                           as.vector(t(estimates_stds_filtered$estimates)),
                           N, mod, params, alpha,

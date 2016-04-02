@@ -86,10 +86,10 @@ shinyUI(pageWithSidebar(
                                                                tabPanel("Observed Counts",
                                                                         selectInput("selected_string", "Select String",
                                                                                     ""),
-                                                                        plotOutput("counts", height = "800px"), br()),
-                                                               tabPanel("Estimated Counts", plotOutput("ests", height = "800px")),
-                                                               tabPanel("Collision Counts", plotOutput("collisions", height = "800px")),
-                                                               tabPanel("Map", plotOutput("map", height = "800px"))
+                                                                        plotOutput("counts", height = "800px"), br())
+                                                               # tabPanel("Estimated Counts", plotOutput("ests", height = "800px")),
+                                                               # tabPanel("Collision Counts", plotOutput("collisions", height = "800px")),
+                                                               # tabPanel("Map", plotOutput("map", height = "800px"))
                                                                )
                                                    )
                                   )
