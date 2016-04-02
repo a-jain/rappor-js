@@ -85,7 +85,11 @@ def main():
 	if privateKey is not "":
 		serverUrl += ("/credentials/" + privateKey)
 
-	r = requests.get(serverUrl, timeout=120)
+	try:
+		r = requests.get(serverUrl, timeout=120)
+	except requests.exceptions.ConnectionError:
+		r.status_code = "Connection refused"
+		print "Hitting URL too many times"
 
 	# cache JSON response
 	try:
