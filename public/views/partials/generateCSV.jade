@@ -32,12 +32,13 @@ script.
 		console.log(allData.strs);
 
 		$.post( url, allData, function( data, textStatus ) {
-			console.log("woo it returned");
-			console.log(data);
 			console.log(textStatus);
 
 			if (textStatus == "success") {
 				window.location = url;
-			};
+			}
+			else {
+				console.log("Something went wrong, e.g. you didn't have the correct private key")
+			}
 		});
 	}

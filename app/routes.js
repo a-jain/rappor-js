@@ -235,11 +235,15 @@ module.exports = function(router) {
             console.log(dirname + req.params.privateKey + ".zip");
 
             rf(dirname + req.params.privateKey, function(err) {
-                if (err) console.log(err);
+                if (err) {
+                    console.log(err);
+                    return res.status(err.statusCode).send("Need to submit form first to create zip file");
+                }
             })
 
             res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
                 console.log(err);
+                return res.status(404).send("Need to submit form first to create zip file");
             });
         })
 
@@ -274,11 +278,11 @@ module.exports = function(router) {
             child.on("close", function(data) {
                 console.log(`Python child is done, and returned: ${data}`);
 
-                if (data) {
-                    res.send("Key not found")
+                if (data || data == 1) {
+                    return res.status(404).send("Key not found");
                 }
 
-                console.log(`Start next Python file!`);
+                // console.log(`Start next Python file!`);
 
                 var args2 = [];
                 args2.push("map_file.py")
@@ -302,18 +306,17 @@ module.exports = function(router) {
 
                 secondChild.on("close", function(data) {
                     if (data) {
-                        res.send("Error")
+                        return res.status(404).send("Map file failed");
                     }
-                    console.log(`Second Python child is done, and returned: ${data}`);
-                    console.log(`Now finalizing zip file`);
+                    // console.log(`Second Python child is done, and returned: ${data}`);
+                    // console.log(`Now finalizing zip file`);
 
                     zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/map.csv");
                     zip.writeZip(dirname + "outputs/" + req.params.privateKey + ".zip");
 
-                    // res.redirect(302, '/api/v1/getCSV/' + req.params.privateKey);
-                    res.sendStatus(200);
+                    return res.sendStatus(200);
 
-                    console.log(`done!`);
+                    // console.log(`done!`);
                 });
             });
         });
@@ -328,7 +331,7 @@ module.exports = function(router) {
 
     router.get('*', function(req, res) {
         res.render('index', {
-            title: 'Akash Jain'
+            title: 'RapporJS'
         })
     });
 

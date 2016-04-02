@@ -90,8 +90,8 @@ def main():
 		r = requests.get(serverUrl, timeout=120)
 	except:
 		print "something went wrong in mySumBits.py"
-		return 1
-
+		sys.exit(1)
+		
 	# cache JSON response
 	try:
 		jsonResponse = r.json()
@@ -99,8 +99,8 @@ def main():
 		print "The private key wasn't found"
 		print "server was " + serverUrl
 		print r
-		return 1
-
+		sys.exit(1)
+		
 	# get parameter info from first response
 	# NB: assuming all params are the same, checking would be trivial
 	#     but unclear how to handle cases where they differ

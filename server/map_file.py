@@ -101,7 +101,7 @@ def main():
 		# candidates = generateCandidates(6)
 
 		candidates = json.loads(sys.argv[2])["strs"]
-		print candidates
+		# print candidates
 
 		X = constructMap(candidates, int(params["m"]), int(params["h"]), int(params["k"]))
 		
