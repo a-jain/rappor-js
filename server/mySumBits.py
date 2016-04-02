@@ -79,7 +79,8 @@ def getParams(params):
 # change from printing to std out to printing to a given filename
 # sumBits.csv for first one, trueBits.csv for second one, params.csv for third one
 def main():
-	serverUrl = "http://localhost:8080/api/v1/records";
+	# serverUrl = "http://localhost:8080/api/v1/records";
+	serverUrl = "http://rappor-hs.herokuapp.com/api/v1/records";
 	privateKey  = sys.argv[1]
 
 	if privateKey is not "":
@@ -88,8 +89,7 @@ def main():
 	try:
 		r = requests.get(serverUrl, timeout=120)
 	except requests.exceptions.ConnectionError:
-		r.status_code = "Connection refused"
-		print "Hitting URL too many times"
+		print "Hitting URL " + serverURL + " too many times"
 
 	# cache JSON response
 	try:
