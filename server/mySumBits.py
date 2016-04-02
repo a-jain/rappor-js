@@ -85,7 +85,7 @@ def main():
 	if privateKey is not "":
 		serverUrl += ("/credentials/" + privateKey)
 
-	r = requests.get(serverUrl, timeout=(5, 120))
+	r = requests.get(serverUrl, timeout=120)
 
 	# cache JSON response
 	try:
