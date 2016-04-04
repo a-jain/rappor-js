@@ -44,7 +44,7 @@
 	.col-md-4
 		h2 2. Generate keys:
 
-		button.btn.btn-primary(type="button", id="keysButton", onclick="getKeys()", disabled="disabled") Generate!
+		button.btn.btn-primary(type="button", id="keysButton", onclick="getKeys()", disabled="disabled", analytics-on="click", analytics-event="genKeys") Generate!
 
 		#keyInfo
 			p
@@ -61,7 +61,7 @@
 	.col-md-4
 		h2 3. Generate code:
 
-		button.btn.btn-primary(type="button", id="codeButton", onclick="genCode()", disabled="disabled") Generate!
+		button.btn.btn-primary(type="button", id="codeButton", onclick="genCode()", disabled="disabled", analytics-on="click", analytics-event="genCode") Generate!
 		p
 		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
 

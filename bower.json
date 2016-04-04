@@ -1,11 +1,12 @@
 {
-	"name": "rappor-js",
-	"dependencies": {
-		"jquery": "latest",
-		"bootstrap": "latest",
-		"angular": "latest",
-		"font-awesome": "latest",
-        "animate.css": "latest",
-        "angular-route": "latest" 
-	}
+  "name": "rappor-js",
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "angular": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular-route": "latest",
+    "angulartics-google-analytics": "^0.1.4"
+  }
 }
