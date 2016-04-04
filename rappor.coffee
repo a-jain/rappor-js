@@ -24,7 +24,7 @@ class window.Rappor
 			m: 8
 
 		@params = defaultParams.params           or baselineParams
-		@params["server"] = defaultParams.server or 'http://localhost:8080/api/v1/records'
+		@params["server"] = defaultParams.server or 'http://rappor-js.herokuapp.com/api/v1/records'
 		@debug = defaultParams.debug             or false
 		@group = defaultParams.publicKey         or ""
 

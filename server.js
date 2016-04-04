@@ -9,7 +9,7 @@ var stylus		   = require('stylus');
 var nib		       = require('nib');
 var mongoose       = require('mongoose');
 var cors           = require('cors');
-var compression    = require('compression')
+var compression    = require('compression');
 
 // configuration ===========================================
     
@@ -19,10 +19,25 @@ var db = require('./config/db');
 // set our port
 var port = process.env.PORT || 8080; 
 
+// var cdnOptions = {
+// 	publicDir  : path.join(__dirname, 'public')
+//   , viewsDir   : path.join(__dirname, 'views')
+//   , domain     : 'd3mc78y0zevxj6.cloudfront.net/'
+//   , bucket     : 'rappor-js'
+//   , endpoint   : 'rappor-js.s3.amazonaws.com/'
+//   , key        : 'AKIAJJTJOX5Y37XUYJLQ'
+//   , secret     : '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'
+//   , port       : port
+//   , ssl        : false
+//   , production : true
+// }
+
+// var CDN = require('express-cdn')(app, cdnOptions);
+
 // for stylus
-function compile(str, path) {
+function compile(str, pathx) {
   return stylus(str)
-    .set('filename', path)
+    .set('filename', pathx)
     .use(nib())
 }
 app.use(stylus.middleware({ 
@@ -50,7 +65,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // use Jade
 app.set('view engine', 'jade');
-app.locals.pretty = true;
+app.set('view options', { layout: false, pretty: true });
+
+app.enable('view cache');
 
 app.set('views', __dirname + '/public/views')
 
@@ -58,7 +75,10 @@ app.set('views', __dirname + '/public/views')
 app.use(methodOverride('X-HTTP-Method-Override')); 
 
 // set the static files location /public/img will be /img for users
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + 'public')); 
+
+// app.locals({ CDN: CDN() });
+// app.locals.CDN = CDN();
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes

@@ -2,10 +2,9 @@ script.
 	function formSubmit() {
 		var n  = $("#n").val();
 		var pK = $("#pubKey").val();
-		var p  = $("#p").val();
-		var s  = $("#s").val();
+		var s  = $("#s").val().toLowerCase();
 
-		simRappor(parseInt(n), parseFloat(p), pK, s);
+		simRappor(parseInt(n), pK, s);
 	}
 
 
@@ -26,17 +25,10 @@ form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle=
 			input.form-control(type="text", name="pubKey", id="pubKey", placeholder="Public Key", pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
 
 	.form-group
-		label.col-sm-2.control-label(for="p") p
+		label.col-sm-2.control-label(for="s") String
 		.col-sm-10
-			input.form-control(type="text", name="p", id="p", placeholder="Probability of sending true", pattern="^(0(\.[0-9]+)*|1(\.0+)*)$", title="Should be a decimal between 0 and 1")
-
-	.form-group
-		label.col-sm-2.control-label(for="s") Optional String
-		.col-sm-10
-			input.form-control(type="text", name="s", id="s", placeholder="(optional - only use if you want to send a string, not a boolean)")
+			input.form-control(type="text", name="s", id="s", placeholder="The string you want to send" required)
 
 	.form-group
 		.col-sm-offset-2.col-sm-10
 			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="simRappor") Go!
-
-p
