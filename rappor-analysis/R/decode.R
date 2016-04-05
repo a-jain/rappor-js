@@ -251,7 +251,7 @@ FitDistribution <- function(estimates_stds, map, quiet = FALSE) {
   # print(as.matrix((map)))
 
   # changed to always do lasso
-  if (S > length(estimates_stds$estimates) * .008) {
+  if (S > length(estimates_stds$estimates) * 0) {
     # the system is close to being underdetermined
     lasso <- FitLasso(map, as.vector(t(estimates_stds$estimates)))
 
@@ -260,10 +260,12 @@ FitDistribution <- function(estimates_stds, map, quiet = FALSE) {
 
     if(!quiet)
       cat("LASSO selected ", length(support_coefs), " non-zero coefficients.\n")
+
+    cat(stderr(), "\nLASSO had these coefficients:\n")
+    print(lasso)
   }
 
-  cat(stderr(), "\nLASSO had these coefficients:\n")
-  print(lasso)
+  
 
 
   coefs <- setNames(rep(0, S), colnames(map))

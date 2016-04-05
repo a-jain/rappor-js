@@ -242,8 +242,11 @@ module.exports = function(router) {
             })
 
             res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
-                console.log(err);
-                return res.status(404).send("Need to submit form first to create zip file");
+                if (err) {
+                    console.log(err);
+                    return res.status(404).send("Need to submit form first to create zip file");
+                }
+                
             });
         })
 
