@@ -92,7 +92,7 @@ script.
 		$("#codeButton").removeAttr("disabled");
 
 		$.post( "/api/v1/credentials", function( data ) {
-			console.log(data.message);
+			//- console.log(data.message);
 			console.log(data);
 			$("#publicKey").text(data.publicKey);
 			$("#privateKey").text(data.privateKey);
@@ -109,7 +109,7 @@ script.
 	}
 
 	function getOperationString() {
-		console.log($('input[name=radios]:checked').attr("id"));
+		//- console.log($('input[name=radios]:checked').attr("id"));
 
 		var checked = $('input[name=radios]:checked').attr("id");
 		var finalStr = `<script src="rappor.js">`

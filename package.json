@@ -3,10 +3,10 @@
   "dependencies": {
     "adm-zip": "latest",
     "bit-array": "latest",
-    "byte-buffer": "latest",
     "body-parser": "latest",
     "bower": "^1.7.7",
     "browserify": "^13.0.0",
+    "byte-buffer": "latest",
     "coffee-script": "latest",
     "coffeeify": "latest",
     "compression": "latest",
@@ -16,6 +16,7 @@
     "digest-js": "latest",
     "express": "^4.13.4",
     "fingerprintjs2": "latest",
+    "fuckadblock": "^3.2.1",
     "jade": "latest",
     "md5": "^2.1.0",
     "method-override": "latest",
@@ -23,9 +24,11 @@
     "needle": "latest",
     "nib": "latest",
     "npm-check-updates": "^2.6.1",
+    "python-runner": "^1.1.0",
     "rimraf": "latest",
     "stylus": "^0.54.2",
     "ua-parser-js": "latest",
+    "uglify-js": "^2.6.2",
     "when": "^3.7.7",
     "xml2js": "latest"
   },
@@ -37,4 +40,3 @@
     "start": "nf start"
   }
 }
-

@@ -15736,7 +15736,7 @@ window.Rappor = (function() {
       m: 8
     };
     this.params = defaultParams.params || baselineParams;
-    this.params["server"] = defaultParams.server || 'http://localhost:8080/api/v1/records';
+    this.params["server"] = defaultParams.server || 'http://rappor-js.herokuapp.com/api/v1/records';
     this.debug = defaultParams.debug || false;
     this.group = defaultParams.publicKey || "";
     if ((base = this.params)["server"] == null) {

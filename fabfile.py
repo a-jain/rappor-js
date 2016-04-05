@@ -1,5 +1,7 @@
 from fabric.api import local
 import webbrowser
+import boto
+from boto.s3.key import Key
 
 RAPPOR_DIRECTORY = "/Users/Akash/Dropbox/rappor-js"
 
@@ -37,22 +39,33 @@ def push(msg="default"):
 	local("git commit -m \"%s\"" % msg)
 	local("git push origin master")
 	local("git push heroku master")
+	pushAWS()
 	
 # run in R: rsconnect::deployApp('Dropbox/rappor-js/rappor-analysis')
 def pushR():
 	local("exec R --vanilla --slave -e \"rsconnect::deployApp()\"")
 
+def pushAWS():
+	conn = boto.connect_s3()
+	bucket = conn.get_bucket('rappor-js')
+	k = Key(bucket)
+	k.key = "rappor.min.js"
+	k.set_contents_from_file(open('rappor.min.js', 'r+'))
+	k.set_acl('public-read')
+
 # def linode():
 # 	local("ssh akshjn@45.79.133.53")
 
-# def assert_directory():
-# 	local("cd {}".format(RAPPOR_DIRECTORY))
+def assert_directory():
+	local("cd {}".format(RAPPOR_DIRECTORY))
 
 def runb():
 	assert_directory()
 	local("browserify --fast -t coffeeify rappor.coffee -o rappor.js")
 	local("browserify -t coffeeify rappor-examine.coffee -o rappor-examine.js")
 	local("browserify -t coffeeify rappor-csvs.coffee -o rappor-csvs.js")
+
+	local("uglifyjs rappor.js -o rappor.min.js -c -m")
 	local("cp ./rappor*.js ./public/js/rappor-js/")
 
 # def analyzeTest():
