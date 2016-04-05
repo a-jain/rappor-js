@@ -11,8 +11,6 @@ html
 		base(href='/')
 
 		script(src="libs/jquery/dist/jquery.min.js")
-		script(src="libs/bootstrap/js/dropdown.js")
-		script(src="libs/bootstrap-select/dist/js/bootstrap-select.min.js")
 		
 		script(src='libs/angular/angular.min.js')
 		script(src='libs/angular-route/angular-route.min.js')
@@ -23,8 +21,6 @@ html
 		script(src='js/controllers/ExamineBrowserCtrl.js')
 		script(src='js/controllers/GenerateCSVCtrl.js')
 		script(src='js/controllers/AnalyzeCSVCtrl.js')
-		
-		script(src='js/services/RecordService.js')
 
 		script(src='js/appRoutes.js')
 		script(src='js/app.js')
@@ -35,6 +31,8 @@ html
 
 		script(src="libs/angulartics/dist/angulartics.min.js")
 		script(src="libs/angulartics-google-analytics/dist/angulartics-google-analytics.min.js")
+
+		//- script(src="js/bundle.js")
 
 		script.
 			if (window.location.host != 'localhost') {
