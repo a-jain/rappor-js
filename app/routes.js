@@ -246,7 +246,6 @@ module.exports = function(router) {
                     console.log(err);
                     return res.status(404).send("Need to submit form first to create zip file");
                 }
-                
             });
         })
 
@@ -321,6 +320,30 @@ module.exports = function(router) {
 
                     // console.log(`done!`);
                 });
+            });
+        });
+
+    // NB: filename not appended with csv!
+    router.route('/api/v1/getCSV/:privateKey/:filename')
+
+        // NB: POST needs to be called first
+        .get(function(req, res) {
+            var dirname = __dirname;
+            dirname = dirname.split("/");
+            dirname.pop();
+            dirname.push("server");
+            dirname.push("outputs");
+            dirname.push(req.params.privateKey);
+            dirname.push(req.params.filename + ".csv");
+            dirname = dirname.join("/");
+
+            console.log("about to send " + req.params.privateKey + ".csv");
+
+            res.download(dirname, req.params.filename + ".csv", function(err) {
+                if (err) {
+                    console.log(err);
+                    return res.status(404).send("CSV file not found");
+                }
             });
         });
 

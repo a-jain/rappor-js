@@ -36,6 +36,12 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
         })
 
         // Send records page that will use the SendReportController
+        .when('/generate/:privateKey', {
+            templateUrl: 'partials/generateCSV',
+            controller: 'GenerateCSVController'
+        })
+
+        // Send records page that will use the SendReportController
         .when('/analyze', {
             templateUrl: 'partials/analyzeCSV',
             controller: 'AnalyzeCSVController'

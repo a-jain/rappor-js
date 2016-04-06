@@ -1,13 +1,15 @@
 .jumbotron.text-center
 	h1 Generate CSV files
 
+	p {{pK}}
+
 p Create the files necessary for analyzing client data using Rappor
 
 form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-toggle="validator")
-	.form-group
+	.form-group#firstbox
 		label.col-sm-2.control-label(for="pK") Private Key
 		.col-sm-10
-			input.form-control(type="text", name="pK", id="pK", placeholder="Private Key", required, pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
+			input.form-control(type="text", name="pK", id="pK", placeholder="Enter key here", required, pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
 
 	.form-group
 		label.col-sm-2.control-label(for="candidates") Candidates
@@ -18,9 +20,15 @@ form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-togg
 		.col-sm-offset-2.col-sm-10
 			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="genCSVs") Go!
 
-p
-
 script.
+
+	url = window.location.href;
+	lastParam = url.substring(url.lastIndexOf('/') + 1);
+	if(lastParam != "generate") {
+		$("#pK").val(lastParam);
+		$("#firstbox").css("display", "none");
+	}
+
 	function csvFormSubmit() {
 		var url = "/api/v1/getCSV/" + $("#pK").val();
 		console.log(url)

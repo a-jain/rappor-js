@@ -56,7 +56,7 @@
 			p
 				b Private 
 				| Key is:
-			p#privateKey(style="font-family: monospace;") X
+			a#privateKey(style="font-family: monospace;") X
 
 	.col-md-4
 		h2 3. Generate code:
@@ -94,8 +94,11 @@ script.
 		$.post( "/api/v1/credentials", function( data ) {
 			//- console.log(data.message);
 			console.log(data);
+
+			var craftedURL = window.location.origin + "/generate/" + data.privateKey;
 			$("#publicKey").text(data.publicKey);
-			$("#privateKey").text(data.privateKey);
+			$("#privateKey").text(craftedURL);
+			$("#privateKey").attr("href", craftedURL);
 			$("#keyInfo").show();
 			$("#codeButton").focus();
 		});

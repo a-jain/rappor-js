@@ -1,4 +1,4 @@
-library(shiny)
+suppressMessages(suppressWarnings(library(shiny)))
 
 source("R/read_input.R")
 source("R/decode.R")
@@ -43,7 +43,9 @@ PlotCohorts <- function(x, highlighted, color = "grey") {
 shinyServer(function(input, output, session) {
   Params <- reactive({
     param_file <- input$params
+    
     if (!is.null(param_file)) {
+      cat(stderr(), param_file$datapath)
       params <- ReadParameterFile(param_file$datapath)
       updateSelectInput(session, "size", selected = params$k)
       updateSelectInput(session, "hashes", selected = params$h)

@@ -1,4 +1,4 @@
-// public/js/controllers/SendReportCtrl.js
+// public/js/controllers/GenerateCSVCtrl.js
 var generateCSVModule = angular.module('GenerateCSVCtrl', []);
 
 generateCSVModule.controller('GenerateCSVController', function($scope) {
