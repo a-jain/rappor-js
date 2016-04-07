@@ -13,12 +13,6 @@ console.log("autorun.js loaded")
 function click() {
 	if (getParameterByName("key") != null) {
 		$("#run").click();
-		$('#tab-6796-2').parent().addClass('active').siblings().removeClass('active');           
-		
-		console.log("button clicked")
-	}
-	else {
-		console.log(getParameterByName("key"));
 	}
 }
 

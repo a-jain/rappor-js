@@ -30,7 +30,7 @@ MakeG <- function(n, X) {
   XX = rbind2(d, last)
   
   # this condition ensures we map *all* of samples
-  XX = rbind2(XX, last2) 
+  # XX = rbind2(XX, last2)
   # XX = rbind2(rbind2(d, last), -X)
 
 }
@@ -49,7 +49,7 @@ MakeH <- function(n, Y, stds) {
   YY <- c(rep(0, n), -1)  # non-negativity condition
   
   # this condition ensures we map *all* of samples
-  YY <- c(YY, 1)
+  # YY <- c(YY, 1)
 }
 
 MakeLseiModel <- function(X, Y, stds) {

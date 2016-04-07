@@ -2,8 +2,8 @@ name: rappor-analysis
 account: rappor-js
 server: shinyapps.io
 appId: 91271
-bundleId: 412602
+bundleId: 412623
 url: https://rappor-js.shinyapps.io/rappor-analysis/
-when: 1460004204.0547
+when: 1460008714.17147
 asMultiple: FALSE
 asStatic: FALSE

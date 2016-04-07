@@ -66,6 +66,13 @@
 		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
 
 script.
+	try {
+		var bigDiv = document.getElementsByClassName("ng-view")[0];
+		bigDiv.removeChild(bigDiv.firstChild);
+	} catch(err) {
+	
+	}
+
 	$("#keyInfo").hide();
 
 	$("#browserLabel").append(" (e.g. this browser returns \"" + RapporExamine.getBrowser() + "\")");
