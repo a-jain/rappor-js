@@ -25,14 +25,17 @@ source.rappor <- function(rel_path)  {
 # source.rappor("analysis/R/util.R")  # for Log
 source.rappor("R/util.R")  # for Log
 
-ReadParameterFile <- function(params_file) {
+ReadParameterFile <- function(params_file, readCSV = TRUE) {
   # Read parameter file. Format:
   # k, h, m, p, q, f
   # 128, 2, 8, 0.5, 0.75, 0.75
+  if (readCSV) {
+    params_file = read.csv(params_file)
+  }
 
-  params <- as.list(read.csv(params_file))
+  params <- as.list(params_file)
   if (length(params) != 6) {
-    stop("There should be exactly 6 columns in the parameter file.")
+    stop(paste("Researcher key incorrect. There should be exactly 6 columns in the parameter file."))
   }
   if (any(names(params) != c("k", "h", "m", "p", "q", "f"))) {
     stop("Parameter names must be k,h,m,p,q,f.")
@@ -40,26 +43,17 @@ ReadParameterFile <- function(params_file) {
   params
 }
 
-# Handle the case of redundant cohorts, i.e. the counts file needs to be
-# further aggregated to obtain counts for the number of cohorts specified in
-# the params file.
-#
-# NOTE: Why is this happening?
-AdjustCounts <- function(counts, params) {
-  apply(counts, 2, function(x) {
-    tapply(x, rep(1:params$m, nrow(counts) / params$m), sum)
-  })
-}
-
-ReadCountsFile <- function(counts_file, params, adjust_counts = FALSE) {
+ReadCountsFile <- function(counts_file, params, readCSV = TRUE) {
   # Read in the counts file.
-  if (!file.exists(counts_file)) {
-    return(NULL)
-  }
-  counts <- read.csv(counts_file, header = FALSE)
-
-  if (adjust_counts) {
-    counts <- AdjustCounts(counts, params)
+  
+  
+  if (readCSV) {
+    if (!file.exists(counts_file)) {
+      return(NULL)
+    }
+    counts <- read.csv(counts_file, header = FALSE)
+  } else {
+    counts = counts_file
   }
 
   if (nrow(counts) != params$m) {
@@ -67,6 +61,8 @@ ReadCountsFile <- function(counts_file, params, adjust_counts = FALSE) {
                  nrow(counts), params$m))
   }
 
+  # cat(stderr(), "k is:\n")
+  # cat(stderr(), params$k)
   if ((ncol(counts) - 1) != params$k) {
     stop(paste0("Counts file: number of columns should equal to k + 1: ",
                 ncol(counts)))
@@ -81,7 +77,7 @@ ReadCountsFile <- function(counts_file, params, adjust_counts = FALSE) {
   as.matrix(counts)
 }
 
-ReadMapFile <- function(map_file, params) {
+ReadMapFile <- function(map_file, params, readCSV = TRUE) {
   # Read in the map file which is in the following format (two hash functions):
   # str1, h11, h12, h21 + k, h22 + k, h31 + 2k, h32 + 2k ...
   # str2, ...
@@ -90,8 +86,13 @@ ReadMapFile <- function(map_file, params) {
   #    strs: a vector of all candidate strings.
 
   Log("Parsing %s", map_file)
-
-  map_pos <- read.csv(map_file, header = FALSE, as.is = TRUE)
+  
+  if (readCSV) {
+    map_pos <- read.csv(map_file, header = FALSE, as.is = TRUE)
+  } else {
+    map_pos = map_file
+  }
+  
   strs <- map_pos[, 1]
   strs[strs == ""] <- "Empty"
 

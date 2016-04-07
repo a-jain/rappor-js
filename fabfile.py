@@ -46,7 +46,7 @@ def pushAWS():
 	bucket = conn.get_bucket('rappor-js')
 	k = Key(bucket)
 	k.key = "rappor.min.js"
-	k.set_contents_from_file(open('public/js/rappor.min.js', 'r+'))
+	k.set_contents_from_file(open('public/js/rappor-js/rappor.min.js', 'r+'))
 	k.set_acl('public-read')
 
 # def linode():

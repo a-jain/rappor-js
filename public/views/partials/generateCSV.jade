@@ -43,7 +43,8 @@ script.
 			console.log(textStatus);
 
 			if (textStatus == "success") {
-				window.location = url;
+				//- window.location = url;
+				window.location = "/analyze/" + $("#pK").val();
 			}
 			else {
 				console.log("Something went wrong, e.g. you didn't have the correct private key")

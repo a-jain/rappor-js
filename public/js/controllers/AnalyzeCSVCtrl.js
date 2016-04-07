@@ -3,7 +3,7 @@ var analyzeCSVModule = angular.module('AnalyzeCSVCtrl', []);
 
 analyzeCSVModule.controller('AnalyzeCSVController', function($scope) {
 
-	$scope.tagline = 'Test various browser configurations here';
+	$scope.tagline = 'Analyze the reports from clients';
 	
 });
 

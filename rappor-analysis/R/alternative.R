@@ -25,8 +25,12 @@ library(Matrix)
 MakeG <- function(n, X) {
   d <- Diagonal(n)
   last <- rep(-1, n)
+  last2 <- rep(1, n)
 
   XX = rbind2(d, last)
+  
+  # this condition ensures we map *all* of samples
+  XX = rbind2(XX, last2) 
   # XX = rbind2(rbind2(d, last), -X)
 
 }
@@ -43,6 +47,9 @@ MakeH <- function(n, Y, stds) {
 #    )
 
   YY <- c(rep(0, n), -1)  # non-negativity condition
+  
+  # this condition ensures we map *all* of samples
+  YY <- c(YY, 1)
 }
 
 MakeLseiModel <- function(X, Y, stds) {
@@ -67,8 +74,8 @@ MakeLseiModel <- function(X, Y, stds) {
   # cat(stderr(), "\nA, B are:\n")
   # print(cbind2(a, b))
 
-  # cat(stderr(), "\nG, H are:\n")
-  # print(cbind2(g, h))
+  cat(stderr(), "\nG, H are:\n")
+  print(cbind2(g, h))
 
   list(# coerce sparse Boolean matrix X to sparse numeric matrix
        A = a,

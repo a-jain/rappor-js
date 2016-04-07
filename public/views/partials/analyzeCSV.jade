@@ -1,1 +1,30 @@
-iframe(src="https://rappor-js.shinyapps.io/rappor-analysis/", frameborder=0, width="100%", height="1250px", id="iframe", allowTransparency="true")
+script.
+	function getLastParam() {
+		url = window.location.href;
+		lastParam = url.substring(url.lastIndexOf('/') + 1);
+
+		return lastParam;
+	}
+
+	$(function() {
+		var iframe = document.createElement('iframe');
+		iframe.frameBorder       = 0;
+		iframe.width             = "100%";
+		iframe.height            = "1024px";
+		iframe.id                = "iframe";
+		iframe.allowTransparency = "true";
+		iframe.seamless          = "seamless";
+		iframe.scrolling         = "no";
+
+		var urlx = "https://rappor-js.shinyapps.io/rappor-analysis/"
+		if (getLastParam() != "analyze") {
+			urlx += "?key=" + getLastParam();
+		}
+		console.log(urlx);
+
+		iframe.src               = urlx;
+		
+		document.getElementsByClassName('container')[0].appendChild(iframe);
+	})
+
+//- iframe(src="https://rappor-js.shinyapps.io/rappor-analysis/", frameborder=0, width="100%", height="1250px", id="iframe", allowTransparency="true")

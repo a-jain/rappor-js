@@ -328,7 +328,10 @@ Resample <- function(e) {
 
 CheckDecodeInputs <- function(counts, map, params) {
   # Returns an error message, or NULL if there is no error.
-
+  cat(stderr(), "printing some details:\n")
+  cat(stderr(), nrow(map)) # 2 
+  cat(stderr(), params$m)  # 82
+  cat(stderr(), params$k)
   if (nrow(map) != (params$m * params$k)) {
     return(sprintf(
         "Map matrix has invalid dimensions: m * k = %d, nrow(map) = %d",
