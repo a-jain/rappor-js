@@ -3,7 +3,6 @@ convertHex = require "convert-hex"
 md5        = require "md5"
 ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
-# needle     = require "needle"
 request    = require "request"
 async      = require "async"
 
@@ -36,39 +35,37 @@ class window.Rappor
 		@cohort = this._generateCohort(@params["m"])
 
 		@debug = false
+		@maxpost = 200
 
-	send: (bool, n=1) ->
+	send: (bool, n=1, callback) ->
 		if typeof bool is "object"
-			this.send(s) for s in bool
+			this.send(s, n, callback) for s in bool
 		else
 			@truth = bool
-			this._encode()
-			this._sendToServer(parseInt n)
+			this._sendToServer(parseInt(n), callback)
 
-	sendTrue: () ->
-		this.send(true)
+	sendTrue: (callback) ->
+		this.send(true, 1, callback)
 
-	sendFalse: () ->
-		this.send(false)
+	sendFalse: (callback) ->
+		this.send(false, 1, callback)
 
 	_encode: () ->
 		bits = this._generateRapporBits()
 		this._generatePrr(bits)
 		this._generateIrr()
 
-	_sendToServer: (n) ->
-		console.log "_sendToServer called with parameter " + n
-		arraySizeLimit = 200
+	_sendToServer: (n, callback) ->
+		console.log "_sendToServer called with parameter #{n}"
 		
 		allData        = []
 		splitData      = {}
 
-		# console.log n
 		for i in [1..n]
-			this._encode(@truth)
+			this._encode()
 			splitData[i] = this._generateJSON()
 
-			if i % (arraySizeLimit) == 0 or i is n
+			if i % (@maxpost) == 0 or i is n
 				allData.push(splitData)
 				splitData = {}
 
@@ -76,7 +73,13 @@ class window.Rappor
 			"Access-Control-Allow-Headers": "X-Requested-With"
 
 		# bind null allows passing in of server parameter
-		async.forEachOfSeries(allData, this._postToServer.bind(null, arraySizeLimit, n, @params["server"]), (err) -> if err then console.log err else console.log "All " + n + " reports done!")
+		async.forEachOfSeries(allData, this._postToServer.bind(null, @maxpost, n, @params["server"]), (err) -> 
+			if err 
+				console.log err 
+			else
+				console.log "All " + n + " reports done!"
+				callback?()
+		)
 		
 	_postToServer: (limit, n, server, reports, index, callback) ->
 

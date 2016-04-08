@@ -36120,9 +36120,10 @@ window.Rappor = (function() {
     this.secret = "secret";
     this.cohort = this._generateCohort(this.params["m"]);
     this.debug = false;
+    this.maxpost = 200;
   }
 
-  Rappor.prototype.send = function(bool, n) {
+  Rappor.prototype.send = function(bool, n, callback) {
     var j, len, results, s;
     if (n == null) {
       n = 1;
@@ -36131,22 +36132,21 @@ window.Rappor = (function() {
       results = [];
       for (j = 0, len = bool.length; j < len; j++) {
         s = bool[j];
-        results.push(this.send(s));
+        results.push(this.send(s, n, callback));
       }
       return results;
     } else {
       this.truth = bool;
-      this._encode();
-      return this._sendToServer(parseInt(n));
+      return this._sendToServer(parseInt(n), callback);
     }
   };
 
-  Rappor.prototype.sendTrue = function() {
-    return this.send(true);
+  Rappor.prototype.sendTrue = function(callback) {
+    return this.send(true, 1, callback);
   };
 
-  Rappor.prototype.sendFalse = function() {
-    return this.send(false);
+  Rappor.prototype.sendFalse = function(callback) {
+    return this.send(false, 1, callback);
   };
 
   Rappor.prototype._encode = function() {
@@ -36156,16 +36156,15 @@ window.Rappor = (function() {
     return this._generateIrr();
   };
 
-  Rappor.prototype._sendToServer = function(n) {
-    var allData, arraySizeLimit, i, j, options, ref, splitData;
+  Rappor.prototype._sendToServer = function(n, callback) {
+    var allData, i, j, options, ref, splitData;
     console.log("_sendToServer called with parameter " + n);
-    arraySizeLimit = 200;
     allData = [];
     splitData = {};
     for (i = j = 1, ref = n; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
-      this._encode(this.truth);
+      this._encode();
       splitData[i] = this._generateJSON();
-      if (i % arraySizeLimit === 0 || i === n) {
+      if (i % this.maxpost === 0 || i === n) {
         allData.push(splitData);
         splitData = {};
       }
@@ -36173,11 +36172,12 @@ window.Rappor = (function() {
     options = {
       "Access-Control-Allow-Headers": "X-Requested-With"
     };
-    return async.forEachOfSeries(allData, this._postToServer.bind(null, arraySizeLimit, n, this.params["server"]), function(err) {
+    return async.forEachOfSeries(allData, this._postToServer.bind(null, this.maxpost, n, this.params["server"]), function(err) {
       if (err) {
         return console.log(err);
       } else {
-        return console.log("All " + n + " reports done!");
+        console.log("All " + n + " reports done!");
+        return typeof callback === "function" ? callback() : void 0;
       }
     });
   };

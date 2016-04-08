@@ -1,13 +1,29 @@
 script.
+	function myCallback() {
+		console.log("callback successful!");
+
+		$("#simButton").removeAttr("disabled");
+		
+		$("#progBar").removeClass("active");
+		$("#progBar").removeClass("progress-bar-striped");
+	}
+
+
 	function formSubmit() {
 		var n  = $("#n").val();
 		var pK = $("#pubKey").val();
 		var s  = $("#s").val().toLowerCase();
 
-		r = new window.Rappor({ publicKey: pK });
-		r.send(s, n);
+		$("#progBar").css("width", "2%");
 
+		r = new window.Rappor({ publicKey: pK });
+		r.send(s, n, myCallback);
+
+		$("#progBar").addClass("progress-bar-striped");
+		$("#progBar").addClass("active");
 		$(".progress").show();
+
+		$("#simButton").attr("disabled", "disabled");
 	}
 
 	$(".progress").hide();
@@ -36,11 +52,11 @@ form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle=
 
 	.form-group
 		.col-sm-offset-2.col-sm-10
-			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="simRappor") Go!
+			button.btn.btn-primary(id="simButton", type="submit", analytics-on="click", analytics-event="simRappor") Go!
 
 p
 p
 p
 .col-sm-10
 	.progress
-		.progress-bar.progress-bar-success.progress-bar-striped.active#progBar(role="progressbar", aria-valuemin="0", aria-valuemax="100", style="width: 2%; background-color: #72BF3F")
+		.progress-bar.progress-bar-success#progBar(role="progressbar", aria-valuemin="0", aria-valuemax="100", style="width: 2%; background-color: #72BF3F")
