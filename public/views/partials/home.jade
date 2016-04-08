@@ -1,4 +1,24 @@
 .jumbotron.text-center
-	h1 Hello
+	h1 Hello!
 
-p How to use this site:
+	p Welcome to RapporJS
+
+p This site has is Akash Jain's Senior Thesis at Princeton University. It's a demonstration of an end-to-end, managed solution for researchers wishing to use Rappor's privacy-strong algorithm of anonymizing data. To use it, a researcher should follow these steps:
+
+dl
+	dt 1. Click on the 'Code for Users' tab
+	dd - This will generate the Javascript code to put on your website and give you an Experiment ID and a Researcher Access Code.
+	dd - Store the Experiment ID and the Researcher Access Code somewhere safe - these pieces of information will help you access client data later.
+	dd - Embed the Javascript code on your website. Then, as users visit your website, they will send some data to your Experiment in the background.
+
+	br
+	
+	dt (optional) 2. Click on the 'Simulate User' tab
+	dd - Simulate a client sending data to you by entering the number of datapoints you wish to send, the Experiment ID from the previous tab, and the data you want to send (e.g. "chrome" or "en-US" or "dog").
+
+	br
+
+	dt 3. Click on the 'Get Data' tab
+	dd - At any point, if you want to check on the status of your experiment, click this tab. Enter the datapoints you're interested in (one on each line), e.g. "chrome", "safari", "firefox" on separate lines and press "Go"!
+	dd - You'll be taken to the analysis page, which will show you Rappor's estimate of how popular each word is in the data that's been received so far
+	dd - Remeber that the data will deliberately not be 100% accurate - some randomness has been added in order to protect the privacy of any given individual sending data.

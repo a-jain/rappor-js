@@ -42,6 +42,7 @@ def pushR():
 	local("exec R --vanilla --slave -e \"rsconnect::deployApp()\"")
 
 def pushAWS():
+	local("echo AWS")
 	conn = boto.connect_s3()
 	bucket = conn.get_bucket('rappor-js')
 	k = Key(bucket)

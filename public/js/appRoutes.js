@@ -24,7 +24,13 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
         })
 
         // Send records page that will use the SendReportController
-        .when('/examine', {
+        .when('/about', {
+            templateUrl: 'partials/about',
+            controller: 'AboutController'
+        })
+
+        // Send records page that will use the SendReportController
+        .when('/users', {
             templateUrl: 'partials/examineBrowser',
             controller: 'ExamineBrowserController'
         })

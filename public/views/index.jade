@@ -17,7 +17,10 @@ html
 		script(src='libs/angular/angular.min.js')
 		script(src='libs/angular-route/angular-route.min.js')
 
+		script(src='libs/bootstrap/dist/js/bootstrap.min.js')
+
 		script(src='js/controllers/MainCtrl.js')
+		script(src='js/controllers/AboutCtrl.js')
 		script(src='js/controllers/RecordCtrl.js')
 		script(src='js/controllers/SendReportCtrl.js')
 		script(src='js/controllers/ExamineBrowserCtrl.js')
@@ -46,36 +49,45 @@ html
 				ga('send', 'pageview');
 			}
 
-			
-
+			$(document).ready(function() {
+				$(".navbar a").on("click", function() {
+					$('.navbar li.active').removeClass('active');
+					$(this).parent().addClass("active");
+				});
+			});
 
 body(ng-app='rappor-js', ng-controller='RecordController')
 	.container
 
 		//- header
 		nav.navbar.navbar-inverse
-			.navbar-header
-				a.navbar-brand(href='/') Home
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href='/') Home
 
-			ul.nav.navbar-nav
-				li
-					a(href='/records') Documentation
+				//- ul.nav.navbar-nav
+				//- 	li
+				//- 		a(href='/records') Documentation
 
-			ul.nav.navbar-nav
-				li
-					a(href='/examine') Code for Users
+				ul.nav.navbar-nav
+					li
+						a(href='/users') Code for Users
 
-			ul.nav.navbar-nav
-				li
-					a(href='/send') Simulate User
+				ul.nav.navbar-nav
+					li
+						a(href='/send') Simulate User
 
-			ul.nav.navbar-nav
-				li
-					a(href='/generate') Get Data
+				ul.nav.navbar-nav
+					li
+						a(href='/generate') Get Data
 
-			//- ul.nav.navbar-nav
-			//- 	li
-			//- 		a(href='/analyze') Analyze Data
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href="/about") About
+
+				//- ul.nav.navbar-nav
+				//- 	li
+				//- 		a(href='/analyze') Analyze Data
 
 
 
