@@ -37,28 +37,52 @@ module.exports = function(router) {
     router.route('/api/v1/records')
 
         .post(function(req, res) {
-            var record = new Record();
 
-            record.bool   = req.body.bool;
-            record.cohort = req.body.cohort;
-            record.orig   = req.body.orig;
-            record.prr    = req.body.prr;
-            record.irr    = req.body.irr;
-            record.group  = req.body.group;
-            
-            record.params = req.body.params;
+            // console.log(req.body);
+            var data = req.body;
+            var allDocs = [];
 
-            // save the record
-            record.save(function(err) {
+            for (var key in data) {
+                if (data.hasOwnProperty(key)) {
+                    // console.log(data[key]);
+
+                    var record = new Record();
+
+                    record.bool   = data[key].bool;
+                    record.cohort = data[key].cohort;
+                    record.orig   = data[key].orig;
+                    record.prr    = data[key].prr;
+                    record.irr    = data[key].irr;
+                    record.group  = data[key].group;
+                    
+                    record.params = data[key].params;
+
+                    allDocs.push(record);
+                }
+            }
+
+            // console.log(allDocs);
+
+            Record.create(allDocs, function(err, records) {
                 if (err)
                     res.send(err);
 
-                // Record.sort({ cohort: 'asc' });
-
                 res.json({
-                    message: 'Record added successfully'
+                    message: "" + records.length + ' records added successfully!'
                 });
-            });
+            })
+
+            // save the record
+            // record.save(function(err) {
+            //     if (err)
+            //         res.send(err);
+
+            //     // Record.sort({ cohort: 'asc' });
+
+            //     res.json({
+            //         message: 'Record added successfully'
+            //     });
+            // });
         })
 
         // get all records

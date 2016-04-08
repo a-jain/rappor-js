@@ -34,7 +34,7 @@ script.
 		console.log(url)
 
 		var allData = {};
-		allData.strs = $("#candidates").val().trim().split(/\s+/);
+		allData.strs = $("#candidates").val().trim().split(/\n+/);
 		allData.strs = Array.from(new Set(allData.strs));
 
 		console.log(allData.strs);

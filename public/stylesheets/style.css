@@ -32,6 +32,7 @@ body {
   font-size: 16px;
 }
 @media (min-width: 768px) {
+  .progress,
   .gists {
     margin-left: 180px;
   }
@@ -44,8 +45,12 @@ body {
   background-color: #f26101;
   border-color: #e65c01;
 }
-.btn-primary:hover,
-.btn-primary:active {
+.btn-primary:hover {
   background-color: #e65c01;
   border-color: #da5701;
+}
+.btn-primary:active,
+.btn-primary:active:focus {
+  background-color: #ce5201;
+  border-color: #c24e01;
 }

@@ -4,8 +4,13 @@ script.
 		var pK = $("#pubKey").val();
 		var s  = $("#s").val().toLowerCase();
 
-		simRappor(parseInt(n), pK, s);
+		r = new window.Rappor({ publicKey: pK });
+		r.send(s, n);
+
+		$(".progress").show();
 	}
+
+	$(".progress").hide();
 
 
 .jumbotron.text-center
@@ -32,3 +37,10 @@ form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle=
 	.form-group
 		.col-sm-offset-2.col-sm-10
 			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="simRappor") Go!
+
+p
+p
+p
+.col-sm-10
+	.progress
+		.progress-bar.progress-bar-success.progress-bar-striped.active#progBar(role="progressbar", aria-valuemin="0", aria-valuemax="100", style="width: 2%; background-color: #72BF3F")

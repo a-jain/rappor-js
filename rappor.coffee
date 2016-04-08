@@ -3,7 +3,9 @@ convertHex = require "convert-hex"
 md5        = require "md5"
 ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
-needle     = require "needle"
+# needle     = require "needle"
+request    = require "request"
+async      = require "async"
 
 # create Rappor object
 class window.Rappor
@@ -33,14 +35,15 @@ class window.Rappor
 
 		@cohort = this._generateCohort(@params["m"])
 
-		# @debug = true
+		@debug = false
 
-	send: (bool) ->
+	send: (bool, n=1) ->
 		if typeof bool is "object"
 			this.send(s) for s in bool
 		else
-			this._encode(bool)
-			this._sendToServer()
+			@truth = bool
+			this._encode()
+			this._sendToServer(parseInt n)
 
 	sendTrue: () ->
 		this.send(true)
@@ -48,13 +51,56 @@ class window.Rappor
 	sendFalse: () ->
 		this.send(false)
 
-	_encode: (data) ->
-		bits = this._generateRapporBits(data)
+	_encode: () ->
+		bits = this._generateRapporBits()
 		this._generatePrr(bits)
 		this._generateIrr()
 
-	_sendToServer: () ->
+	_sendToServer: (n) ->
+		console.log "_sendToServer called with parameter " + n
+		arraySizeLimit = 200
+		
+		allData        = []
+		splitData      = {}
 
+		# console.log n
+		for i in [1..n]
+			this._encode(@truth)
+			splitData[i] = this._generateJSON()
+
+			if i % (arraySizeLimit) == 0 or i is n
+				allData.push(splitData)
+				splitData = {}
+
+		options =
+			"Access-Control-Allow-Headers": "X-Requested-With"
+
+		# bind null allows passing in of server parameter
+		async.forEachOfSeries(allData, this._postToServer.bind(null, arraySizeLimit, n, @params["server"]), (err) -> if err then console.log err else console.log "All " + n + " reports done!")
+		
+	_postToServer: (limit, n, server, reports, index, callback) ->
+
+		options =
+			"Access-Control-Allow-Headers": "X-Requested-With"
+		
+		data = 
+			url: server,
+			headers: options,
+			json: reports
+
+		request.post(data, (err, resp, body) -> 
+						if err
+							console.log err.message
+							callback(err)
+						else
+							console.log body.message
+
+							percentage = ((index*limit + Object.keys(reports).length) * 100 / n) + "%"
+							$("#progBar").css("width", percentage);
+							callback()
+					)
+
+	_generateJSON: () ->
 		data = 
 			cohort: @cohort
 			irr: @irr
@@ -66,24 +112,19 @@ class window.Rappor
 			data.orig = @orig.join("")
 			data.prr = @prr
 
-		options =
-			"Access-Control-Allow-Headers": "X-Requested-With"
+		return data
 
-		console.log data
-		needle.post(@params["server"], data, options, (err, resp) -> if err then console.log err.message else console.log resp)
-
-		@cohort = this._generateCohort(@params["m"])
-
-	_generateRapporBits: (data) ->
+	_generateRapporBits: () ->
 		# return mapping of bits
 		# note that the range will create [0 to 16], so we subtract 1
 
-		if typeof data is "boolean"
-			trueString = if data then "true" else "false"
+		if typeof @truth is "boolean"
+			trueString = if @truth then "true" else "false"
 		else
-			trueString = data
+			trueString = @truth
 
-		@truth = trueString
+		
+		@cohort = this._generateCohort(@params["m"])
 		b = this._to_big_endian(@cohort)
 
 		b.implicitGrowth = true

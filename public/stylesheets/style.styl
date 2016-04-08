@@ -46,6 +46,7 @@ body
 		font-size 16px
 
 @media (min-width: 768px)
+	.progress
 	.gists
 		margin-left 180px
 	
@@ -57,7 +58,11 @@ body
 	background-color button-color
 	border-color darken(button-color, 5%)
 
-.btn-primary:hover,
-.btn-primary:active
+.btn-primary:hover
 	background-color darken(button-color, 5%)
 	border-color darken(button-color, 10%)
+
+.btn-primary:active,
+.btn-primary:active:focus
+	background-color darken(button-color, 15%)
+	border-color darken(button-color, 20%)

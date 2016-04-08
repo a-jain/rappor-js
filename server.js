@@ -60,8 +60,8 @@ mongoose.connect(db.url);
 // parse application/vnd.api+json as json
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); 
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json({ limit: '100mb', type: 'application/vnd.api+json', parameterLimit: 10000}));
+app.use(bodyParser.urlencoded({ limit: '100mb', extended: true, parameterLimit: 10000 })); 
 
 // use Jade
 app.set('view engine', 'jade');

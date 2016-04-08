@@ -66,6 +66,7 @@ def runb():
 
 	local("uglifyjs public/js/rappor-js/rappor.js -o public/js/rappor-js/rappor.min.js -m --stats --keep-fnames")
 
+
 def scale(n=1):
 	local("heroku ps:scale web=%d" % int(n))
 
