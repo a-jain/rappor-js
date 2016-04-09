@@ -249,29 +249,29 @@ module.exports = function(router) {
     router.route('/api/v1/getCSV/:privateKey')
 
         // NB: POST needs to be called first
-        .get(function(req, res) {
-            var dirname = __dirname;
-            dirname = dirname.split("/");
-            dirname.pop();
-            dirname = dirname.join("/") + "/server/outputs/";
+        // .get(function(req, res) {
+        //     var dirname = __dirname;
+        //     dirname = dirname.split("/");
+        //     dirname.pop();
+        //     dirname = dirname.join("/") + "/server/outputs/";
 
-            console.log("about to send download zip");
-            console.log(dirname + req.params.privateKey + ".zip");
+        //     console.log("about to send download zip");
+        //     console.log(dirname + req.params.privateKey + ".zip");
 
-            rf(dirname + req.params.privateKey, function(err) {
-                if (err) {
-                    console.log(err);
-                    return res.status(err.statusCode).send("Need to submit form first to create zip file");
-                }
-            })
+        //     rf(dirname + req.params.privateKey, function(err) {
+        //         if (err) {
+        //             console.log(err);
+        //             return res.status(err.statusCode).send("Need to submit form first to create zip file");
+        //         }
+        //     })
 
-            res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
-                if (err) {
-                    console.log(err);
-                    return res.status(404).send("Need to submit form first to create zip file");
-                }
-            });
-        })
+        //     res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
+        //         if (err) {
+        //             console.log(err);
+        //             return res.status(404).send("Need to submit form first to create zip file");
+        //         }
+        //     });
+        // })
 
         .post(function(req, res) {
 
@@ -287,7 +287,7 @@ module.exports = function(router) {
             args.push(req.params.privateKey);
 
             // create the zipper
-            var zip = new AdmZip();
+            // var zip = new AdmZip();
             
             // create child process for counts file
             var child = spawn("python", args, { cwd: dirname });
@@ -318,8 +318,8 @@ module.exports = function(router) {
                 // console.log(args2)
 
                 secondChild = spawn("python", args2, { cwd: dirname });
-                zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/params.csv")
-                zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/counts.csv")
+                // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/params.csv")
+                // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/counts.csv")
 
                 // handle outputs
                 secondChild.stdout.on("data", function(data) {
@@ -330,15 +330,15 @@ module.exports = function(router) {
                     console.log(`stderr: ${data}`);
                 });
 
-                secondChild.on("close", function(data) {
-                    if (data) {
+                secondChild.on("close", function(err) {
+                    if (err) {
                         return res.status(404).send("Map file failed");
                     }
                     // console.log(`Second Python child is done, and returned: ${data}`);
                     // console.log(`Now finalizing zip file`);
 
-                    zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/map.csv");
-                    zip.writeZip(dirname + "outputs/" + req.params.privateKey + ".zip");
+                    // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/map.csv");
+                    // zip.writeZip(dirname + "outputs/" + req.params.privateKey + ".zip");
 
                     return res.sendStatus(200);
 

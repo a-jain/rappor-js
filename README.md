@@ -10,17 +10,13 @@ This is a provisional implementation of Rappor in JavaScript that is designed to
 3. Start the server `node server.js`
 4. Go to `http://localhost:8080/`
 
-## Client Usage
-
-If you have some array of true/false values, e.g.
-
-> `bools = [true, true, false]`
-
-Then you can sent it to the server like so: 
+## Quick Start
 
 > `r = new Rappor()`
 > 
 > `r.sendToServer(r.encode(bools))`
+
+## API 
 
 ## Server Dependencies
 

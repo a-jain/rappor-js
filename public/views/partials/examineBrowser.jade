@@ -66,13 +66,6 @@
 		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
 
 script.
-	//- try {
-	//- 	var bigDiv = document.getElementsByClassName("ng-view")[0];
-	//- 	bigDiv.removeChild(bigDiv.firstChild);
-	//- } catch(err) {
-
-	//- }
-
 	$("#keyInfo").hide();
 
 	$("#browserLabel").append(" (e.g. this browser returns \"" + RapporExamine.getBrowser() + "\")");
@@ -122,10 +115,10 @@ script.
 		//- console.log($('input[name=radios]:checked').attr("id"));
 
 		var checked = $('input[name=radios]:checked').attr("id");
-		var finalStr = `<script src="rappor.js">`
+		var finalStr = `<script src="http://cdn.rapporjs.com/rappor.min.js">`
 
 		if (checked != "otherRadio")
-			finalStr += `\n<script src="rappor-examine.js">`;
+			finalStr += `\n<script src="http://cdn.rapporjs.com/rappor-examine.min.js">`;
 
 		finalStr += `\n\nr = new window.Rappor("` + $("#publicKey").text() + `");\n`		
 
@@ -146,7 +139,7 @@ script.
 				finalStr += `r.send(RapporExamine.getTouchSupport());\n`;
 				break;
 			case "otherRadio":
-				finalStr += `r.send(<your_variable_here>);\n`;
+				finalStr += `r.send("anything!");\n`;
 				break;
 			default:
 				break;

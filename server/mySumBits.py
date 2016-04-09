@@ -104,6 +104,10 @@ def main():
 	# get parameter info from first response
 	# NB: assuming all params are the same, checking would be trivial
 	#     but unclear how to handle cases where they differ
+	if not jsonResponse:
+		print "params not found because 0 reports"
+		sys.exit(1)
+
 	params = jsonResponse[0]["params"]
 
 	getSumBits(params, jsonResponse)
