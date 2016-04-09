@@ -1,12 +1,31 @@
 .container-fluid
-	.col-md-6
+	.col-md-6(style="border-right: 1px; border-right-style: solid; border-right-color: #D9E8F5;")
 		h1.text-left About Rappor
 
-		p.text-left(style="border-right: 1px; border-right-style: solid; border-right-color: #D9E8F5;") Hi
+		p.text-left Rappor is an algorithm developed by #[a(href="http://research.google.com/pubs/pub42852.html") Google] that allows users to send data to a server in a privacy preserving manner. It is a straightforward process best described by an illustration:
 
-	.span6
+		p.text-left Pretend you (the server) are the US government. You want to know how many of your citizens (the users) are communists. 
+
+		p.text-left But, given the sensitive nature of this information, you want to be careful how you collect this information. So, you tell each user to do the following: 
+
+		p.text-left(style="text-indent: 50px") Flip a coin. If it's heads, tell me you're a communist. If it's tails, answer the question truthfully.
+
+		p.text-left After all your citizens have done this, you look at the data. You can adjust the data to take into account users have a 50% chance of always reporting "true" to arrive at a reasonably accurate estimate of the fraction of your citizens that truly are communists.
+
+		p.text-left Crucially though, you don't know very much about whether or not a given user is a communist. For example, let's say you know that Bob down the road told you he was a communist. It's much more likely that he claimed to be a communist because his coin flip was a heads than he actually is a communist. So you really don't know much about Bob in particular.
+
+		p.text-left But in #[i aggregate], if enough people respond, you still have a pretty good idea of the #[i total] fraction of citizens who are communists.
+
+		p.text-left And voilà - that process of users sending data by flipping a coin is Rappor!
+
 	.col-md-6#secondCol
 
-		h1.text-right About Akash
+		h1.text-right About Me
 
-		p.text-right Bye
+		p.text-right My name is Akash Jain and I'm a CS major at Princeton University who's interested in privacy research and information security.
+
+		p.text-right With RapporJS, I wanted to build a tool that allows a general audience to make use of recent developments in the protection of user privacy. 
+
+		p.text-right I welcome any feedback: please email me at #[a(href="mailto:mr.akashj@gmail.com") mr.akashj@gmail.com] with any thoughts or questions you have about this service.
+
+		p.text-right The source code is available for anyone to view and use on #[a(href="https://github.com/a-jain/rappor-js") GitHub]:
