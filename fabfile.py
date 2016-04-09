@@ -50,6 +50,10 @@ def pushAWS():
 	k.set_contents_from_file(open('public/js/rappor-js/rappor.min.js', 'r+'))
 	k.set_acl('public-read')
 
+	k.key = "rappor-examine.min.js"
+	k.set_contents_from_file(open('public/js/rappor-js/rappor-examine.min.js', 'r+'))
+	k.set_acl('public-read')
+
 # def linode():
 # 	local("ssh akshjn@45.79.133.53")
 
@@ -66,6 +70,7 @@ def runb():
 	local("browserify -t coffeeify rappor-csvs.coffee -o public/js/rappor-js/rappor-csvs.js")
 
 	local("uglifyjs public/js/rappor-js/rappor.js -o public/js/rappor-js/rappor.min.js -m --stats --keep-fnames")
+	local("uglifyjs public/js/rappor-js/rappor-examine.js -o public/js/rappor-js/rappor-examine.min.js -m --stats --keep-fnames")
 
 
 def scale(n=1):
