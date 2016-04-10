@@ -14,6 +14,9 @@ body {
   font-family: 'Arimo';
   background-color: #fff;
 }
+blockquote {
+  font-size: 11pt;
+}
 .navbar-inverse {
   background-color: #304269;
   border-color: #2e3f64;

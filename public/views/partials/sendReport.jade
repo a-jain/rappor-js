@@ -43,14 +43,14 @@ form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle=
 			input.form-control(type="text", name="n", id="n", placeholder="Number of times to submit report", required, pattern="^[1-9][0-9]*$", title="Must be a number")
 
 	.form-group
-		label.col-sm-2.control-label(for="group") Public Key
+		label.col-sm-2.control-label(for="group") Experiment ID
 		.col-sm-10
-			input.form-control(type="text", name="pubKey", id="pubKey", placeholder="Public Key", pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
+			input.form-control(type="text", name="pubKey", id="pubKey", placeholder="Generated on the previous page!", pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
 
 	.form-group
 		label.col-sm-2.control-label(for="s") String
 		.col-sm-10
-			input.form-control(type="text", name="s", id="s", placeholder="The string you want to send" required)
+			input.form-control(type="text", name="s", id="s", placeholder="The data you want to report" required)
 
 	.form-group
 		.col-sm-offset-2.col-sm-10
