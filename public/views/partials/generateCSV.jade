@@ -29,6 +29,9 @@ script.
 		$("#firstbox").css("display", "none");
 	}
 
+	//- to cache the R page
+	$.get("https://rappor-js.shinyapps.io/rappor-analysis/")
+
 	function csvFormSubmit() {
 		var url = "/api/v1/getCSV/" + $("#pK").val();
 		console.log(url)
