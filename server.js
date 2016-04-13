@@ -19,21 +19,6 @@ var db = require('./config/db');
 // set our port
 var port = process.env.PORT || 8080; 
 
-// var cdnOptions = {
-// 	publicDir  : path.join(__dirname, 'public')
-//   , viewsDir   : path.join(__dirname, 'views')
-//   , domain     : 'd3mc78y0zevxj6.cloudfront.net/'
-//   , bucket     : 'rappor-js'
-//   , endpoint   : 'rappor-js.s3.amazonaws.com/'
-//   , key        : 'AKIAJJTJOX5Y37XUYJLQ'
-//   , secret     : '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'
-//   , port       : port
-//   , ssl        : false
-//   , production : true
-// }
-
-// var CDN = require('express-cdn')(app, cdnOptions);
-
 // for stylus
 function compile(str, pathx) {
   return stylus(str)
@@ -46,7 +31,8 @@ app.use(stylus.middleware({
 }))
 
 // allow CORS requests FOR NOW
-app.use(cors())
+app.options('*', cors())
+// app.use(cors())
 
 // add gzip compression
 app.use(compression())

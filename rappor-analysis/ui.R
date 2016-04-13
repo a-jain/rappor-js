@@ -68,11 +68,11 @@ shinyUI(pageWithSidebar(
                                                    helpText(h2("Welcome to the RAPPOR Analysis Tool")),
                                                    helpText("To analyze a RAPPOR collection, please upload three files:"),
                                                    helpText(h3("1. Params file"), "This file specifies the 6 parameters that were used to encode RAPPOR reports. An example is shown below. It must have column names in the header line, 6 columns in this order, and 1 row. "),
-                                                   htmlOutput("example_params"),
+                                                   # htmlOutput("example_params"),
                                                    helpText(h3("2. Counts file"), "Required.  This file must have as many rows as cohorts. The first column contains the number of reports in the cohort.  The remaining k columns specify the number of times the corresponding bit was set in all reports (in the corresponding cohort). This file cannot have a CSV header line."),
-                                                   htmlOutput("example_counts"),
-                                                   helpText(h3("3. Map file"), "Required.  The first column contains candidate strings. The remaining columns show which bit each string is hashed to within each cohort. Indices are specified in the extended format, starting with index 1 (not 0!). Because we do not specify a cohort in the map file, indices must be adjusted in the following way. For example, if bits i and j are set in cohort 2, then their corresponding indices are i + k and j + k in the map file. The number of columns is equal to (h * m). This file cannot have a CSV header line."),
-                                                   htmlOutput("example_map")
+                                                   # htmlOutput("example_counts"),
+                                                   helpText(h3("3. Map file"), "Required.  The first column contains candidate strings. The remaining columns show which bit each string is hashed to within each cohort. Indices are specified in the extended format, starting with index 1 (not 0!). Because we do not specify a cohort in the map file, indices must be adjusted in the following way. For example, if bits i and j are set in cohort 2, then their corresponding indices are i + k and j + k in the map file. The number of columns is equal to (h * m). This file cannot have a CSV header line.")
+                                                   # htmlOutput("example_map")
                                                    ),
                                   conditionalPanel(
                                                    condition = "output.countsUploaded && output.mapUploaded",

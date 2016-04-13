@@ -76,6 +76,7 @@ class window.Rappor
 		async.forEachOfSeries(allData, this._postToServer.bind(null, @maxpost, n, @params["server"]), (err) -> 
 			if err 
 				console.log err 
+				callback? err
 			else
 				console.log "All " + n + " reports done!"
 				callback?()
