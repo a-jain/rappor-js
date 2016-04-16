@@ -30,6 +30,7 @@ def pull():
 	local("git pull")
 
 def push(msg="default"):
+	runb()
 	local("npm shrinkwrap")
 	local("git add -A")
 	local("git commit -m \"%s\"" % msg)
