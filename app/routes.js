@@ -156,12 +156,13 @@ module.exports = function(router) {
         });
 
     // routes to handle credentials go here
-    router.route('/api/v1/records/credentials/:key/:dateRange?*')
+    router.route('/api/v1/records/credentials/:key')
 
         // get all records using a given *private* key
         .get(function(req, res) {
 
             var pubKey = "x";
+            console.log(req.params.key);
 
             // first retrieve appropriate public key
             Auth.find({
