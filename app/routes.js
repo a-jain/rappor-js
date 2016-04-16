@@ -156,7 +156,7 @@ module.exports = function(router) {
         });
 
     // routes to handle credentials go here
-    router.route('/api/v1/records/credentials/:key/:dateRange?')
+    router.route('/api/v1/records/credentials/:key/:dateRange?*')
 
         // get all records using a given *private* key
         .get(function(req, res) {
@@ -284,7 +284,7 @@ module.exports = function(router) {
                 console.log(`Python child is done, and returned: ${data}`);
 
                 if (data || data == 1) {
-                    return res.status(404).send("Key not found");
+                    return res.status(400).send("Key not found");
                 }
 
                 var args2 = [];
@@ -305,7 +305,7 @@ module.exports = function(router) {
 
                 secondChild.on("close", function(err) {
                     if (err) {
-                        return res.status(404).send("Map file failed");
+                        return res.status(400).send("Map file failed");
                     }
                     return res.sendStatus(200);
                 });
