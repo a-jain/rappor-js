@@ -6,6 +6,7 @@
     "bit-array": "latest",
     "body-parser": "latest",
     "bower": "^1.7.7",
+    "browser-cookies": "^1.0.8",
     "browserify": "^13.0.0",
     "byte-buffer": "latest",
     "coffee-script": "latest",

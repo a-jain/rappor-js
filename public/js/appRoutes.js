@@ -24,6 +24,12 @@ appRoutesModule.config(['$routeProvider', '$locationProvider', function($routePr
         })
 
         // Send records page that will use the SendReportController
+        .when('/send/:privateKey', {
+            templateUrl: 'partials/sendReport',
+            controller: 'SendReportController'
+        })
+
+        // Send records page that will use the SendReportController
         .when('/about', {
             templateUrl: 'partials/about',
             controller: 'AboutController'

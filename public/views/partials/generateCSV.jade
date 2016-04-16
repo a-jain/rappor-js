@@ -4,10 +4,11 @@
 	p Analyze client data here
 
 p Create the files necessary for analyzing client data using Rappor
+p
 
-form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-toggle="validator")
+form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-toggle="validator", role="form")
 	.form-group#firstbox
-		label.col-sm-2.control-label(for="pK") Private Key
+		label.col-sm-2.control-label(for="pK") Researcher Code
 		.col-sm-10
 			input.form-control(type="text", name="pK", id="pK", placeholder="Enter key here", required, pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")
 
@@ -17,8 +18,27 @@ form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-togg
 			textarea.form-control(rows="5", name="candidates", id="candidates", placeholder="Enter each candidate string on a new line")
 
 	.form-group
+		label.col-sm-2.control-label(for="candidates") Optional Date Range
+		.col-sm-10
+			.form-group.row
+				.col-sm-3
+					.checkbox
+						label
+							input(type="checkbox")#dateCheck
+							| Get all reports?
+
+				label.col-sm-1.control-label(for="dateFrom") From
+				.col-sm-3
+					input.form-control#fromD(type="date", name="dateFrom", min="2016-01-01")
+
+				label.col-sm-1.control-label(for="dateTo") To
+				.col-sm-3
+					input.form-control#toD(type="date", name="dateTo", min="2016-01-01")
+
+	.form-group
 		.col-sm-offset-2.col-sm-10
 			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="genCSVs") Go!
+	br
 
 script.
 
@@ -29,18 +49,52 @@ script.
 		$("#firstbox").css("display", "none");
 	}
 
+	$(document).ready(function() {
+		var today = new Date();
+		var todayYear  = today.getFullYear(); 
+		var todayMonth = today.getMonth()+1;
+		var todayDay   = today.getDate();
+
+		if(todayMonth < 10)
+	        todayMonth = "0" + todayMonth;
+	    if(todayDay < 10)
+	        todayDay = "0" + todayDay;
+
+	    var maxDate = todayYear + '-' + todayMonth + '-' + todayDay;
+
+	    $('#fromD').attr('max', maxDate);
+	    $('#toD').attr('max', maxDate);
+	})
+
+	$(".checkbox").change( function() {
+		if ($("#dateCheck").is(":checked")) {
+			$("#fromD").prop("disabled", true);
+			$("#toD").prop("disabled", true);
+		}
+		else {
+			$("#fromD").prop("disabled", false);
+			$("#toD").prop("disabled", false);
+		}
+	});
+
 	//- to cache the R page
-	$.get("https://rappor-js.shinyapps.io/rappor-analysis/")
+	$.get("https://rappor-js.shinyapps.io/rappor-analysis/");
 
 	function csvFormSubmit() {
 		var url = "/api/v1/getCSV/" + $("#pK").val();
 		console.log(url)
 
-		var allData = {};
-		allData.strs = $("#candidates").val().trim().split(/\n+/);
-		allData.strs = Array.from(new Set(allData.strs));
+		var allData   = {};
+		allData.strs  = $("#candidates").val().trim().split(/\n+/);
+		allData.strs  = Array.from(new Set(allData.strs));
 
-		console.log(allData.strs);
+		allData.allD  = $("#dateCheck").is(":checked");
+		allData.fromD = $("#fromD").val();
+		allData.toD   = $("#toD").val();
+
+		//- console.log
+
+		//- console.log(allData.strs);
 
 		$.post( url, allData, function( data, textStatus ) {
 			console.log(textStatus);

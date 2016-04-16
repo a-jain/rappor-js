@@ -18,8 +18,8 @@ module.exports = function(router) {
         // do logging
         console.log('Something is happening.');
         // accept any headers
-        // res.header("Access-Control-Allow-Origin", "*");
-        // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next(); // make sure we go to the next routes and don't stop here
     });
 
@@ -156,7 +156,7 @@ module.exports = function(router) {
         });
 
     // routes to handle credentials go here
-    router.route('/api/v1/records/credentials/:key')
+    router.route('/api/v1/records/credentials/:key/:dateRange?')
 
         // get all records using a given *private* key
         .get(function(req, res) {
@@ -248,31 +248,6 @@ module.exports = function(router) {
 
     router.route('/api/v1/getCSV/:privateKey')
 
-        // NB: POST needs to be called first
-        // .get(function(req, res) {
-        //     var dirname = __dirname;
-        //     dirname = dirname.split("/");
-        //     dirname.pop();
-        //     dirname = dirname.join("/") + "/server/outputs/";
-
-        //     console.log("about to send download zip");
-        //     console.log(dirname + req.params.privateKey + ".zip");
-
-        //     rf(dirname + req.params.privateKey, function(err) {
-        //         if (err) {
-        //             console.log(err);
-        //             return res.status(err.statusCode).send("Need to submit form first to create zip file");
-        //         }
-        //     })
-
-        //     res.download(dirname + req.params.privateKey + ".zip", "csv_files_" + req.params.privateKey + ".zip", function(err) {
-        //         if (err) {
-        //             console.log(err);
-        //             return res.status(404).send("Need to submit form first to create zip file");
-        //         }
-        //     });
-        // })
-
         .post(function(req, res) {
 
             // first get app root directory
@@ -286,9 +261,13 @@ module.exports = function(router) {
             args.push("mySumBits.py");
             args.push(req.params.privateKey);
 
-            // create the zipper
-            // var zip = new AdmZip();
-            
+            if (req.params.allD != null && req.params.allD != undefined && req.params.allD == false) {
+                args.push(req.params.fromD);
+                args.push(req.params.toD);
+            }
+
+            console.log(args);
+
             // create child process for counts file
             var child = spawn("python", args, { cwd: dirname });
 
@@ -308,18 +287,12 @@ module.exports = function(router) {
                     return res.status(404).send("Key not found");
                 }
 
-                // console.log(`Start next Python file!`);
-
                 var args2 = [];
                 args2.push("map_file.py")
                 args2.push(req.params.privateKey)
                 args2.push(JSON.stringify(req.body))
 
-                // console.log(args2)
-
                 secondChild = spawn("python", args2, { cwd: dirname });
-                // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/params.csv")
-                // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/counts.csv")
 
                 // handle outputs
                 secondChild.stdout.on("data", function(data) {
@@ -334,15 +307,7 @@ module.exports = function(router) {
                     if (err) {
                         return res.status(404).send("Map file failed");
                     }
-                    // console.log(`Second Python child is done, and returned: ${data}`);
-                    // console.log(`Now finalizing zip file`);
-
-                    // zip.addLocalFile(dirname + "outputs/" + req.params.privateKey + "/map.csv");
-                    // zip.writeZip(dirname + "outputs/" + req.params.privateKey + ".zip");
-
                     return res.sendStatus(200);
-
-                    // console.log(`done!`);
                 });
             });
         });

@@ -1,6 +1,6 @@
 .jumbotron.text-center
 	h1 Examine Browser
-	
+
 	p Generate client code here
 
 .row
@@ -13,141 +13,85 @@
 			form-group
 				.radio
 					label#browserLabel
-						input(type="radio", name="radios", value="")#browserRadio
+						input(type="radio", name="radios", value="x")#browserRadio
 						| Browser
 			form-group
 				.radio
 					label#adBlockerLabel 
-						input(type="radio", name="radios", value="")#adBlockerRadio
+						input(type="radio", name="radios", value="x")#adBlockerRadio
 						| Ad Blocker
 			form-group
 				.radio
 					label#pluginsLabel 
-						input(type="radio", name="radios", value="")#pluginsRadio
+						input(type="radio", name="radios", value="x")#pluginsRadio
 						| Plugins
 			form-group
 				.radio
 					label#languageLabel 
-						input(type="radio", name="radios", value="")#languageRadio
+						input(type="radio", name="radios", value="x")#languageRadio
 						| Language
 			form-group
 				.radio
 					label#touchLabel 
-						input(type="radio", name="radios", value="")#touchRadio
+						input(type="radio", name="radios", value="x")#touchRadio
 						| Touch Support
 			form-group
 				.radio
 					label#otherLabel 
-						input(type="radio", name="radios", value="")#otherRadio
+						input(type="radio", name="radios", value="x")#otherRadio
 						| Other variable (whatever you want it to be)
+		br
 
 	.col-md-4
 		h2 2. Generate keys:
 
+		form.form-horizontal#freqForm
+			form-group
+				.radio
+					label
+						input(type="radio", name="radioF", value="x")#instant
+						| Always
+			form-group
+				.radio
+					label
+						input(type="radio", name="radioF", value="x")#hourly
+						| Hourly
+			form-group
+				.radio
+					label
+						input(type="radio", name="radioF", value="x")#daily
+						| Daily
+			form-group
+				.radio
+					label
+						input(type="radio", name="radioF", value="x")#weekly
+						| Weekly
+			form-group
+				.radio
+					label
+						input(type="radio", name="radioF", value="x")#monthly
+						| Monthly
+		br
+
 		button.btn.btn-primary(type="button", id="keysButton", onclick="getKeys()", disabled="disabled", analytics-on="click", analytics-event="genKeys") Generate!
+
+		
+
+	.col-md-4
+		h2 3. Experiment Info:
+
+		p
+		p Copy and paste the code below into your website:
+		p(id="finalCode", style="font-family: monospace; font-size: 75%; white-space: pre") (Final code will appear here once you fill in the form!)
+
+		hr
 
 		#keyInfo
 			p
-			p 
-				b Experiment ID 
-				| is:
-			p#publicKey(style="font-family: monospace;") X
+			p The link to #[b simulate a user] is:
+			a#publicKey(style="font-family: monospace;") X
 			p
-			p
-				b Researcher Acess Code 
-				| is:
+			p The link to #[b access the results] is:
 			a#privateKey(style="font-family: monospace;") X
 
-	.col-md-4
-		h2 3. Generate code:
-
-		button.btn.btn-primary(type="button", id="codeButton", onclick="genCode()", disabled="disabled", analytics-on="click", analytics-event="genCode") Generate!
-		p
-		p(id="finalCode", style="font-family: monospace; white-space: pre") Final Code Here
-
-script.
-	$("#keyInfo").hide();
-
-	$("#browserLabel").append(" (e.g. this browser returns \"" + RapporExamine.getBrowser() + "\")");
-	RapporExamine.getAdBlock(adBlockSuccess, adBlockFailure);
-	$("#pluginsLabel").append(" (e.g. this browser returns \"[" + RapporExamine.getPlugins() + "]\")");
-	$("#languageLabel").append(" (e.g. this browser returns \"" + RapporExamine.getLanguage() + "\")");
-	$("#touchLabel").append(" (e.g. this browser returns \"" + RapporExamine.getTouchSupport() + "\")");
-
-	function adBlockSuccess() {
-		$("#adBlockerLabel").append(" (e.g. this browser returns \"true\")");
-	}
-
-	function adBlockFailure() {
-		$("#adBlockerLabel").append(" (e.g. this browser returns \"true\")");
-	}
-
-	$('input[name=radios]').change(function(){
-	    $("#keysButton").removeAttr("disabled");
-	    $("#keysButton").focus();
-	});
-
-	function getKeys() {
-		$("#keysButton").attr("disabled", "disabled");
-		$("#codeButton").removeAttr("disabled");
-
-		$.post( "/api/v1/credentials", function( data ) {
-			//- console.log(data.message);
-			console.log(data);
-
-			var craftedURL = window.location.origin + "/generate/" + data.privateKey;
-			$("#publicKey").text(data.publicKey);
-			$("#privateKey").text(craftedURL);
-			$("#privateKey").attr("href", craftedURL);
-			$("#keyInfo").show();
-			$("#codeButton").focus();
-		});
-	}
-
-	function genCode() {
-		$("#codeButton").attr("disabled", "disabled");
-
-		templateString = getOperationString();
-		$("#finalCode").text(templateString);
-	}
-
-	function getOperationString() {
-		//- console.log($('input[name=radios]:checked').attr("id"));
-
-		var checked = $('input[name=radios]:checked').attr("id");
-		var finalStr = `<script src="http://cdn.rapporjs.com/rappor.min.js">`
-
-		if (checked != "otherRadio")
-			finalStr += `\n<script src="http://cdn.rapporjs.com/rappor-examine.min.js">`;
-
-		finalStr += `\n\n<script>\n`
-
-		finalStr += `r = new window.Rappor("` + $("#publicKey").text() + `");\n`		
-
-		switch(checked) {
-			case "browserRadio":
-				finalStr += `r.send(RapporExamine.getBrowser());\n`;
-				break;
-			case "adBlockerRadio":
-				finalStr += `RapporExamine.getAdBlock(r.sendTrue(), r.sendFalse()));\n`;
-				break;
-			case "pluginsRadio":
-				finalStr += `r.send(RapporExamine.getPlugins());\n`;
-				break;
-			case "languageRadio":
-				finalStr += `r.send(RapporExamine.getLanguage());\n`;
-				break;
-			case "touchRadio":
-				finalStr += `r.send(RapporExamine.getTouchSupport());\n`;
-				break;
-			case "otherRadio":
-				finalStr += `r.send("anything!");\n`;
-				break;
-			default:
-				break;
-		}
-
-		finalStr += `</script>\n`
-
-		return finalStr;
-	}
+script(src="js/partials/examineBrowser.js")

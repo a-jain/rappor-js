@@ -38,6 +38,8 @@ blockquote {
 .jumbotron {
   font-family: 'Lobster';
   background-color: #d9e8f5;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .gist .blob-code-inner {
   font-size: 16px;

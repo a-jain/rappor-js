@@ -5,12 +5,14 @@ ByteBuffer = require "byte-buffer"
 BitArray   = require "bit-array"
 request    = require "request"
 async      = require "async"
+cookies    = require "browser-cookies"
 
 # create Rappor object
 class window.Rappor
 
 	# hard coding m as 64
 	# hard coding server as http://rappor-js.herokuapp.com/api/v1/records
+	# http://localhost:8080/api/v1/records
 	# should we be hard coding k as well?
 	# note that k must be < 32
 	# provide default secret
@@ -37,18 +39,28 @@ class window.Rappor
 		@debug = false
 		@maxpost = 200
 
-	send: (bool, n=1, callback) ->
+		cookies.defaults.expires = 366 * 5;
+
+	send: (bool, {freq, n, callback} = {}) ->
+		
+		if not freq? then freq = "instant"
+		if not n? or n < 1 then n = 1
+		if not callback? then callback = null
+
 		if typeof bool is "object"
-			this.send(s, n, callback) for s in bool
+			this.send(s, {freq: freq, n: n, callback: callback}) for s in bool
 		else
-			@truth = bool
-			this._sendToServer(parseInt(n), callback)
+			if this._checkAge(freq)
+				@truth = bool
+				this._sendToServer(parseInt(n), callback)
+				
+				if freq is not "instant" then this._storeAge()
 
-	sendTrue: (callback) ->
-		this.send(true, 1, callback)
+	sendTrue: ({freq, callback} = {}) ->
+		this.send(true, {freq: freq, n: 1, callback: callback})
 
-	sendFalse: (callback) ->
-		this.send(false, 1, callback)
+	sendFalse: ({freq, callback} = {}) ->
+		this.send(false, {freq: freq, n: 1, callback: callback})
 
 	_encode: () ->
 		bits = this._generateRapporBits()
@@ -56,7 +68,7 @@ class window.Rappor
 		this._generateIrr()
 
 	_sendToServer: (n, callback) ->
-		console.log "_sendToServer called with parameter #{n}"
+		console.log "sendToServer called with parameter #{n}"
 		
 		allData        = []
 		splitData      = {}
@@ -71,6 +83,7 @@ class window.Rappor
 
 		options =
 			"Access-Control-Allow-Headers": "X-Requested-With"
+			"Access-Control-Allow-Origin" : "*"
 
 		# bind null allows passing in of server parameter
 		async.forEachOfSeries(allData, this._postToServer.bind(null, @maxpost, n, @params["server"]), (err) -> 
@@ -231,6 +244,33 @@ class window.Rappor
 
 	_generateCohort: (m) ->
 		Math.floor(Math.random() * m)
+
+	_checkAge: (freq) ->
+		lastAge    = parseInt(cookies.get(@group)) || -1
+
+		if lastAge is not -1 # i.e. if lastAge exists
+			
+			# difference is in seconds
+			difference = (Date.now() - lastAge) / 1000
+			switch freq
+				when "instant" then return true
+				when "hourly" 
+					if difference < 60*60 then return true else return false
+				when "daily"
+					if difference < 60*60*24 then return true else return false
+				when "weekly"
+					if difference < 60*60*24*7 then return true else return false
+				when "monthly"
+					if difference < 60*60*24*30 then return true else return false
+				when "yearly"
+					if difference < 60*60*24*365 then return true else return false
+				else false
+		
+		else
+			return true
+
+	_storeAge: () ->
+		cookies.set(@group, "" + Date.now())
 
 	_print: () ->
 		for param, value of @params

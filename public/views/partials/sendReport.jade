@@ -17,7 +17,7 @@ script.
 		$("#progBar").css("width", "2%");
 
 		r = new window.Rappor({ publicKey: pK });
-		r.send(s, n, myCallback);
+		r.send(s, {n: n, callback: myCallback});
 
 		$("#progBar").addClass("progress-bar-striped");
 		$("#progBar").addClass("active");
@@ -28,6 +28,13 @@ script.
 
 	$(".progress").hide();
 
+	url = window.location.href;
+	lastParam = url.substring(url.lastIndexOf('/') + 1);
+	if(lastParam != "send") {
+		$("#pK").val(lastParam);
+		$("#expID").css("display", "none");
+	}
+
 
 .jumbotron.text-center
 	h1 Send a Report
@@ -35,14 +42,15 @@ script.
 	p Simulate a client
 
 p Simulate Rappor #[em N] times, with #[em p] probability of sending true (or an optional other string)
+p
 
 form.form-horizontal(name="sim", id="sim", onSubmit="formSubmit()", data-toggle="validator")
 	.form-group
-		label.col-sm-2.control-label(for="n") N*
+		label.col-sm-2.control-label(for="n") N
 		.col-sm-10
 			input.form-control(type="text", name="n", id="n", placeholder="Number of times to submit report", required, pattern="^[1-9][0-9]*$", title="Must be a number")
 
-	.form-group
+	.form-group#expID
 		label.col-sm-2.control-label(for="group") Experiment ID
 		.col-sm-10
 			input.form-control(type="text", name="pubKey", id="pubKey", placeholder="Generated on the previous page!", pattern="^[a-f0-9]{12}$", title="Must be a 12-character string")

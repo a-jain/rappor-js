@@ -134,6 +134,11 @@
       "from": "bower@>=1.5.2 <2.0.0",
       "resolved": "https://registry.npmjs.org/bower/-/bower-1.7.7.tgz"
     },
+    "browser-cookies": {
+      "version": "1.0.8",
+      "from": "browser-cookies@*",
+      "resolved": "https://registry.npmjs.org/browser-cookies/-/browser-cookies-1.0.8.tgz"
+    },
     "browserify": {
       "version": "13.0.0",
       "from": "https://registry.npmjs.org/browserify/-/browserify-13.0.0.tgz",
@@ -4045,15 +4050,15 @@
                           "from": "lodash.padright@>=3.0.0 <4.0.0",
                           "resolved": "https://registry.npmjs.org/lodash.padright/-/lodash.padright-3.1.1.tgz"
                         },
-                        "lodash._createpadding": {
-                          "version": "3.6.1",
-                          "from": "lodash._createpadding@3.6.1",
-                          "resolved": "https://registry.npmjs.org/lodash._createpadding/-/lodash._createpadding-3.6.1.tgz"
-                        },
                         "lodash._basetostring": {
                           "version": "3.0.1",
                           "from": "lodash._basetostring@3.0.1",
                           "resolved": "https://registry.npmjs.org/lodash._basetostring/-/lodash._basetostring-3.0.1.tgz"
+                        },
+                        "lodash._createpadding": {
+                          "version": "3.6.1",
+                          "from": "lodash._createpadding@3.6.1",
+                          "resolved": "https://registry.npmjs.org/lodash._createpadding/-/lodash._createpadding-3.6.1.tgz"
                         },
                         "lodash.repeat": {
                           "version": "3.2.0",
