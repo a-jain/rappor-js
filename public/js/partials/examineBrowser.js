@@ -35,7 +35,7 @@ function getKeys() {
 		console.log(data);
 
 		var craftedURL1 = window.location.origin + "/generate/" + data.privateKey;
-		var craftedURL2 = window.location.origin + "/send/" + data.privateKey;
+		var craftedURL2 = window.location.origin + "/send/" + data.publicKey;
 
 		$("#privateKey").text(craftedURL1);
 		$("#privateKey").attr("href", craftedURL1);
@@ -68,7 +68,7 @@ function getOperationString() {
 
 	finalStr += `\n\n<script>\n`
 
-	finalStr += `\tr = new window.Rappor({ publicKey: "` + $("#publicKey").text() + `" });\n`		
+	finalStr += `\tr = new window.Rappor({ publicKey: "` + $("#privateKey").text() + `" });\n`		
 
 	switch(checked) {
 		case "browserRadio":

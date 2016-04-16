@@ -162,7 +162,7 @@ module.exports = function(router) {
         .get(function(req, res) {
 
             var pubKey = "x";
-            // console.log(req.params.key);
+            console.log(req.params.key);
 
             // first retrieve appropriate public key
             Auth.find({
