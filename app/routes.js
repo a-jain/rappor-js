@@ -162,7 +162,7 @@ module.exports = function(router) {
         .get(function(req, res) {
 
             var pubKey = "x";
-            console.log(req.params.key);
+            // console.log(req.params.key);
 
             // first retrieve appropriate public key
             Auth.find({
@@ -185,8 +185,7 @@ module.exports = function(router) {
 
                 // now get all records corresponding to public key
                 Record.find({
-                    group: pubKey,
-                    type: "record"
+                    group: pubKey
                 }, function(err, records) {
                     if (err) {
                         res.send(err);
@@ -262,10 +261,10 @@ module.exports = function(router) {
             args.push("mySumBits.py");
             args.push(req.params.privateKey);
 
-            if (req.params.allD != null && req.params.allD != undefined && req.params.allD == false) {
-                args.push(req.params.fromD);
-                args.push(req.params.toD);
-            }
+            // if (req.params.allD != null && req.params.allD != undefined && req.params.allD == false) {
+            //     args.push(req.params.fromD);
+            //     args.push(req.params.toD);
+            // }
 
             console.log(args);
 
