@@ -21,18 +21,18 @@ form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-togg
 		label.col-sm-2.control-label(for="candidates") Optional Date Range
 		.col-sm-10
 			.form-group.row
-				.col-sm-3
+				.col-sm-2
 					.checkbox
 						label
 							input(type="checkbox")#dateCheck
 							| Get all reports?
 
 				label.col-sm-1.control-label(for="dateFrom") From
-				.col-sm-3
+				.col-sm-4
 					input.form-control#fromD(type="date", name="dateFrom", min="2016-01-01")
 
 				label.col-sm-1.control-label(for="dateTo") To
-				.col-sm-3
+				.col-sm-4
 					input.form-control#toD(type="date", name="dateTo", min="2016-01-01")
 
 	.form-group
