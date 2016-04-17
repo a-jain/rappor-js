@@ -163,9 +163,30 @@ module.exports = function(router) {
             var pubKey = "x";
             console.log(req.params.key);
 
+            var d1 = null;
+            var d2 = null;
+
+            if (req.query.from != null && req.query.to != null) {
+                d1 = new Date(req.query.from);
+                d2 = new Date(req.query.to);
+            } else {
+                d1 = new Date("2016-01-01");
+                d2 = new Date();
+            }
+
+            // make sure d2 represents end of day, not beginning which is native
+            d2.setDate(d2.getDate() + 1);
+
+            // add time zone offsets of local area
+            d1.setMinutes(d1.getMinutes() + d1.getTimezoneOffset());
+            d2.setMinutes(d2.getMinutes() + d2.getTimezoneOffset());
+
+            // console.log(d1.toISOString());
+            // console.log(d2.toISOString());
+
             // first retrieve appropriate public key
             Auth.find({
-                privateKey: req.params.key,
+                privateKey: req.params.key
             }, function(err, auth) {
                 if (err) {
                     res.send(err);
@@ -183,7 +204,8 @@ module.exports = function(router) {
 
                 // now get all records corresponding to public key
                 Record.find({
-                    group: pubKey
+                    group: pubKey,
+                    date: { $gte: d1, $lte: d2 }
                 }, function(err, records) {
                     if (err) {
                         res.send(err);
@@ -259,7 +281,7 @@ module.exports = function(router) {
             args.push("mySumBits.py");
             args.push(req.params.privateKey);
 
-            console.log(req.query);
+            // console.log(req.query);
 
             if (req.query.from != null && req.query.to != null) {
                 args.push(req.query.from);
