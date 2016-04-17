@@ -86,6 +86,13 @@ def main():
 	if privateKey is not "":
 		serverUrl += ("/credentials/" + privateKey)
 
+		if len(sys.argv) is 4:
+			fromD = sys.argv[2]
+			toD   = sys.argv[3]
+
+			serverUrl += "?from=" + fromD
+			serverUrl += "&to=" + toD
+
 	print serverUrl
 
 	try:

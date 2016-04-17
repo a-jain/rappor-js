@@ -37,10 +37,10 @@ function getKeys() {
 		var craftedURL1 = window.location.origin + "/generate/" + data.privateKey;
 		var craftedURL2 = window.location.origin + "/send/" + data.publicKey;
 
-		$("#privateKey").text(craftedURL1);
+		$("#privateKey").text(craftedURL1.split("//")[1]);
 		$("#privateKey").attr("href", craftedURL1);
 
-		$("#publicKey").text(craftedURL2);
+		$("#publicKey").text(craftedURL2.split("//")[1]);
 		$("#publicKey").attr("href", craftedURL2);
 
 		$("#keyInfo").show();

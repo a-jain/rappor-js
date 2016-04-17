@@ -6,8 +6,7 @@ var Schema = mongoose.Schema;
 var authSchema = new Schema({
   date:  { type: Date, default: Date.now },
   publicKey:  { type: String, trim: true, default: "mongoose error" },
-  privateKey:  { type: String, trim: true, default: "mongoose error" },
-  type: { type: String, default: "auth" }
+  privateKey:  { type: String, trim: true, default: "mongoose error" }
 });
 
 authSchema.index({date: 1});

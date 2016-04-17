@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:8080/generate/8c297ed7ae33 -->
+<html><script async="" src="./RapporJS_files/analytics.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><title>RapporJS</title><meta name="viewport" content="width=device-width, initial-scale=1"><!--<base href="/">--><base href="."><link rel="stylesheet" href="./RapporJS_files/bootstrap.min.css"><link rel="stylesheet" href="./RapporJS_files/bootstrap-select.css"><link rel="stylesheet" href="./RapporJS_files/style.css"><script src="./RapporJS_files/jquery.min.js"></script><script src="./RapporJS_files/angular.min.js"></script><script src="./RapporJS_files/angular-route.min.js"></script><script src="./RapporJS_files/bootstrap.min.js"></script><script src="./RapporJS_files/MainCtrl.js"></script><script src="./RapporJS_files/AboutCtrl.js"></script><script src="./RapporJS_files/RecordCtrl.js"></script><script src="./RapporJS_files/SendReportCtrl.js"></script><script src="./RapporJS_files/ExamineBrowserCtrl.js"></script><script src="./RapporJS_files/GenerateCSVCtrl.js"></script><script src="./RapporJS_files/AnalyzeCSVCtrl.js"></script><script src="./RapporJS_files/appRoutes.js"></script><script src="./RapporJS_files/app.js"></script><script src="./RapporJS_files/rappor.min.js"></script><script src="./RapporJS_files/rappor-examine.min.js"></script><script src="./RapporJS_files/angulartics.min.js"></script><script src="./RapporJS_files/angulartics-google-analytics.min.js"></script><script>if (window.location.host != 'localhost') {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-50152323-4', 'auto');
+	ga('send', 'pageview');
+}
+
+$(document).ready(function() {
+	$(".navbar a").on("click", function() {
+		$('.navbar li.active').removeClass('active');
+		$(this).parent().addClass("active");
+	});
+});
+</script></head><body ng-app="rappor-js" ng-controller="RecordController" class="ng-scope" cz-shortcut-listen="true"><div class="container"><nav class="navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><a href="http://localhost:8080/" class="navbar-brand">Home</a></div><ul class="nav navbar-nav"><li><a href="http://localhost:8080/users">Code for Users</a></li></ul><ul class="nav navbar-nav"><li><a href="http://localhost:8080/send">Simulate User</a></li></ul><ul class="nav navbar-nav"><li><a href="http://localhost:8080/generate">Get Data</a></li></ul><ul class="nav navbar-nav navbar-right"><li><a href="http://localhost:8080/about">About</a></li></ul>
+
+</div></nav><!-- ngView:  --><div ng-view="" class="ng-scope"><div class="jumbotron text-center ng-scope"><h1>Generate CSV files</h1><p>Analyze client data here</p></div><p class="ng-scope">Create the files necessary for analyzing client data using Rappor</p><p class="ng-scope"></p><form name="map" id="map" onsubmit="csvFormSubmit()" data-toggle="validator" role="form" class="form-horizontal ng-pristine ng-valid ng-scope"><div id="firstbox" class="form-group" style="display: none;"><label for="pK" class="col-sm-2 control-label">Researcher Code</label><div class="col-sm-10"><input type="text" name="pK" id="pK" placeholder="Enter key here" required="required" pattern="^[a-f0-9]{12}$" title="Must be a 12-character string" class="form-control"></div></div><div class="form-group"><label for="candidates" class="col-sm-2 control-label">Candidates</label><div class="col-sm-10"><textarea rows="5" name="candidates" id="candidates" placeholder="Enter each candidate string on a new line" class="form-control"></textarea></div></div><div class="form-group"><label for="candidates" class="col-sm-2 control-label">Optional Date Range</label><div class="col-sm-10"><div class="form-group row"><div class="col-sm-3"><div class="checkbox"><label><input type="checkbox" id="dateCheck">Get all reports?</label></div></div><label for="dateFrom" class="col-sm-1 control-label">From</label><div class="col-sm-3"><input id="fromD" type="date" name="dateFrom" min="2016-01-01" class="form-control" max="2016-04-16"></div><label for="dateTo" class="col-sm-1 control-label">To</label><div class="col-sm-3"><input id="toD" type="date" name="dateTo" min="2016-01-01" class="form-control" max="2016-04-16"></div></div></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button type="submit" analytics-on="click" analytics-event="genCSVs" class="btn btn-primary">Go!</button></div></div><br></form><script class="ng-scope">url = window.location.href;
+lastParam = url.substring(url.lastIndexOf('/') + 1);
+if(lastParam != "generate") {
+	$("#pK").val(lastParam);
+	$("#firstbox").css("display", "none");
+}
+
+$(document).ready(function() {
+	var today = new Date();
+	var todayYear  = today.getFullYear(); 
+	var todayMonth = today.getMonth()+1;
+	var todayDay   = today.getDate();
+
+	if(todayMonth < 10)
+        todayMonth = "0" + todayMonth;
+    if(todayDay < 10)
+        todayDay = "0" + todayDay;
+
+    var maxDate = todayYear + '-' + todayMonth + '-' + todayDay;
+
+    $('#fromD').attr('max', maxDate);
+    $('#toD').attr('max', maxDate);
+})
+
+$(".checkbox").change( function() {
+	if ($("#dateCheck").is(":checked")) {
+		$("#fromD").prop("disabled", true);
+		$("#toD").prop("disabled", true);
+	}
+	else {
+		$("#fromD").prop("disabled", false);
+		$("#toD").prop("disabled", false);
+	}
+});
+
+//- to cache the R page
+$.get("https://rappor-js.shinyapps.io/rappor-analysis/");
+
+function csvFormSubmit() {
+	var url = "/api/v1/getCSV/" + $("#pK").val();
+	console.log(url);
+
+	if(!$("#dateCheck").is(":checked")) {
+		if ($("#fromD").val() != "" && $("#toD").val() != "") {
+			if (Date.parse($("#fromD").val()) <= Date.parse($("#toD").val())) {
+				url += "?from=" + $("#fromD").val();
+				url += "?to=" + $("#toD").val();
+			}
+		}
+	}
+
+	var allData   = {};
+	allData.strs  = $("#candidates").val().trim().split(/\n+/);
+	allData.strs  = Array.from(new Set(allData.strs));
+
+	//- allData.allD  = ;
+	//- allData.fromD = $("#fromD").val();
+	//- allData.toD   = $("#toD").val();
+
+	//- console.log
+
+	//- console.log(allData.strs);
+
+	$.post( url, allData, function( data, textStatus ) {
+		console.log(textStatus);
+
+		if (textStatus == "success") {
+			//- window.location = url;
+			window.location = "/analyze/" + $("#pK").val();
+		}
+		else {
+			console.log("Something went wrong, e.g. you didn't have the correct private key")
+		}
+	});
+}</script></div></div></body></html>

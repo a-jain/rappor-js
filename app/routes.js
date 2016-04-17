@@ -88,7 +88,7 @@ module.exports = function(router) {
         // get all records
         .get(function(req, res) {
             Record.find({
-                type: "record"
+                
             }, function(err, records) {
                 if (err)
                     res.send(err)
@@ -102,7 +102,7 @@ module.exports = function(router) {
         // delete all records
         .delete(function(req, res) {
             Record.remove({
-                type: "record"
+                
             }, function(err, record) {
                 if (err)
                     res.send(err);
@@ -145,8 +145,7 @@ module.exports = function(router) {
         // delete a specific record
         .delete(function(req, res) {
             Record.remove({
-                _id: req.params.record_id,
-                type: "record"
+                _id: req.params.record_id
             }, function(err, record) {
                 if (err)
                     res.send(err);
@@ -167,7 +166,6 @@ module.exports = function(router) {
             // first retrieve appropriate public key
             Auth.find({
                 privateKey: req.params.key,
-                type: "auth"
             }, function(err, auth) {
                 if (err) {
                     res.send(err);
@@ -203,7 +201,7 @@ module.exports = function(router) {
         // get all auths
         .get(function(req, res) {
             Auth.find({
-                type: "auth"
+               
             }, function(err, records) {
                 if (err)
                     res.send(err)
@@ -237,7 +235,7 @@ module.exports = function(router) {
         // delete all auths
         .delete(function(req, res) {
             Auth.remove({
-                type: "auth"
+                
             }, function(err, record) {
                 if (err)
                     res.send(err);
@@ -261,10 +259,12 @@ module.exports = function(router) {
             args.push("mySumBits.py");
             args.push(req.params.privateKey);
 
-            // if (req.params.allD != null && req.params.allD != undefined && req.params.allD == false) {
-            //     args.push(req.params.fromD);
-            //     args.push(req.params.toD);
-            // }
+            console.log(req.query);
+
+            if (req.query.from != null && req.query.to != null) {
+                args.push(req.query.from);
+                args.push(req.query.to);
+            }
 
             console.log(args);
 

@@ -10,7 +10,6 @@ var recordSchema = new Schema({
   prr:  { type: String, trim: true },
   irr:  { type: String, trim: true, default: "mongoose error" },
   group: { type: String, trim: true, default: "" },
-  type: { type: String, default: "record" },
   params: {
   	k: Number,
   	h: Number,

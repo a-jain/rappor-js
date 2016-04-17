@@ -82,15 +82,24 @@ script.
 
 	function csvFormSubmit() {
 		var url = "/api/v1/getCSV/" + $("#pK").val();
-		console.log(url)
+		console.log(url);
+
+		if(!$("#dateCheck").is(":checked")) {
+			if ($("#fromD").val() != "" && $("#toD").val() != "") {
+				if (Date.parse($("#fromD").val()) <= Date.parse($("#toD").val())) {
+					url += "?from=" + $("#fromD").val();
+					url += "&to=" + $("#toD").val();
+				}
+			}
+		}
 
 		var allData   = {};
 		allData.strs  = $("#candidates").val().trim().split(/\n+/);
 		allData.strs  = Array.from(new Set(allData.strs));
 
-		allData.allD  = $("#dateCheck").is(":checked");
-		allData.fromD = $("#fromD").val();
-		allData.toD   = $("#toD").val();
+		//- allData.allD  = ;
+		//- allData.fromD = $("#fromD").val();
+		//- allData.toD   = $("#toD").val();
 
 		//- console.log
 
