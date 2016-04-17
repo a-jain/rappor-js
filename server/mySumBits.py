@@ -79,8 +79,8 @@ def getParams(params):
 # change from printing to std out to printing to a given filename
 # sumBits.csv for first one, trueBits.csv for second one, params.csv for third one
 def main():
-	serverUrl = "http://localhost:8080/api/v1/records";
-	# serverUrl = "http://rappor-js.herokuapp.com/api/v1/records";
+	# serverUrl = "http://localhost:8080/api/v1/records";
+	serverUrl = "http://rappor-js.herokuapp.com/api/v1/records";
 	privateKey  = sys.argv[1]
 
 	if privateKey is not "":
