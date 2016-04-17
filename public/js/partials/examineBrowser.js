@@ -60,34 +60,36 @@ function getOperationString() {
 	var checked = $('input[name=radios]:checked').attr("id");
 	var freqStr = $('input[name=radioF]:checked').attr("id");
 
+	var pubKeyURLComponents = $("#publicKey").text().split("/");
+	var pubKey = pubKeyURLComponents[pubKeyURLComponents.length - 1];
 
-	var finalStr = `<script src="http://cdn.rapporjs.com/rappor.min.js">`
+	var finalStr = `<script src="http://cdn.rapporjs.com/rappor.min.js">`;
 
 	if (checked != "otherRadio")
 		finalStr += `\n<script src="http://cdn.rapporjs.com/rappor-examine.min.js">`;
 
-	finalStr += `\n\n<script>\n`
+	finalStr += `\n\n<script>\n`;
 
-	finalStr += `\tr = new window.Rappor({ publicKey: "` + $("#privateKey").text() + `" });\n`		
+	finalStr += `\tr = new window.Rappor({ publicKey: "${pubKey}" });\n`;
 
 	switch(checked) {
 		case "browserRadio":
-			finalStr += `\tr.send(RapporExamine.getBrowser(), {freq: "` + freqStr + `"});\n`;
+			finalStr += `\tr.send(RapporExamine.getBrowser(), {freq: "${freqStr}"});\n`;
 			break;
 		case "adBlockerRadio":
-			finalStr += `\tRapporExamine.getAdBlock(r.sendTrue({freq: "` + freqStr + `"}), r.sendFalse({freq: "` + freqStr + `"})));\n`;
+			finalStr += `\tRapporExamine.getAdBlock(r.sendTrue({freq: "${freqStr}"}), r.sendFalse({freq: "${freqStr}"})));\n`;
 			break;
 		case "pluginsRadio":
-			finalStr += `\tr.send(RapporExamine.getPlugins(), {freq: "` + freqStr + `"});\n`;
+			finalStr += `\tr.send(RapporExamine.getPlugins(), {freq: "${freqStr}"});\n`;
 			break;
 		case "languageRadio":
-			finalStr += `\tr.send(RapporExamine.getLanguage(), {freq: "` + freqStr + `"});\n`;
+			finalStr += `\tr.send(RapporExamine.getLanguage(), {freq: "${freqStr}"});\n`;
 			break;
 		case "touchRadio":
-			finalStr += `\tr.send(RapporExamine.getTouchSupport(), {freq: "` + freqStr + `"});\n`;
+			finalStr += `\tr.send(RapporExamine.getTouchSupport(), {freq: "${freqStr}"});\n`;
 			break;
 		case "otherRadio":
-			finalStr += `\tr.send("anything!", {freq: "` + freqStr + `"});\n`;
+			finalStr += `\tr.send("anything!", {freq: "${freqStr}"});\n`;
 			break;
 		default:
 			break;

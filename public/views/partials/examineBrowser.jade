@@ -4,7 +4,7 @@
 	p Generate client code here
 
 .row
-	.col-md-4
+	.col-md-4(style="border-right-style: solid; border-right-width: 1px; border-right-color: #D9E8F5")
 		h2 1. Select options:
 
 		p Select the criteria you want to choose from:
@@ -42,15 +42,17 @@
 						| Other variable (whatever you want it to be)
 		br
 
-	.col-md-4
-		h2 2. Generate keys:
+	.col-md-4(style="border-right-style: solid; border-right-width: 1px; border-right-color: #D9E8F5")
+		h2 2. Select frequency:
+
+		p When a client lands on your page, send a report at least:
 
 		form.form-horizontal#freqForm
 			form-group
 				.radio
 					label
 						input(type="radio", name="radioF", value="x")#instant
-						| Always
+						| Instantly
 			form-group
 				.radio
 					label
