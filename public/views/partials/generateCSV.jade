@@ -64,7 +64,9 @@ script.
 
 	    $('#fromD').attr('max', maxDate);
 	    $('#toD').attr('max', maxDate);
-	})
+	});
+
+	$("#dateCheck").prop("checked", true);
 
 	$(".checkbox").change( function() {
 		if ($("#dateCheck").is(":checked")) {
