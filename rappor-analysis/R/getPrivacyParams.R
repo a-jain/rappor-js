@@ -1,10 +1,8 @@
 source('R/decode.R')
 
-# ComputePrivacyGuarantees <- function(params, alpha, N)
-
 # p, q, f, h, N
 alpha = 0.05
-N = 2000
+N = 10000
 ln_3 = 1.0986
 
 n = 9*9*9*2
@@ -24,13 +22,13 @@ for (pZ in seq(0.1, 0.9, by=0.1)) {
 	for (qZ in seq(0.1, 0.9, by=0.1)) {
 		params$q = qZ
 
-		for (fZ in seq(0.1, 0.9, by=0.1)) {
+		for (fZ in seq(0.8, 0.9, by=0.01)) {
 			params$f = fZ
 
 			for (hZ in 2:3) {
 				params$h = hZ
 				c = ComputePrivacyGuarantees(params, alpha, N)
-				# print(c[6,2])
+				# print(c)
 				
 				ps[i] = params$p
 				qs[i] = params$q
@@ -44,10 +42,20 @@ for (pZ in seq(0.1, 0.9, by=0.1)) {
 				
         # stop()
 			}
-		}
+	  } 
 	}
 }
 
 r = data.frame(ps, qs, fs, hs, cs)
+r = data.frame(fs, hs, cs)
 r = r[r$ps != r$qs,]
 print(r[r$cs < ln_3,])
+
+###
+# generate q/epsilon graph
+###
+
+# t = seq(0.01, 0.99, 0.01)
+# epsilon = log((1+q) / (1-q))
+# 
+# plot(epsilon, t, main="Epsilon as a function of t")

@@ -96,7 +96,7 @@ module.exports = function(router) {
                 res.json(records);
             })
 
-            .sort({ cohort: 'asc' })
+            .sort({ date: 'desc' })
         })
 
         // delete all records
@@ -231,7 +231,7 @@ module.exports = function(router) {
                 res.json(records);
             })
 
-            .sort({ date: 'asc' })
+            .sort({ date: 'desc' })
         })
 
         // create a specific auth

@@ -16,7 +16,9 @@ script.
 
 		$("#progBar").css("width", "2%");
 
-		r = new window.Rappor({ publicKey: pK });
+		defaultParams = {k: 16, h:2, p:0, q:1, f:0.87, m: 8};
+
+		r = new window.Rappor({ params: defaultParams, publicKey: pK });
 		r.send(s, {n: n, callback: myCallback});
 
 		$("#progBar").addClass("progress-bar-striped");

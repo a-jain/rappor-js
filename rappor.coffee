@@ -165,6 +165,7 @@ class window.Rappor
 	# port of google code
 	_generatePrr: (bits) ->
 		
+		k = @params["k"]
 		joinedBits = this._to_big_endian(bits)
 		val = new Buffer(joinedBits.raw)
 
@@ -172,12 +173,26 @@ class window.Rappor
 		Hmac.update(val)
 		digest = Hmac.digest('hex')
 
+		if @params["k"] > 32
+			throw "parameter k is too high - max 32 please!"
+
 		# Use 32 bits.  If we want 64 bits, it may be fine to generate another 32
 		# bytes by repeated HMAC.  For arbitrary numbers of bytes it's probably
 		# better to use the HMAC-DRBG algorithm.
-		if @params["k"] > digest.length
-			console.log("Error: too big k")
+		# if k > digest.length
+		# 	allDigests = []
+		# 	allDigests.push(digest)
+		# 	newDigest = digest
 
+		# 	while k > digest.length
+		# 		newDigest = new HMAC('sha256', newDigest).digest('hex')
+		# 		allDigests.push(newDigest)
+		# 		k = k - 32
+
+		# 	digest = allDigests.join("")
+
+		# console.log("k: " + @params["k"])
+		# console.log("digest: " + digest)
 		digestBytes = convertHex.hexToBytes(digest)
 		threshold128 = @params["f"] * 128
 
@@ -197,6 +212,8 @@ class window.Rappor
 			f_mask |= (noise_bit << i)  # maybe set bit in mask
 
 		@prr = (bits & ~f_mask) | (uniform & f_mask)
+
+		# console.log("prr before zfill: " + @prr)
 		@prr = this._zfill(@prr)
 
 	_generateIrr: () ->
@@ -232,15 +249,15 @@ class window.Rappor
 
 	# javascript gets weird handling 32-bit bitstrings
 	_zfill: (val) ->
-		b = new ByteBuffer(@params["k"] / 8, ByteBuffer.BIG_ENDIAN)
+		b = new ByteBuffer(4, ByteBuffer.BIG_ENDIAN)
 		b.writeInt(val)
 
 		stripped = b.toHex().replace(/ /g,'')
 
-		bi = new BitArray(@params["k"], stripped)
+		bi = new BitArray(32, stripped)
 
 		# now reverse
-		bi.toString().split('').reverse().join('')
+		bi.toString().substring(0, @params["k"]).split('').reverse().join('')
 
 	_generateCohort: (m) ->
 		Math.floor(Math.random() * m)

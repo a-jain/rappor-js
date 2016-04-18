@@ -36366,14 +36366,15 @@ window.Rappor = (function() {
   };
 
   Rappor.prototype._generatePrr = function(bits) {
-    var Hmac, byte, ch, digest, digestBytes, f_mask, i, j, joinedBits, noise_bit, rand128, ref, threshold128, u_bit, uniform, val;
+    var Hmac, byte, ch, digest, digestBytes, f_mask, i, j, joinedBits, k, noise_bit, rand128, ref, threshold128, u_bit, uniform, val;
+    k = this.params["k"];
     joinedBits = this._to_big_endian(bits);
     val = new Buffer(joinedBits.raw);
     Hmac = new HMAC('sha256', this.secret);
     Hmac.update(val);
     digest = Hmac.digest('hex');
-    if (this.params["k"] > digest.length) {
-      console.log("Error: too big k");
+    if (this.params["k"] > 32) {
+      throw "parameter k is too high - max 32 please!";
     }
     digestBytes = convertHex.hexToBytes(digest);
     threshold128 = this.params["f"] * 128;
@@ -36423,11 +36424,11 @@ window.Rappor = (function() {
 
   Rappor.prototype._zfill = function(val) {
     var b, bi, stripped;
-    b = new ByteBuffer(this.params["k"] / 8, ByteBuffer.BIG_ENDIAN);
+    b = new ByteBuffer(4, ByteBuffer.BIG_ENDIAN);
     b.writeInt(val);
     stripped = b.toHex().replace(/ /g, '');
-    bi = new BitArray(this.params["k"], stripped);
-    return bi.toString().split('').reverse().join('');
+    bi = new BitArray(32, stripped);
+    return bi.toString().substring(0, this.params["k"]).split('').reverse().join('');
   };
 
   Rappor.prototype._generateCohort = function(m) {
