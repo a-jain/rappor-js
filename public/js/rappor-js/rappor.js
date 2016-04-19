@@ -36192,7 +36192,7 @@ window.Rappor = (function() {
     }
     this.secret = "secret";
     this.cohort = this._generateCohort(this.params["m"]);
-    this.debug = false;
+    this.debug = true;
     this.maxpost = 200;
     cookies.defaults.expires = 366 * 5;
   }

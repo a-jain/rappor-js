@@ -85,19 +85,22 @@ def writeToFile(X):
 
 def unitTest():
 	candidates = ["true"]
-	m = 3
+	m = 8
 	h = 2
-	k = 32
+	k = 16
+	# p = 0
+	# q = 1
+	# f = 0.87
 
 	print constructMap(candidates, m, h, k)
 
 def main():
 	testing = False
-	params = getParams()
 
 	if testing:
 		unitTest()
 	else:
+		params = getParams()
 		# candidates = generateCandidates(6)
 
 		candidates = json.loads(sys.argv[2])["strs"]

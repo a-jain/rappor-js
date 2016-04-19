@@ -36,7 +36,7 @@ class window.Rappor
 
 		@cohort = this._generateCohort(@params["m"])
 
-		@debug = false
+		@debug = true
 		@maxpost = 200
 
 		cookies.defaults.expires = 366 * 5;
@@ -76,6 +76,7 @@ class window.Rappor
 		for i in [1..n]
 			this._encode()
 			splitData[i] = this._generateJSON()
+			# console.log(splitData[i])
 
 			if i % (@maxpost) == 0 or i is n
 				allData.push(splitData)
