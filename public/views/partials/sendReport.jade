@@ -16,9 +16,9 @@ script.
 
 		$("#progBar").css("width", "2%");
 
-		defaultParams = {k: 16, h:2, p:0, q:1, f:0.87, m: 8};
+		defaultParams = {k: 32, h:2, p:0.1, q:0.8, f:0.81, m:128};
 
-		r = new window.Rappor({ params: defaultParams, publicKey: pK });
+		r = new Rappor({ params: defaultParams, publicKey: pK });
 		r.send(s, {n: n, callback: myCallback});
 
 		r._print();

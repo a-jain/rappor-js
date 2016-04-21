@@ -161,7 +161,7 @@ module.exports = function(router) {
         .get(function(req, res) {
 
             var pubKey = "x";
-            console.log(req.params.key);
+            // console.log(req.params.key);
 
             var d1 = null;
             var d2 = null;
@@ -214,7 +214,41 @@ module.exports = function(router) {
 
                     res.json(records);
                 });
-            });
+            })
+        })
+
+        // delete a specific record
+        .delete(function(req, res) {
+            // first retrieve appropriate public key
+            Auth.find({
+                privateKey: req.params.key
+            }, function(err, auth) {
+                if (err) {
+                    res.send(err);
+                    return;
+                }
+
+                if (typeof auth === undefined || auth.length == 0) {
+                    res.send("Private key not found. Make sure you\'re not using the public key!");
+                    return;
+                }
+
+                // console.log(auth)
+                pubKey = auth[0].publicKey;
+                // console.log(pubKey)
+
+                // now get all records corresponding to public key
+                Record.remove({
+                    group: pubKey
+                }, function(err, records) {
+                    if (err) {
+                        res.send(err);
+                        return;
+                    }
+
+                    res.send({ message: 'Successfully deleted everything'});
+                });
+            })
         });
 
     // route to create new credentials goes here:

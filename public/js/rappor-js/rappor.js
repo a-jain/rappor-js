@@ -36169,7 +36169,7 @@ async = require("async");
 
 cookies = require("browser-cookies");
 
-window.Rappor = (function() {
+this.Rappor = (function() {
   function Rappor(defaultParams) {
     var base, baselineParams;
     if (defaultParams == null) {
@@ -36179,9 +36179,9 @@ window.Rappor = (function() {
       k: 32,
       h: 2,
       p: 0.1,
-      q: 0.9,
-      f: 0.15,
-      m: 8
+      q: 0.8,
+      f: 0.81,
+      m: 128
     };
     this.params = defaultParams.params || baselineParams;
     this.params["server"] = defaultParams.server || 'http://rappor-js.herokuapp.com/api/v1/records';
@@ -36304,7 +36304,9 @@ window.Rappor = (function() {
       } else {
         console.log(body.message);
         percentage = ((index * limit + Object.keys(reports).length) * 100 / n) + "%";
-        $("#progBar").css("width", percentage);
+        try {
+          document.getElementById("progBar").style.width = percentage;
+        } catch (undefined) {}
         return callback();
       }
     });
@@ -36436,8 +36438,15 @@ window.Rappor = (function() {
   };
 
   Rappor.prototype._checkAge = function(freq) {
-    var difference, lastAge;
-    lastAge = parseInt(cookies.get(this.group)) || -1;
+    var difference, error, error1, lastAge;
+    try {
+      lastAge = parseInt(cookies.get(this.group)) || -1;
+    } catch (error1) {
+      error = error1;
+      console.log(error);
+    } finally {
+      lastAge = -1;
+    }
     if (lastAge === !-1) {
       difference = (Date.now() - lastAge) / 1000;
       switch (freq) {
@@ -36507,6 +36516,10 @@ window.Rappor = (function() {
 })();
 
 console.log("rappor.js loaded");
+
+window.Rappor = this.Rappor;
+
+module.exports = this.Rappor;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/rappor.coffee","/")

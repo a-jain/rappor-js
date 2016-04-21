@@ -5,9 +5,12 @@ import os
 import struct
 import json
 
-subDir      = os.path.join(os.getcwd(), "outputs/" + sys.argv[1])
-paramsFile  = subDir + "/params.csv"
-mapFile     = subDir + "/map.csv"
+testing = False
+
+if not testing:
+	subDir      = os.path.join(os.getcwd(), "outputs/" + sys.argv[1])
+	paramsFile  = subDir + "/params.csv"
+	mapFile     = subDir + "/map.csv"
 
 def getParams():
 	params = {}
@@ -84,19 +87,17 @@ def writeToFile(X):
 
 
 def unitTest():
-	candidates = ["true"]
-	m = 8
+	candidates = ["true", "false"]
+	m = 1
 	h = 2
-	k = 16
-	# p = 0
-	# q = 1
-	# f = 0.87
+	k = 32
+	# p = 0.1
+	# q = 0.8
+	# f = 0.81
 
 	print constructMap(candidates, m, h, k)
 
 def main():
-	testing = False
-
 	if testing:
 		unitTest()
 	else:

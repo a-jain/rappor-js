@@ -126,7 +126,7 @@ FitLasso <- function(X, Y, intercept = TRUE) {
                     # Cap the number of non-zero coefficients to 500 or
                     # 80% of the length of Y, whichever is less. The 500 cap
                     # is for performance reasons, 80% is to avoid overfitting.
-                    pmax = min(500, length(Y) * .8)),
+                    pmax = min(500, length(Y))),
              silent = TRUE)
   
   # cat(stderr(), "\nhere is X: ", as.vector(X), "\n")
@@ -264,9 +264,6 @@ FitDistribution <- function(estimates_stds, map, quiet = FALSE) {
     cat(stderr(), "\nLASSO had these coefficients:\n")
     print(lasso)
   }
-
-  
-
 
   coefs <- setNames(rep(0, S), colnames(map))
 

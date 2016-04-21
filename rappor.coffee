@@ -8,7 +8,7 @@ async      = require "async"
 cookies    = require "browser-cookies"
 
 # create Rappor object
-class window.Rappor
+class @Rappor
 
 	# hard coding m as 64
 	# hard coding server as http://rappor-js.herokuapp.com/api/v1/records
@@ -22,9 +22,9 @@ class window.Rappor
 			k: 32
 			h: 2
 			p: 0.1
-			q: 0.9
-			f: 0.15
-			m: 8
+			q: 0.8
+			f: 0.81
+			m: 128
 
 		@params = defaultParams.params           or baselineParams
 		@params["server"] = defaultParams.server or 'http://rappor-js.herokuapp.com/api/v1/records'
@@ -114,7 +114,9 @@ class window.Rappor
 							console.log body.message
 
 							percentage = ((index*limit + Object.keys(reports).length) * 100 / n) + "%"
-							$("#progBar").css("width", percentage);
+							# $("#progBar").css("width", percentage)
+							try
+								document.getElementById("progBar").style.width = percentage
 							callback()
 					)
 
@@ -264,7 +266,12 @@ class window.Rappor
 		Math.floor(Math.random() * m)
 
 	_checkAge: (freq) ->
-		lastAge    = parseInt(cookies.get(@group)) || -1
+		try
+			lastAge    = parseInt(cookies.get(@group)) || -1
+		catch error
+			console.log error
+		finally
+			lastAge = -1
 
 		if lastAge is not -1 # i.e. if lastAge exists
 			
@@ -300,3 +307,5 @@ class window.Rappor
 
 console.log "rappor.js loaded"
 
+window.Rappor  = @Rappor
+module.exports = @Rappor
