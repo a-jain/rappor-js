@@ -70,7 +70,7 @@ function getOperationString() {
 
 	finalStr += `\n\n<script>\n`;
 
-	finalStr += `\tr = new window.Rappor({ publicKey: "${pubKey}" });\n`;
+	finalStr += `\tr = new Rappor({ publicKey: "${pubKey}" });\n`;
 
 	switch(checked) {
 		case "browserRadio":
