@@ -492,7 +492,7 @@ Decode <- function(counts, map, params, alpha = 0.05,
   # ests is added
   list(fit = fit, summary = res_summary, privacy = privacy, params = params,
        lasso = NULL, residual = as.vector(residual),
-       counts = counts[, -1], resid = NULL, metrics = metrics, ests = as.matrix(estimates_stds_filtered$estimates))
+       counts = counts[, -1], resid = NULL, metrics = metrics, ests = es$estimates)
 }
 
 ComputeCounts <- function(reports, cohorts, params) {

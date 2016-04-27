@@ -61,9 +61,6 @@ def pushAWS():
 def assert_directory():
 	local("cd {}".format(RAPPOR_DIRECTORY))
 
-def bundleJS():
-	local("uglifyjs public/libs/jquery/dist/jquery.min.js public/libs/angular/angular.min.js public/libs/angular-route/angular-route.min.js public/js/controllers/*.js public/js/app*.js public/js/rappor-js/rappor-*.js public/js/rappor-js/rappor.min.js public/libs/angulartics/dist/angulartics.min.js public/libs/angulartics-google-analytics/dist/angulartics-google-analytics.min.js -o public/js/bundle.js --stats --keep-fnames") 
-
 def runb():
 	assert_directory()
 	local("browserify --fast -t coffeeify rappor.coffee -o public/js/rappor-js/rappor.js")

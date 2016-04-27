@@ -26,7 +26,7 @@ module.exports = function(router) {
     // basic test to start:
     router.get('/api/v1/', function(req, res) {
         res.json({
-            message: 'First test'
+            message: 'The API works! Check the GitHub page for the full API'
         })
     })
 

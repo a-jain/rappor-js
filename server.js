@@ -10,6 +10,7 @@ var nib		       = require('nib');
 var mongoose       = require('mongoose');
 var cors           = require('cors');
 var compression    = require('compression');
+var newrelic       = require('newrelic');
 
 // configuration ===========================================
     
@@ -39,7 +40,7 @@ app.use(compression())
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
-mongoose.connect(db.url); 
+mongoose.connect(db.url)
 
 // bodyParser gets all data/stuff of the body (POST) parameters
 // parse application/json 
