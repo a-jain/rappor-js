@@ -1,6 +1,7 @@
 // server.js
 
 // modules =================================================
+var newrelic       = require('newrelic');
 var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
@@ -10,7 +11,6 @@ var nib		       = require('nib');
 var mongoose       = require('mongoose');
 var cors           = require('cors');
 var compression    = require('compression');
-var newrelic       = require('newrelic');
 
 // configuration ===========================================
     
