@@ -340,7 +340,7 @@ module.exports = function(router) {
                 console.log(`Python child is done, and returned: ${data}`);
 
                 if (data || data == 1) {
-                    return res.status(400).send("Key not found");
+                    return res.status(400).send("Researcher code " + req.params.privateKey + " not found");
                 }
 
                 var args2 = [];

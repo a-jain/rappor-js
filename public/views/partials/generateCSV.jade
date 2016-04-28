@@ -15,7 +15,7 @@ form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-togg
 	.form-group
 		label.col-sm-2.control-label(for="candidates") Candidates
 		.col-sm-10
-			textarea.form-control(rows="5", name="candidates", id="candidates", placeholder="Enter each candidate string on a new line")
+			textarea.form-control(rows="5", name="candidates", id="candidates", placeholder="Enter each candidate string on a new line", required)
 
 	.form-group
 		label.col-sm-2.control-label(for="candidates") Optional Date Range
@@ -110,6 +110,7 @@ script.
 		//- console.log(allData.strs);
 
 		$.post( url, allData, function( data, textStatus ) {
+			//- console.log(data);
 			console.log(textStatus);
 
 			if (textStatus == "success") {
@@ -119,5 +120,11 @@ script.
 			else {
 				console.log("Something went wrong, e.g. you didn't have the correct private key")
 			}
+		})
+
+		.fail(function(response) {
+			console.log(response.responseText);
+			alert("Error: " + response.responseText);
+
 		});
 	}

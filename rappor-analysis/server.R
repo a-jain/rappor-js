@@ -53,11 +53,11 @@ shinyServer(function(input, output, session) {
 		pK = query[['key']]
 		if (!is.null(pK) && pK != "") {
 			
-			cat(stderr(), "private key is: \n")
-			cat(stderr(), pK)
+			# cat(stderr(), "private key is: \n")
+			# cat(stderr(), pK)
 			
 			url_csvs <- paste("http://rappor-js.herokuapp.com/api/v1/getCSV/", pK, "/params", sep="")
-			cat(stderr(), url_csvs)
+			# cat(stderr(), url_csvs)
 			
 			x <- GET(url_csvs)
 			params <- ReadParameterFile(content(x), readCSV = FALSE)
@@ -87,12 +87,11 @@ shinyServer(function(input, output, session) {
 		pK = query[['key']]
 		if (!is.null(pK)) {
 			
-			# cat(stderr(), "print everything:\n")
-			cat(stderr(), "private key is: \n")
-			cat(stderr(), pK)
+			# cat(stderr(), "private key is: \n")
+			# cat(stderr(), pK)
 			
 			url_csvs = paste("http://rappor-js.herokuapp.com/api/v1/getCSV/", pK, "/counts", sep="")
-			cat(stderr(), url_csvs)
+			# cat(stderr(), url_csvs)
 			
 			x = GET(url_csvs)
 			counts <- ReadCountsFile(content(x, col_names=FALSE), params, readCSV = FALSE)
@@ -163,10 +162,10 @@ shinyServer(function(input, output, session) {
 	outputOptions(output, 'countsUploaded', suspendWhenHidden=FALSE)
 
 	Analyze <- reactive({
-		cat(stderr(), "map and then counts and then params:\n")
-		cat(stderr(), is.null(input$map))
-		cat(stderr(), is.null(input$counts))
-		cat(stderr(), is.null(input$params))
+		# cat(stderr(), "map and then counts and then params:\n")
+		# cat(stderr(), is.null(input$map))
+		# cat(stderr(), is.null(input$counts))
+		# cat(stderr(), is.null(input$params))
 
 		if (input$run == 0) {
 			return()
@@ -177,13 +176,13 @@ shinyServer(function(input, output, session) {
 		counts <- Counts()
 		decoding_params <- DecodingParams()
 
-		cat(stderr(), "\n\n\nreached just fine\n\n\n")
+		# cat(stderr(), "\n\n\nreached just fine\n\n\n")
 
 		fit <- Decode(counts, map$map, params,
 									alpha = decoding_params$alpha,
 									correction = decoding_params$correction)
 		
-		cat(stderr(), "Analyze done\n")
+		# cat(stderr(), "Analyze done\n")
 		fit
 	})
 

@@ -470,10 +470,11 @@ Decode <- function(counts, map, params, alpha = 0.05,
   parameters <-
       c("Candidate strings", "Detected strings",
         "Sample size (N)", "Discovered Prop (out of N)",
-        "Explained Variance", "Missing Variance", "Noise Variance",
-        "Theoretical Noise Std. Dev.")
+        "Explained Variance", "Missing Variance") 
+  #, "Noise Variance","Theoretical Noise Std. Dev.")
   values <- c(S, num_detected, N, allocated_mass,
-              explained_var, missing_var, noise_var, noise_std_dev)
+              explained_var, missing_var)
+  #, noise_var, noise_std_dev)
 
   res_summary <- data.frame(parameters = parameters, values = values)
 
