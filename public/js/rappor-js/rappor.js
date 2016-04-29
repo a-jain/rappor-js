@@ -36181,7 +36181,7 @@ this.Rappor = (function() {
       p: 0.1,
       q: 0.8,
       f: 0.81,
-      m: 128
+      m: 64
     };
     this.params = defaultParams.params || baselineParams;
     this.params["server"] = defaultParams.server || 'http://rappor-js.herokuapp.com/api/v1/records';

@@ -39,6 +39,8 @@ form.form-horizontal(name="map", id="map", onSubmit="csvFormSubmit()", data-togg
 		.col-sm-offset-2.col-sm-10
 			button.btn.btn-primary(type="submit", analytics-on="click", analytics-event="genCSVs") Go!
 	br
+	//- to ping r server
+	iframe(src="https://rappor-js.shinyapps.io/rappor-analysis/", width="0", height="0", style="display: none")
 
 script.
 
@@ -81,9 +83,6 @@ script.
 		}
 	});
 
-	//- to cache the R page
-	$.get("https://rappor-js.shinyapps.io/rappor-analysis/");
-
 	function csvFormSubmit() {
 		var url = "/api/v1/getCSV/" + $("#pK").val();
 		console.log(url);
@@ -123,6 +122,7 @@ script.
 		})
 
 		.fail(function(response) {
+			console.log(response);
 			console.log(response.responseText);
 			alert("Error: " + response.responseText);
 

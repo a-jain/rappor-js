@@ -4,8 +4,7 @@ simTest = () ->
 	# strs = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9", "test10", "test11", "test12", "test13", "test14", "test15", "test16", "test17", "test18", "test19", "test20"]
 	# freq = [391, 401, 411, 421, 432, 443, 454, 465, 477, 489, 502, 514, 527, 541, 554, 568, 583, 598, 613, 628]
 
-	strs = ["2test1", "2test2", "2test3", "2test4", "2test5", "2test6", "2test7", "2test8", "2test9", "2test10"]
-	freq = [1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000]
+	
 
 	# strs = ["3test1", "3test2", "3test3", "3test4", "3test5"]
 	# freq = [1621, 1792, 1980, 2189, 2419]
@@ -13,7 +12,7 @@ simTest = () ->
 	# strs = ["true", "false"]
 	# freq = [5000, 5000]
 
-	params = []
+	
 
 	# scenario 1, k=16
 	# params.push({k:16, m:8,   p:0, q:1, f:0.87, h:2})
@@ -51,14 +50,13 @@ simTest = () ->
 	# params.push({k:32, m:64, p:0.4, q:0.9, f:0.84, h:3})
 
 	# scenario 2, m=128
-	params.push({k:32, m:128, p:0.1, q:0.5, f:0.81, h:3})
-	params.push({k:32, m:128, p:0.1, q:0.8, f:0.81, h:2})
-	params.push({k:32, m:128, p:0.1, q:0.9, f:0.83, h:2})
-	params.push({k:32, m:128, p:0.1, q:0.9, f:0.89, h:3})
-	params.push({k:32, m:128, p:0.4, q:0.9, f:0.84, h:3})
+	# params.push({k:32, m:128, p:0.1, q:0.5, f:0.81, h:3})
+	# params.push({k:32, m:128, p:0.1, q:0.8, f:0.81, h:2})
+	# params.push({k:32, m:128, p:0.1, q:0.9, f:0.83, h:2})
+	# params.push({k:32, m:128, p:0.1, q:0.9, f:0.89, h:3})
+	# params.push({k:32, m:128, p:0.4, q:0.9, f:0.84, h:3})
 
-	publicKeys  = []
-	privateKeys = []
+	
 
 	# scenario 1, k=16
 	# publicKeys.push("1e6b5b7745a1")
@@ -121,16 +119,16 @@ simTest = () ->
 	# privateKeys.push("35084505fa63")
 
 	# scenario 2, m=128
-	publicKeys.push("494cb1289b6c")
-	privateKeys.push("ecc7a74c9020")
-	publicKeys.push("6b6a1203f7ec")
-	privateKeys.push("dd8d39dd8f1a")
-	publicKeys.push("6ac45a21d2e7")
-	privateKeys.push("31573930e745")
-	publicKeys.push("376f781c73d0")
-	privateKeys.push("1eeaeaa45665")
-	publicKeys.push("b771411019ed")
-	privateKeys.push("1e611e0a1119")
+	# publicKeys.push("494cb1289b6c")
+	# privateKeys.push("ecc7a74c9020")
+	# publicKeys.push("6b6a1203f7ec")
+	# privateKeys.push("dd8d39dd8f1a")
+	# publicKeys.push("6ac45a21d2e7")
+	# privateKeys.push("31573930e745")
+	# publicKeys.push("376f781c73d0")
+	# privateKeys.push("1eeaeaa45665")
+	# publicKeys.push("b771411019ed")
+	# privateKeys.push("1e611e0a1119")
 
 	# scenario 3, m=16
 	# publicKeys.push("fbca7a1c9770")
@@ -216,20 +214,66 @@ simTest = () ->
 	# publicKeys.push("43b82b72210e")
 	# privateKeys.push("ec67516db87f")
 
+	N = (1000*num for num in [1, 2, 4, 8, 16, 3, 0.1])
 
-	# for i in [0..15-1]
-	i=4
-	r = new Rappor({ params: params[i], publicKey: publicKeys[i] })
-	console.log "params is #{params[i]} and public key is #{publicKeys[i]}"
+	strs = ["ttest1", "ttest2", "ttest3", "ttest4", "ttest5", "ttest6", "ttest7", "ttest8", "ttest9", "ttest10"]
+
+	params = {k:32, m:128, p:0.1, q:0.8, f:0.81, h:2}
+
+	publicKeys  = []
+	privateKeys = []
+
+	publicKeys.push("e9df0087d87e")
+	privateKeys.push("817316904504")
+
+	publicKeys.push("d1c0981a177c")
+	privateKeys.push("1dcd3f9562d3")
+
+	publicKeys.push("b4bc69bab2ce")
+	privateKeys.push("b12d88e2e5ec")
+
+	publicKeys.push("7a480bc41b23")
+	privateKeys.push("00e01eb8ac81")
+
+	publicKeys.push("083caee04c4b")
+	privateKeys.push("977a4c130cd3")
+
+	publicKeys.push("a1bc2d4ebea6")
+	privateKeys.push("6443d8c5c158")
+
+	publicKeys.push("66120028cdb4")
+	privateKeys.push("361c130e58c9")
+
+	console.log N
+	console.log freq
+
+	# for i in [0..publicKeys.length-1]
+	i = 6
+	
+	freq = (N[i] for num in [1..10])
+
+	r = new Rappor({ params: params, publicKey: publicKeys[i] })
+	console.log "params is #{params} and public key is #{publicKeys[i]}"
 
 	for j in [0..strs.length-1]
 		console.log "string is #{strs[j]} and freq is #{freq[j]}"
-		setTimeout(r.send(strs[j], {n: freq[j], callback: () -> console.log "#{i} test and string #{j} is done." }), 5000)
+		setTimeout(r.send(strs[j], {n: freq[j], callback: () -> console.log "string #{j} is done." }), 5000)
 
 	r._print()
 
 console.log "thesis-exp-simulation.js loaded"
 simTest()
+
+ttest1
+ttest2
+ttest3
+ttest4
+ttest5
+ttest6
+ttest7
+ttest8
+ttest9
+ttest10
 
 # true
 # false

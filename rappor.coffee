@@ -24,7 +24,7 @@ class @Rappor
 			p: 0.1
 			q: 0.8
 			f: 0.81
-			m: 128
+			m: 64
 
 		@params = defaultParams.params           or baselineParams
 		@params["server"] = defaultParams.server or 'http://rappor-js.herokuapp.com/api/v1/records'
