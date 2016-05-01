@@ -4,17 +4,15 @@ This is a provisional implementation of Rappor in JavaScript that is designed to
 
 ## Setup
 
-0. Download the code
-1. Install the npm modules `npm install`
-2. Install the bower components `bower install`
-3. Start the server `node server.js`
-4. Go to `http://localhost:8080/`
+Embed the following line of code into a website your respondents will visit
+
+> <script src="http://cdn.rapporjs.com/rappor.min.js">
 
 ## Quick Start
 
-> `r = new Rappor()`
+> r = new Rappor( {publicKey: "generated_from_/users"} );
 > 
-> `r.sendToServer(r.encode(bools))`
+> r.send(some_string);
 
 ## API 
 
