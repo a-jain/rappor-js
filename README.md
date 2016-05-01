@@ -63,11 +63,11 @@ r = new Rappor( {params: params, publicKey: pK} );
 
 `send()` provides further option choices, and will result in a JSON object being sent via a POST request to the server specified in the `Rappor()` instantiation:
 
-```JSON
+```JavaScript
 example = {
-	cohort: <cohort>
-	irr: "010010101" etc
-	params: {k: 32, h:2, p:0.1, q:0.8, f:0.81, m:128, server:"http://rappor-js.herokuapp.com/api/v1/records"}
+	cohort: <cohort>,
+	irr: "010010101" etc,
+	params: {k: 32, h:2, p:0.1, q:0.8, f:0.81, m:128, server:"http://rappor-js.herokuapp.com/api/v1/records"},
 	group: <publicKey>
 }
 
