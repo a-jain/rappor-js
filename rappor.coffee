@@ -24,9 +24,15 @@ class @Rappor
 			p: 0.1
 			q: 0.8
 			f: 0.81
-			m: 64
+			m: 128
 
-		@params = defaultParams.params           or baselineParams
+		@params["k"] = defaultParams.params.k    or baselineParams.k
+		@params["h"] = defaultParams.params.h    or baselineParams.h
+		@params["p"] = defaultParams.params.p    or baselineParams.p
+		@params["q"] = defaultParams.params.q    or baselineParams.q
+		@params["f"] = defaultParams.params.f    or baselineParams.f
+		@params["m"] = defaultParams.params.m    or baselineParams.m
+
 		@params["server"] = defaultParams.server or 'http://rappor-js.herokuapp.com/api/v1/records'
 		@debug = defaultParams.debug             or false
 		@group = defaultParams.publicKey         or ""
