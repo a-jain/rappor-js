@@ -46,6 +46,17 @@ To change specific parameters, supply them in the same format. For example, to c
 
 ```JavaScript
 params = {m: 64, server="http://url_of_your_choice.com"}
+r = new Rappor( {params: params} );
+```
+
+**publicKey**
+
+If you're using your own server, then you can also specify your own publicKey (default is the empty string):
+
+```JavaScript
+params = {m: 64, server="http://url_of_your_choice.com"};
+pK = "my_special_key";
+r = new Rappor( {params: params, publicKey: pK} );
 ```
 
 ### Calling `send()`
