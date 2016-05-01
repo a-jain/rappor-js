@@ -32,11 +32,14 @@ def pull():
 def push(msg="default"):
 	runb()
 	local("npm shrinkwrap")
+	pushGit(msg)
+	local("git push heroku master")
+	pushAWS()
+
+def pushGit(msg="default"):
 	local("git add -A")
 	local("git commit -m \"%s\"" % msg)
 	local("git push origin master")
-	local("git push heroku master")
-	pushAWS()
 	
 # run in R: rsconnect::deployApp('Dropbox/rappor-js/rappor-analysis')
 def pushR():
