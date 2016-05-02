@@ -36181,9 +36181,14 @@ this.Rappor = (function() {
       p: 0.1,
       q: 0.8,
       f: 0.81,
-      m: 64
+      m: 128
     };
-    this.params = defaultParams.params || baselineParams;
+    this.params["k"] = defaultParams.params.k || baselineParams.k;
+    this.params["h"] = defaultParams.params.h || baselineParams.h;
+    this.params["p"] = defaultParams.params.p || baselineParams.p;
+    this.params["q"] = defaultParams.params.q || baselineParams.q;
+    this.params["f"] = defaultParams.params.f || baselineParams.f;
+    this.params["m"] = defaultParams.params.m || baselineParams.m;
     this.params["server"] = defaultParams.server || 'http://rappor-js.herokuapp.com/api/v1/records';
     this.debug = defaultParams.debug || false;
     this.group = defaultParams.publicKey || "";
