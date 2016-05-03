@@ -27,7 +27,6 @@
     "newrelic": "^1.26.2",
     "nib": "latest",
     "npm-check-updates": "^2.6.1",
-    "python-runner": "^1.1.0",
     "request": "^2.70.0",
     "rimraf": "latest",
     "stylus": "^0.54.2",

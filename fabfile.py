@@ -68,7 +68,7 @@ def runb():
 	assert_directory()
 	local("browserify --fast -t coffeeify rappor.coffee -o public/js/rappor-js/rappor.js")
 	local("browserify -t coffeeify rappor-examine.coffee -o public/js/rappor-js/rappor-examine.js")
-	local("browserify -t coffeeify rappor-csvs.coffee -o public/js/rappor-js/rappor-csvs.js")
+	# local("browserify -t coffeeify rappor-csvs.coffee -o public/js/rappor-js/rappor-csvs.js")
 	# local("coffee thesis-exp-simulation.coffee -o public/js/rappor-js/thesis-exp-simulation.js")
 
 	local("uglifyjs public/js/rappor-js/rappor.js -o public/js/rappor-js/rappor.min.js -m --stats --keep-fnames")
