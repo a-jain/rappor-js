@@ -36183,6 +36183,7 @@ this.Rappor = (function() {
       f: 0.81,
       m: 128
     };
+    this.params = {};
     this.params["k"] = defaultParams.params.k || baselineParams.k;
     this.params["h"] = defaultParams.params.h || baselineParams.h;
     this.params["p"] = defaultParams.params.p || baselineParams.p;
@@ -36197,7 +36198,7 @@ this.Rappor = (function() {
     }
     this.secret = "secret";
     this.cohort = this._generateCohort(this.params["m"]);
-    this.debug = true;
+    this.debug = false;
     this.maxpost = 200;
     cookies.defaults.expires = 366 * 5;
   }

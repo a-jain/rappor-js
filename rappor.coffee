@@ -26,6 +26,7 @@ class @Rappor
 			f: 0.81
 			m: 128
 
+		@params = {}
 		@params["k"] = defaultParams.params.k    or baselineParams.k
 		@params["h"] = defaultParams.params.h    or baselineParams.h
 		@params["p"] = defaultParams.params.p    or baselineParams.p
@@ -42,7 +43,7 @@ class @Rappor
 
 		@cohort = this._generateCohort(@params["m"])
 
-		@debug = true
+		@debug = false
 		@maxpost = 200
 
 		cookies.defaults.expires = 366 * 5;
